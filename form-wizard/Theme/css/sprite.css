@@ -1,0 +1,95 @@
+.svg-checkbox {
+	background: url("svg/sprite.css-355f8ecf.svg") 71.23287671232876% 30.656934306569344% no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.svg-checkbox-checked {
+	background: url("svg/sprite.css-355f8ecf.svg") 54.794520547945204% 74.45255474452554% no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.svg-checkbox-checked-mob {
+	background: url("svg/sprite.css-355f8ecf.svg") 0 100% no-repeat;
+	width: 35px;
+	height: 35px;
+}
+
+.svg-close-cross {
+	background: url("svg/sprite.css-355f8ecf.svg") 0 74.45255474452554% no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.svg-close-cross-blue {
+	background: url("svg/sprite.css-355f8ecf.svg") 100% 0 no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.svg-close-cross-mob {
+	background: url("svg/sprite.css-355f8ecf.svg") 41.666666666666664% 96.59863945578232% no-repeat;
+	width: 30px;
+	height: 30px;
+}
+
+.svg-close-cross-mob-blue {
+	background: url("svg/sprite.css-355f8ecf.svg") 22.435897435897434% 96.59863945578232% no-repeat;
+	width: 30px;
+	height: 30px;
+}
+
+.svg-error {
+	background: url("svg/sprite.css-355f8ecf.svg") 27.397260273972602% 74.45255474452554% no-repeat;
+	width: 40px;
+	height: 40px;
+}
+
+.svg-error-mob {
+	background: url("svg/sprite.css-355f8ecf.svg") 90.6832298136646% 75% no-repeat;
+	width: 25px;
+	height: 25px;
+}
+
+.svg-radio {
+	background: url("svg/sprite.css-355f8ecf.svg") 72.22222222222223% 0 no-repeat;
+	width: 42px;
+	height: 42px;
+}
+
+.svg-radio-mob {
+	background: url("svg/sprite.css-355f8ecf.svg") 97.98657718120805% 28.571428571428573% no-repeat;
+	width: 37px;
+	height: 37px;
+}
+
+.svg-radio-selected {
+	background: url("svg/sprite.css-355f8ecf.svg") 36.111111111111114% 37.77777777777778% no-repeat;
+	width: 42px;
+	height: 42px;
+}
+
+.svg-radio-selected-mob {
+	background: url("svg/sprite.css-355f8ecf.svg") 97.98657718120805% 55% no-repeat;
+	width: 37px;
+	height: 37px;
+}
+
+.svg-step-arrow {
+	background: url("svg/sprite.css-355f8ecf.svg") 0 40.476190476190474% no-repeat;
+	width: 52px;
+	height: 51px;
+}
+
+.svg-step-down-active {
+	background: url("svg/sprite.css-355f8ecf.svg") 38.80597014925373% 0 no-repeat;
+	width: 52px;
+	height: 51px;
+}
+
+.svg-step-up-active {
+	background: url("svg/sprite.css-355f8ecf.svg") 0 0 no-repeat;
+	width: 52px;
+	height: 51px;
+}
