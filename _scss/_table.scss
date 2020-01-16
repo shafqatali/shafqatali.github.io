@@ -1,0 +1,52 @@
+/* Table General Styles */
+
+table:not(.datepicker-grid) {
+  visibility: hidden;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-y: auto;
+  padding-bottom: 6px;
+  margin: 0 0 20px;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid $silver;
+    background-color: $silver;
+  }
+  table {
+    visibility: visible;
+    width: 100%;
+    margin: 0;
+    @media screen and (max-width: $screen-xs) {
+      width: 1000px;
+      font-size: 1.0625rem;
+    }
+    caption {
+      display: none;
+    }
+    thead {
+      background-color: $dim-gray;
+      tr {
+        th {
+          color: $white;
+          border-bottom: none;
+          padding: 10px 20px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 15px 20px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

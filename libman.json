@@ -1,0 +1,56 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "defaultDestination": "js/libman",
+  "libraries": [
+    {
+      "library": "jquery@3.4.1",
+      "destination": "js/libman",
+      "files": [
+        "jquery.min.js"
+      ]
+    },
+    {
+      "library": "vue@2.6.10",
+      "destination": "js/libman",
+      "files": [
+        "vue.min.js"
+      ]
+    },
+    {
+      "library": "twitter-bootstrap@4.3.1",
+      "destination": "js/libman",
+      "files": [
+        "js/bootstrap.bundle.min.js"
+      ]
+    },
+    {
+      "library": "enquire.js@2.1.6",
+      "destination": "js/libman",
+      "files": [
+        "enquire.min.js"
+      ]
+    },
+    {
+      "library": "hammer.js@2.0.8",
+      "destination": "js/libman",
+      "files": [
+        "hammer.min.js"
+      ]
+    },
+    {
+      "library": "picturefill@3.0.3",
+      "destination": "js/libman",
+      "files": [
+        "picturefill.min.js"
+      ]
+    },
+    {
+      "library": "lazysizes@5.1.2",
+      "destination": "js/libman",
+      "files": [
+        "lazysizes.min.js"
+      ]
+    }
+  ]
+}

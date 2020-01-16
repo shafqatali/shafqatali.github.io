@@ -1,0 +1,13 @@
+Note:
+
+The files to make svg sprite are relocated to this path
+
+~\utilities\svg-sprite
+
+The gulp file at this path "~\utilities\svg-sprite" is use to generate SVG sprite as explained in the screen cast.
+
+
+The gulp file in the root directory is used to minify CSS and Javascript.
+
+
+The paths described in the screen cast are not valid now but the procedure to make svg sprite is same.

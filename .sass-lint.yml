@@ -1,0 +1,77 @@
+--- 
+files: 
+  ignore: 
+    - _boostrap-sass
+    - _styleguide-specifics
+  include: _scss/**/*.s+(a|c)ss
+options: 
+  formatter: stylish
+  merge-default-rules: false
+rules: 
+  brace-style:
+    - 2
+    -
+      style: 1tbs
+      allow-single-line: false
+  clean-import-paths:
+    - 2
+    - 
+      leading-underscore: false
+      filename-extension: false
+  indentation:
+    - 2
+    - 
+      size: 2
+  nesting-depth:
+    - 1
+    -
+      max-depth: 4
+  no-empty-rulesets: 2
+  no-invalid-hex: 2
+  no-misspelled-properties: 1
+  property-units:
+    - 2
+    -
+      per-property: { font-size: ['rem'] }
+  quotes:
+    - 2
+    -
+      style: double
+  url-quotes:
+    - 2
+    -
+      style: double
+  trailing-semicolon: 2
+  attribute-quotes: 1
+  empty-args: 1
+  hex-length: 
+    - 1
+    -
+      style: long  
+  leading-zero:
+    - 1
+    -
+      include: true
+  no-trailing-zero: 1
+  no-trailing-whitespace: 1
+  one-declaration-per-line: 1
+  single-line-per-selector: 1
+  border-zero:
+    - 1
+    -
+      convention: 'none'
+  max-line-length:
+    - 1
+    -
+      length: 140
+  no-duplicate-properties: 1
+  zero-unit: 1
+  variable-for-property: 
+    - 0
+    - 
+      properties: 
+        - font-family
+        - font-size
+        - z-index
+        - color
+        - background-color

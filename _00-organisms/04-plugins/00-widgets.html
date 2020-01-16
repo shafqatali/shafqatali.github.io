@@ -1,0 +1,50 @@
+---
+title: Plugins
+containerWrappedPlugins:
+ - name: "image-spotlight"
+ - name: "latest-tweets"
+ - name: "multi-item-carousel"
+ - name: "tile-grid"
+ - name: "gallery"
+ - name: "custom-accordion-grid"
+ - name: "kpis"
+ - name: "event-item"
+ - name: "spotlight-filter"
+ - name: "login-form"
+ - name: "logo-carousel"
+ - name: "split-carousel"
+ - name: "testimonials-carousel-with-images"
+---
+{% assign plugins = site.data.plugins.items %}
+{% assign noMargin= '' %}
+{% for item in plugins  %}
+
+{% assign wrapContainer = 'yes' %}
+{% assign pName = item.name | append: '/' | append: item.name | append: '.html' %}
+{% if item.name == 'tile-grid' %}
+{% assign noMargin= 'zero-margin' %}
+{% endif %}
+<h2 class="ds-plugin-title"><a href="{{item.name}}.html" target="_blank">{{item.name | replace: '-', ' ' | capitalize }}</a></h2>
+
+{% assign filteredList = page.containerWrappedPlugins | where:"name", item.name %}
+{% assign filterCount = filteredList | size %}
+{% if filterCount == 0 %}
+{% assign wrapContainer = 'no' %}
+{% endif %}
+
+{% if wrapContainer == 'yes' %}
+<div class="container">
+    <div class="row {{noMargin}}">
+        {% endif %}
+
+
+        {% include {{pName}} %}
+
+
+        {% if wrapContainer == 'yes' %}
+    </div>
+</div>
+{% endif %}
+
+
+{% endfor %}

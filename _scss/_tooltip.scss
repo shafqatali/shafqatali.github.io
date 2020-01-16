@@ -1,0 +1,55 @@
+/* Tooltip  */
+
+.form-tooltip {
+  position: relative;
+  height: 32px;
+  @media screen and (max-width: $screen-xs) {
+    display: none;
+  }
+  span.icon {
+    display: block;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 7px;
+    &:before {
+      content: "";
+      @extend .svg-info;
+      display: inline-block;
+    }
+    &:hover,
+    &:focus {
+      + span.new {
+        display: block;
+      }
+    }
+  }
+  span.new {
+    display: none;
+    position: absolute;
+    background-color: $white;
+    padding: 20px;
+    top: -15px;
+    left: 45px;
+    border-radius: 5px;
+    margin: auto;
+    width: 329px; //calc(100% - 40px);
+    color: $dark-gray;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    @include x-rem(font-size, 14px);
+    &:before {
+      position: absolute;
+      content: "";
+      left: -11px;
+      top: 20px;
+      @extend .svg-dropdown-gray;
+      transform: rotate(90deg);
+    }
+  }
+}

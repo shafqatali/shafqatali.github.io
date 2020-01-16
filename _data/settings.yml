@@ -1,0 +1,12 @@
+#Set PatternLab to "yes" or "no" if in use or not
+PatternLab: "yes"
+#Set RequiredVueJs to "yes" or "no" if in use or not
+RequiredVueJs: "no"
+#DistributeMode value can be "dev" OR "dist"
+DistributeMode: "dev"
+mobileSize: 640
+maxContainerWidth: 480
+meduimScreen: 1199
+macPortrait: 768
+macLandscape: 1024
+baseFont: 16

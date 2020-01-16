@@ -1,0 +1,64 @@
+/*
+Buttons  */
+
+.btn {
+  @media screen and (min-width: $screen-sm) {
+    //min-width: 300px;
+    min-height: 40px;
+  }
+  border-radius: 6px;
+  font-weight: bold;
+  margin: 5px;
+  &.btn-primary {
+    &:hover {
+      text-decoration: underline;
+      background-color: $deep-sky-blue;
+      border-color: $deep-sky-blue;
+    }
+    &:not(:disabled):not(.disabled) {
+      &:focus,
+      &:active {
+        box-shadow: none;
+        background-color: $deep-sky-blue;
+        border-color: $deep-sky-blue;
+      }
+    }
+  }
+  &.btn-secondary {
+    border: 1px solid $deep-sky-blue;
+    background-color: $white;
+    color: $deep-sky-blue;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:not(:disabled):not(.disabled) {
+      &:focus,
+      &:active {
+        color: $deep-sky-blue;
+        background-color: transparent;
+        box-shadow: none;
+        border-color: $deep-sky-blue;
+      }
+    }
+  }
+}
+
+// Back Button
+
+.back-button {
+  position: relative;
+  padding-left: 15px;
+  font-weight: bold;
+  @include x-rem(font-size, 14px);
+  &:before {
+    position: absolute;
+    content: "";
+    @extend .svg-dropdown-blue;
+    transform: rotate(90deg);
+    left: 0;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}

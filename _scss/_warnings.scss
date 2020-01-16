@@ -1,0 +1,130 @@
+#browser-warning {
+  background-color: $white-smoke;
+  width: 100%;
+  display: block;
+  padding: 20px 0;
+
+  .row {
+    @media screen and (max-width: $screen-xs) {
+      margin: {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  p {
+    line-height: 1;
+    color: $dark-gray;
+    padding: 0;
+    margin: 0;
+    i {
+      margin-right: 10px;
+      font-size: 1.25rem;
+      vertical-align: text-bottom;
+      line-height: 1;
+    }
+  }
+}
+/*
+.cookie-data{
+  display: none;
+  &.show{
+    display: block;
+  }
+}
+
+body.cookie-overlay{
+  position: relative;
+  overflow: hidden;
+  &:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 10;
+  }
+  main{
+    pointer-events: none;
+  }
+  #cookie{
+    z-index: 10000;
+  }
+}
+
+#cookie {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 20px 0;
+  display: none;
+  background-color: $white-smoke;
+  p {
+    padding: 5px 0 0;
+    margin: 0;
+    @include x-rem(font-size, 12px);
+    font-weight: 300;
+    line-height: 25px;
+    @media screen and (max-width: $screen-xs) {
+      line-height: 17px;
+    }
+    strong {
+      font-weight: 700;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  #cookieBtn {
+    display: inline-block;
+    min-width: 47px;
+    min-height: 36px;
+    border-radius: 3px;
+    @include x-rem(font-size, 12px);
+    font-weight: 700;
+    line-height: 20px;
+    border: none;
+    @media screen and (max-width: $screen-xs) {
+      @include x-rem(font-size, 10px);
+      line-height: 17px;
+    }
+  }
+  &.show {
+    display: block;
+    border-top: 1px solid $silver;
+    + footer {
+      margin-bottom: 52px;
+      @media screen and (max-width: $screen-xs) {
+        margin-bottom: 107px;
+      }
+    }
+    &.cookie-top{
+      border-bottom: 1px solid $silver;
+      top: 0;
+      bottom: auto;
+    }
+    &.cookie-center{
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 75%;
+      height: fit-content;
+      z-index: 100000;
+      border: 1px solid $white-smoke;
+      border-radius: 15px;
+      @media screen and (max-width: $screen-xs) {
+        width: 90%;
+      }
+    }
+  }
+}
+*/
+.buorg-test,
+.buorg-test-sub {
+  display: none !important;
+}

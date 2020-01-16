@@ -1,0 +1,71 @@
+@import "../_bootstrap-sass/scss/bootstrap";
+@import "variables";
+@import "mixins";
+@import "warnings";
+
+@import "glyphs";
+@import "sprite";
+@import "base_structure";
+@import "table";
+@import "tooltip";
+@import "button";
+@import "checkbox";
+@import "radio";
+@import "date-picker";
+@import "form";
+@import "standard-content";
+@import "print_bootstrap";
+@import "print";
+
+a{
+  &.skip-content {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+    color: $dark-gray;
+    &:focus {
+      width: auto;
+      height: auto;
+      padding: 9px 10px;
+      border: 1px solid;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 9999999;
+      outline: none;
+    }
+  }
+  &.external-link{
+    position: relative;
+    padding-right: 15px;
+    &:after{
+      position: absolute;
+      font-family: "Glyphicons Halflings";
+      content: "\e066";
+      line-height: 1;
+      @include x-rem(font-size, 12px);
+      width: 12px;
+      height: 12px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
+
+.skiptarget {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+//Import all plugins
+@import "plugins";
+@import "kentico_form";
+@import "animation";

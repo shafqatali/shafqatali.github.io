@@ -1,0 +1,33 @@
+cookies:
+ message: <strong>Cookies:</strong> By Using this website, you agree to the use of cookies in accordance with the Cookie Policy. For more information on cookies see our
+ linkLabel: Cookie Policy
+ linkUrl: '#/'
+ buttonText: Ok
+checkboxes:
+- name: Compulsory
+  value: Compulsory
+  label: Compulsory
+  class: cookie-checkbox
+  checked: true
+  disbaled: true
+- name: Analytics
+  value: Analytics
+  label: Analytics
+  class: cookie-checkbox
+- name: Performance
+  value: Performance
+  label: Performance
+  class: cookie-checkbox
+cookiePlacement: bottom
+error403:
+  errorCode: 403
+  heading: Permission denied
+  message: The request was denied due to insufficient permissions
+error404:
+  errorCode: 404
+  heading: Page not found
+  message: The page you are looking for cannot be found
+error502:
+  errorCode: 502
+  heading: Gateway error
+  message: The site is currently down

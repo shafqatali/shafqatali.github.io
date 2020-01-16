@@ -1,9 +1,134 @@
 ---
-layout: default
-title: Jekyll Boilerplate
+layout: global
+title: Pattern Library
+presentation: 'yes'
+###################################
+# This page shows link for all the pages in this project
+###################################
+separateTemplatePages: true
+TemplatePages:
+ - name: "standard-content.html"
 ---
 
+{% if site.data.settings.PatternLab == "yes" %}
+<!-- PATTERNLAB -->
+{% include pattern-lab.html %}
+<script type="text/javascript">
+    var isOnline = document.location.host.indexOf("localhost") == - 1;
+    if(isOnline === false){
+        //show test pages only on localhost
+        var items = document.querySelectorAll('.ds-main .nav-stacked a[href*="test-"]');
+        for(var i=0; i< items.length; i++){
+            items[i].classList.add("show-link");
+        }
+    }
+    if(isOnline){
+        //remove components with text "sprint-3"
+        var sprintTwo = document.querySelectorAll('li[id*="sprint-3"],a[href*="sprint-3"]');
+        for(var c=0; c< sprintTwo.length; c++){
+            sprintTwo[c].remove();
+        }
+    }
+    function loadAdditionalJs() {
+        downloadJS("js/scrollspy.min.js", function () {
+            $('body').scrollspy({
+                target: 'nav.ds-main',
+                offset: 70
+            });
 
-<h1>{{ page.title }}</h1>
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= 40) {
+                    $('nav.ds-main').removeClass('ds-top');
+                } else {
+                    $('nav.ds-main').addClass('ds-top');
+                }
+            });
 
-<p>Lorem ipsum</p>
+            $("li.ds-group").each(function () {
+                if ($(this).find(".ds-elements").length == 0) {
+                    $(this).addClass("just-heading");
+                    $(this).find(".ds-title").removeClass("ds-code-title");
+                }
+            });
+
+            $("li.ds-group .ds-code-title").each(function () {
+                var colorText = $(this).text().toLowerCase();
+                //console.log(colorText);
+                if(colorText.indexOf("colors") >=0 ||
+                   colorText.indexOf("colours") >=0 ||
+                   colorText.indexOf("fonts") >=0){
+                    $(this).parents('.ds-group').addClass("just-heading");
+                }
+            });
+
+            //.ds-code-title
+            $(".ds-view-code").click(function () {
+                var liId = $(this).parents('.ds-group').attr('id');
+                location.hash = liId;
+                $(this).parent().siblings(".ds-the-code").toggle("fast");
+                $(this).parent().find("i").toggleClass("glyphicon glyphicon-circle-arrow-down").toggleClass("glyphicon glyphicon-circle-arrow-right");
+            });
+            $('li[id*="not-visible"]').addClass("d-none");
+        });
+    }
+</script>
+<!-- /PATTERNLAB -->
+{% else %}
+<!-- BASE TEMPLATE -->
+<h1 class="ds-sandbox-title">UI Development</h1>
+<h2 class="ds-sandbox-title">HTML Assets</h2>
+<nav class="ds-widgets-list">
+    <div class="container">
+        <ul class="flex-column">
+            {% assign pluginsCount = site.data.plugins.items | size %}
+            {% assign pages = site.html_pages | sort: 'path' %}
+
+            {% for file in pages %}
+
+            {% assign filteredList = site.data.config.excludePagesFromIndexList | where:"name", file.path %}
+            {% assign filterCount = filteredList | size %}
+
+            {% if page.separateTemplatePages == true %}
+            {% assign templateList = page.TemplatePages | where:"name", file.path %}
+            {% assign templateCount = templateList | size %}
+            {% else %}
+            {% assign templateCount = 0 %}
+            {% endif %}
+
+            {% if filterCount == 0 and templateCount == 0 %}
+
+            {% assign page-name = file.path | replace: '.html', '' | replace: '-', ' '%}
+
+            {% assign widgetsClass = '' %}
+            {% if page-name == 'widgets' and pluginsCount == 0 %}
+            {% assign widgetsClass = ' d-none' %}
+            {% endif %}
+
+            <li class="nav-item {{widgetsClass}}"><a class="nav-link" href="{{ file.path }}">{{ page-name | capitalize }}</a></li>
+
+            {% endif %}
+            {% endfor %}
+
+            {% if page.separateTemplatePages == true %}
+            <!-- LIST Base template pages -->
+            <li style="list-style: none;"><br/><b>HTML pages from Base template</b><br/><br/></li>
+
+            {% for file in pages %}
+
+            {% assign templateList = page.TemplatePages | where:"name", file.path %}
+            {% assign templateCount = templateList | size %}
+
+            {% if templateCount == 1 %}
+            {% assign page-name = file.path | replace: '.html', '' | replace: '-', ' '%}
+            {% assign page-name = page-name | replace: 'bs ', 'Bootstrap '%}
+
+            <li class="nav-item"><a class="nav-link" href="{{ file.path }}">{{ page-name | capitalize }}</a></li>
+
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+<!-- /BASE TEMPLATE -->
+{% endif %}

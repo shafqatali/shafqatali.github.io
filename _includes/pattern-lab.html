@@ -1,0 +1,163 @@
+{% comment %}
+addLinkForAllPages: can have only one from this 'yes','no'
+{% endcomment %}
+{% assign addLinkForAllPages = "no" %}
+<header class="ds-header-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <h1>Arekibo Base Template 2019</h1>
+                <p class="lead">Based on Pattern Lab and built using Jekyll 3, Bootstrap 4 and Gulp.</p>
+
+            </div>
+        </div>
+    </div>
+</header>
+<content class="ds-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <nav id="nav" class="ds-main ds-top">
+                    <ul id="sidebar" class="nav nav-stacked">
+                        {% for collection in site.collections %}
+                        {% if collection.label != "posts" %}
+                        <li class="parent"><a href="#{{ collection.label }}">{{ collection.label | split: '00-' | last | upcase  }}</a>
+                            <ul class="nav nav-stacked">
+                                {% for folder in site.[collection.label] %}
+
+                                {% assign titleValue = folder.title %}
+                                {% if titleValue != 'n/a' %}
+                                <li class="sub-parent">
+                                    <a href="#p-{{ folder.title | replace:' ','-' | downcase  }}-{{ collection.label }}">
+                                        {{ folder.title }}
+                                    </a>
+                                </li>
+                                {% endif %}
+
+                                {% endfor %}
+
+                            </ul>
+                          </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+
+                    <ul style="margin-top: 30px;" class="nav nav-stacked">
+                        <li class="parent"><a style="color: #000;"><b>Pages</b></a></li>
+
+                        {% assign pluginsCount = site.data.plugins.items | size %}
+                        {% assign pages = site.html_pages | sort: 'path' %}
+
+                        {% for file in pages %}
+
+                        {% assign filteredList = site.data.config.excludePagesFromIndexList | where:"name", file.path %}
+                        {% assign filterCount = filteredList | size %}
+
+                        {% if page.separateTemplatePages == true %}
+                        {% assign templateList = page.TemplatePages | where:"name", file.path %}
+                        {% assign templateCount = templateList | size %}
+                        {% else %}
+                        {% assign templateCount = 0 %}
+                        {% endif %}
+
+                        {% if filterCount == 0 and templateCount == 0 %}
+
+                        {% assign page-name = file.path | replace: '.html', '' | replace: '-', ' '%}
+
+                        {% assign widgetsClass = '' %}
+                        {% if page-name == 'widgets' and pluginsCount == 0 %}
+                        {% assign widgetsClass = ' d-none' %}
+                        {% endif %}
+
+                        <!--<li class="parent {{widgetsClass}}"><a href="{{ file.path }}">{{ page-name | capitalize }}</a></li>-->
+
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if page.separateTemplatePages == true %}
+                        <!-- LIST Base template pages -->
+                        <!--<li class="parent" style="list-style: none;"><br/><b>HTML pages from Base template</b><br/><br/></li>-->
+
+                        {% assign filterCount = 1 %}
+                        {% assign listToCheck = page.TemplatePages %}
+                        {% if addLinkForAllPages == "yes" %}
+                        {% assign filterCount = 0 %}
+                        {% assign listToCheck = site.data.config.excludePagesFromIndexList %}
+                        {% endif %}
+
+                        {% for file in pages %}
+
+                        {% assign templateList = listToCheck | where:"name", file.path %}
+                        {% assign templateCount = templateList | size %}
+                        {% if templateCount == filterCount %}
+                        {% assign page-name = file.path | replace: '.html', '' | replace: '-', ' '%}
+                        {% assign page-name = page-name | replace: 'bs ', 'Bootstrap '%}
+
+                        <li class="parent"><a href="{{ file.path }}">{{ page-name | capitalize }}</a></li>
+
+                        {% endif %}
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-sm-10 ds-items-box">
+                <ul class="pattern-list pl-0">
+                    {% for collection in site.collections %}
+                    {% if collection.label != "posts" %}
+                    <hr>
+                    <h2 id="{{ collection.label }}">{{ collection.label | split: '00-' | last | upcase }}</h2>
+
+                    {% for folder in site.[collection.label] %}
+
+                    {% assign titleValue = folder.title %}
+                    {% assign titleText = '' %}
+
+                    {% if titleValue != 'n/a' %}
+                    {% assign titleText = titleValue %}
+                    {% elsif titleValue == 'n/a' %}
+                    {% assign titleText = folder.subtitle %}
+                    {% endif %}
+
+                    <li id="p-{{ titleText | replace:' ','-' | downcase  }}-{{ collection.label }}" class="ds-group">
+
+                        {% assign titleValue = folder.title %}
+                        {% if titleValue != 'n/a' %}
+                        <h3 class="ds-title ds-code-title">
+                            {{ folder.title }}
+                            <span class="ds-view-code">View code <i class="glyphicon glyphicon-circle-arrow-right"></i></span>
+                        </h3>
+                        {% endif %}
+
+                        {% assign subTitleSize = folder.subtitle.size %}
+                        {% if subTitleSize > 0 %}
+                        <h4 class="ds-sub-title ds-code-title">
+                            {{ folder.subtitle }}
+                            <span class="ds-view-code">View code <i class="glyphicon glyphicon-circle-arrow-right"></i></span>
+                        </h4>
+                        {% endif %}
+
+                        {% assign noteSize = folder.notes.size %}
+                        {% if noteSize > 0 %}
+                        <div class="ds-notes">{{ folder.notes }}</div>
+                        {% endif %}
+
+                        {% assign size = folder.description.size %}
+                        {% if size > 0 %}
+                        <p class="ds-description">{{ folder.description }}</p>
+                        {% endif %}
+                        <div class="ds-the-code">
+                            {% highlight html %}{{ folder.output }}{% endhighlight %}
+                        </div>
+
+                        {{ folder.output }}
+
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</content>

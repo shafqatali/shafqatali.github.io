@@ -1,1 +1,32 @@
-markdown: rdiscount
+# Name of your blog (this will show up at the top of your page and in the RSS feed)
+baseurl: /
+port: 4000
+#Enable the incremental build feature. Incremental build only re-builds posts and pages that have changed
+incremental: true
+
+#overwriten with Gulp
+# sass:
+#     sass_dir: _scss
+#     style: compressed
+
+exclude: ['.gitignore','*.scss','utilities', 'node_modules','gulp_config','Gemfile','package.json','package-lock.json',
+          'Gemfile.lock','gulpfile.js','*.md','folder-structure.png','gulpfile.js', 'BS-phone-desktop-config.json',
+          'libman.json']
+include: [ ]
+
+collections:
+  00-atoms:
+  00-molecules:
+  00-organisms:
+    
+###To minify HTML,CSS and Javascript remove commented lines with single '#'
+
+#exclude: [css/*-default.scss]
+#gems:
+#    - jekyll-minifier
+
+### Exclude files from processing - file name, glob pattern or array of file names and glob patterns
+### Exclude easyListSplitter.js from all folder(s) and files from locations folder because we get an error while minifying it
+
+#jekyll-minifier:
+#  exclude: ['*.scss','*.js','*/*/easyListSplitter.js','locations/*','gulpfile.js']

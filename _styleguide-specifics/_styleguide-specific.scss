@@ -1,0 +1,179 @@
+/*------------------------------------*\
+$PATTERN LAB-SPECIFIC STYLES
+\*------------------------------------*/
+/**
+* This stylesheet is for styles you want to include only when the interface is being viewed within Pattern Lab.
+* This is helpful for displaying demo styles for grids, animations, color swatches, etc
+* It's also helpful for overriding context-specific styles like fixed or absolutely positioned elements
+* These styles will not be your production CSS.
+*/
+/* Style Guide Interface Colors */
+.ds-top {
+  top: 100px !important;
+}
+/**
+* Nav
+*/
+nav.ds-main {
+  position: fixed;
+  top: 0;
+  margin: 0 0 0 -15px;
+  padding: 20px 20px 0 0 !important;
+  width: 200px;
+  font-size: 12px;
+  li.parent {
+    font-weight: bold;
+    display: block;
+    width: 100%;
+  }
+  .child {
+    margin-left: 10px;
+    font-weight: normal;
+  }
+  @media screen and (max-width: $screen-xs) {
+    display: none !important;
+  }
+}
+/* all links */
+.ds-main .nav > li > a {
+  border-left: 5px solid transparent;
+  padding: 4px 20px;
+  color: $sg-secondary;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+}
+/* nested links */
+.ds-main .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+/* active & hover links */
+.ds-main .nav > .active > a,
+.ds-main .nav > .parent-active > a,
+.ds-main .nav > li > a:hover,
+.ds-main .nav > li > a:focus {
+  border-left-color: $brand-color;
+  background-color: transparent;
+  text-decoration: none;
+  color: $brand-color;
+}
+/* all active links */
+.ds-main .nav > .active > a,
+.ds-main .nav > .parent-active > a,
+.ds-main .nav > .active:hover > a,
+.ds-main .nav > .active:focus > a {
+  font-weight: 700;
+}
+/* nested active links */
+.ds-main .nav .nav > .active > a,
+.ds-main .nav > .parent-active > a,
+.ds-main .nav .nav > .active:hover > a,
+.ds-main .nav .nav > .active:focus > a {
+  font-weight: 500;
+}
+/* hide inactive nested list */
+.ds-main .nav ul.nav {
+  display: none;
+}
+/* show active nested list */
+.ds-main .nav > .active > ul.nav {
+  display: block;
+}
+.ds-title {
+  margin: 20px 0;
+  background: $sg-tertiary;
+  cursor: pointer;
+  padding: 10px;
+  text-transform: none;
+  color: $sg-primary;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  border-left: 5px solid;
+  text-transform: capitalize;
+  + .ds-notes {
+    //margin-top: -20px;
+    padding: 20px 10px;
+    border: 1px solid $sg-tertiary;
+    border-left: 5px solid;
+  }
+}
+.ds-sub-title {
+  margin: 20px 0 !important;
+  background: $sg-light;
+  //cursor: pointer;
+  padding: 10px;
+  text-transform: none;
+  color: $sg-primary;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  border-left: 3px solid;
+  + .ds-notes {
+    margin-top: -20px;
+    padding: 10px;
+    border: 1px solid $sg-light;
+    border-left: 3px solid;
+  }
+}
+.ds-title:hover {
+  background: $sg-tertiary;
+}
+.ds-the-code {
+  display: none;
+}
+.ds-view-code {
+  font-size: 10px;
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.ds-description {
+  font-size: 14px;
+}
+.ds-group {
+  list-style: none;
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  fieldset {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+        min-height: 25px;
+      }
+    }
+  }
+  &.just-heading {
+    .ds-sub-title,
+    .ds-title {
+      cursor: default;
+      margin-bottom: 0;
+      span.ds-view-code {
+        display: none;
+      }
+    }
+  }
+}
+
+.ds-content-wrapper,
+.ds-header-wrapper {
+  @media screen and (max-width: $screen-xs) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.ds-main .nav-stacked a[href*="test-"]{
+  display: none;
+  &.show-link {
+    display: inline-block;
+  }
+}
