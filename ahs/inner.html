@@ -29,7 +29,7 @@
 <div class="br-box">
     <div class="container solid-bg">
         <div class="row">
-            <button type="button" class="menu-button">
+            <button type="button" class="menu-button" data-target="#rightMenu" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
                 <span class="sr-only">menu icon</span>
                 <span class="menu-icon"></span>
             </button>
@@ -41,7 +41,7 @@
     <div class="container bg-white">
         <div class="row">
             <div class="col-sm-2">
-                <ul class="right-menu">
+                <ul id="rightMenu" class="right-menu">
                     <li class="active"><a href="#">Projects</a></li>
                     <li><a href="#">Files</a></li>
                     <li><a href="#">My Account</a></li>
@@ -133,6 +133,37 @@
                             <td>Z individuals</td>
                             <td>Life Styles Inventory</td>
                         </tr>
+                        <tr>
+                            <td>Jul 23, 2019</td>
+                            <td>Callaghan Innovation individuals
+                            </td>
+                            <td>Life Styles Inventory</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 2, 2019</td>
+                            <td>Evolve systems groups</td>
+                            <td>Group Styles Inventory</td>
+                        </tr>
+                        <tr>
+                            <td>Sep 12, 2019</td>
+                            <td>Callaghan Innovation service styles</td>
+                            <td>Customer Service Styles Inventory</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 16, 2019</td>
+                            <td>Department of Internal Affairs leadership</td>
+                            <td>Leadership/Impact</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 6, 2019</td>
+                            <td>Department of Internal Affairs leadership</td>
+                            <td>Leadership Work Styles</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 1, 2019</td>
+                            <td>Z individuals</td>
+                            <td>Life Styles Inventory</td>
+                        </tr>
                         </tbody>
                         <tfoot>
                         <tr>
@@ -196,6 +227,10 @@
         for (var i = 0; i < dds.length; i++) {
             easydropdown(dds[i], bindOptions);
         }
+
+        $("#dropdownMenuButton").click(function () {
+            $("#rightMenu").toggleClass("active");
+        });
     })
 </script>
 </body>

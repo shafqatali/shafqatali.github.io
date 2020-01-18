@@ -66,7 +66,7 @@
 
                         <div class="form-group" data-sf-role="text-field-container">
 
-                            <div class="input-group flex-nowrap">
+                            <div class="password-group input-group flex-nowrap">
                                 <label class="sr-only" for="Textbox-2">Untitled</label>
                                 <input id="Textbox-2" type="password" class="form-control" aria-describedby="addon-wrapping"
                                        name="TextFieldController" placeholder="Password" value=""
@@ -152,6 +152,10 @@
         for (var i = 0; i < dds.length; i++) {
             easydropdown(dds[i], bindOptions);
         }
+
+        $("#dropdownMenuButton").click(function () {
+            $("#rightMenu").toggleClass("active");
+        });
     })
 </script>
 </body>
