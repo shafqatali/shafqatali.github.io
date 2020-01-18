@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div class="container solid-bg">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="header">
+            <img src="images/logo-other.png" alt="ahs logo"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="img-bg">
+    <div class="container solid-bg inner-box">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="hd">
+                    <h1>WELCOME TO<br>YOUR HS PORTAL</h1>
+                    <p>PLEASE SIGN INTO THE PORTAL BY ENTERING<br>YOUR EMAIL AND PASSWORD</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 login-form">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="sr-only" for="Textbox-1">Untitled</label>
+                            <input id="Textbox-1" type="text" class="form-control" name="TextFieldController_0"
+                                   placeholder="caitlin@human-synergistics.com.au" value="" aria-required="true"
+                                   data-sf-role="text-field-input" required="required"
+                                   aria-describedby="TextboxErrorMessage-1">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group" data-sf-role="dropdown-list-field-container">
+                            <label class="sr-only" for="Dropdown-1">
+                                Select a choice
+                            </label>
+                            <select id="Dropdown-1" data-sf-role="dropdown-list-field-select"
+                                    name="DropdownListFieldController" class="form-control"
+                                    aria-required="false" aria-describedby="DropdownErrorMessage-1">
+                                <option selected="" value="- Select -">- Select -</option>
+                                <option value="First Choice">First Choice</option>
+                                <option value="Second Choice">Second Choice</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+
+                        <div class="form-group" data-sf-role="text-field-container">
+
+                            <div class="input-group flex-nowrap">
+                                <label class="sr-only" for="Textbox-2">Untitled</label>
+                                <input id="Textbox-2" type="password" class="form-control" aria-describedby="addon-wrapping"
+                                       name="TextFieldController" placeholder="Password" value=""
+                                       aria-required="true" data-sf-role="text-field-input" required="required"
+                                       aria-describedby="TextboxErrorMessage-2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="addon-wrapping">
+                                        <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="customCheck1">
+  <label class="custom-control-label" for="customCheck1">Show</label>
+</div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="custom_btn form-group">
+                            <button type="submit" class="sf-SubmitButton btn btn-primary d-block">Sign in</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-links">
+                    <ul><li><a href="#">FORGET PASSWORD</a></li><li><a href="#">RESET PASSWORD</a></li></ul></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="container solid-bg">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="foo">
+                    <ul>
+                        <li><a href="#">REQUEST SUPPORT</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
+                    </ul>
+                    <p>Human Synergistics Internagtional<br>Copyright@2020<br>All Right Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<script>
+    $(document).ready(function () {
+       $("#customCheck1").click(function () {
+           console.log('checkbox clicked');
+           if($(this).prop("checked")){
+               $('label[for="customCheck1"]').text("Hide");
+               $('#Textbox-2').attr("type","text");
+           }else {
+               $('label[for="customCheck1"]').text("Show");
+               $('#Textbox-2').attr("type","password");
+           }
+       })
+    });
+</script>
+</div>
+</body>
+</html>
