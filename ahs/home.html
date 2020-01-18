@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Login page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/easydropdown.js"></script>
 </head>
 <body>
 <div id="wrapper">
     <div class="container solid-bg">
     <div class="row">
-        <div class="col-lg-8 offset-lg-2">
+        <div class="col-sm-8 offset-sm-2">
             <div class="header">
-            <img src="images/logo-other.png" alt="ahs logo"/>
+                <a href="index.html"><img src="images/logo-other.png" alt="ahs logo"/></a>
             </div>
         </div>
     </div>
@@ -23,7 +27,7 @@
 <div class="img-bg">
     <div class="container solid-bg inner-box">
         <div class="row">
-            <div class="col-lg-8 offset-lg-2">
+            <div class="col-sm-8 offset-sm-2">
                 <div class="hd">
                     <h1>WELCOME TO<br>YOUR HS PORTAL</h1>
                     <p>PLEASE SIGN INTO THE PORTAL BY ENTERING<br>YOUR EMAIL AND PASSWORD</p>
@@ -31,9 +35,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 offset-lg-2 login-form">
+            <div class="col-sm-8 offset-sm-2 login-form">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
                         <div class="form-group">
                             <label class="sr-only" for="Textbox-1">Untitled</label>
                             <input id="Textbox-1" type="text" class="form-control" name="TextFieldController_0"
@@ -42,7 +46,7 @@
                                    aria-describedby="TextboxErrorMessage-1">
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
                         <div class="form-group" data-sf-role="dropdown-list-field-container">
                             <label class="sr-only" for="Dropdown-1">
                                 Select a choice
@@ -58,7 +62,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
 
                         <div class="form-group" data-sf-role="text-field-container">
 
@@ -79,21 +83,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-4">
                         <div class="custom_btn form-group">
                             <button type="submit" class="sf-SubmitButton btn btn-primary d-block">Sign in</button>
                         </div>
                     </div>
                 </div>
-                <div class="form-links">
-                    <ul><li><a href="#">FORGET PASSWORD</a></li><li><a href="#">RESET PASSWORD</a></li></ul></div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-links">
+                            <ul><li><a href="#">FORGET PASSWORD</a></li><li><a href="#">RESET PASSWORD</a></li></ul></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="footer">
     <div class="container solid-bg">
         <div class="row">
-            <div class="col-lg-8 offset-lg-2">
+            <div class="col-sm-8 offset-sm-2">
                 <div class="foo">
                     <ul>
                         <li><a href="#">REQUEST SUPPORT</a></li>
@@ -123,5 +131,28 @@
     });
 </script>
 </div>
+<script>
+    var bindOptions = {
+        behavior: {
+            clampMaxVisibleItems: true,
+            closeOnSelect: true,
+            openOnFocus: true,
+            showPlaceholderWhenOpen: false,
+            liveUpdates: true,
+            loop: true,
+            maxVisibleItems: 10,
+            useNativeUiOnMobile: true,
+        },
+        classNames: {
+            root: "edd-root form-control"
+        }
+    };
+    $(document).ready(function () {
+        var dds = document.querySelectorAll('select');
+        for (var i = 0; i < dds.length; i++) {
+            easydropdown(dds[i], bindOptions);
+        }
+    })
+</script>
 </body>
 </html>

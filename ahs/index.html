@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/easydropdown.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -16,12 +20,38 @@
 </div>
 <div class="img-bg">
     <div class="container solid-bg inner-box">
-
+        <ul>
+            <li><a href="home.html">Login Page</a></li>
+            <li><a href="inner.html">Projects Listing</a></li>
+        </ul>
     </div>
     <div class="footer">
         <div class="container solid-bg"></div>
     </div>
 </div>
 </div>
+<script>
+    var bindOptions = {
+        behavior: {
+            clampMaxVisibleItems: true,
+            closeOnSelect: true,
+            openOnFocus: true,
+            showPlaceholderWhenOpen: false,
+            liveUpdates: true,
+            loop: true,
+            maxVisibleItems: 10,
+            useNativeUiOnMobile: true,
+        },
+        classNames: {
+            root: "edd-root form-control"
+        }
+    };
+    $(document).ready(function () {
+        var dds = document.querySelectorAll('select');
+        for (var i = 0; i < dds.length; i++) {
+            easydropdown(dds[i], bindOptions);
+        }
+    })
+</script>
 </body>
 </html>

@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/easydropdown.js"></script>
 </head>
 <body>
 <div id="wrapper">
     <div class="inner-bg">
     <div class="container solid-bg">
         <div class="row">
-            <div class="col-lg-8 offset-lg-2">
+            <div class="col-sm-8 offset-sm-2">
                 <div class="header">
-                    <img src="images/logo-other.png" alt="ahs logo"/>
+                    <a href="index.html"><img src="images/logo-other.png" alt="ahs logo"/></a>
                 </div>
             </div>
         </div>
@@ -36,37 +40,35 @@
 <div class="grey-box">
     <div class="container bg-white">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-sm-2">
                 <ul class="right-menu">
                     <li class="active"><a href="#">Projects</a></li>
                     <li><a href="#">Files</a></li>
                     <li><a href="#">My Account</a></li>
                 </ul>
             </div>
-            <div class="col-lg-6 offset-lg-1 listing-form">
+            <div class="col-sm-6 offset-sm-1 listing-form">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                         <div class="form-group" data-sf-role="dropdown-list-field-container">
                             <label class="" for="Dropdown-1">
                                 status
                             </label>
                             <select id="Dropdown-1" data-sf-role="dropdown-list-field-select"
-                                    name="DropdownListFieldController" class="form-control"
-                                    aria-required="false" aria-describedby="DropdownErrorMessage-1">
+                                    name="DropdownListFieldController" class="form-control" >
                                 <option selected="" value="- Select -">- Select -</option>
                                 <option value="First Choice">First Choice</option>
                                 <option value="Second Choice">Second Choice</option>
                             </select>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                         <div class="form-group" data-sf-role="dropdown-list-field-container">
                             <label class="" for="Dropdown-2">
                                 company
                             </label>
                             <select id="Dropdown-2" data-sf-role="dropdown-list-field-select"
-                                    name="DropdownListFieldController" class="form-control"
-                                    aria-required="false" aria-describedby="DropdownErrorMessage-1">
+                                    name="DropdownListFieldController" class="form-control" >
                                 <option selected="" value="- Select -">- Select -</option>
                                 <option value="First Choice">First Choice</option>
                                 <option value="Second Choice">Second Choice</option>
@@ -75,14 +77,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-sm-12">
                         <div class="form-group" data-sf-role="dropdown-list-field-container">
-                            <label class="" for="Dropdown-1">
+                            <label class="" for="Dropdown-3">
                                 instrument
                             </label>
                             <select id="Dropdown-3" data-sf-role="dropdown-list-field-select"
-                                    name="DropdownListFieldController" class="form-control"
-                                    aria-required="false" aria-describedby="DropdownErrorMessage-1">
+                                    name="DropdownListFieldController" class="form-control">
                                 <option selected="" value="- Select -">- Select -</option>
                                 <option value="First Choice">First Choice</option>
                                 <option value="Second Choice">Second Choice</option>
@@ -136,8 +137,8 @@
                         <tfoot>
                         <tr>
                             <td colspan="3">
-                                <label for="exampleFormControlSelect1">Items per page</label>
-                                <select class="form-control" id="exampleFormControlSelect1">
+                                <label for="pagingList">Items per page</label>
+                                <select class="form-control" id="pagingList">
                                     <option>10</option>
                                     <option selected>20</option>
                                     <option>30</option>
@@ -158,7 +159,7 @@
     <div class="footer">
     <div class="container solid-bg">
         <div class="row">
-            <div class="col-lg-8 offset-lg-2">
+            <div class="col-sm-8 offset-sm-2">
                 <div class="foo">
                     <ul>
                         <li><a href="#">REQUEST SUPPORT</a></li>
@@ -174,5 +175,28 @@
 </div>
 </div>
 </div>
+<script>
+    var bindOptions = {
+        behavior: {
+            clampMaxVisibleItems: true,
+            closeOnSelect: true,
+            openOnFocus: true,
+            showPlaceholderWhenOpen: false,
+            liveUpdates: true,
+            loop: true,
+            maxVisibleItems: 10,
+            useNativeUiOnMobile: true,
+        },
+        classNames: {
+            root: "edd-root form-control"
+        }
+    };
+    $(document).ready(function () {
+        var dds = document.querySelectorAll('select');
+        for (var i = 0; i < dds.length; i++) {
+            easydropdown(dds[i], bindOptions);
+        }
+    })
+</script>
 </body>
 </html>
