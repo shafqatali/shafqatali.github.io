@@ -26,6 +26,9 @@
   @media screen and (max-width: 1365px) {
     .img-bg {
       height: 794px; } }
+  @media screen and (max-height: 768px) {
+    .img-bg {
+      min-height: 600px; } }
 
 .solid-bg {
   background-color: rgba(13, 62, 155, 0.36); }
@@ -55,7 +58,7 @@
   width: 100%; }
 
 .hd {
-  padding-top: 30px;
+  padding-top: 50px;
   margin-bottom: 30px; }
   .hd h1 {
     color: #fff;
