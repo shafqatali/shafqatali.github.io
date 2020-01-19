@@ -219,6 +219,9 @@ body {
   position: relative;
   padding-bottom: 144px;
   height: auto; }
+  @media screen and (max-height: 768px) {
+    .grey-box {
+      min-height: 700px; } }
   @media screen and (min-width: 1400px) {
     .grey-box {
       height: calc(100vh - 196px); } }
