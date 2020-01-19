@@ -218,10 +218,10 @@ body {
   background-color: #ddd;
   position: relative;
   padding-bottom: 144px;
-  /*height: calc(100vh - 196px);
-  @media screen and (max-width: 1365px) {
-    height: auto;
-  }*/ }
+  height: auto; }
+  @media screen and (min-width: 1400px) {
+    .grey-box {
+      height: calc(100vh - 196px); } }
   .grey-box .footer {
     background-color: #1a326b;
     position: absolute;
