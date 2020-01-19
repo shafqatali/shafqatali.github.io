@@ -217,7 +217,11 @@ body {
 .grey-box {
   background-color: #ddd;
   position: relative;
-  padding-bottom: 144px; }
+  padding-bottom: 144px;
+  /*height: calc(100vh - 196px);
+  @media screen and (max-width: 1365px) {
+    height: auto;
+  }*/ }
   .grey-box .footer {
     background-color: #1a326b;
     position: absolute;
@@ -231,7 +235,7 @@ body {
       background-color: rgba(255, 255, 255, 0.36); }
   .grey-box .bg-white {
     background-color: #ffffff;
-    min-height: 560px; }
+    min-height: 100%; }
 
 .menu-button {
   background-color: #020a2d;
@@ -499,5 +503,38 @@ body {
   opacity: 1; }
 .edd-body-scrollable.edd-body-at-top .edd-gradient-top, .edd-body-scrollable.edd-body-at-bottom .edd-gradient-bottom {
   opacity: 0; }
+
+table.scroll {
+  /* width: 100%; */
+  /* Optional */
+  /* border-collapse: collapse; */
+  border-spacing: 0; }
+  table.scroll tbody,
+  table.scroll thead {
+    display: block; }
+    table.scroll tbody tr th, table.scroll tbody tr td,
+    table.scroll thead tr th,
+    table.scroll thead tr td {
+      border-bottom: none; }
+      table.scroll tbody tr th:first-of-type, table.scroll tbody tr td:first-of-type,
+      table.scroll thead tr th:first-of-type,
+      table.scroll thead tr td:first-of-type {
+        width: 97px; }
+      table.scroll tbody tr th:nth-of-type(2), table.scroll tbody tr td:nth-of-type(2),
+      table.scroll thead tr th:nth-of-type(2),
+      table.scroll thead tr td:nth-of-type(2) {
+        width: 226px; }
+      table.scroll tbody tr th:nth-of-type(3), table.scroll tbody tr td:nth-of-type(3),
+      table.scroll thead tr th:nth-of-type(3),
+      table.scroll thead tr td:nth-of-type(3) {
+        width: 190px; }
+  table.scroll tbody {
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    height: 180px;
+    overflow-y: auto;
+    overflow-x: hidden; }
+  table.scroll tfoot tr td {
+    border-top: none; }
 
 /*# sourceMappingURL=main.css.map */
