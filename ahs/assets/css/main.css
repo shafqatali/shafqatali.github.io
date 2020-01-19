@@ -23,6 +23,9 @@
   height: calc(100vh - 107px);
   background: url("imgs/main-banner.jpg") no-repeat center top;
   background-size: cover; }
+  @media screen and (max-width: 1365px) {
+    .img-bg {
+      height: 794px; } }
 
 .solid-bg {
   background-color: rgba(13, 62, 155, 0.36); }
