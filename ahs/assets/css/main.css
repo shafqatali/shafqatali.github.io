@@ -225,13 +225,13 @@ body {
   background-color: #ddd;
   position: relative;
   padding-bottom: 144px;
-  height: auto; }
+  height: auto;
+  /*@media screen and (min-width: 1400px) {
+    height: calc(100vh - 165px);
+  }*/ }
   @media screen and (max-height: 768px) {
     .grey-box {
       min-height: 640px; } }
-  @media screen and (min-width: 1400px) {
-    .grey-box {
-      height: calc(100vh - 165px); } }
   .grey-box .footer {
     background-color: #1a326b;
     position: absolute;
@@ -545,7 +545,7 @@ table.scroll {
     overflow-y: auto;
     overflow-x: hidden;
     min-height: 180px;
-    height: calc(100vh - 630px); }
+    height: calc(100vh - 627px); }
   table.scroll tfoot tr td {
     border-top: none; }
 
