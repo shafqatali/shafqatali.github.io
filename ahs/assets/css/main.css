@@ -155,7 +155,6 @@
     background-color: #f1f1f2; }
     .listing-table table thead tr th {
       padding: 8px 15px;
-      white-space: nowrap;
       font-size: 12px;
       text-transform: uppercase;
       border-bottom: 1px solid #dadada; }
@@ -168,9 +167,8 @@
         border-top-right-radius: 6px; }
   .listing-table table tbody tr td {
     font-size: 12px;
-    white-space: nowrap; }
+    vertical-align: top; }
     .listing-table table tbody tr td:nth-of-type(2) {
-      white-space: normal;
       background-color: #d4deef;
       color: #1a326b;
       border-left: 1px solid #dadada;
@@ -530,15 +528,21 @@ table.scroll {
       table.scroll tbody tr th:first-of-type, table.scroll tbody tr td:first-of-type,
       table.scroll thead tr th:first-of-type,
       table.scroll thead tr td:first-of-type {
-        width: 97px; }
+        width: 97px;
+        min-width: 97px;
+        max-width: 97px; }
       table.scroll tbody tr th:nth-of-type(2), table.scroll tbody tr td:nth-of-type(2),
       table.scroll thead tr th:nth-of-type(2),
       table.scroll thead tr td:nth-of-type(2) {
-        width: 226px; }
+        width: 226px;
+        min-width: 226px;
+        max-width: 226px; }
       table.scroll tbody tr th:nth-of-type(3), table.scroll tbody tr td:nth-of-type(3),
       table.scroll thead tr th:nth-of-type(3),
       table.scroll thead tr td:nth-of-type(3) {
-        width: 190px; }
+        width: 190px;
+        min-width: 190px;
+        max-width: 190px; }
   table.scroll tbody {
     border-top: 1px solid #dadada;
     border-bottom: 1px solid #dadada;
