@@ -542,9 +542,10 @@ table.scroll {
   table.scroll tbody {
     border-top: 1px solid #dadada;
     border-bottom: 1px solid #dadada;
-    height: 180px;
     overflow-y: auto;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    min-height: 180px;
+    height: calc(100vh - 630px); }
   table.scroll tfoot tr td {
     border-top: none; }
 
