@@ -228,7 +228,7 @@ body {
   height: auto; }
   @media screen and (max-height: 768px) {
     .grey-box {
-      min-height: 700px; } }
+      min-height: 640px; } }
   @media screen and (min-width: 1400px) {
     .grey-box {
       height: calc(100vh - 165px); } }
@@ -245,7 +245,7 @@ body {
       background-color: rgba(255, 255, 255, 0.36); }
   .grey-box .bg-white {
     background-color: #ffffff;
-    min-height: 560px;
+    min-height: 490px;
     height: 100%; }
 
 .menu-button {
