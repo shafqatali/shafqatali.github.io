@@ -2,7 +2,7 @@ var pins = null;
 function bind_maps() {
     pins = locationsList.Markers;
     var count = 0;
-    $('.pin-details').hide().removeClass('d-none');
+    $('.annotated-bg').removeClass("show-details");
     $('.annotated-wrapper').each(function () {
         count += 1;
         var wrapperId = $(this).attr("id");
@@ -19,7 +19,7 @@ function bind_maps() {
     //bind click event for map pins
     $('.map-pins span').click(function () {
         var wrapperId = $(this).attr("data-parent");
-        $('#' + wrapperId + ' .pin-details').hide();
+        $('#' + wrapperId + ' .annotated-bg').removeClass("show-details");
         var dHref = $(this).attr('data-href');
         if (dHref.length > 0 && dHref != '#') {
             fetchPlaceData(wrapperId, dHref.replace('#', ''));
@@ -27,7 +27,7 @@ function bind_maps() {
     });
     //scroll to hashed pin
     if (window.location.hash.length > 0) {
-        $('.pin-details').hide();
+        $('.annotated-bg').removeClass("show-details");
         var hash = window.location.hash.replace('#', '');
         hash = hash.replace('/', '');
         if (hash.length) {
@@ -70,17 +70,18 @@ function fetchPlaceData(wrapperId, dPlace) {
         });
 
     var placeImage = '<img src="images/temple-zeus.jpg" alt="placeholder" />';
-    $('#' + wrapperId + ' .image').html(placeImage);
+    $('#' + wrapperId + ' .place-image').html(placeImage);
 
     $('#' + wrapperId + ' .name').html(place[0].Title);
     $('#' + wrapperId + ' .description').html(place[0].Info);
-    $('#' + wrapperId + ' .pin-details').show();
     scrolledToDetails(wrapperId);
 }
 
 function scrolledToDetails(wrapperId) {
     setTimeout(function () {
-        $('html, body').stop().animate({scrollTop: $('#' + wrapperId + ' .pin-details').offset().top}, 500);
+        $('html, body').stop().animate({scrollTop: $('#' + wrapperId + '').offset().top}, 250,"linear",function () {
+            $('#' + wrapperId + ' .annotated-bg').addClass("show-details");
+        });
     }, 500);
 }
 

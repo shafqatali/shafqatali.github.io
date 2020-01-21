@@ -8,5 +8,13 @@ $dark-gray: #4D4D4D;
 $silver: #C7C7CC; //#bababa;
 $white-smoke: #E5E5EA; //#f3f1f1;
 
+@mixin mxTransition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
 @import "structure";
 @import "skin";

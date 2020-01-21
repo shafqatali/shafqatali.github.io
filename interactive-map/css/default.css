@@ -5,41 +5,72 @@ we have to place the hex code of color after the last slash (/), It give a nice 
 */
 .annotated-wrapper {
   width: 960px;
-  margin: 0 auto;
-  min-height: 845px;
-  height: 845px;
-  max-height: 845px; }
+  margin: 0 auto; }
   .annotated-wrapper .annotated-bg {
-    display: flex;
-    height: 100%; }
+    min-height: 845px;
+    height: 845px;
+    max-height: 845px;
+    position: relative;
+    overflow: hidden; }
     .annotated-wrapper .annotated-bg .pins-wrapper {
       position: relative;
       height: 100%;
       width: 100%;
       overflow: hidden; }
-    .annotated-wrapper .annotated-bg .pins-wrapper .map-pins {
-      position: relative;
-      height: 100%; }
-      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner {
-        padding: 9px 21px;
-        position: relative; }
-        .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner:after {
+      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins {
+        z-index: 1;
+        position: relative;
+        height: 100%; }
+        .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner {
+          padding: 9px 21px;
+          position: relative; }
+          .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner:after {
+            position: absolute;
+            top: -15px;
+            left: -5px;
+            right: 0;
+            margin: auto;
+            width: 18px; }
+        .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-arrow {
+          display: none; }
+        .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker {
+          width: 32px;
+          height: 50px;
           position: absolute;
-          top: -15px;
-          left: -5px;
-          right: 0;
-          margin: auto;
-          width: 18px; }
-      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-arrow {
-        display: none; }
-      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker {
-        width: 32px;
-        height: 50px;
-        position: absolute;
-        left: 0;
-        top: 0; }
-  .annotated-wrapper .pin-details {
-    display: none; }
+          left: 0;
+          top: 0; }
+    .annotated-wrapper .annotated-bg .place-image,
+    .annotated-wrapper .annotated-bg .place-info {
+      position: absolute;
+      bottom: auto;
+      right: 0;
+      left: 0;
+      z-index: 9;
+      width: 100%;
+      transition: all 1s ease-in-out;
+      overflow: hidden; }
+    .annotated-wrapper .annotated-bg .place-image {
+      top: 0;
+      height: 544px;
+      transform: translateY(-544px); }
+    .annotated-wrapper .annotated-bg .place-info {
+      top: 544px;
+      height: 400px;
+      padding: 50px 50px;
+      transform: translateY(400px);
+      background-color: #000000; }
+      .annotated-wrapper .annotated-bg .place-info * {
+        color: #ffffff; }
+      .annotated-wrapper .annotated-bg .place-info .inner-wrapper {
+        width: 100%;
+        height: 245px;
+        overflow-y: auto; }
+    .annotated-wrapper .annotated-bg.show-details {
+      overflow: visible; }
+      .annotated-wrapper .annotated-bg.show-details .place-image,
+      .annotated-wrapper .annotated-bg.show-details .place-info {
+        transform: translateY(0);
+        transition: all 1s ease-in-out; }
 
 .annotated-wrapper .annotated-bg {
   background: url("imgs/maketa-short.jpg") no-repeat center center;
@@ -55,7 +86,7 @@ we have to place the hex code of color after the last slash (/), It give a nice 
       content: url("imgs/tooltip-arrow.png"); }
   .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker {
     background: url("imgs/white-marker.png") no-repeat center center;
-    z-index: 31;
+    z-index: 3;
     cursor: pointer; }
     .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:hover, .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:focus {
       background: url("imgs/hover-marker.png") no-repeat center center; }
