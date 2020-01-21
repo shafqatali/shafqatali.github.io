@@ -1,0 +1,12 @@
+/*
+For naming convention of color variable I have used this site
+https://www.htmlcsscolor.com/hex/262928
+we have to place the hex code of color after the last slash (/), It give a nice name for the color
+*/
+
+$dark-gray: #4D4D4D;
+$silver: #C7C7CC; //#bababa;
+$white-smoke: #E5E5EA; //#f3f1f1;
+
+@import "structure";
+@import "skin";

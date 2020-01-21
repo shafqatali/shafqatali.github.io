@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- SequenceSpeed: apo 0 mexri 1 -->
+
+<Data>
+	<MapImage><![CDATA[assets/images/maketa.jpg]]></MapImage>
+	<Markers>
+		<Marker>
+			<PosX>500</PosX>
+			<PosY>600</PosY>
+			<HoverInfo><![CDATA[ktirio 1]]></HoverInfo>
+			<Title><![CDATA[ktirio 1]]]></Title>
+			<FolderName length='143'><![CDATA[assets/politikoNosokomeio/]]></FolderName>
+			<Info><![CDATA[This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+
+Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+
+Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.]]></Info>
+		</Marker>
+		<Marker>
+			<PosX>100</PosX>
+			<PosY>900</PosY>
+			<HoverInfo><![CDATA[ktirio 1.5]]></HoverInfo>
+			<Title><![CDATA[ktirio 1.5]]]></Title>
+			<FolderName length='143'><![CDATA[assets/politikoNosokomeio/]]></FolderName>
+			<Info><![CDATA[This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. ]]></Info>
+		</Marker>
+		<Marker>
+			<PosX>1500</PosX>
+			<PosY>1600</PosY>
+			<HoverInfo><![CDATA[ktirio 2]]></HoverInfo>
+			<Title><![CDATA[ktirio 2]]></Title>
+			<FolderName length='143'><![CDATA[assets/politikoNosokomeio/]]></FolderName>
+			<Info><![CDATA[This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+
+Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+
+Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.]]></Info>
+		</Marker>
+		<Marker>
+			<PosX>1550</PosX>
+			<PosY>1620</PosY>
+			<HoverInfo><![CDATA[ktirio 2 kai miso]]></HoverInfo>
+			<Title><![CDATA[ktirio 2 kai miso]]></Title>
+			<FolderName length='143'><![CDATA[assets/politikoNosokomeio/]]></FolderName>
+			<Info><![CDATA[This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. ]]></Info>
+		</Marker>
+		<Marker>
+			<PosX>1000</PosX>
+			<PosY>1200</PosY>
+			<HoverInfo><![CDATA[ktirio 3]]></HoverInfo>
+			<Title><![CDATA[ktirio 3]]></Title>
+			<FolderName length='143'><![CDATA[assets/politikoNosokomeio/]]></FolderName>
+			<Info><![CDATA[This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+
+Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+
+Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.]]></Info>
+		</Marker>
+		<Marker>
+			<PosX>2200</PosX>
+			<PosY>200</PosY>
+			<HoverInfo><![CDATA[Αγαλμα του Κολοκοτρώνη Αγαλμα του Κολοκοτρώνη]]></HoverInfo>
+			<Title><![CDATA[Αγαλμα Κολοκοτρώνη]]></Title>
+			<FolderName length='143'><![CDATA[assets/politikoNosokomeio/]]></FolderName>
+			<Info><![CDATA[This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+
+Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+
+Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.]]></Info>
+		</Marker>
+		<Marker>
+			<PosX>2800</PosX>
+			<PosY>1000</PosY>
+			<HoverInfo><![CDATA[5]]></HoverInfo>
+			<Title><![CDATA[Αγαλμα Κολοκοτρώνη 5]]></Title>
+			<FolderName length='143'><![CDATA[assets/politikoNosokomeio/]]></FolderName>
+			<Info><![CDATA[ 5 This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. 
+
+Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+
+Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.]]></Info>
+		</Marker>
+	</Markers>
+</Data>

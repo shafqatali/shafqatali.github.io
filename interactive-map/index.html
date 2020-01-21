@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>interactive-annotated-image-with-legend</title>
+    <!--<link href="css/interactive-annotated-image-with-legend-default.css" rel="stylesheet"/>-->
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/pins-data.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/plugin.js"></script>
+</head>
+<body>
+<div id="map683" class="annotated-wrapper">
+    <div class="annotated-bg">
+        <div class="pins-wrapper d-block">
+            <div class="map-pins"></div>
+        </div>
+    </div>
+    <div class="pin-details d-none">
+        <div class="image">&nbsp;</div>
+        <h1 class="name">&nbsp;</h1>
+        <div class="description">&nbsp;</div>
+    </div>
+</div>
+<!-- JS References block-->
+<!--we can write function name(s) that would  be called after loading all js files-->
+<script type="text/javascript">
+    let es6Supported = true;
+    let mobileSize = 640;
+    let desktop = true;
+    let mobile = false;
+    //this variable will be add from code behind in CMS System
+    const isLiveSite = true;
+
+    $(document).ready(function () {
+        bind_maps();
+    });
+</script>
+</body>
+</html>
+
+

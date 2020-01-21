@@ -1,0 +1,29 @@
+.annotated-wrapper {
+  .annotated-bg {
+    background: url("imgs/maketa-short.jpg") no-repeat center center;
+    background-size: cover;
+    .pins-wrapper .map-pins {
+      .tooltip-inner {
+        background-color: $white-smoke;
+        color: $dark-gray;
+        font-size: 0.875rem;
+        position: relative;
+        border: 1px solid $silver;
+        box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1);
+        &:after {
+          content: url("imgs/tooltip-arrow.png");
+        }
+      }
+      span {
+        &.marker {
+          background: url("imgs/white-marker.png") no-repeat center center;
+          z-index: 31;
+          cursor: pointer;
+          &:hover,&:focus {
+            background: url("imgs/hover-marker.png") no-repeat center center;
+          }
+        }
+      }
+    }
+  }
+}

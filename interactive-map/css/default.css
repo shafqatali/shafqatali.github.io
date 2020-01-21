@@ -1,0 +1,61 @@
+/*
+For naming convention of color variable I have used this site
+https://www.htmlcsscolor.com/hex/262928
+we have to place the hex code of color after the last slash (/), It give a nice name for the color
+*/
+.annotated-wrapper {
+  width: 960px;
+  margin: 0 auto;
+  min-height: 845px;
+  height: 845px;
+  max-height: 845px; }
+  .annotated-wrapper .annotated-bg {
+    display: flex;
+    height: 100%; }
+    .annotated-wrapper .annotated-bg .pins-wrapper {
+      position: relative;
+      height: 100%; }
+    .annotated-wrapper .annotated-bg .pins-wrapper .map-pins {
+      position: relative;
+      height: 100%; }
+      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner {
+        padding: 9px 21px;
+        position: relative; }
+        .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner:after {
+          position: absolute;
+          top: -15px;
+          left: -5px;
+          right: 0;
+          margin: auto;
+          width: 18px; }
+      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-arrow {
+        display: none; }
+      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker {
+        width: 32px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: 0; }
+  .annotated-wrapper .pin-details {
+    display: none; }
+
+.annotated-wrapper .annotated-bg {
+  background: url("imgs/maketa-short.jpg") no-repeat center center;
+  background-size: cover; }
+  .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner {
+    background-color: #E5E5EA;
+    color: #4D4D4D;
+    font-size: 0.875rem;
+    position: relative;
+    border: 1px solid #C7C7CC;
+    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1); }
+    .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner:after {
+      content: url("imgs/tooltip-arrow.png"); }
+  .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker {
+    background: url("imgs/white-marker.png") no-repeat center center;
+    z-index: 31;
+    cursor: pointer; }
+    .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:hover, .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:focus {
+      background: url("imgs/hover-marker.png") no-repeat center center; }
+
+/*# sourceMappingURL=default.css.map */
