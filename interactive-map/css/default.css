@@ -14,7 +14,9 @@ we have to place the hex code of color after the last slash (/), It give a nice 
     height: 100%; }
     .annotated-wrapper .annotated-bg .pins-wrapper {
       position: relative;
-      height: 100%; }
+      height: 100%;
+      width: 100%;
+      overflow: hidden; }
     .annotated-wrapper .annotated-bg .pins-wrapper .map-pins {
       position: relative;
       height: 100%; }

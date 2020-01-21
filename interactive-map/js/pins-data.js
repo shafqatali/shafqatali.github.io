@@ -14,7 +14,7 @@ var locationsList = {
         },
         {
             "PosX": "100",
-            "PosY": "900",
+            "PosY": "670",
             "HoverInfo": "ktirio 1.5",
             "Title": "ktirio 1.5]",
             "FolderName": {
