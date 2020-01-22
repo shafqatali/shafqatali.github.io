@@ -5,11 +5,10 @@
     min-height: 755px;
     height: 755px;
     max-height: 755px;
-    overflow: hidden;
     position: relative;
     .pins-wrapper {
       position: relative;
-      height: 100%;
+      height: 755px;
       width: 100%;
       overflow: hidden;
       .map-pins {
@@ -43,21 +42,24 @@
       }
     }
     .place-info {
-      position: relative;
+      position: absolute;
       width: 100%;
-      height: 0;
+      height: 944px; //100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1100;
       .place-content,
       .place-image {
         position: absolute;
         bottom: auto;
         right: 0;
         left: 0;
-        z-index: 1008;
         width: 100%;
         transition: all 1.5s ease-in-out;
         overflow: hidden;
       }
       .back-button {
+        pointer-events: none;
         border: none;
         padding: 0;
         margin: 0;
@@ -65,7 +67,6 @@
         height: 50px;
         display: inline-block;
         background: url("imgs/back-arrow.png") no-repeat center center transparent;
-        z-index: 1009;
         opacity: 0;
         transition: all 1s ease-in-out;
         position: absolute;
@@ -79,7 +80,7 @@
         height: 544px;
       }
       .place-content {
-        bottom: -1155px;
+        bottom: -400px;
         height: 400px;
         padding: 50px 50px;
         background-color: #000000;
@@ -90,36 +91,25 @@
           width: 100%;
           height: 245px;
           overflow-y: auto;
-
+          @include styled-scrollbar(#e5e3d9, #93928d, #e5e3d9, 10px, 50px);
         }
       }
     }
     &.show-details {
       .place-info {
+        pointer-events: auto;
         .back-button {
           opacity: 1;
+          z-index: 1100;
+          pointer-events: auto;
         }
         .place-image,
         .place-content {
-          bottom: -944px;
+          bottom: 0; // -189px;
           transition: all 1s ease-in-out;
         }
         .place-image {
           top: 0;
-        }
-      }
-      &.hide-again {
-        overflow: hidden;
-        .place-info {
-          .back-button {
-            opacity: 0;
-          }
-          .place-image {
-
-          }
-          .place-content {
-
-          }
         }
       }
     }

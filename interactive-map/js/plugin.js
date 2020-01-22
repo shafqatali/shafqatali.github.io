@@ -28,10 +28,39 @@ function bind_maps() {
 
     $('#backButton').click(function (e) {
         e.preventDefault();
-        $('.annotated-bg.show-details').addClass("hide-again");
-        setTimeout(function () {
-            $('.annotated-bg.show-details').removeClass("show-details").removeClass("hide-again");
-        },1200);
+        $('.annotated-bg').removeClass("show-details");
+    });
+
+    $(document).keydown(function (e) {
+        var obj = (e.target ? e.target : e.srcElement);
+        var target = $(obj);
+        var isPinObj = checkRequiredParent(target,".marker");
+        var isParent = checkRequiredParent(target,".annotated-bg");
+        if(isPinObj || isParent) {
+            switch (e.keyCode) {
+                case 9://tab key
+                    break;
+                case 27:// ESC key
+                    e.preventDefault();
+                    $('.annotated-bg').removeClass("show-details");
+                    break;
+                case 38://Arrow Up
+                case 37://Arrow Left
+                case 39://Arrow Right
+                case 40://Arrow Down
+                    break;
+                case 32://SPACE key
+                    break;
+                case 13://ENTER key
+                    if(isPinObj){
+                        e.preventDefault();
+                        $(obj).trigger('click');
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
     });
     //scroll to hashed pin
     if (window.location.hash.length > 0) {
@@ -107,4 +136,35 @@ function slugifyString(str) {
         parsed = trimmed;
     }
     return parsed;
+}
+
+/*
+* This function will be use to check either the target has filter expression items as a parent or not
+*/
+function checkRequiredParent(target, filterExpression) {
+    //parents function return true if current element is child of any
+    var res = filterExpression.split(',');
+    var itemHasClass = false;
+    var itemHasId = false;
+    //search for either clicked item is required item
+    for (var i = 0; i < res.length; i++) {
+        //if found any one class than skip others
+        if (!itemHasClass) {
+            //remove . and # from string
+            var className = res[i].replace('.', '').replace('#', '');
+            itemHasClass = target.hasClass(className);
+        }
+        //if found a single id then skip others
+        if (!itemHasId) {
+            itemHasId = target.is(res[i]);
+        }
+    }
+    //search for clicked item has required item as parent
+    if (target.parents(filterExpression).length || itemHasClass || itemHasId) {
+        //console.log('filterExpression found or item has it as a class');
+        return true;
+    } else {
+        //console.log('filterExpression not found. other item');
+        return false;
+    }
 }

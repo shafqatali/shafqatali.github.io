@@ -10,11 +10,10 @@ we have to place the hex code of color after the last slash (/), It give a nice 
     min-height: 755px;
     height: 755px;
     max-height: 755px;
-    overflow: hidden;
     position: relative; }
     .annotated-wrapper .annotated-bg .pins-wrapper {
       position: relative;
-      height: 100%;
+      height: 755px;
       width: 100%;
       overflow: hidden; }
       .annotated-wrapper .annotated-bg .pins-wrapper .map-pins {
@@ -40,20 +39,23 @@ we have to place the hex code of color after the last slash (/), It give a nice 
           left: 0;
           top: 0; }
     .annotated-wrapper .annotated-bg .place-info {
-      position: relative;
+      position: absolute;
       width: 100%;
-      height: 0; }
+      height: 944px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1100; }
       .annotated-wrapper .annotated-bg .place-info .place-content,
       .annotated-wrapper .annotated-bg .place-info .place-image {
         position: absolute;
         bottom: auto;
         right: 0;
         left: 0;
-        z-index: 1008;
         width: 100%;
         transition: all 1.5s ease-in-out;
         overflow: hidden; }
       .annotated-wrapper .annotated-bg .place-info .back-button {
+        pointer-events: none;
         border: none;
         padding: 0;
         margin: 0;
@@ -61,7 +63,6 @@ we have to place the hex code of color after the last slash (/), It give a nice 
         height: 50px;
         display: inline-block;
         background: url("imgs/back-arrow.png") no-repeat center center transparent;
-        z-index: 1009;
         opacity: 0;
         transition: all 1s ease-in-out;
         position: absolute;
@@ -73,7 +74,7 @@ we have to place the hex code of color after the last slash (/), It give a nice 
         top: -544px;
         height: 544px; }
       .annotated-wrapper .annotated-bg .place-info .place-content {
-        bottom: -1155px;
+        bottom: -400px;
         height: 400px;
         padding: 50px 50px;
         background-color: #000000; }
@@ -83,18 +84,42 @@ we have to place the hex code of color after the last slash (/), It give a nice 
           width: 100%;
           height: 245px;
           overflow-y: auto; }
-    .annotated-wrapper .annotated-bg.show-details .place-info .back-button {
-      opacity: 1; }
-    .annotated-wrapper .annotated-bg.show-details .place-info .place-image,
-    .annotated-wrapper .annotated-bg.show-details .place-info .place-content {
-      bottom: -944px;
-      transition: all 1s ease-in-out; }
-    .annotated-wrapper .annotated-bg.show-details .place-info .place-image {
-      top: 0; }
-    .annotated-wrapper .annotated-bg.show-details.hide-again {
-      overflow: hidden; }
-      .annotated-wrapper .annotated-bg.show-details.hide-again .place-info .back-button {
-        opacity: 0; }
+          .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper::-webkit-scrollbar {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px; }
+          .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper::-webkit-scrollbar-button {
+            border-radius: 50px;
+            /*-webkit-box-shadow: inset 0 0 12px $thumbColor;
+            box-shadow: inset 0 0 12px $thumbColor;*/ }
+          .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px #e5e3d9;
+            box-shadow: inset 0 0 6px #e5e3d9;
+            border-radius: 50px; }
+          .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper::-webkit-scrollbar-track-piece {
+            background-color: #93928d; }
+          .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper::-webkit-scrollbar-thumb {
+            background-color: #e5e3d9;
+            border-radius: 50px; }
+          .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper::-webkit-scrollbar-corner {
+            border-radius: 50px;
+            /*-webkit-box-shadow: inset 0 0 12px $thumbColor;
+            box-shadow: inset 0 0 12px $thumbColor;*/ }
+          .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper::-webkit-resizer {
+            border-radius: 50px; }
+    .annotated-wrapper .annotated-bg.show-details .place-info {
+      pointer-events: auto; }
+      .annotated-wrapper .annotated-bg.show-details .place-info .back-button {
+        opacity: 1;
+        z-index: 1100;
+        pointer-events: auto; }
+      .annotated-wrapper .annotated-bg.show-details .place-info .place-image,
+      .annotated-wrapper .annotated-bg.show-details .place-info .place-content {
+        bottom: 0;
+        transition: all 1s ease-in-out; }
+      .annotated-wrapper .annotated-bg.show-details .place-info .place-image {
+        top: 0; }
 
 .annotated-wrapper .annotated-bg {
   background: url("imgs/maketa.jpg") no-repeat center center;
