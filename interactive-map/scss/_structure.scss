@@ -2,11 +2,11 @@
   width: 960px;
   margin: 0 auto;
   .annotated-bg {
-    min-height: 845px;
-    height: 845px;
-    max-height: 845px;
-    position: relative;
+    min-height: 755px;
+    height: 755px;
+    max-height: 755px;
     overflow: hidden;
+    position: relative;
     .pins-wrapper {
       position: relative;
       height: 100%;
@@ -42,50 +42,85 @@
         }
       }
     }
-    .place-image,
     .place-info {
-      position: absolute;
-      bottom: auto;
-      right: 0;
-      left: 0;
-      z-index: 9;
+      position: relative;
       width: 100%;
-      transition: all 1s ease-in-out;
-      overflow: hidden;
-    }
-    .place-image {
-      top: 0;
-      height: 544px;
-      transform: translateY(-544px);
-    }
-    .place-info {
-      top: 544px;
-      height: 400px;
-      padding: 50px 50px;
-      transform: translateY(400px);
-      background-color: #000000;
-      * {
-        color: #ffffff;
-      }
-      .inner-wrapper {
+      height: 0;
+      .place-content,
+      .place-image {
+        position: absolute;
+        bottom: auto;
+        right: 0;
+        left: 0;
+        z-index: 1008;
         width: 100%;
-        height: 245px;
-        overflow-y: auto;
+        transition: all 1.5s ease-in-out;
+        overflow: hidden;
+      }
+      .back-button {
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background: url("imgs/back-arrow.png") no-repeat center center transparent;
+        z-index: 1009;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 0;
+      }
+      .place-image {
+        top: -544px;
+        height: 544px;
+      }
+      .place-content {
+        bottom: -1155px;
+        height: 400px;
+        padding: 50px 50px;
+        background-color: #000000;
+        * {
+          color: #ffffff;
+        }
+        .inner-wrapper {
+          width: 100%;
+          height: 245px;
+          overflow-y: auto;
 
+        }
       }
     }
     &.show-details {
-      overflow: visible;
-      .place-image,
       .place-info {
-        transform: translateY(0);
-        transition: all 1s ease-in-out;
+        .back-button {
+          opacity: 1;
+        }
+        .place-image,
+        .place-content {
+          bottom: -944px;
+          transition: all 1s ease-in-out;
+        }
+        .place-image {
+          top: 0;
+        }
       }
-      .place-image {
+      &.hide-again {
+        overflow: hidden;
+        .place-info {
+          .back-button {
+            opacity: 0;
+          }
+          .place-image {
 
-      }
-      .place-info {
+          }
+          .place-content {
 
+          }
+        }
       }
     }
   }

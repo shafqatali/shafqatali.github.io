@@ -7,11 +7,11 @@ we have to place the hex code of color after the last slash (/), It give a nice 
   width: 960px;
   margin: 0 auto; }
   .annotated-wrapper .annotated-bg {
-    min-height: 845px;
-    height: 845px;
-    max-height: 845px;
-    position: relative;
-    overflow: hidden; }
+    min-height: 755px;
+    height: 755px;
+    max-height: 755px;
+    overflow: hidden;
+    position: relative; }
     .annotated-wrapper .annotated-bg .pins-wrapper {
       position: relative;
       height: 100%;
@@ -39,41 +39,65 @@ we have to place the hex code of color after the last slash (/), It give a nice 
           position: absolute;
           left: 0;
           top: 0; }
-    .annotated-wrapper .annotated-bg .place-image,
     .annotated-wrapper .annotated-bg .place-info {
-      position: absolute;
-      bottom: auto;
-      right: 0;
-      left: 0;
-      z-index: 9;
+      position: relative;
       width: 100%;
-      transition: all 1s ease-in-out;
-      overflow: hidden; }
-    .annotated-wrapper .annotated-bg .place-image {
-      top: 0;
-      height: 544px;
-      transform: translateY(-544px); }
-    .annotated-wrapper .annotated-bg .place-info {
-      top: 544px;
-      height: 400px;
-      padding: 50px 50px;
-      transform: translateY(400px);
-      background-color: #000000; }
-      .annotated-wrapper .annotated-bg .place-info * {
-        color: #ffffff; }
-      .annotated-wrapper .annotated-bg .place-info .inner-wrapper {
+      height: 0; }
+      .annotated-wrapper .annotated-bg .place-info .place-content,
+      .annotated-wrapper .annotated-bg .place-info .place-image {
+        position: absolute;
+        bottom: auto;
+        right: 0;
+        left: 0;
+        z-index: 1008;
         width: 100%;
-        height: 245px;
-        overflow-y: auto; }
-    .annotated-wrapper .annotated-bg.show-details {
-      overflow: visible; }
-      .annotated-wrapper .annotated-bg.show-details .place-image,
-      .annotated-wrapper .annotated-bg.show-details .place-info {
-        transform: translateY(0);
-        transition: all 1s ease-in-out; }
+        transition: all 1.5s ease-in-out;
+        overflow: hidden; }
+      .annotated-wrapper .annotated-bg .place-info .back-button {
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background: url("imgs/back-arrow.png") no-repeat center center transparent;
+        z-index: 1009;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 0; }
+      .annotated-wrapper .annotated-bg .place-info .place-image {
+        top: -544px;
+        height: 544px; }
+      .annotated-wrapper .annotated-bg .place-info .place-content {
+        bottom: -1155px;
+        height: 400px;
+        padding: 50px 50px;
+        background-color: #000000; }
+        .annotated-wrapper .annotated-bg .place-info .place-content * {
+          color: #ffffff; }
+        .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper {
+          width: 100%;
+          height: 245px;
+          overflow-y: auto; }
+    .annotated-wrapper .annotated-bg.show-details .place-info .back-button {
+      opacity: 1; }
+    .annotated-wrapper .annotated-bg.show-details .place-info .place-image,
+    .annotated-wrapper .annotated-bg.show-details .place-info .place-content {
+      bottom: -944px;
+      transition: all 1s ease-in-out; }
+    .annotated-wrapper .annotated-bg.show-details .place-info .place-image {
+      top: 0; }
+    .annotated-wrapper .annotated-bg.show-details.hide-again {
+      overflow: hidden; }
+      .annotated-wrapper .annotated-bg.show-details.hide-again .place-info .back-button {
+        opacity: 0; }
 
 .annotated-wrapper .annotated-bg {
-  background: url("imgs/maketa-short.jpg") no-repeat center center;
+  background: url("imgs/maketa.jpg") no-repeat center center;
   background-size: cover; }
   .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner {
     background-color: #E5E5EA;
@@ -86,7 +110,7 @@ we have to place the hex code of color after the last slash (/), It give a nice 
       content: url("imgs/tooltip-arrow.png"); }
   .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker {
     background: url("imgs/white-marker.png") no-repeat center center;
-    z-index: 3;
+    z-index: 2;
     cursor: pointer; }
     .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:hover, .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:focus {
       background: url("imgs/hover-marker.png") no-repeat center center; }

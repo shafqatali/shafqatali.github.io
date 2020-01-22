@@ -25,6 +25,14 @@ function bind_maps() {
             fetchPlaceData(wrapperId, dHref.replace('#', ''));
         }
     });
+
+    $('#backButton').click(function (e) {
+        e.preventDefault();
+        $('.annotated-bg.show-details').addClass("hide-again");
+        setTimeout(function () {
+            $('.annotated-bg.show-details').removeClass("show-details").removeClass("hide-again");
+        },1200);
+    });
     //scroll to hashed pin
     if (window.location.hash.length > 0) {
         $('.annotated-bg').removeClass("show-details");
@@ -74,7 +82,9 @@ function fetchPlaceData(wrapperId, dPlace) {
 
     $('#' + wrapperId + ' .name').html(place[0].Title);
     $('#' + wrapperId + ' .description').html(place[0].Info);
-    scrolledToDetails(wrapperId);
+
+    $('#' + wrapperId + ' .annotated-bg').addClass("show-details");
+    //scrolledToDetails(wrapperId);
 }
 
 function scrolledToDetails(wrapperId) {

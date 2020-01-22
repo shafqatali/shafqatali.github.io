@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>interactive-annotated-image-with-legend</title>
     <!--<link href="css/interactive-annotated-image-with-legend-default.css" rel="stylesheet"/>-->
-    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/default.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/pins-data.js"></script>
     <script src="js/jquery.min.js"></script>
@@ -18,15 +18,18 @@
 </div>
 <div id="map683" class="annotated-wrapper">
     <div class="annotated-bg">
-        <div class="place-image">&nbsp;</div>
+        <div class="place-info">
+            <button type="button" id="backButton" class="back-button"><span class="sr-only">back to list</span></button>
+            <div class="place-image">&nbsp;</div>
+            <div class="place-content">
+                <h1 class="name">&nbsp;</h1>
+                <div class="inner-wrapper">
+                    <div class="description">&nbsp;</div>
+                </div>
+            </div>
+        </div>
         <div class="pins-wrapper d-block">
             <div class="map-pins"></div>
-        </div>
-        <div class="place-info">
-            <h1 class="name">&nbsp;</h1>
-            <div class="inner-wrapper">
-                <div class="description">&nbsp;</div>
-            </div>
         </div>
     </div>
 </div>
