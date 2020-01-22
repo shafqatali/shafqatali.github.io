@@ -91,7 +91,6 @@
           width: 100%;
           height: 245px;
           overflow-y: auto;
-          @include styled-scrollbar(#e5e3d9, #93928d, #e5e3d9, 10px, 50px);
         }
       }
     }
@@ -113,5 +112,26 @@
         }
       }
     }
+  }
+}
+.annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #93928d;
+    background-color: #93928d;
+    border-radius: 10px;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #e5e3d9;
+    border-radius: 10px;
+  }
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #d3d3d3;
   }
 }

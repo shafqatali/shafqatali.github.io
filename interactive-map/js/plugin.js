@@ -112,16 +112,16 @@ function fetchPlaceData(wrapperId, dPlace) {
     $('#' + wrapperId + ' .name').html(place[0].Title);
     $('#' + wrapperId + ' .description').html(place[0].Info);
 
-    $('#' + wrapperId + ' .annotated-bg').addClass("show-details");
-    //scrolledToDetails(wrapperId);
+    //$('#' + wrapperId + ' .annotated-bg').addClass("show-details");
+    scrolledToDetails(wrapperId);
 }
 
 function scrolledToDetails(wrapperId) {
     setTimeout(function () {
-        $('html, body').stop().animate({scrollTop: $('#' + wrapperId + '').offset().top}, 250,"linear",function () {
+        $('html, body').stop().animate({scrollTop: $('.annotated-wrapper').offset().top}, 250,"linear",function () {
             $('#' + wrapperId + ' .annotated-bg').addClass("show-details");
         });
-    }, 500);
+    }, 250);
 }
 
 /*
