@@ -4,48 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>interactive-annotated-image-with-legend</title>
-    <!--<link href="css/interactive-annotated-image-with-legend-default.css" rel="stylesheet"/>-->
+    <!--bootstrap is loaded to style the page if it's removed it will not break the map styling -->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!--default.css has all styling for the map-->
     <link rel="stylesheet" href="css/default.css"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/pins-data.js"></script>
     <script src="js/jquery.min.js"></script>
+    <!--Only tooltips are dependent on bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/plugin.js"></script>
+    <!--contains the script to draw marker over the map -->
+    <script src="js/interactive-map.js"></script>
 </head>
 <body>
 <div class="pt-5 pb-5">
     <h1 class="text-uppercase text-center">museum of the city of athens</h1>
 </div>
-<div id="map683" class="annotated-wrapper">
+
+<!-- interactive map start from here -->
+<div id="interactive_map" class="annotated-wrapper">
     <div class="annotated-bg">
         <div class="place-info">
-            <button type="button" id="backButton" class="back-button"><span class="sr-only">back to list</span></button>
+            <button type="button" id="backToAllPlaces" class="back-button"><span class="sr-only">back to list</span></button>
             <div class="place-image">&nbsp;</div>
             <div class="place-content">
-                <h1 class="name">&nbsp;</h1>
+                <h1 class="name"></h1>
                 <div class="inner-wrapper">
-                    <div class="description">&nbsp;</div>
+                    <div class="description"></div>
                 </div>
             </div>
         </div>
-        <div class="pins-wrapper d-block">
+        <div class="pins-wrapper">
             <div class="map-pins"></div>
         </div>
     </div>
 </div>
+<!-- interactive map ends here -->
+
 <div class="pt-5"><p class="pt-5"><span class="sr-only">just a gap can be removed</span></p></div>
 <!-- JS References block-->
-<!--we can write function name(s) that would  be called after loading all js files-->
 <script type="text/javascript">
-    let es6Supported = true;
-    let mobileSize = 640;
-    let desktop = true;
-    let mobile = false;
-    //this variable will be add from code behind in CMS System
-    const isLiveSite = true;
-
     $(document).ready(function () {
-        bind_maps();
+        <!-- call the function that binds data for the map -->
+        bind_maps(locationsList.Markers);
     });
 </script>
 </body>

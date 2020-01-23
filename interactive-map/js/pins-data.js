@@ -59,7 +59,7 @@ var locationsList = {
         {
             "PosX": "220",
             "PosY": "200",
-            "HoverInfo": "Αγαλμα του Κολοκοτρώνη Αγαλμα του Κολοκοτρώνη",
+            "HoverInfo": "hover info goes here",
             "Title": "Αγαλμα Κολοκοτρώνη",
             "FolderName": {
                 "@length": "143",

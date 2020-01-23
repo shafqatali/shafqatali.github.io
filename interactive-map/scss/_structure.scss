@@ -1,12 +1,16 @@
 .annotated-wrapper {
   width: 960px;
   margin: 0 auto;
+  * {
+    box-sizing: border-box;
+  }
   .annotated-bg {
     min-height: 755px;
     height: 755px;
     max-height: 755px;
     position: relative;
     .pins-wrapper {
+      display: block;
       position: relative;
       height: 755px;
       width: 100%;

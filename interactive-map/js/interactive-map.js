@@ -1,124 +1,141 @@
-var pins = null;
-function bind_maps() {
-    pins = locationsList.Markers;
-    var count = 0;
-    $('.annotated-bg').removeClass("show-details");
-    $('.annotated-wrapper').each(function () {
-        count += 1;
-        var wrapperId = $(this).attr("id");
-        var filter = false;
-        drawPins(wrapperId, count, filter);
-    });
+var markers = null;
 
-    //bind tooltips
-    $('.annotated-bg [data-toggle="tooltip"]').tooltip();
-    $('body').tooltip({
-        selector: '[data-toggle=tooltip]'
-    });
-    
-    //bind click event for map pins
+function bind_maps(json_data) {
+    markers = json_data;
+    $('.annotated-bg').removeClass("show-details");
+
+    var wrapperId = "interactive_map";
+    drawPins(wrapperId);
+
+    //bind click event for map markers
     $('.map-pins span').click(function () {
         var wrapperId = $(this).attr("data-parent");
         $('#' + wrapperId + ' .annotated-bg').removeClass("show-details");
         var dHref = $(this).attr('data-href');
-        if (dHref.length > 0 && dHref != '#') {
+        if (dHref.length > 0 && dHref !== '#') {
             fetchPlaceData(wrapperId, dHref.replace('#', ''));
         }
     });
 
-    $('#backButton').click(function (e) {
+    //bind click event for button to close the place details
+    $('#backToAllPlaces').click(function (e) {
         e.preventDefault();
         $('.annotated-bg').removeClass("show-details");
     });
 
+    //handle keyboard events
     $(document).keydown(function (e) {
         var obj = (e.target ? e.target : e.srcElement);
         var target = $(obj);
-        var isPinObj = checkRequiredParent(target,".marker");
-        var isParent = checkRequiredParent(target,".annotated-bg");
-        if(isPinObj || isParent) {
+        var isPinObj = checkRequiredParent(target, ".marker");
+        var isParent = checkRequiredParent(target, ".annotated-bg");
+        if (isPinObj || isParent) {
             switch (e.keyCode) {
-                case 9://tab key
-                    break;
                 case 27:// ESC key
                     e.preventDefault();
                     $('.annotated-bg').removeClass("show-details");
                     break;
-                case 38://Arrow Up
-                case 37://Arrow Left
-                case 39://Arrow Right
-                case 40://Arrow Down
-                    break;
-                case 32://SPACE key
-                    break;
                 case 13://ENTER key
-                    if(isPinObj){
+                    if (isPinObj) {
                         e.preventDefault();
                         $(obj).trigger('click');
                     }
+                    break;
+                case 9://tab key
+                    break;
+                case 38://Arrow Up
+                    break;
+                case 37://Arrow Left
+                    break;
+                case 39://Arrow Right
+                    break;
+                case 40://Arrow Down
+                    break;
+                case 32://SPACE key
                     break;
                 default:
                     break;
             }
         }
     });
-    //scroll to hashed pin
+    //handle hashed pin, if it's available in URL then it's shown by default.
     if (window.location.hash.length > 0) {
         $('.annotated-bg').removeClass("show-details");
         var hash = window.location.hash.replace('#', '');
         hash = hash.replace('/', '');
         if (hash.length) {
             var wrapperId = $('.annotated-wrapper span[data-href="#' + hash + '"]').attr("data-parent");
-            if(wrapperId !== undefined){
+            if (wrapperId !== undefined) {
                 fetchPlaceData(wrapperId, hash);
             }
         }
     }
+
+    //bind tooltips for map markers
+    $('.annotated-bg [data-toggle="tooltip"]').tooltip();
+    $('body').tooltip({
+        selector: '[data-toggle=tooltip]'
+    });
 }
 
-function drawPins(wrapperId, counter, filter) {
-    //console.log('drawPins: wrapperId: '+ wrapperId + ' >>counter: '+ counter +' >>filter: '+ filter);
+/*
+* This function will draw pins on the map
+* */
+function drawPins(wrapperId) {
     var html = "";
-    for (var i = 0; i < pins.length; i++) {
-        counter = i;
-        var xPos = pins[i]['PosX'];
-        var yPos = pins[i]['PosY'];
-        var hoverInfo = pins[i]['HoverInfo'];
-        var title = pins[i]['Title'];
-        var info = pins[i]['Info'];
-        var folderName = pins[i]['FolderName']['#text'];
-        var pinIdx = 'pin_'+xPos+'_'+yPos;
+    for (var i = 0; i < markers.length; i++) {
+        //get the properties from json that makes the marker's markup.
+        var xPos = markers[i]['PosX'];
+        var yPos = markers[i]['PosY'];
+        var hoverInfo = markers[i]['HoverInfo'];
+        var title = markers[i]['Title'];
+
+        var pinIdx = 'pin_' + xPos + '_' + yPos;
         var pinId = slugifyString(title);
 
-        html += '<span style="left: ' + xPos + 'px; top:' + yPos + 'px;" class="marker" id="' + pinId + '-' + counter + '" tabindex="0" data-href="#' + pinId + '" data-toggle="tooltip" data-placement="bottom" title="' + title + '" role="tooltip" aria-label="' + title + '" data-parent="' + wrapperId + '"></span>';
+        html += '<span style="left: ' + xPos + 'px; top:' + yPos + 'px;" class="marker" id="' + pinId + '" tabindex="0" data-href="#' + pinId + '" data-toggle="tooltip" data-placement="bottom" title="' + hoverInfo + '" role="tooltip" aria-label="' + title + '" data-parent="' + wrapperId + '"></span>';
     }
     $('#' + wrapperId + ' .annotated-bg .map-pins').append(html);
 }
 
-function fetchPlaceData(wrapperId, dPlace) {
-    //console.log('fetchPlaceData wrapperId: '+ wrapperId + ' >>dPlace,: '+ dPlace);
-    if (dPlace == undefined) {
+/*
+* This function will filter the data from JSON and show it's detail
+* */
+function fetchPlaceData(wrapperId, placeToFind) {
+    if (placeToFind == undefined) {
         return false;
     }
     //get required place form JSON Object
-    var place = pins.filter(
+    var place = markers.filter(
         function (data) {
-            return slugifyString(data.Title) == dPlace;
+            return slugifyString(data.Title) == placeToFind;
         });
 
-    var placeImage = '<img src="images/temple-zeus.jpg" alt="placeholder" />';
-    $('#' + wrapperId + ' .place-image').html(placeImage);
+    if (place.length) {
+        var placeImg = place[0]['FolderName']['#text'];
+        var placeTitle = place[0]['Title'];
+        var placeInfo = place[0]['Info'];
+        //remove the next line once image path is available in JSON
+        placeImg = "images/temple-zeus.jpg";
+        var placeImage = '<img src="' + placeImg + '" alt="' + placeTitle + '" />';
+        $('#' + wrapperId + ' .place-image').html(placeImage);
 
-    $('#' + wrapperId + ' .name').html(place[0].Title);
-    $('#' + wrapperId + ' .description').html(place[0].Info);
+        $('#' + wrapperId + ' .name').html(placeTitle);
+        $('#' + wrapperId + ' .description').html(placeInfo);
 
-    //$('#' + wrapperId + ' .annotated-bg').addClass("show-details");
-    scrolledToDetails(wrapperId);
+        //if you don't want to scroll the page then uncomment the next line
+        //$('#' + wrapperId + ' .annotated-bg').addClass("show-details");
+
+        //if you don't want to scroll the page then comment the next line
+        scrolledToDetails(wrapperId);
+    }
+
 }
 
+//Scroll the page top
 function scrolledToDetails(wrapperId) {
     setTimeout(function () {
-        $('html, body').stop().animate({scrollTop: $('.annotated-wrapper').offset().top}, 250,"linear",function () {
+        $('html, body').stop().animate({scrollTop: $('.annotated-wrapper').offset().top}, 250, "linear", function () {
             $('#' + wrapperId + ' .annotated-bg').addClass("show-details");
         });
     }, 250);
@@ -132,7 +149,7 @@ function slugifyString(str) {
     let trimmed = str.trim();
     let slug = trimmed.replace(/[^a-z0-9-]/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
     var parsed = slug.toLowerCase();
-    if(parsed.length == 0){
+    if (parsed.length == 0) {
         parsed = trimmed;
     }
     return parsed;
