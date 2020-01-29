@@ -7356,7 +7356,7 @@ body.cookie-overlay{
       margin-bottom: 15px; }
 
 .annotated-wrapper .annotated-bg {
-  background: url("imgs/interactive-annotated-image-with-legend/map-bg.jpg") no-repeat center center; }
+  background: url("imgs/map-bg.jpg") no-repeat center center; }
   @media screen and (max-width: 640px) {
     .annotated-wrapper .annotated-bg {
       background: none; } }
@@ -7387,15 +7387,15 @@ body.cookie-overlay{
         .annotated-wrapper .annotated-bg .pins-wrapper .filter-box li span:after {
           content: "";
           cursor: pointer;
-          background: url("imgs/interactive-annotated-image-with-legend/map-icons-mobile.png") no-repeat center center; }
+          background: url("imgs/map-icons-mobile.png") no-repeat center center; }
         .annotated-wrapper .annotated-bg .pins-wrapper .filter-box li span.hydrochk:after {
-          background: url("imgs/interactive-annotated-image-with-legend/hydro-station-icon.png") no-repeat center center;
+          background: url("imgs/hydro-station-icon.png") no-repeat center center;
           /*background-position: 3px;*/ }
         .annotated-wrapper .annotated-bg .pins-wrapper .filter-box li span.thermalchk:after {
-          background: url("imgs/interactive-annotated-image-with-legend/thermal-station-icon.png") no-repeat center center;
+          background: url("imgs/thermal-station-icon.png") no-repeat center center;
           /*background-position: -30px;*/ }
         .annotated-wrapper .annotated-bg .pins-wrapper .filter-box li span.windchk:after {
-          background: url("imgs/interactive-annotated-image-with-legend/wind-farm-icon.png") no-repeat center center;
+          background: url("imgs/wind-farm-icon.png") no-repeat center center;
           /*background-position: -61px;*/ }
         .annotated-wrapper .annotated-bg .pins-wrapper .filter-box li span.pumpedstoragechk:after {
           background-position: -122px; }
@@ -7409,25 +7409,25 @@ body.cookie-overlay{
     border: 1px solid #C7C7CC;
     box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1); }
     .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner:after {
-      content: url("imgs/interactive-annotated-image-with-legend/tooltip-arrow.png"); }
+      content: url("imgs/tooltip-arrow.png"); }
   .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span {
     /*&.hydro, &.thermal, &.wind, */ }
     .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.pumpedstorage, .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.biomass {
       content: "";
-      background: url("imgs/interactive-annotated-image-with-legend/map-icons.png") no-repeat center center;
+      background: url("imgs/map-icons.png") no-repeat center center;
       cursor: pointer; }
     .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.hydro {
-      background: url("imgs/interactive-annotated-image-with-legend/hydro-station-icon.png") no-repeat center center;
+      background: url("imgs/hydro-station-icon.png") no-repeat center center;
       /*background-position: -70px;*/
       z-index: 33;
       cursor: pointer; }
     .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.thermal {
-      background: url("imgs/interactive-annotated-image-with-legend/thermal-station-icon.png") no-repeat center center;
+      background: url("imgs/thermal-station-icon.png") no-repeat center center;
       /*background-position: 0 0;*/
       z-index: 32;
       cursor: pointer; }
     .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.wind {
-      background: url("imgs/interactive-annotated-image-with-legend/wind-farm-icon.png") no-repeat center center;
+      background: url("imgs/wind-farm-icon.png") no-repeat center center;
       /*background-position: -34px;*/
       z-index: 31;
       cursor: pointer; }
@@ -7519,7 +7519,7 @@ body.cookie-overlay{
       text-decoration: none; }
     .annotated-wrapper .collapseable-wrapper .collapseable a.collapse-heading:before {
       content: "";
-      background: url("imgs/interactive-annotated-image-with-legend/map-icons-mobile.png") no-repeat center center; }
+      background: url("imgs/map-icons-mobile.png") no-repeat center center; }
     .annotated-wrapper .collapseable-wrapper .collapseable a.collapse-heading.hydro:before {
       background-position: 0; }
     .annotated-wrapper .collapseable-wrapper .collapseable a.collapse-heading.thermal:before {

@@ -1,7 +1,4 @@
-/* globals is_iPad_device slugifyString locationsList */
-/* exported screen_change_interactive_annotated_image_with_legend
- * page_ready_interactive_annotated_image_with_legend */
-var forIpad = is_iPad_device();
+var forIpad = false;
 
 function bind_maps() {
     var count = 0;
@@ -130,7 +127,7 @@ function fetchPinData(wrapperId, dCity, dType) {
     $('#' + wrapperId + ' .type').html(dType).addClass(dType);
     if (city[0].ImageVisible) {
         $('#' + wrapperId + ' .image').show();
-        var myimg = '<img src="images/interactive-annotated-image-with-legend/placeholder.png" alt=" " />';
+        var myimg = '<img src="images/placeholder.png" alt=" " />';
         $('#' + wrapperId + ' .image').html(myimg);
     } else {
         $('#' + wrapperId + ' .image').hide();
@@ -153,16 +150,15 @@ function scrolledToDetails(wrapperId) {
     }, 500);
 }
 
-//code for screen change event goes here
-//this function will be called from global layout
-function screen_change_interactive_annotated_image_with_legend() {
-    //do nothing for now
-    //use this function if you want to do something on screen change event
-}
-
-function page_ready_interactive_annotated_image_with_legend() {
+function draw_pins_on_image() {
     if ($('.annotated-wrapper').length) {
         bind_maps();
         mobileViewBindings();
     }
+}
+
+function slugifyString(str) {
+    let trimmed = str.trim();
+    let slug = trimmed.replace(/[^a-z0-9-]/gi, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+    return slug.toLowerCase();
 }
