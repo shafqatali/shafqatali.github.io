@@ -1,10 +1,84 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
+    <title>Site Links</title>
+
+    <style type="text/css" scoped="scoped">
+        body {
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        .container {
+            padding: 0 15px;
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        .templates {
+            width: 100%;
+            margin: 0 0 15px;
+            display: inline-block;
+        }
+
+        .templates li {
+            padding: 10px 0;
+            width: 30%;
+            float: left;
+        }
+
+        .templates li a {
+            outline: none;
+            line-height: 1;
+            width: auto;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .templates li a.uncheck > .glyphicon {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .templates li {
+                margin: 10px 0;
+                width: 100%;
+                float: none;
+            }
+
+            .templates li a {
+                font-size: 16px;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1199px) {
+            .templates li {
+                margin: 10px 0;
+                width: 50%;
+            }
+
+            .templates li a {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-
+<div class="container">
+    <h1>List of HTML Sites</h1>
+    <ul class="templates">
+        <li><a href="ahs">ahs</a></li>
+        <li><a href="form-wizard">form-wizard</a></li>
+        <li><a href="interactive-map">interactive-map</a></li>
+        <li><a href="map">map</a></li>
+        <li><a href="ticker">ticker</a></li>
+    </ul>
+</div>
 </body>
 </html>
