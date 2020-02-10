@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>ThreeSixty</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+
+        <div class="threesixty-wrapper">
+
+            <div class="threesixty" data-path="ASTEROSKOPEIO/100{index}.jpg" data-count="9">
+                <!-- put your preloader here -->
+                <div class="ui-spinner">
+                    <span class="side side-left">
+                        <span class="fill"></span>
+                    </span>
+                    <span class="side side-right">
+                        <span class="fill"></span>
+                    </span>
+                </div>
+                <!-- end preloader -->
+            </div>
+        </div>
+
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquery.threesixty.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                var $threeSixty = $('.threesixty');
+
+                $threeSixty.threeSixty({
+                    dragDirection: 'horizontal',
+                    useKeys: true,
+                    draggable: true
+                });
+
+                $('.next').click(function(){
+                    $threeSixty.nextFrame();
+                });
+
+                $('.prev').click(function(){
+                    $threeSixty.prevFrame();
+                });
+
+                $threeSixty.on('down', function(){
+                    $('.ui, h1, h2, .label, .examples').stop().animate({opacity:0}, 300);
+                });
+
+                $threeSixty.on('up', function(){
+                    $('.ui, h1, h2, .label, .examples').stop().animate({opacity:1}, 500);
+                });
+            });
+        </script>
+    </body>
+</html>
