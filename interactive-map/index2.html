@@ -5,7 +5,6 @@
     </head>
     <body>
 
-
         <div class="threesixty-wrapper">
 
             <div class="threesixty" data-path="ASTEROSKOPEIO/{index}.jpg" data-count="160">
@@ -22,6 +21,8 @@
             </div>
         </div>
 
+        <br/><br/><br/>
+        <button type="button" id="autoPlay">Autoplay</button>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="js/jquery.threesixty.js"></script>
         <script>
@@ -50,6 +51,22 @@
                 $threeSixty.on('up', function(){
                     $('.ui, h1, h2, .label, .examples').stop().animate({opacity:1}, 500);
                 });
+
+
+
+                var autoInterval = null;
+                $("#autoPlay").click(function (e) {
+                    e.preventDefault();
+                    if($(this).hasClass('playing')){
+                        clearInterval(autoInterval);
+                        $(this).removeClass('playing').text("autoplay");
+                    }else {
+                        $(this).addClass('playing').text("stop");
+                        autoInterval = setInterval(function () {
+                            $('.threesixty').nextFrame();
+                        },500);
+                    }
+                })
             });
         </script>
     </body>
