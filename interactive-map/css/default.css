@@ -88,6 +88,25 @@ we have to place the hex code of color after the last slash (/), It give a nice 
           width: 100%;
           height: 245px;
           overflow-y: auto; }
+      .annotated-wrapper .annotated-bg .place-info .ui {
+        display: none !important; }
+      .annotated-wrapper .annotated-bg .place-info.single {
+        display: none !important; }
+      .annotated-wrapper .annotated-bg .place-info.multi .ui {
+        display: block !important;
+        height: 544px; }
+        .annotated-wrapper .annotated-bg .place-info.multi .ui .prev,
+        .annotated-wrapper .annotated-bg .place-info.multi .ui .next {
+          display: block; }
+        .annotated-wrapper .annotated-bg .place-info.multi .ui .play-pause {
+          display: none; }
+      .annotated-wrapper .annotated-bg .place-info.rotate .ui {
+        display: block !important; }
+        .annotated-wrapper .annotated-bg .place-info.rotate .ui .prev,
+        .annotated-wrapper .annotated-bg .place-info.rotate .ui .next {
+          display: none; }
+        .annotated-wrapper .annotated-bg .place-info.rotate .ui .play-pause {
+          display: block; }
     .annotated-wrapper .annotated-bg.show-details .place-info {
       pointer-events: auto; }
       .annotated-wrapper .annotated-bg.show-details .place-info .back-button {
@@ -118,25 +137,6 @@ we have to place the hex code of color after the last slash (/), It give a nice 
   .annotated-wrapper .annotated-bg .place-info .place-content .inner-wrapper::-webkit-scrollbar-thumb:hover {
     background: #d3d3d3; }
 
-.annotated-wrapper .annotated-bg {
-  background: url("imgs/maketa.jpg") no-repeat center center;
-  background-size: cover; }
-  .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner {
-    background-color: #E5E5EA;
-    color: #4D4D4D;
-    font-size: 0.875rem;
-    position: relative;
-    border: 1px solid #C7C7CC;
-    box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1); }
-    .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner:after {
-      content: url("imgs/tooltip-arrow.png"); }
-  .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker {
-    background: url("imgs/white-marker.png") no-repeat center center;
-    z-index: 2;
-    cursor: pointer; }
-    .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:hover, .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:focus {
-      background: url("imgs/hover-marker.png") no-repeat center center; }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -147,6 +147,254 @@ we have to place the hex code of color after the last slash (/), It give a nice 
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0; }
+
+.annotated-wrapper {
+  /* line 114, ../../scss/_ui-spinner.scss */
+  /* line 120, ../../scss/_ui-spinner.scss */
+  /* line 130, ../../scss/_ui-spinner.scss */
+  /* line 133, ../../scss/_ui-spinner.scss */
+  /* line 142, ../../scss/_ui-spinner.scss */
+  /* line 145, ../../scss/_ui-spinner.scss */
+  /* line 1, ../../scss/_ui.scss */ }
+  .annotated-wrapper .annotated-bg {
+    background: url("imgs/maketa.jpg") no-repeat center center;
+    background-size: cover; }
+    .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner {
+      background-color: #E5E5EA;
+      color: #4D4D4D;
+      font-size: 0.875rem;
+      position: relative;
+      border: 1px solid #C7C7CC;
+      box-shadow: 1px 2px 0 0 rgba(0, 0, 0, 0.1); }
+      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins .tooltip-inner:after {
+        content: url("imgs/tooltip-arrow.png"); }
+    .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker {
+      background: url("imgs/white-marker.png") no-repeat center center;
+      z-index: 2;
+      cursor: pointer; }
+      .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:hover, .annotated-wrapper .annotated-bg .pins-wrapper .map-pins span.marker:focus {
+        background: url("imgs/hover-marker.png") no-repeat center center; }
+@-webkit-keyframes ui-spinner-rotate-right {
+  /* line 58, ../../scss/_ui-spinner.scss */
+  0% {
+    -webkit-transform: rotate(0deg); }
+  /* line 59, ../../scss/_ui-spinner.scss */
+  25% {
+    -webkit-transform: rotate(180deg); }
+  /* line 60, ../../scss/_ui-spinner.scss */
+  50% {
+    -webkit-transform: rotate(180deg); }
+  /* line 61, ../../scss/_ui-spinner.scss */
+  75% {
+    -webkit-transform: rotate(360deg); }
+  /* line 62, ../../scss/_ui-spinner.scss */
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes ui-spinner-rotate-left {
+  /* line 66, ../../scss/_ui-spinner.scss */
+  0% {
+    -webkit-transform: rotate(0deg); }
+  /* line 67, ../../scss/_ui-spinner.scss */
+  25% {
+    -webkit-transform: rotate(0deg); }
+  /* line 68, ../../scss/_ui-spinner.scss */
+  50% {
+    -webkit-transform: rotate(180deg); }
+  /* line 69, ../../scss/_ui-spinner.scss */
+  75% {
+    -webkit-transform: rotate(180deg); }
+  /* line 70, ../../scss/_ui-spinner.scss */
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes ui-spinner-rotate-right {
+  /* line 74, ../../scss/_ui-spinner.scss */
+  0% {
+    -moz-transform: rotate(0deg); }
+  /* line 75, ../../scss/_ui-spinner.scss */
+  25% {
+    -moz-transform: rotate(180deg); }
+  /* line 76, ../../scss/_ui-spinner.scss */
+  50% {
+    -moz-transform: rotate(180deg); }
+  /* line 77, ../../scss/_ui-spinner.scss */
+  75% {
+    -moz-transform: rotate(360deg); }
+  /* line 78, ../../scss/_ui-spinner.scss */
+  100% {
+    -moz-transform: rotate(360deg); } }
+@-moz-keyframes ui-spinner-rotate-left {
+  /* line 82, ../../scss/_ui-spinner.scss */
+  0% {
+    -moz-transform: rotate(0deg); }
+  /* line 83, ../../scss/_ui-spinner.scss */
+  25% {
+    -moz-transform: rotate(0deg); }
+  /* line 84, ../../scss/_ui-spinner.scss */
+  50% {
+    -moz-transform: rotate(180deg); }
+  /* line 85, ../../scss/_ui-spinner.scss */
+  75% {
+    -moz-transform: rotate(180deg); }
+  /* line 86, ../../scss/_ui-spinner.scss */
+  100% {
+    -moz-transform: rotate(360deg); } }
+@keyframes ui-spinner-rotate-right {
+  /* line 90, ../../scss/_ui-spinner.scss */
+  0% {
+    transform: rotate(0deg); }
+  /* line 91, ../../scss/_ui-spinner.scss */
+  25% {
+    transform: rotate(180deg); }
+  /* line 92, ../../scss/_ui-spinner.scss */
+  50% {
+    transform: rotate(180deg); }
+  /* line 93, ../../scss/_ui-spinner.scss */
+  75% {
+    transform: rotate(360deg); }
+  /* line 94, ../../scss/_ui-spinner.scss */
+  100% {
+    transform: rotate(360deg); } }
+@keyframes ui-spinner-rotate-left {
+  /* line 98, ../../scss/_ui-spinner.scss */
+  0% {
+    transform: rotate(0deg); }
+  /* line 99, ../../scss/_ui-spinner.scss */
+  25% {
+    transform: rotate(0deg); }
+  /* line 100, ../../scss/_ui-spinner.scss */
+  50% {
+    transform: rotate(180deg); }
+  /* line 101, ../../scss/_ui-spinner.scss */
+  75% {
+    transform: rotate(180deg); }
+  /* line 102, ../../scss/_ui-spinner.scss */
+  100% {
+    transform: rotate(360deg); } }
+  .annotated-wrapper .ui-spinner .side {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute; }
+  .annotated-wrapper .ui-spinner .side .fill {
+    border-radius: 999px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear; }
+  .annotated-wrapper .ui-spinner .side-left {
+    left: 0; }
+  .annotated-wrapper .ui-spinner .side-left .fill {
+    left: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-animation-name: ui-spinner-rotate-left;
+    -moz-animation-name: ui-spinner-rotate-left;
+    -ms-animation-name: ui-spinner-rotate-left;
+    -o-animation-name: ui-spinner-rotate-left;
+    animation-name: ui-spinner-rotate-left;
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    transform-origin: 0 50%; }
+  .annotated-wrapper .ui-spinner .side-right {
+    left: 50%; }
+  .annotated-wrapper .ui-spinner .side-right .fill {
+    left: -100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-animation-name: ui-spinner-rotate-right;
+    -moz-animation-name: ui-spinner-rotate-right;
+    -ms-animation-name: ui-spinner-rotate-right;
+    -o-animation-name: ui-spinner-rotate-right;
+    animation-name: ui-spinner-rotate-right;
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%; }
+  .annotated-wrapper .ui {
+    width: 100%;
+    position: relative; }
+    .annotated-wrapper .ui .prev,
+    .annotated-wrapper .ui .next {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.3);
+      font-size: 2.0em;
+      position: absolute;
+      display: inline-block;
+      color: #CDD3D1;
+      cursor: pointer;
+      text-align: center;
+      vertical-align: middle;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 9999; }
+      .annotated-wrapper .ui .prev:hover, .annotated-wrapper .ui .prev:focus, .annotated-wrapper .ui .prev:active,
+      .annotated-wrapper .ui .next:hover,
+      .annotated-wrapper .ui .next:focus,
+      .annotated-wrapper .ui .next:active {
+        text-decoration: none; }
+    .annotated-wrapper .ui .next {
+      right: 0;
+      left: auto; }
+    .annotated-wrapper .ui .prev {
+      right: auto;
+      left: 0; }
+    .annotated-wrapper .ui .play-pause {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      margin: auto;
+      width: 60px;
+      height: 60px;
+      background: url("imgs/play-button.png") no-repeat center center;
+      background-size: 25px; }
+      .annotated-wrapper .ui .play-pause.active {
+        background: url("imgs/pause-button.png") no-repeat center center;
+        background-size: 25px; }
+  .annotated-wrapper .ui-spinner {
+    border-radius: 100%;
+    width: 46px;
+    height: 46px;
+    background: #dddddd;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .annotated-wrapper .ui-spinner:after {
+      content: "";
+      background: transparent;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      top: 9px;
+      left: 9px;
+      display: block; }
+    .annotated-wrapper .ui-spinner .side .fill {
+      background: #3c76ca;
+      -webkit-animation-duration: 3s;
+      -moz-animation-duration: 3s;
+      -ms-animation-duration: 3s;
+      -o-animation-duration: 3s;
+      animation-duration: 3s;
+      opacity: 0.8; }
 
 .tooltip {
   position: absolute;

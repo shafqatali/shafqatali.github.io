@@ -1,0 +1,22 @@
+So, we have a new csv and a group of folder with filenames 10xx.jpg and without the file count column
+
+You want from me to add a new column to csv as filecount
+
+And rename all filenames to 0.jpg, 1.jpg etc
+
+When my csv is ready, I will send it to you and:
+
+
+b) You will create the new index.html for langID = 1 , so I can duplicate it and create another one for langID = 2
+
+
+
+
+
+
+-------------- Done
+a) You will convert it to json (and please show my how, because I tried to use a convert tool and it has a lot of options)
+c) The slide in effect remain the same
+d) If the image has multiple images it will have the 360 effect and an autoplay icon
+e) If the image is single it will just show one (but I think if you keep the 360 here it just won't show any movement so it will be ok)
+f) If the images are below (let's say) 5, can it show any next/previous button for slider effects? It can be global setting too.

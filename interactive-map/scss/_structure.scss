@@ -98,6 +98,37 @@
           overflow-y: auto;
         }
       }
+      .ui {
+        display: none !important;
+      }
+      &.single {
+        display: none !important;
+      }
+      &.multi {
+        .ui {
+          display: block !important;
+          height: 544px;
+          .prev,
+          .next {
+            display: block;
+          }
+          .play-pause {
+            display: none;
+          }
+        }
+      }
+      &.rotate {
+        .ui {
+          display: block !important;
+          .prev,
+          .next {
+            display: none;
+          }
+          .play-pause {
+            display: block;
+          }
+        }
+      }
     }
     &.show-details {
       .place-info {

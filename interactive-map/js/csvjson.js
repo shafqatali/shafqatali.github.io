@@ -1,0 +1,53 @@
+var locationsList = [
+  {
+    "rowID": 12,
+    "langID": 1,
+    "status": "published",
+    "statusChangedDate": "1/1/1753 12:00:00 πμ",
+    "Title": "Αστεροσκοπείο",
+    "FolderName": "files/1/Athens1842/ASTEROSKOPEIO",
+    "Info": "Το Εθνικό Αστεροσκοπείο Αθηνών βρίσκεται στην κορυφή του λόφου των Νυμφών, απέναντι από την Ακρόπολη. Πρόκειται για το αρχαιότερο ερευνητικό ίδρυμα της Ελλάδας και των Βαλκανίων. \n\tΗ πρωτοβουλία για την ίδρυσή του ανήκει στον ευεργέτη βαρόνο Γεώργιο Σίνα (1783-1856), Γενικό Πρόξενο της Ελλάδας στην Αυστρία. Ο Γεώργιος Σίνας  προχώρησε σε δωρεά με σκοπό την ανάπτυξη της επιστημονικής έρευνας στην Ελλάδα. Απευθύνθηκε στον Άντον Πρόκες - Όστεν (Αnton von Prokesch-Osten, 1795-1876), πρεσβευτή της Αυστρίας στην Ελλάδα, ο οποίος είχε ως σύμβουλό του τον καθηγητή αστρονομίας Γεώργιο Βούρη (1802-1860). Αυτός πρότεινε την ίδρυση αστεροσκοπείου. Ο Γεώργιος Σίνας δώρισε το ποσό των 500.000 δραχμών, που χρησιμοποιήθηκε για την αγορά του οικοπέδου,την ανέγερση του κτηρίου και την προμήθεια του αρχικού εξοπλισμού από τη Βιέννη.\n\tΤα σχέδια έγιναν από το Δανό αρχιτέκτονα Θεόφιλο Χάνσεν (Theophil Hansen, 1813-1891), που έλαβε υπόψη του τις υποδείξεις του διάσημου τότε αστρονόμου Χάινριχ Σουμάχερ (Heinrich Christian Schumacher, 1780-1850). Αρχικά, ως χώρος για την ανέγερση είχε προταθεί ο λόφος του Λυκαβηττού, αλλά τελικά αποφασίστηκε ότι ο λόφος των Νυμφών ήταν καταλληλότερος, λόγω ευκολότερης πρόσβασης. Κατά μία άλλη εκδοχή, επιλέχθηκε ο λόφος των Νυμφών γιατί, σύμφωνα με το θρύλο, ο αρχαίος αστρονόμος Μέτων (5ος αιώνας π.Χ.) έκανε τις παρατηρήσεις του εκεί. Ο θεμέλιος λίθος τέθηκε στις 8 Ιουλίου 1842 με μεγάλη επισημότητα, κατά τη διάρκεια έκλειψης ηλίου, με την παρουσία του Όθωνα (1815-1867) και πολλών αξιωματούχων. Χαρακτηριστικό είναι ότι ο Θεόφιλος Χάνσεν ανέγραψε στο επιστύλιο, πάνω από την είσοδο του κτηρίου, τη λατινική φράση «Servare Intaminatum» («Να μείνει ανέπαφο.»). Η ανέγερση ολοκληρώθηκε το 1846 και πρώτος διευθυντής διορίστηκε ο Γεώργιος Βούρης. Αξίζει να σημειωθεί ότι η χαρτογράφηση της Ελλάδας βασίστηκε στον προσδιορισμό του γεωγραφικού μήκους και πλάτους της χώρας, που υπολογίστηκε στο Αστεροσκοπείο από το Γεώργιο Βούρη.\n\tΤο κτήριο είναι ένα νεοκλασικό κομψοτέχνημα, εμπλουτισμένο με αναγεννησιακά στοιχεία. Χαρακτηριστικό του κτηρίου είναι η σταυροειδής μορφή και ο προσανατολισμός του προς τα τέσσερα σημεία του ορίζοντα, με τον άξονα βορρά-νότου να είναι μεγαλύτερος από αυτόν της ανατολής-δύσης. Στο κέντρο του κτηρίου δεσπόζει πύργος τετράγωνης διατομής, το άνω μέρος του οποίου αποτελεί τη βάση έδρασης του περιστρεφόμενου θόλου, που φιλοξενεί το τηλεσκόπιο. Ο θόλος είναι κατασκευασμένος από σφυρήλατο σίδερο επιστρωμένο με χαλκό, τοποθετημένος σε δακτυλιοειδή μαρμάρινη βάση. Είναι διακοσμημένος με αστέρια και το ζωδιακό κύκλο. Ο πύργος διαθέτει σκάλα, η οποία οδηγεί στο θόλο και στο δώμα. Λόγω της διαμόρφωσης του εδάφους, στο βόρειο και στο νότιο σκέλος υπάρχει υπόγειο. Στην κεντρική είσοδο οδηγεί σκάλα από λευκό πεντελικό μάρμαρο, εκατέρωθεν της οποίας υπάρχουν δύο χαρακτηριστικοί φανοστάτες. Στον προθάλαμο υπάρχει επένδυση πλακών από λευκό και μαύρο τηνιακό μάρμαρο. Το κυρίως κτήριο διαχωρίζεται από τον προθάλαμο με δύο πεσσούς. Οι δίρριχτες στέγες είναι επικαλυμμένες με ψευδάργυρο και ο κυκλικός εξώστης διακοσμημένος με μαύρα και άσπρα βότσαλα θαλάσσης. Τα τέσσερα τμήματα του κτηρίου καλύπτονται με ξύλινη στέγη. Όσον αφορά τους τοίχους του οικοδομήματος, σύμφωνα με τις περιγραφές του Χάνσεν, είναι κατασκευασμένοι από ασβεστόλιθο προερχόμενο από τον λόφο των Νυμφών. «…Οι γωνίες, τα βάθρα, οι παραστάδες και τα επιστύλια είναι κατασκευασμένα από υποκύανο μάρμαρο Υμηττού, ενώ τα κιονόκρανα, τα γείσα, τα ακρωτήρια, η δακτυλιοειδής βάση στήριξης θόλου, τα αγγεία που έχουν τοποθετηθεί στις γωνίες της στέγης ως καπνοδόχοι, τα περίθυρα, οι δύο κιονόμορφοι φανοστάτες  εκατέρωθεν της κεντρικής εισόδου (έργα του Γερμανού γλύπτη Κρίστιαν Ζήγκελ (Christian Siegel), 1803-1883) και το οικόσημο του ιδρυτή, που βρίσκεται στο αέτωμα της πρόσοψής του, είναι κατασκευασμένο από το ωραίο λευκό πεντελικό μάρμαρο…». Εκτός από τις επισκευές του κτηρίου το 1859, έγιναν και μεταγενέστερες παρεμβάσεις τη δεκαετία του 1990, όπως η επισκευή της στέγης, των πατωμάτων και της σιδερένιας θύρας της εισόδου, καθώς και ο καθαρισμός των μαρμάρινων επιφανειών.\n\n\nΜαράη Γεωργούση",
+    "HoverInfo": "Αστεροσκοπείο",
+    "PosX": 500,
+    "PosY": 344,
+    "Speed": 7,
+    "Label": "",
+    "Description": "",
+    "Type": 1,
+    "filecount": 161
+  },
+  {
+    "rowID": 12,
+    "langID": 1,
+    "status": "published",
+    "statusChangedDate": "1/1/1753 12:00:00 πμ",
+    "Title": "Observatory",
+    "FolderName": "files/1/Athens1842/Observatory",
+    "Info": "The National Observatory of Athens (as it is currently known) lies on the top of the hill of the Nymphs, opposite the Acropolis hill. It is the oldest research center in Greece as well as in the Balkan region. Its foundations were laid in 1842, two whole years before the creation of a corresponding building in the USA.\n\nThe initiative for its creation belongs to the benefactor Baron George Sina, consul general of Greece in Austria. Baron G. Sina gifted the sum of 500,000Drachmas, through which the plot was bought, the building erected and the commission for the initial equipment, acquired from Vienna in 1845, was paid. \n\tThe plans were by the Danish architect, Theophil Hansen, and took unto consideration the suggestions of the then famous astronomer, Heinrich Christian Schumacher.\n\tThere are two theories as to why the hill of the Nymphs was used as the site for the Observatory’s erection. In the first theory the hill was chosen due to the relative ease with which it can be accessed, as opposed to its neighbouring hills. In the other, the hill was chosen because according to legend it was there that the ancient astronomer Méton of 5th Century BC observed the stars.\n\nThe cornerstone was set with great formality on the 8th of July 1842 during a solar eclipse and was attended to by King Otto and a great number of Officers. The construction was completed in 1846. \n\tUpon the entryway underneath the pediment T. Hansen wrote “SERVARE INTAMINATUM”, “stay integral”. A point of note is that the mapping of Greece was based on the determination of the Observatory’s longitude and latitude from George Vouris, its first Director.\n\nCharacteristic of the building is its cruciform and its orientation towards the four cardinal points. The centre of the building is dominated by a square sectioned tower that serves as the mounting for the rotating dome that houses the telescope. The dome is constructed out of copper plated wrought iron and placed on an annular marble footing; its decorations consist of stellar formations and the Zodiac. \n\nIts rich decorative elements together with the unique composition of the construction materials contribute to make the Observatory a “true Neoclassical masterpiece, with Renaissance elements”.",
+    "HoverInfo": "Observatory",
+    "PosX": 750,
+    "PosY": 344,
+    "Speed": 7,
+    "Label": "",
+    "Description": "",
+    "Type": 1,
+    "filecount": 5
+  },
+  {
+    "rowID": 12,
+    "langID": 1,
+    "status": "published",
+    "statusChangedDate": "1/1/1753 12:00:00 πμ",
+    "Title": "Αγαλμα Κολοκοτρώνη",
+    "FolderName": "files/1/Athens1842/Acropolis",
+    "Info": "The National Observatory of Athens (as it is currently known) lies on the top of the hill of the Nymphs, opposite the Acropolis hill. It is the oldest research center in Greece as well as in the Balkan region. Its foundations were laid in 1842, two whole years before the creation of a corresponding building in the USA.\n\nThe initiative for its creation belongs to the benefactor Baron George Sina, consul general of Greece in Austria. Baron G. Sina gifted the sum of 500,000Drachmas, through which the plot was bought, the building erected and the commission for the initial equipment, acquired from Vienna in 1845, was paid. \n\tThe plans were by the Danish architect, Theophil Hansen, and took unto consideration the suggestions of the then famous astronomer, Heinrich Christian Schumacher.\n\tThere are two theories as to why the hill of the Nymphs was used as the site for the Observatory’s erection. In the first theory the hill was chosen due to the relative ease with which it can be accessed, as opposed to its neighbouring hills. In the other, the hill was chosen because according to legend it was there that the ancient astronomer Méton of 5th Century BC observed the stars.\n\nThe cornerstone was set with great formality on the 8th of July 1842 during a solar eclipse and was attended to by King Otto and a great number of Officers. The construction was completed in 1846. \n\tUpon the entryway underneath the pediment T. Hansen wrote “SERVARE INTAMINATUM”, “stay integral”. A point of note is that the mapping of Greece was based on the determination of the Observatory’s longitude and latitude from George Vouris, its first Director.\n\nCharacteristic of the building is its cruciform and its orientation towards the four cardinal points. The centre of the building is dominated by a square sectioned tower that serves as the mounting for the rotating dome that houses the telescope. The dome is constructed out of copper plated wrought iron and placed on an annular marble footing; its decorations consist of stellar formations and the Zodiac. \n\nIts rich decorative elements together with the unique composition of the construction materials contribute to make the Observatory a “true Neoclassical masterpiece, with Renaissance elements”.",
+    "HoverInfo": "Αγαλμα Κολοκοτρώνη",
+    "PosX": 282,
+    "PosY": 344,
+    "Speed": 7,
+    "Label": "",
+    "Description": "",
+    "Type": 1,
+    "filecount": 1
+  }
+];

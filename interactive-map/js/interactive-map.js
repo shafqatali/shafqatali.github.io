@@ -1,4 +1,6 @@
 var markers = null;
+var imageCount = 5;
+var autoInterval = null;
 
 function bind_maps(json_data) {
     markers = json_data;
@@ -21,6 +23,7 @@ function bind_maps(json_data) {
     $('#backToAllPlaces').click(function (e) {
         e.preventDefault();
         $('.annotated-bg').removeClass("show-details");
+        reset360Viewer();
     });
 
     //handle keyboard events
@@ -112,13 +115,26 @@ function fetchPlaceData(wrapperId, placeToFind) {
         });
 
     if (place.length) {
-        var placeImg = place[0]['FolderName']['#text'];
+        var placeImg = place[0]['FolderName'];
         var placeTitle = place[0]['Title'];
         var placeInfo = place[0]['Info'];
+        var fileCount = place[0]['filecount'];
         //remove the next line once image path is available in JSON
-        placeImg = "images/temple-zeus.jpg";
-        var placeImage = '<img src="' + placeImg + '" alt="' + placeTitle + '" />';
-        $('#' + wrapperId + ' .place-image').html(placeImage);
+        //placeImg = "images/temple-zeus.jpg";
+        var placeImage = '<img src="' + placeImg + '/0.jpg" alt="' + placeTitle + '" />';
+        if(fileCount > 1){
+            reset360Viewer();
+            var markup360 = '<div class="threesixty" data-path="ROOT_PATH/{index}.jpg" data-count="ITEM_COUNT"><div class="ui-spinner"><span class="side side-left"><span class="fill"></span></span><span class="side side-right"><span class="fill"></span></span></div></div>';
+            markup360 = markup360.replace("ROOT_PATH",placeImg);
+            markup360 = markup360.replace("ITEM_COUNT",fileCount);
+            var multiClass = (fileCount <= imageCount) ? "multi" : "rotate";
+            $('#' + wrapperId + ' .place-image.threesixty-wrapper').html(markup360);
+            $('#' + wrapperId + ' .place-info').addClass(multiClass).removeClass('single');
+            bind360Viewer(fileCount);
+        }else {
+            $('#' + wrapperId + ' .place-image.single').html(placeImage);
+            $('#' + wrapperId + ' .place-info').addClass('single').removeClass('rotate').removeClass('multi');
+        }
 
         $('#' + wrapperId + ' .name').html(placeTitle);
         $('#' + wrapperId + ' .description').html(placeInfo);
@@ -184,4 +200,52 @@ function checkRequiredParent(target, filterExpression) {
         //console.log('filterExpression not found. other item');
         return false;
     }
+}
+
+function bind360Viewer(filesCount) {
+    var $threeSixty = $('.threesixty');
+
+    if(filesCount <= imageCount){
+        $threeSixty.threeSixty({
+            dragDirection: 'vertical',
+            useKeys: false,
+            draggable: false
+        });
+        $('.next').click(function(e){
+            e.preventDefault();
+            $threeSixty.nextFrame();
+        });
+
+        $('.prev').click(function(e){
+            e.preventDefault();
+            $threeSixty.prevFrame();
+        });
+
+    }else {
+        $threeSixty.threeSixty({
+            dragDirection: 'horizontal',
+            useKeys: true,
+            draggable: true
+        });
+
+        $("#autoPlay").click(function (e) {
+            e.preventDefault();
+            if($(this).hasClass('active')){
+                clearInterval(autoInterval);
+                $(this).removeClass('active');
+            }else {
+                $(this).addClass('active');
+                autoInterval = setInterval(function () {
+                    $('.threesixty').nextFrame();
+                },100);
+            }
+        });
+    }
+}
+
+function reset360Viewer() {
+    $('.annotated-wrapper .place-info').removeClass('single').removeClass('rotate').removeClass('multi');
+    $('.annotated-wrapper .place-image.threesixty-wrapper').html('');
+    $('.annotated-wrapper .play-pause').removeClass('active');
+    clearInterval(autoInterval);
 }

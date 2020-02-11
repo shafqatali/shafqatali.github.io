@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--default.css has all styling for the map-->
     <link rel="stylesheet" href="css/default.css"/>
-    <script src="js/csvjson.js"></script>
-    <script src="js/jQuery-v1.9.1.js"></script>
+    <script src="js/pins-data.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!--Only tooltips are dependent on bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.threesixty.js"></script>
     <!--contains the script to draw marker over the map -->
     <script src="js/interactive-map.js"></script>
 </head>
@@ -26,13 +25,7 @@
     <div class="annotated-bg">
         <div class="place-info">
             <button type="button" id="backToAllPlaces" class="back-button"><span class="sr-only">back to list</span></button>
-            <div class="place-image single">&nbsp;</div>
-            <div class="place-image threesixty-wrapper"></div>
-            <div class="ui">
-                <a id="autoPlay" href="#" class="play-pause"><span class="sr-only">play/pause</span></a>
-                <a href="#" class="next">&gt;</a>
-                <a href="#" class="prev">&lt;</a>
-            </div>
+            <div class="place-image">&nbsp;</div>
             <div class="place-content">
                 <h1 class="name"></h1>
                 <div class="inner-wrapper">
@@ -52,10 +45,9 @@
 <script type="text/javascript">
     $(document).ready(function () {
         <!-- call the function that binds data for the map -->
-        bind_maps(locationsList);
+        bind_maps(locationsList.Markers);
     });
 </script>
-
 </body>
 </html>
 

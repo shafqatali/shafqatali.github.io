@@ -127,7 +127,6 @@ var scope,
      */
     ThreeSixty.prototype.initLoad = function() {
         var i = 0, len = data.length, url, j;
-        console.log(data);
         $el.addClass('preloading');
         for(i; i < len; i++){
             j = 0;
