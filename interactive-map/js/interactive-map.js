@@ -251,7 +251,7 @@ function bind360Viewer(filesCount) {
 
 function reset360Viewer() {
     $('.annotated-wrapper .place-info').removeClass('loaded').removeClass('single').removeClass('rotate').removeClass('multi');
-    $('.annotated-wrapper .place-image.threesixty-wrapper').html('');
+    $('.annotated-wrapper .place-image').html('');
     $('.annotated-wrapper .play-pause').removeClass('active');
     clearInterval(autoInterval);
 }

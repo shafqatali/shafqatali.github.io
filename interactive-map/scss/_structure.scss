@@ -102,7 +102,9 @@
         display: none !important;
       }
       &.single {
-        display: none !important;
+        .ui {
+          display: none !important;
+        }
       }
       &.multi {
         .ui {

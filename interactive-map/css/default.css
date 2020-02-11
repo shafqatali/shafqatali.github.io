@@ -90,7 +90,7 @@ we have to place the hex code of color after the last slash (/), It give a nice 
           overflow-y: auto; }
       .annotated-wrapper .annotated-bg .place-info .ui {
         display: none !important; }
-      .annotated-wrapper .annotated-bg .place-info.single {
+      .annotated-wrapper .annotated-bg .place-info.single .ui {
         display: none !important; }
       .annotated-wrapper .annotated-bg .place-info.multi .ui {
         height: 544px; }
