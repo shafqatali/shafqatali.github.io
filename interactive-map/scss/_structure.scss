@@ -106,7 +106,6 @@
       }
       &.multi {
         .ui {
-          display: block !important;
           height: 544px;
           .prev,
           .next {
@@ -119,7 +118,6 @@
       }
       &.rotate {
         .ui {
-          display: block !important;
           .prev,
           .next {
             display: none;
@@ -127,6 +125,11 @@
           .play-pause {
             display: block;
           }
+        }
+      }
+      &.loaded {
+        .ui {
+          display: block !important;
         }
       }
     }

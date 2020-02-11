@@ -165,6 +165,9 @@ var scope,
         $this.html(html);
 
         this.attachHandlers(objIndex);
+        if (typeof (options.loadingComplete) == "function") {
+            options.loadingComplete();
+        }
     };
 
     var startY = 0,

@@ -209,7 +209,10 @@ function bind360Viewer(filesCount) {
         $threeSixty.threeSixty({
             dragDirection: 'vertical',
             useKeys: false,
-            draggable: false
+            draggable: false,
+            loadingComplete: function () {
+                $('.annotated-wrapper .place-info').addClass('loaded');
+            }
         });
         $('.next').click(function(e){
             e.preventDefault();
@@ -225,7 +228,10 @@ function bind360Viewer(filesCount) {
         $threeSixty.threeSixty({
             dragDirection: 'horizontal',
             useKeys: true,
-            draggable: true
+            draggable: true,
+            loadingComplete: function () {
+                $('.annotated-wrapper .place-info').addClass('loaded');
+            }
         });
 
         $("#autoPlay").click(function (e) {
@@ -244,7 +250,7 @@ function bind360Viewer(filesCount) {
 }
 
 function reset360Viewer() {
-    $('.annotated-wrapper .place-info').removeClass('single').removeClass('rotate').removeClass('multi');
+    $('.annotated-wrapper .place-info').removeClass('loaded').removeClass('single').removeClass('rotate').removeClass('multi');
     $('.annotated-wrapper .place-image.threesixty-wrapper').html('');
     $('.annotated-wrapper .play-pause').removeClass('active');
     clearInterval(autoInterval);

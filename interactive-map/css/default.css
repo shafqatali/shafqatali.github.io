@@ -93,20 +93,19 @@ we have to place the hex code of color after the last slash (/), It give a nice 
       .annotated-wrapper .annotated-bg .place-info.single {
         display: none !important; }
       .annotated-wrapper .annotated-bg .place-info.multi .ui {
-        display: block !important;
         height: 544px; }
         .annotated-wrapper .annotated-bg .place-info.multi .ui .prev,
         .annotated-wrapper .annotated-bg .place-info.multi .ui .next {
           display: block; }
         .annotated-wrapper .annotated-bg .place-info.multi .ui .play-pause {
           display: none; }
-      .annotated-wrapper .annotated-bg .place-info.rotate .ui {
+      .annotated-wrapper .annotated-bg .place-info.rotate .ui .prev,
+      .annotated-wrapper .annotated-bg .place-info.rotate .ui .next {
+        display: none; }
+      .annotated-wrapper .annotated-bg .place-info.rotate .ui .play-pause {
+        display: block; }
+      .annotated-wrapper .annotated-bg .place-info.loaded .ui {
         display: block !important; }
-        .annotated-wrapper .annotated-bg .place-info.rotate .ui .prev,
-        .annotated-wrapper .annotated-bg .place-info.rotate .ui .next {
-          display: none; }
-        .annotated-wrapper .annotated-bg .place-info.rotate .ui .play-pause {
-          display: block; }
     .annotated-wrapper .annotated-bg.show-details .place-info {
       pointer-events: auto; }
       .annotated-wrapper .annotated-bg.show-details .place-info .back-button {
