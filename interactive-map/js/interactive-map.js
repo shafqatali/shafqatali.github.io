@@ -24,8 +24,12 @@ function bind_maps(json_data) {
     //bind click event for button to close the place details
     $('#backToAllPlaces').click(function (e) {
         e.preventDefault();
+        clearInterval(autoInterval);
+        $('.place-info').removeClass('loaded')
         $('.annotated-bg').removeClass("show-details");
-        reset360Viewer();
+        setTimeout(function () {
+            reset360Viewer();
+        },1500);
     });
 
     //handle keyboard events
@@ -80,6 +84,30 @@ function bind_maps(json_data) {
     $('.annotated-bg [data-toggle="tooltip"]').tooltip();
     $('body').tooltip({
         selector: '[data-toggle=tooltip]'
+    });
+
+    $('.next').click(function(e){
+        e.preventDefault();
+        $threeSixty.nextFrame();
+    });
+
+    $('.prev').click(function(e){
+        e.preventDefault();
+        $threeSixty.prevFrame();
+    });
+    $("#autoPlay").click(function (e) {
+        e.preventDefault();
+        //console.log('auto play button clicked');
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            //console.log('stop auto play');
+        }else {
+            $(this).addClass('active');
+            autoInterval = setInterval(function () {
+                $('.threesixty').nextFrame();
+            },100);
+            //console.log('start auto play');
+        }
     });
 }
 
@@ -208,7 +236,6 @@ function checkRequiredParent(target, filterExpression) {
 
 function bind360Viewer(filesCount) {
     var $threeSixty = $('.threesixty');
-
     if(filesCount <= imageCount){
         $threeSixty.threeSixty({
             dragDirection: 'vertical',
@@ -218,16 +245,6 @@ function bind360Viewer(filesCount) {
                 $('.annotated-wrapper .place-info').addClass('loaded');
             }
         });
-        $('.next').click(function(e){
-            e.preventDefault();
-            $threeSixty.nextFrame();
-        });
-
-        $('.prev').click(function(e){
-            e.preventDefault();
-            $threeSixty.prevFrame();
-        });
-
     }else {
         $threeSixty.threeSixty({
             dragDirection: 'horizontal',
@@ -237,19 +254,7 @@ function bind360Viewer(filesCount) {
                 $('.annotated-wrapper .place-info').addClass('loaded');
             }
         });
-
-        $("#autoPlay").click(function (e) {
-            e.preventDefault();
-            if($(this).hasClass('active')){
-                clearInterval(autoInterval);
-                $(this).removeClass('active');
-            }else {
-                $(this).addClass('active');
-                autoInterval = setInterval(function () {
-                    $('.threesixty').nextFrame();
-                },100);
-            }
-        });
+        clearInterval(autoInterval);
     }
 }
 

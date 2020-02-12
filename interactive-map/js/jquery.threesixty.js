@@ -302,7 +302,7 @@ var scope,
 
     ThreeSixty.prototype.onMouseUp = function(e) {
         isMouseDown = false;
-        $downElem.trigger('up');
+        //$downElem.trigger('up');
     };
 
     /**
