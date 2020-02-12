@@ -99,8 +99,6 @@ function drawPins(wrapperId) {
         var pinIdx = 'pin_' + xPos + '_' + yPos;
         var pinId = slugifyString(title);
         if(langId == languageId){
-            console.log(langId);
-            console.log(languageId);
             html += '<span style="left: ' + xPos + 'px; top:' + yPos + 'px;" class="marker" id="' + pinId + '" tabindex="0" data-href="#' + pinId + '" data-toggle="tooltip" data-placement="bottom" title="' + hoverInfo + '" role="tooltip" aria-label="' + title + '" data-parent="' + wrapperId + '"></span>';
         }
     }
