@@ -1,12 +1,14 @@
 var markers = null;
 var imageCount = 5;
 var autoInterval = null;
+var languageId = 1;
 
 function bind_maps(json_data) {
     markers = json_data;
     $('.annotated-bg').removeClass("show-details");
 
     var wrapperId = "interactive_map";
+    languageId = parseInt($('#'+ wrapperId).attr('data-langID'));
     drawPins(wrapperId);
 
     //bind click event for map markers
@@ -88,6 +90,7 @@ function drawPins(wrapperId) {
     var html = "";
     for (var i = 0; i < markers.length; i++) {
         //get the properties from json that makes the marker's markup.
+        var langId = parseInt(markers[i]['langID']);
         var xPos = markers[i]['PosX'];
         var yPos = markers[i]['PosY'];
         var hoverInfo = markers[i]['HoverInfo'];
@@ -95,8 +98,11 @@ function drawPins(wrapperId) {
 
         var pinIdx = 'pin_' + xPos + '_' + yPos;
         var pinId = slugifyString(title);
-
-        html += '<span style="left: ' + xPos + 'px; top:' + yPos + 'px;" class="marker" id="' + pinId + '" tabindex="0" data-href="#' + pinId + '" data-toggle="tooltip" data-placement="bottom" title="' + hoverInfo + '" role="tooltip" aria-label="' + title + '" data-parent="' + wrapperId + '"></span>';
+        if(langId == languageId){
+            console.log(langId);
+            console.log(languageId);
+            html += '<span style="left: ' + xPos + 'px; top:' + yPos + 'px;" class="marker" id="' + pinId + '" tabindex="0" data-href="#' + pinId + '" data-toggle="tooltip" data-placement="bottom" title="' + hoverInfo + '" role="tooltip" aria-label="' + title + '" data-parent="' + wrapperId + '"></span>';
+        }
     }
     $('#' + wrapperId + ' .annotated-bg .map-pins').append(html);
 }
