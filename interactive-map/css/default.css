@@ -88,6 +88,10 @@ we have to place the hex code of color after the last slash (/), It give a nice 
           width: 100%;
           height: 245px;
           overflow-y: auto; }
+      .annotated-wrapper .annotated-bg .place-info .threesixty-wrapper .threesixty {
+        background-color: rgba(0, 0, 0, 0.5) !important; }
+        .annotated-wrapper .annotated-bg .place-info .threesixty-wrapper .threesixty .threesixty-frame[style*="block"] {
+          z-index: 1100 !important; }
       .annotated-wrapper .annotated-bg .place-info .ui {
         display: none !important; }
       .annotated-wrapper .annotated-bg .place-info.single .ui {
@@ -106,6 +110,9 @@ we have to place the hex code of color after the last slash (/), It give a nice 
         display: block; }
       .annotated-wrapper .annotated-bg .place-info.loaded .ui {
         display: block !important; }
+      .annotated-wrapper .annotated-bg .place-info.loaded + .pins-wrapper {
+        opacity: 0 !important;
+        z-index: -1 !important; }
     .annotated-wrapper .annotated-bg.show-details .place-info {
       pointer-events: auto; }
       .annotated-wrapper .annotated-bg.show-details .place-info .back-button {

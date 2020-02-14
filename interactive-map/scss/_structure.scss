@@ -98,6 +98,14 @@
           overflow-y: auto;
         }
       }
+      .threesixty-wrapper {
+        .threesixty  {
+          background-color: rgba(0,0,0,0.5) !important;
+          .threesixty-frame[style*="block"] {
+            z-index: 1100 !important;
+          }
+        }
+      }
       .ui {
         display: none !important;
       }
@@ -132,6 +140,10 @@
       &.loaded {
         .ui {
           display: block !important;
+        }
+        + .pins-wrapper {
+          opacity: 0 !important;
+          z-index: -1 !important;
         }
       }
     }
