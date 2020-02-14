@@ -88,19 +88,19 @@ function bind_maps(json_data) {
 
     $('.next').click(function(e){
         e.preventDefault();
-        $threeSixty.nextFrame();
+        $('.threesixty').nextFrame();
     });
 
     $('.prev').click(function(e){
         e.preventDefault();
-        $threeSixty.prevFrame();
+        $('.threesixty').prevFrame();
     });
     $("#autoPlay").click(function (e) {
         e.preventDefault();
         //console.log('auto play button clicked');
         if($(this).hasClass('active')){
             $(this).removeClass('active');
-            //console.log('stop auto play');
+            clearInterval(autoInterval);
         }else {
             $(this).addClass('active');
             autoInterval = setInterval(function () {
