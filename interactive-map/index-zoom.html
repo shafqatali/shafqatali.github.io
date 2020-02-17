@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>interactive map</title>
+    <!--bootstrap is loaded to style the page if it's removed it will not break the map styling -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--default.css has all styling for the map-->
+    <link rel="stylesheet" href="css/default.css"/>
+    <script src="js/csvjson.js"></script>
+    <script src="js/jQuery-v1.9.1.js"></script>
+    <!--Only tooltips are dependent on bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.threesixty.js"></script>
+    <script src="js/panzoom.js"></script>
+    <!--contains the script to draw marker over the map -->
+    <script src="js/interactive-map-zoom.js"></script>
+</head>
+<body>
+<div class="pt-5 pb-5">
+    <h1 class="text-uppercase text-center">museum of the city of athens</h1>
+    <div class="zoom-ui">
+        <button class="zoom-in">Zoom In</button>
+        <button class="zoom-out">Zoom Out</button>
+        <input type="range" class="zoom-range">
+        <button class="reset">Reset</button>
+    </div>
+</div>
+
+<!-- interactive map start from here -->
+<div id="interactive_map" class="annotated-wrapper" data-langID="1">
+    <div class="annotated-bg">
+        <div class="place-info">
+            <button type="button" id="backToAllPlaces" class="back-button"><span class="sr-only">back to list</span></button>
+            <div class="place-image single">&nbsp;</div>
+            <div class="place-image threesixty-wrapper"></div>
+            <div class="ui">
+                <a id="autoPlay" href="#" class="play-pause"><span class="sr-only">play/pause</span></a>
+                <a href="#" class="next">&gt;</a>
+                <a href="#" class="prev">&lt;</a>
+            </div>
+            <div class="place-content">
+                <h1 class="name"></h1>
+                <div class="inner-wrapper">
+                    <div class="description"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pins-wrapper">
+            <div class="map-pins"></div>
+        </div>
+    </div>
+</div>
+<!-- interactive map ends here -->
+<div class="pt-5"><p class="pt-5"><span class="sr-only">just a gap can be removed</span></p></div>
+<!-- JS References block-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        <!-- call the function that binds data for the map -->
+        bind_maps(locationsList);
+    });
+</script>
+
+</body>
+</html>
+
+
