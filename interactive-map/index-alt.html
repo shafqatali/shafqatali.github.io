@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tikslus360.js"></script>
+</head>
+<body>
+<div id="demo">
+    <button class="autorotate">Auto Rotate</button>
+</div>
+<br/>
+<hr/>
+<br/>
+<p>This library has following features</p>
+<ul>
+    <li>Auto play/pause feature</li>
+    <li>Default zooming [Just click and drag on the image,then it will zoom out that portion]</li>
+    <li>Rotate as mouse cursor move on the image </li>
+</ul>
+<script>
+    $(document).ready(function(){
+        $("#demo").tikslus360({
+            imageDir:'files/1/Athens1842/ASTEROSKOPEIO/', // the location where you’ve put the images.
+            imageCount:160, // the number of images you have.
+            imageExt:'jpg', // the extension of the images. Make sure all the images have same extension.
+            canvasID:'my_place', // ID that will be assigned to the canvas
+            canvasWidth:960, // width of canvas
+            canvasHeight:543, // height of canvas
+            zoomPower:2, // power of zoom
+            zoomRadius:100, // radius of zoom lens
+            autoRotate:false, // if TRUE, auto rotation will be enabled by default
+            autoRotateInterval:100, // rotation inteval
+            fadeInInterval:400 // fade interval
+        });
+    });
+</script>
+</body>
+</html>
