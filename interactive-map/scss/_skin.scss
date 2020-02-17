@@ -323,9 +323,42 @@
       height: 60px;
       background: url("imgs/play-button.png") no-repeat center center;
       background-size: 25px;
+      background-color: rgba(255,255,255,0.25);
       &.active {
         background: url("imgs/pause-button.png") no-repeat center center;
         background-size: 25px;
+        background-color: rgba(255,255,255,0.25);
+      }
+    }
+    .zoom-io {
+      position: absolute;
+      top: 0;
+      right: 61px;
+      bottom: auto;
+      left: auto;
+      margin: auto;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255,255,255,0.25);
+      &:after {
+        content: "";
+        width: 18px;
+        height: 24px;
+        display: block;
+        margin: auto;
+        background: url("imgs/plus-minus.png") no-repeat;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background-position: 0 0;
+      }
+      &.minus {
+        right: 122px;
+        &:after {
+          background-position: 0px -22px;
+        }
       }
     }
   }

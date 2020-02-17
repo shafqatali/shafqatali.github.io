@@ -121,7 +121,8 @@
           .next {
             display: block;
           }
-          .play-pause {
+          .zoom-io,
+          .play-pause{
             display: none;
           }
         }
@@ -132,6 +133,7 @@
           .next {
             display: none;
           }
+          .zoom-io,
           .play-pause {
             display: block;
           }

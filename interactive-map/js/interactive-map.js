@@ -2,6 +2,8 @@ var markers = null;
 var imageCount = 5;
 var autoInterval = null;
 var languageId = 1;
+var scaleRatio = 1;
+var scaleAmount = 0.25;
 
 function bind_maps(json_data) {
     markers = json_data;
@@ -107,6 +109,21 @@ function bind_maps(json_data) {
                 $('.threesixty').nextFrame();
             },100);
             //console.log('start auto play');
+        }
+    });
+
+    $('.zoom-io.plus').click(function (e) {
+        e.preventDefault();
+        if(scaleRatio < 3){
+            scaleRatio += scaleAmount;
+            $('.threesixty').css('transform', 'scale('+ scaleRatio+')');
+        }
+    });
+    $('.zoom-io.minus').click(function (e) {
+        e.preventDefault();
+        if(scaleRatio > 1) {
+            scaleRatio -= scaleAmount;
+            $('.threesixty').css('transform', 'scale('+ scaleRatio+')');
         }
     });
 }
@@ -262,5 +279,7 @@ function reset360Viewer() {
     $('.annotated-wrapper .place-info').removeClass('loaded').removeClass('single').removeClass('rotate').removeClass('multi');
     $('.annotated-wrapper .place-image').html('');
     $('.annotated-wrapper .play-pause').removeClass('active');
+    scaleRatio = 1;
+    $('.threesixty').css('transform', 'scale('+ scaleRatio+')');
     clearInterval(autoInterval);
 }

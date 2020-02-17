@@ -101,11 +101,13 @@ we have to place the hex code of color after the last slash (/), It give a nice 
         .annotated-wrapper .annotated-bg .place-info.multi .ui .prev,
         .annotated-wrapper .annotated-bg .place-info.multi .ui .next {
           display: block; }
+        .annotated-wrapper .annotated-bg .place-info.multi .ui .zoom-io,
         .annotated-wrapper .annotated-bg .place-info.multi .ui .play-pause {
           display: none; }
       .annotated-wrapper .annotated-bg .place-info.rotate .ui .prev,
       .annotated-wrapper .annotated-bg .place-info.rotate .ui .next {
         display: none; }
+      .annotated-wrapper .annotated-bg .place-info.rotate .ui .zoom-io,
       .annotated-wrapper .annotated-bg .place-info.rotate .ui .play-pause {
         display: block; }
       .annotated-wrapper .annotated-bg .place-info.loaded .ui {
@@ -368,10 +370,39 @@ we have to place the hex code of color after the last slash (/), It give a nice 
       width: 60px;
       height: 60px;
       background: url("imgs/play-button.png") no-repeat center center;
-      background-size: 25px; }
+      background-size: 25px;
+      background-color: rgba(255, 255, 255, 0.25); }
       .annotated-wrapper .ui .play-pause.active {
         background: url("imgs/pause-button.png") no-repeat center center;
-        background-size: 25px; }
+        background-size: 25px;
+        background-color: rgba(255, 255, 255, 0.25); }
+    .annotated-wrapper .ui .zoom-io {
+      position: absolute;
+      top: 0;
+      right: 61px;
+      bottom: auto;
+      left: auto;
+      margin: auto;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.25); }
+      .annotated-wrapper .ui .zoom-io:after {
+        content: "";
+        width: 18px;
+        height: 24px;
+        display: block;
+        margin: auto;
+        background: url("imgs/plus-minus.png") no-repeat;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background-position: 0 0; }
+      .annotated-wrapper .ui .zoom-io.minus {
+        right: 122px; }
+        .annotated-wrapper .ui .zoom-io.minus:after {
+          background-position: 0px -22px; }
   .annotated-wrapper .ui-spinner {
     border-radius: 100%;
     width: 46px;
