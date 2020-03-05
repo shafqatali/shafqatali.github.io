@@ -7305,7 +7305,7 @@ a.spotlight.hover-overlay .image-wrapper:before {
   display: block; }
 
 .spotlight.image-overlay .image-wrapper .overlay-text-box {
-  background-color: #E5E5EA;
+  background-color: transparent;
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 25px;
@@ -7313,7 +7313,7 @@ a.spotlight.hover-overlay .image-wrapper:before {
 
 .spotlight.image-overlay .image-wrapper .overlay-icon-box {
   font-size: 1.5rem;
-  background-color: #E5E5EA; }
+  background-color: transparent; }
 
 .spotlight.image-overlay.center .image-wrapper .overlay-text-box {
   text-align: center; }
