@@ -8230,8 +8230,8 @@ just replace your svg sprite and modify these classes.
 
 .svg-info {
   background: url("svg/sprite.svg") 65.98929% 44.50226% no-repeat;
-  width: 22.175px;
-  height: 22.175px; }
+  width: 23px;
+  height: 23px; }
 
 .svg-kitchen {
   background: url("svg/sprite.svg") 0 99.83784% no-repeat;
@@ -8589,6 +8589,60 @@ just replace your svg sprite and modify these classes.
   .input-group.bg-white .input-group-append .input-group-text {
     background-color: #ffffff;
     border-left: transparent; }
+
+.table-status {
+  background-color: #ffffff;
+  min-height: 88px;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative; }
+  .table-status:before {
+    content: "";
+    width: 9px;
+    height: 100%;
+    background-color: #e70d4d;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 8px 0 0 8px; }
+  .table-status div[class*="col-"] {
+    padding-right: 0; }
+    .table-status div[class*="col-"]:first-of-type {
+      padding-left: 25px; }
+    .table-status div[class*="col-"]:last-of-type {
+      padding-right: 10px; }
+  .table-status span[class*="svg-"] {
+    vertical-align: middle; }
+  .table-status .text {
+    display: block;
+    margin-bottom: 10px;
+    color: #3f3d56;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px; }
+  .table-status .time {
+    padding: 8px 6px;
+    float: right;
+    display: block;
+    text-align: center;
+    max-width: 68px;
+    min-height: 68px;
+    border-radius: 8px;
+    border: 1px solid #3f3d56; }
+    .table-status .time .text {
+      margin-bottom: 0; }
+  .table-status.free:before {
+    background-color: #2db148; }
+  .table-status.kitchen:before {
+    background-color: #3f3d56; }
+  .table-status.ready:before {
+    background-color: #4285f4; }
 
 @media screen and (min-width: 641px) {
   .mobile-box {
