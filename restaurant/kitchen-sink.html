@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Restaurant Design System</title>
+    <!--It's temporary CSS only for presentation of HTML page. It should be excluded from actual project Kentico/CMS -->
+    <!--If you want to remove any page then add this "presentation: 'yes'" to your page  between liquid tags -->
+    <link href="css/patterns.css" rel="stylesheet"/>
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="mobile-box">
+    <div class="container-fluid">
+        <h1>Design System</h1>
+        <span class="ds-h4">Input fields</span>
+<div class="login-form">
+<div class="form-group">
+    <label for="field81" class="sr-only">Email</label>
+    <input type="email" class="form-control" placeholder="Email" id="field81">
+</div>
+<div class="form-group">
+    <label for="field766" class="sr-only">Email</label>
+    <input type="password" class="form-control" placeholder="Password" id="field766">
+</div>
+</div>
+<span class="ds-h4">Checkbox fields</span>
+<div class="form-group">
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="field830" >
+        <label class="custom-control-label" for="field830">Online</label>
+    </div>
+</div>
+<div class="form-group">
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="field556" checked="checked">
+        <label class="custom-control-label" for="field556">Online</label>
+    </div>
+</div>
+<span class="ds-h4">Input group</span>
+<div class="form-group">
+    <div class="input-group ">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+            <button  class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="input-group bg-green">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+            <button  class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="input-group bg-white">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+            <button  class="input-group-text" type="button"><span class="svg-details"></span></button>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="input-group bg-green">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append multi">
+            <button  class="input-group-text" type="button"><span class="svg-details"></span></button>
+        </div>
+        <div class="input-group-append">
+            <button  class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
+        </div>
+    </div>
+</div>
+<span class="ds-h4">Buttons</span>
+<button type="button" class="btn btn-primary">Primary</button>
+<br/>
+<div class="badge badge-primary">Primary</div>
+<br/><br/>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<br/>
+<div class="badge badge-secondary">Secondary</div>
+<br/><br/>
+<button type="button" class="btn btn-light">Light</button>
+<br/>
+<div class="badge badge-light">Light</div>
+<br/><br/>
+<button type="button" class="btn btn-white">White</button>
+<br/>
+<div class="badge badge-white">White</div>
+<br/><br/>
+<button type="button" class="btn btn-dark">Dark</button>
+<br/>
+<div class="badge badge-dark">Dark</div>
+<span class="ds-h4">Buttons with icon</span>
+<button type="button" class="btn btn-white">
+    <span class="icon svg-view"></span>
+    Change View
+</button>
+<br/>
+<button type="button" class="btn btn-light">
+    <span class="icon svg-table-chair"></span>
+    Table 03
+</button>
+<br/>
+<button type="button" class="btn btn-white">
+    <span class="icon svg-plus-circle"></span>
+    Add more
+</button>
+<br/>
+<button type="button" class="btn btn-white">Clear Table</button>
+<span class="ds-h4">Shadow Box</span>
+<div class="square-box">
+    <a href="#/">
+        <span class="svg-kitchen"></span>
+        <h2>Kitchen Icon</h2>
+    </a>
+</div>
+<div class="square-box">
+    <a href="#/">
+        <span class="svg-table-chair-yellow"></span>
+        <h2>table chair yellow</h2>
+    </a>
+</div>
+<span class="ds-h4">Rooms</span>
+<div class="room bg-pink">
+    <span class="svg-table-chair-white"></span>
+    <span>Table 01</span>
+</div>
+<div class="room bg-green">
+    <span class="svg-table-chair-white"></span>
+    <span>Table 03</span>
+</div>
+<div class="room bg-blue">
+    <span class="svg-table-chair-white"></span>
+    <span>Table 11</span>
+</div>
+<div class="room bg-black">
+    <span class="svg-table-chair-white"></span>
+    <span>Table 07</span>
+</div>
+<span class="ds-h4">Menu Items</span>
+<div class="row">
+ <div class="col-6">
+<div class="menu-item">
+    <div class="media-box">
+        <img src="images/menu-item.png" alt="menu item image">
+        <a href="#/" class="icon"><span class="sr-only">Add to order</span></a>
+    </div>
+    <span class="name">Main Meat Courses</span>
+</div>
+ </div>
+</div>
+<span class="ds-h4">Ordered Item</span>
+<div class="ordered-item active">
+    <div class="row">
+        <div class="col-8">
+            <span class="name">Barbecu Burger</span>
+            <span class="desc">Lorem ipsum is simply dummy</span>
+            <span class="price"><i class="svg-pound"></i>111,80</span>
+        </div>
+        <div class="col-4 pl-0">
+<div class="quantity ">
+    <button type="button" class="btn-plain minus"><span class="icon btn-minus"></span><span class="sr-only">remove one</span></button>
+    <span class="text">02</span>
+    <button type="button" class="btn-plain plus"><span class="icon btn-plus"></span><span class="sr-only">add one</span></button>
+</div>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="ordered-item ">
+    <div class="row">
+        <div class="col-8">
+            <span class="name">Hamdog</span>
+            <span class="desc">Lorem ipsum is simply dummy</span>
+            <span class="price"><i class="svg-pound"></i>111,80</span>
+        </div>
+        <div class="col-4 pl-0">
+<div class="quantity ">
+    <button type="button" class="btn-plain minus"><span class="icon btn-minus"></span><span class="sr-only">remove one</span></button>
+    <span class="text">02</span>
+    <button type="button" class="btn-plain plus"><span class="icon btn-plus"></span><span class="sr-only">add one</span></button>
+</div>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="cart-item">
+    <span class="name">Barbecu Burger</span>
+    <div class="row">
+        <div class="col-5">
+            <span class="price"><i class="svg-pound"></i>111,80</span>
+        </div>
+        <div class="col-5">
+<div class="quantity ">
+    <button type="button" class="btn-plain minus"><span class="icon btn-minus"></span><span class="sr-only">remove one</span></button>
+    <span class="text">02</span>
+    <button type="button" class="btn-plain plus"><span class="icon btn-plus"></span><span class="sr-only">add one</span></button>
+</div>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn-plain btn-remove"><span class="icon svg-stop"></span><span class="sr-only">add one</span></button>
+        </div>
+    </div>
+</div>
+<br/>
+<span class="ds-h4">Order Details</span>
+<div class="order-detail">
+    <p><span>Date:</span> 12/03/2020 at 10:45</p>
+    <p><span>Number:</span> 2858516</p>
+    <p><span>Total Price:</span>15,30</p>
+    <p><span>Items:</span></p>
+    <p>(1) Barbecue Burger</p>
+    <p>(1) Cheeseburger</p>
+</div>
+<br/>
+<span class="ds-h4">Menu Item Details</span>
+<div class="menu-item-detail">
+    <p><span>Name:</span> Cold hummus</p>
+    <p><span>Category:</span>Cold_starters</p>
+    <p><span>Price:</span> 15,90</p>
+    <p><span>Sequence:</span> 1</p>
+    <p><span>Type:</span> Normal item</p>
+    <div class="buttons-wrapper">
+        <button type="button" class="btn-plain edit"><span class="icon svg-edit"></span><span class="sr-only">edit</span></button>
+        <button type="button" class="btn-plain remove"><span class="icon svg-remove"></span><span class="sr-only">remove</span></button>
+        <button type="button" class="btn btn-dark">Set options</button>
+    </div>
+</div>
+<br/>
+<span class="ds-h4">Page Heading</span>
+<header class="page-header ">
+    <a href="index.html" class="btn-plain btn-back"><span class="svg-arrow-back"></span><span class="sr-only">Back Button</span></a>
+    <h1>Menu Items</h1>
+    <a href="settings.html" class="btn-plain btn-settings"><span class="svg-settings"></span><span class="sr-only">Settings Button</span></a>
+</header>
+<br/>
+<span class="ds-h4">Table Status</span>
+<div class="table-status ">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="svg-table"></span> Table 01</span>
+            <span class="text"><span class="svg-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="svg-info"></span> Occupied</span>
+            <span class="text"><span class="svg-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="svg-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="table-status free">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="svg-table"></span> Table 01</span>
+            <span class="text"><span class="svg-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="svg-info"></span> Occupied</span>
+            <span class="text"><span class="svg-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="svg-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="table-status kitchen">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="svg-table"></span> Table 01</span>
+            <span class="text"><span class="svg-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="svg-info"></span> Occupied</span>
+            <span class="text"><span class="svg-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="svg-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="table-status ready">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="svg-table"></span> Table 01</span>
+            <span class="text"><span class="svg-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="svg-info"></span> Occupied</span>
+            <span class="text"><span class="svg-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="svg-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+<div class="container-fluid">
+    <span class="ds-h4">Sprite Icons</span>
+    <div class="ds-sprites-wrapper">
+    <ul class="ds-sprites-list">
+        <li><span class="svg-arrow-back"></span><span class="class-name">.svg-arrow-back</span></li>
+        <li><span class="svg-chair"></span><span class="class-name">.svg-chair</span></li>
+        <li><span class="svg-chef"></span><span class="class-name">.svg-chef</span></li>
+        <li><span class="svg-clock"></span><span class="class-name">.svg-clock</span></li>
+        <li><span class="svg-clock-white"></span><span class="class-name">.svg-clock-white</span></li>
+        <li><span class="svg-details"></span><span class="class-name">.svg-details</span></li>
+        <li><span class="svg-edit"></span><span class="class-name">.svg-edit</span></li>
+        <li><span class="svg-info"></span><span class="class-name">.svg-info</span></li>
+        <li><span class="svg-kitchen"></span><span class="class-name">.svg-kitchen</span></li>
+        <li><span class="svg-minus"></span><span class="class-name">.svg-minus</span></li>
+        <li><span class="svg-minus-circle"></span><span class="class-name">.svg-minus-circle</span></li>
+        <li><span class="svg-minus-circle-white"></span><span class="class-name">.svg-minus-circle-white</span></li>
+        <li><span class="svg-plus"></span><span class="class-name">.svg-plus</span></li>
+        <li><span class="svg-plus-circle"></span><span class="class-name">.svg-plus-circle</span></li>
+        <li><span class="svg-plus-circle-white"></span><span class="class-name">.svg-plus-circle-white</span></li>
+        <li><span class="svg-plus-circle-yellow"></span><span class="class-name">.svg-plus-circle-yellow</span></li>
+        <li><span class="svg-pound"></span><span class="class-name">.svg-pound</span></li>
+        <li><span class="svg-pound-white"></span><span class="class-name">.svg-pound-white</span></li>
+        <li><span class="svg-remove"></span><span class="class-name">.svg-remove</span></li>
+        <li><span class="svg-settings"></span><span class="class-name">.svg-settings</span></li>
+        <li><span class="svg-stop"></span><span class="class-name">.svg-stop</span></li>
+        <li><span class="svg-table"></span><span class="class-name">.svg-table</span></li>
+        <li><span class="svg-table-chair"></span><span class="class-name">.svg-table-chair</span></li>
+        <li><span class="svg-table-chair-white"></span><span class="class-name">.svg-table-chair-white</span></li>
+        <li><span class="svg-table-chair-yellow"></span><span class="class-name">.svg-table-chair-yellow</span></li>
+        <li><span class="svg-tick-circle"></span><span class="class-name">.svg-tick-circle</span></li>
+        <li><span class="svg-view"></span><span class="class-name">.svg-view</span></li>
+    </ul>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
