@@ -7593,6 +7593,172 @@ just replace your svg sprite and modify these classes.
   width: 21.293px;
   height: 21.293px; }
 
+.bg-pink {
+  background-color: #e70d4d; }
+
+.bg-green {
+  background-color: #2db148; }
+
+.bg-blue {
+  background-color: #4285f4; }
+
+.bg-black {
+  background-color: #000000; }
+
+.btn-plain {
+  background-color: transparent;
+  border: none;
+  vertical-align: middle; }
+
+.room {
+  width: 88px;
+  min-height: 89px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 14px 8px;
+  text-align: center;
+  margin: 0 19px 19px 0;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px; }
+  .room span {
+    display: inline-block; }
+    .room span[class*="svg-"] {
+      margin-bottom: 5px; }
+
+.menu-item {
+  display: inline-block; }
+  .menu-item .media-box {
+    position: relative; }
+    .menu-item .media-box img {
+      border-radius: 50%;
+      display: block;
+      width: 100%;
+      height: auto; }
+    .menu-item .media-box .icon {
+      background-color: transparent;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      display: block; }
+      .menu-item .media-box .icon:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        margin: auto;
+        background: url("svg/sprite.svg") 78.93262% 69.25366% no-repeat;
+        width: 27.305px;
+        height: 27.305px; }
+  .menu-item .name {
+    display: block;
+    color: #3f3d56;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px; }
+
+.btn-icon {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #3f3d56;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 400; }
+  .btn-icon .icon {
+    display: inline-block;
+    vertical-align: text-top;
+    margin-right: 5px; }
+  .btn-icon.btn-white {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
+  .btn-icon.btn-light {
+    border: 1px solid #3f3d56;
+    background-color: #f2f2f4; }
+
+.quantity {
+  margin: 15px 0 0; }
+  .quantity .btn-plain,
+  .quantity .text {
+    vertical-align: middle;
+    display: inline-block; }
+  .quantity .btn-plain .icon.btn-minus {
+    background: url("svg/sprite.svg") 99.87237% 19.57846% no-repeat;
+    width: 21.221px;
+    height: 21.221px; }
+  .quantity .btn-plain .icon.btn-plus {
+    background: url("svg/sprite.svg") 99.87237% 29.3677% no-repeat;
+    width: 21.221px;
+    height: 21.221px; }
+
+.cart-item,
+.ordered-item {
+  padding: 8px 15px;
+  min-height: 88px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff; }
+  .cart-item span,
+  .ordered-item span {
+    display: block;
+    color: #3f3d56;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px; }
+    .cart-item span.desc,
+    .ordered-item span.desc {
+      font-size: 13px; }
+    .cart-item span.price i,
+    .ordered-item span.price i {
+      vertical-align: middle; }
+  .cart-item.active,
+  .ordered-item.active {
+    background-color: #e70d4d; }
+    .cart-item.active span,
+    .ordered-item.active span {
+      color: #ffffff; }
+      .cart-item.active span.price i,
+      .ordered-item.active span.price i {
+        background: url("svg/sprite.svg") 66.27894% 44.50226% no-repeat;
+        width: 22.175px;
+        height: 22.175px; }
+
+.quantity.white .btn-plain .icon.btn-minus,
+.ordered-item.active .btn-plain .icon.btn-minus {
+  background: url("svg/sprite.svg") 99.87237% 9.78923% no-repeat;
+  width: 21.221px;
+  height: 21.221px; }
+
+.quantity.white .btn-plain .icon.btn-plus,
+.ordered-item.active .btn-plain .icon.btn-plus {
+  background: url("svg/sprite.svg") 99.87237% 0 no-repeat;
+  width: 21.221px;
+  height: 21.221px; }
+
+.cart-item {
+  min-height: 75px; }
+  .cart-item span.name {
+    margin-bottom: 10px; }
+  .cart-item span.price {
+    display: inline-block; }
+  .cart-item .quantity {
+    margin: 0;
+    display: inline-block; }
+
 .custom-switch {
   padding: 0; }
   .custom-switch .custom-control-label {
@@ -7622,7 +7788,8 @@ just replace your svg sprite and modify these classes.
 .mobile-box {
   padding: 50px 0;
   max-width: 360px;
-  margin: auto; }
+  margin: 0 auto 0 60px;
+  background-color: #f2f2f4; }
 
 *[class*="svg-"] {
   display: inline-block; }
