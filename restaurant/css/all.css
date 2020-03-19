@@ -195,11 +195,11 @@ sup {
   top: -.5em; }
 
 a {
-  color: #FFCC2A;
+  color: #E70D4D;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #FFCC2A;
+    color: #E70D4D;
     text-decoration: underline; }
 
 a:not([href]) {
@@ -2284,10 +2284,10 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #FFCC2A;
+  color: #E70D4D;
   text-decoration: none; }
   .btn-link:hover {
-    color: #FFCC2A;
+    color: #E70D4D;
     text-decoration: underline; }
   .btn-link:focus, .btn-link.focus {
     text-decoration: underline;
@@ -8366,7 +8366,7 @@ just replace your svg sprite and modify these classes.
   color: #ffffff;
   padding: 14px 8px;
   text-align: center;
-  margin: 0 19px 19px 0;
+  margin: 0 15px 20px 0;
   display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -8491,6 +8491,7 @@ just replace your svg sprite and modify these classes.
   height: 22px; }
 
 .cart-item {
+  margin-bottom: 30px;
   min-height: 75px; }
   .cart-item span.name {
     margin-bottom: 10px; }
@@ -8506,7 +8507,8 @@ just replace your svg sprite and modify these classes.
   min-height: 173px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  margin-bottom: 30px; }
   .menu-item-detail p,
   .order-detail p {
     color: #3f3d56;
@@ -8552,7 +8554,8 @@ just replace your svg sprite and modify these classes.
 .page-header {
   font-size: 0;
   background-color: transparent;
-  padding: 10px 0; }
+  padding: 10px 0;
+  margin-bottom: 30px; }
   .page-header h1,
   .page-header .btn-plain {
     vertical-align: middle; }
@@ -8567,6 +8570,9 @@ just replace your svg sprite and modify these classes.
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     font-weight: 400; }
+  .page-header.no-back .btn-plain.btn-back {
+    visibility: hidden;
+    pointer-events: none; }
 
 .input-group {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -8651,6 +8657,11 @@ just replace your svg sprite and modify these classes.
     margin: 0 auto 0 60px;
     background-color: #f2f2f4; } }
 
+body {
+  background-color: #f2f2f4; }
+  body .btn {
+    min-width: 100%; }
+
 .custom-switch {
   padding: 0; }
   .custom-switch .custom-control-label {
@@ -8690,6 +8701,20 @@ just replace your svg sprite and modify these classes.
   margin-bottom: 30px;
   background-color: #ffffff;
   position: relative; }
+  .square-box a {
+    display: block; }
+  .square-box h2 {
+    margin: 0;
+    text-align: center;
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 35px;
+    position: absolute;
+    top: auto;
+    bottom: 15%;
+    width: 100%; }
   .square-box span[class*="svg-"] {
     display: block;
     position: absolute;
