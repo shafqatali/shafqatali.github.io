@@ -7759,6 +7759,13 @@ just replace your svg sprite and modify these classes.
     margin: 0;
     display: inline-block; }
 
+@media screen and (min-width: 641px) {
+  .mobile-box {
+    padding: 50px 0;
+    max-width: 360px;
+    margin: 0 auto 0 60px;
+    background-color: #f2f2f4; } }
+
 .custom-switch {
   padding: 0; }
   .custom-switch .custom-control-label {
@@ -7784,12 +7791,6 @@ just replace your svg sprite and modify these classes.
     transform: none;
     right: 30px;
     background-color: #ffffff; }
-
-.mobile-box {
-  padding: 50px 0;
-  max-width: 360px;
-  margin: 0 auto 0 60px;
-  background-color: #f2f2f4; }
 
 *[class*="svg-"] {
   display: inline-block; }
