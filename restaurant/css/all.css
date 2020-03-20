@@ -7774,7 +7774,8 @@ just replace your svg sprite and modify these classes.
   .btn.btn-primary {
     min-width: 100%; }
   .btn.btn-secondary {
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    text-transform: uppercase; }
   .btn.btn-light {
     border: 1px solid #E70D4D;
     background-color: #FFFFFF;
@@ -8288,6 +8289,7 @@ body {
       text-decoration: none; }
 
 .login-screen {
+  padding-top: 1px;
   height: 100vh;
   width: 100%;
   background-color: #FFFFFF; }
@@ -8333,14 +8335,36 @@ body {
     margin: auto; }
     .login-screen .login-form .custom-control.custom-radio + .forgot-link {
       float: right; }
-    .login-screen .login-form .new-login {
-      padding: 25px 0 0;
+  .login-screen .new-login {
+    padding: 25px 0 0;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400; }
+    .login-screen .new-login p {
+      margin-bottom: 0; }
+  .login-screen .logo-box {
+    background: url("imgs/logo.png") no-repeat center center;
+    max-width: 252px;
+    min-height: 252px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+    margin: 153px auto 45px; }
+  .login-screen .inner-box {
+    padding: 0 35px;
+    text-align: center; }
+    .login-screen .inner-box .text {
       text-align: center;
+      color: #484848;
       font-family: "Open Sans", sans-serif;
-      font-size: 18px;
-      font-weight: 400; }
-      .login-screen .login-form .new-login p {
-        margin-bottom: 0; }
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 27px; }
+      .login-screen .inner-box .text span {
+        font-size: 28px;
+        font-weight: 300;
+        line-height: 32px;
+        display: block; }
 
 .form-settings {
   text-align: center; }
@@ -8353,5 +8377,21 @@ body {
 
 .menu-items-row > .col-6:nth-of-type(odd) {
   padding-right: 5px; }
+
+.otp-fields {
+  font-size: 0;
+  margin-top: 20px; }
+  .otp-fields .form-control {
+    display: inline-block;
+    border-radius: 8px; }
+    .otp-fields .form-control.country-code {
+      border-radius: 8px 0 0 8px;
+      border: 1px solid #B9B9B7;
+      margin-right: 4px;
+      width: 30%; }
+    .otp-fields .form-control.phone-number {
+      border-radius: 0 8px 8px 0;
+      border: 1px solid #B9B9B7;
+      width: calc(70% - 4px); }
 
 /*# sourceMappingURL=all.css.map */
