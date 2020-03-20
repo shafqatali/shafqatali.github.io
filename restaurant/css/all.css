@@ -8133,7 +8133,7 @@ just replace your svg sprite and modify these classes.
 @media screen and (min-width: 641px) {
   .mobile-box {
     padding: 50px 0;
-    max-width: 360px;
+    max-width: 375px;
     margin: 0 auto 0 60px;
     background-color: #f2f2f4; } }
 
@@ -8141,6 +8141,9 @@ body {
   background-color: #f2f2f4; }
   body .btn {
     min-width: 100%; }
+  body .container-fluid, body .container-sm, body .container-md, body .container-lg, body .container-xl {
+    padding-right: 36px;
+    padding-left: 36px; }
 
 .custom-switch {
   padding: 0; }
@@ -8179,29 +8182,37 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-bottom: 30px;
+  background-color: #ffffff; }
+
+.choose-box {
+  min-width: 302px;
+  width: 100%;
+  min-height: 286px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 30px;
   background-color: #ffffff;
-  position: relative; }
-  .square-box a {
-    display: block; }
-  .square-box h2 {
-    margin: 0;
-    text-align: center;
-    color: #000000;
-    font-family: "Open Sans", sans-serif;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 35px;
-    position: absolute;
-    top: auto;
-    bottom: 15%;
-    width: 100%; }
-  .square-box span[class*="svg-"] {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto; }
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center; }
+  .choose-box .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .choose-box .item .icon {
+      display: block;
+      margin-bottom: 10px; }
+    .choose-box .item .text {
+      display: block;
+      margin: 0;
+      text-align: center;
+      color: #000000;
+      font-family: "Open Sans", sans-serif;
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 35px; }
+    .choose-box .item:hover, .choose-box .item:focus {
+      text-decoration: none; }
 
 /*# sourceMappingURL=all.css.map */
