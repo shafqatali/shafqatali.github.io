@@ -1740,7 +1740,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: normal;
+  font-weight: 400;
   color: #3f3d56;
   text-align: center;
   vertical-align: middle;
@@ -7777,16 +7777,20 @@ just replace your svg sprite and modify these classes.
     color: #ffffff; }
   .btn.btn-light {
     border: 1px solid #e70d4d;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    color: #e70d4d; }
     .btn.btn-light.no-bg {
       background-color: transparent; }
   .btn.btn-white {
     border: 1px solid #c4c4c4;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    color: #000000; }
 
 .badge {
   min-width: 100%;
-  line-height: 1.1; }
+  line-height: 1.1;
+  margin-bottom: 10px;
+  border: none; }
   .badge.badge-primary {
     min-width: 100%; }
   .badge.badge-secondary {
@@ -7799,6 +7803,17 @@ just replace your svg sprite and modify these classes.
   .badge.badge-white {
     border: 1px solid #c4c4c4;
     background-color: #ffffff; }
+  .badge.badge-border-only {
+    background-color: transparent;
+    border: 1px solid #3f3d56;
+    color: #3f3d56; }
+  .badge.smaller {
+    padding: 5px 8px; }
+
+.btn *[class*="svg-"],
+.badge *[class*="svg-"] {
+  vertical-align: middle;
+  margin-top: -3px; }
 
 .bg-pink {
   background-color: #e70d4d; }
@@ -7821,14 +7836,6 @@ just replace your svg sprite and modify these classes.
   border: 1px solid #ffffff;
   background-color: #ffffff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
-  .badge-white.btn-rounded-xx {
-    border-radius: 50px;
-    border: 1px solid #c4c4c4;
-    box-shadow: none; }
-
-.btn-light-xx {
-  border: 1px solid #3f3d56;
-  background-color: #f2f2f4; }
 
 .room {
   width: 88px;
@@ -7923,7 +7930,8 @@ just replace your svg sprite and modify these classes.
   min-height: 88px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  margin-bottom: 30px; }
   .cart-item span,
   .ordered-item span {
     display: block;
@@ -8014,7 +8022,7 @@ just replace your svg sprite and modify these classes.
     width: 45px;
     height: 100%;
     padding: 15px 0; }
-    .menu-item-detail .buttons-wrapper .btn-dark {
+    .menu-item-detail .buttons-wrapper .badge-dark {
       position: absolute;
       top: auto;
       right: 0;
