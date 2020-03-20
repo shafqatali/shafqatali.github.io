@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Restaurant Design System</title>
     <!--It's temporary CSS only for presentation of HTML page. It should be excluded from actual project Kentico/CMS -->
     <!--If you want to remove any page then add this "presentation: 'yes'" to your page  between liquid tags -->
@@ -16,63 +19,75 @@
 <div class="mobile-box">
     <div class="container-fluid">
         <h1>Design System</h1>
-        <span class="ds-h4">Input fields</span>
+        <div class="d-inline-block" style="height: 100px;width: 100px; background-color: #000; opacity: 0.7;"></div>
+<div class="d-inline-block" style="height: 100px;width: 100px; background-color: rgba(0,0,0,0.7);"></div>
+<div class="d-inline-block" style="height: 100px;width: 100px; background-color: #484848;"></div>
+<div class="d-inline-block" style="height: 100px;width: 100px; background-color: #3F3D56;"></div>
+<span class="ds-h4">Input fields</span>
 <div class="login-form">
 <div class="form-group">
-    <label for="field28" class="sr-only">Email</label>
-    <input type="email" class="form-control" placeholder="Email" id="field28">
+    <label for="field979" class="sr-only">Email</label>
+    <input type="email" class="form-control" placeholder="Email" id="field979">
 </div>
 <div class="form-group">
-    <label for="field985" class="sr-only">Email</label>
-    <input type="password" class="form-control" placeholder="Password" id="field985">
+    <label for="field644" class="sr-only">Email</label>
+    <input type="password" class="form-control" placeholder="Password" id="field644">
 </div>
 </div>
 <span class="ds-h4">Checkbox fields</span>
 <div class="form-group">
     <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="field562" >
-        <label class="custom-control-label" for="field562">Online</label>
+        <input type="checkbox" class="custom-control-input" id="field746" >
+        <label class="custom-control-label" for="field746">Online</label>
     </div>
 </div>
 <div class="form-group">
     <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="field830" checked="checked">
-        <label class="custom-control-label" for="field830">Online</label>
+        <input type="checkbox" class="custom-control-input" id="field535" checked="checked">
+        <label class="custom-control-label" for="field535">Online</label>
     </div>
 </div>
 <span class="ds-h4">Input group</span>
 <div class="form-group">
-    <div class="input-group ">
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+    <div class="input-group bg-pink">
+        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
         <div class="input-group-append">
-            <button  class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
+            <button class="input-group-text" type="button">Ok</button>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="input-group ">
+        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
+        <div class="input-group-append">
+            <button class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
         </div>
     </div>
 </div>
 <div class="form-group">
     <div class="input-group bg-green">
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
         <div class="input-group-append">
-            <button  class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
+            <button class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
         </div>
     </div>
 </div>
 <div class="form-group">
     <div class="input-group bg-white">
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
         <div class="input-group-append">
-            <button  class="input-group-text" type="button"><span class="svg-details"></span></button>
+            <button class="input-group-text" type="button"><span class="svg-details"></span></button>
         </div>
     </div>
 </div>
 <div class="form-group">
     <div class="input-group bg-green">
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
         <div class="input-group-append multi">
-            <button  class="input-group-text" type="button"><span class="svg-details"></span></button>
+            <button class="input-group-text" type="button"><span class="svg-details"></span></button>
         </div>
         <div class="input-group-append">
-            <button  class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
+            <button class="input-group-text" type="button"><span class="svg-tick-circle"></span></button>
         </div>
     </div>
 </div>
@@ -101,7 +116,7 @@
 <br/>
 <button type="button" class="badge badge-white">
     <span class="icon svg-view"></span>
-    Change View
+    Change view
 </button>
 <br/>
 <button type="button" class="badge badge-white">
@@ -131,19 +146,19 @@
     </a>
 </div>
 <span class="ds-h4">Rooms</span>
-<div class="room bg-pink">
+<div class="room-table occupied">
     <span class="svg-table-chair-white"></span>
     <span>Table 01</span>
 </div>
-<div class="room bg-green">
+<div class="room-table free">
     <span class="svg-table-chair-white"></span>
     <span>Table 03</span>
 </div>
-<div class="room bg-blue">
+<div class="room-table ready">
     <span class="svg-table-chair-white"></span>
     <span>Table 11</span>
 </div>
-<div class="room bg-black">
+<div class="room-table kitchen">
     <span class="svg-table-chair-white"></span>
     <span>Table 07</span>
 </div>
@@ -162,12 +177,12 @@
 <span class="ds-h4">Ordered Item</span>
 <div class="ordered-item active">
     <div class="row">
-        <div class="col-8">
+        <div class="col-8 column-one">
             <span class="name">Barbecu Burger</span>
             <span class="desc">Lorem ipsum is simply dummy</span>
             <span class="price"><i class="svg-pound"></i>111,80</span>
         </div>
-        <div class="col-4 pl-0">
+        <div class="col-4 column-two">
 <div class="quantity ">
     <button type="button" class="btn-plain minus"><span class="icon btn-minus"></span><span class="sr-only">remove one</span></button>
     <span class="text">02</span>
@@ -179,12 +194,12 @@
 <br/>
 <div class="ordered-item ">
     <div class="row">
-        <div class="col-8">
+        <div class="col-8 column-one">
             <span class="name">Hamdog</span>
             <span class="desc">Lorem ipsum is simply dummy</span>
             <span class="price"><i class="svg-pound"></i>111,80</span>
         </div>
-        <div class="col-4 pl-0">
+        <div class="col-4 column-two">
 <div class="quantity ">
     <button type="button" class="btn-plain minus"><span class="icon btn-minus"></span><span class="sr-only">remove one</span></button>
     <span class="text">02</span>
@@ -238,14 +253,14 @@
 </div>
 <br/>
 <span class="ds-h4">Page Heading</span>
-<header class="page-header ">
-    <a href="index.html" class="btn-plain btn-back"><span class="svg-arrow-back"></span><span class="sr-only">Back Button</span></a>
+<header class="page-header">
+    <a href="index.html" class="btn-plain btn-back "><span class="svg-arrow-back"></span><span class="sr-only">Back Button</span></a>
     <h1>Menu Items</h1>
-    <a href="settings.html" class="btn-plain btn-settings"><span class="svg-settings"></span><span class="sr-only">Settings Button</span></a>
+    <a href="settings.html" class="btn-plain btn-settings "><span class="svg-settings"></span><span class="sr-only">Settings Button</span></a>
 </header>
 <br/>
 <span class="ds-h4">Table Status</span>
-<div class="table-status ">
+<div class="table-status occupied">
     <div class="row">
         <div class="col-5">
             <span class="text"><span class="svg-table"></span> Table 01</span>

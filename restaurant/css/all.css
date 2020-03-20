@@ -85,7 +85,7 @@ $enable-print-styles: true;
   --primary: #E70D4D;
   --secondary: #FFCC2A;
   --white: #FFFFFF;
-  --dark: #3f3d56;
+  --dark: #3F3D56;
   --breakpoint-xs: 0;
   --breakpoint-sm: 641px;
   --breakpoint-md: 641px;
@@ -103,7 +103,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(72, 72, 72, 0); }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
@@ -114,7 +114,7 @@ body {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #3f3d56;
+  color: #3F3D56;
   text-align: left;
   background-color: #FFFFFF; }
 
@@ -358,15 +358,15 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: "Open Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.2;
-  color: #3f3d56; }
+  color: #484848; }
 
 h1, .h1 {
   font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 1.4375rem; }
 
 h3, .h3 {
   font-size: 1.75rem; }
@@ -1393,12 +1393,12 @@ pre {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  height: 48px;
+  padding: 10px 15px;
+  font-size: 1.1875rem;
   font-weight: 400;
-  line-height: 1.5;
-  color: #3f3d56;
+  line-height: 1;
+  color: #484848;
   background-color: #FFFFFF;
   background-clip: padding-box;
   border: 1px solid #C4C4C4;
@@ -1412,7 +1412,7 @@ pre {
     border: 0; }
   .form-control:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #3f3d56; }
+    text-shadow: 0 0 0 #484848; }
   .form-control:focus {
     color: #495057;
     background-color: #fff;
@@ -1427,7 +1427,7 @@ pre {
     opacity: 1; }
 
 select.form-control:focus::-ms-value {
-  color: #3f3d56;
+  color: #484848;
   background-color: #FFFFFF; }
 
 .form-control-file,
@@ -1436,11 +1436,11 @@ select.form-control:focus::-ms-value {
   width: 100%; }
 
 .col-form-label {
-  padding-top: calc(0.375rem + 1px);
-  padding-bottom: calc(0.375rem + 1px);
+  padding-top: 11px;
+  padding-bottom: 11px;
   margin-bottom: 0;
   font-size: inherit;
-  line-height: 1.5; }
+  line-height: 1; }
 
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
@@ -1457,10 +1457,10 @@ select.form-control:focus::-ms-value {
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding: 0.375rem 0;
+  padding: 10px 0;
   margin-bottom: 0;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.1875rem;
+  line-height: 1;
   color: #212529;
   background-color: transparent;
   border: solid transparent;
@@ -1490,7 +1490,7 @@ textarea.form-control {
   height: auto; }
 
 .form-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 15px; }
 
 .form-text {
   display: block;
@@ -1740,8 +1740,8 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 400;
-  color: #3f3d56;
+  font-weight: 300;
+  color: #3F3D56;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -1757,7 +1757,7 @@ textarea.form-control {
     .btn {
       transition: none; } }
   .btn:hover {
-    color: #3f3d56;
+    color: #3F3D56;
     text-decoration: none; }
   .btn:focus, .btn.focus {
     outline: 0;
@@ -1849,8 +1849,8 @@ fieldset:disabled a.btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #3f3d56;
-  border-color: #3f3d56; }
+  background-color: #3F3D56;
+  border-color: #3F3D56; }
   .btn-dark:hover {
     color: #fff;
     background-color: #2f2d40;
@@ -1862,8 +1862,8 @@ fieldset:disabled a.btn {
     box-shadow: 0 0 0 0.2rem rgba(92, 90, 111, 0.5); }
   .btn-dark.disabled, .btn-dark:disabled {
     color: #fff;
-    background-color: #3f3d56;
-    border-color: #3f3d56; }
+    background-color: #3F3D56;
+    border-color: #3F3D56; }
   .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active,
   .show > .btn-dark.dropdown-toggle {
     color: #fff;
@@ -1937,22 +1937,22 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5); }
 
 .btn-outline-dark {
-  color: #3f3d56;
-  border-color: #3f3d56; }
+  color: #3F3D56;
+  border-color: #3F3D56; }
   .btn-outline-dark:hover {
     color: #fff;
-    background-color: #3f3d56;
-    border-color: #3f3d56; }
+    background-color: #3F3D56;
+    border-color: #3F3D56; }
   .btn-outline-dark:focus, .btn-outline-dark.focus {
     box-shadow: 0 0 0 0.2rem rgba(63, 61, 86, 0.5); }
   .btn-outline-dark.disabled, .btn-outline-dark:disabled {
-    color: #3f3d56;
+    color: #3F3D56;
     background-color: transparent; }
   .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
   .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
-    background-color: #3f3d56;
-    border-color: #3f3d56; }
+    background-color: #3F3D56;
+    border-color: #3F3D56; }
     .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(63, 61, 86, 0.5); }
@@ -2384,11 +2384,11 @@ input[type="button"].btn-block {
 .input-group-text {
   display: flex;
   align-items: center;
-  padding: 0.375rem 0.75rem;
+  padding: 10px 15px;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1.1875rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1;
   color: #495057;
   text-align: center;
   white-space: nowrap;
@@ -2471,19 +2471,19 @@ input[type="button"].btn-block {
   .custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
     border-color: transparent;
-    background-color: #2DB148; }
+    background-color: #28a745; }
   .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-    border-color: #2DB148; }
+    border-color: #28a745; }
   .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     color: #fff;
-    background-color: #2DB148;
+    background-color: #28a745;
     border-color: transparent; }
   .custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
     color: #6c757d; }
     .custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
-      background-color: rgba(45, 177, 72, 0.5); }
+      background-color: rgba(40, 167, 69, 0.5); }
 
 .custom-control-label {
   position: relative;
@@ -2498,7 +2498,7 @@ input[type="button"].btn-block {
     height: 1rem;
     pointer-events: none;
     content: "";
-    background-color: #2DB148;
+    background-color: #28a745;
     border: #fff solid 1px; }
   .custom-control-label::after {
     position: absolute;
@@ -2524,10 +2524,10 @@ input[type="button"].btn-block {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e"); }
 
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(45, 177, 72, 0.5); }
+  background-color: rgba(40, 167, 69, 0.5); }
 
 .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
-  background-color: rgba(45, 177, 72, 0.5); }
+  background-color: rgba(40, 167, 69, 0.5); }
 
 .custom-radio .custom-control-label::before {
   border-radius: 50%; }
@@ -2536,7 +2536,7 @@ input[type="button"].btn-block {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); }
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(45, 177, 72, 0.5); }
+  background-color: rgba(40, 167, 69, 0.5); }
 
 .custom-switch {
   padding-left: 2.25rem; }
@@ -2557,10 +2557,10 @@ input[type="button"].btn-block {
       .custom-switch .custom-control-label::after {
         transition: none; } }
   .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: #2DB148;
+    background-color: #28a745;
     transform: translateX(0.75rem); }
   .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
-    background-color: rgba(45, 177, 72, 0.5); }
+    background-color: rgba(40, 167, 69, 0.5); }
 
 .custom-select {
   display: inline-block;
@@ -2581,7 +2581,7 @@ input[type="button"].btn-block {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
     .custom-select:focus::-ms-value {
-      color: #3f3d56;
+      color: #484848;
       background-color: #FFFFFF; }
   .custom-select[multiple], .custom-select[size]:not([size="1"]) {
     height: auto;
@@ -3423,7 +3423,7 @@ input[type="button"].btn-block {
 
 .badge-dark {
   color: #fff;
-  background-color: #3f3d56; }
+  background-color: #3F3D56; }
   a.badge-dark:hover, a.badge-dark:focus {
     color: #fff;
     background-color: #292838; }
@@ -3468,40 +3468,40 @@ input[type="button"].btn-block {
     color: inherit; }
 
 .alert-primary {
-  color: #780728;
+  color: #9b294b;
   background-color: #facfdb;
   border-color: #f8bbcd; }
   .alert-primary hr {
     border-top-color: #f6a4bc; }
   .alert-primary .alert-link {
-    color: #480418; }
+    color: #731e37; }
 
 .alert-secondary {
-  color: #856a16;
+  color: #a78d38;
   background-color: #fff5d4;
   border-color: #fff1c3; }
   .alert-secondary hr {
     border-top-color: #ffebaa; }
   .alert-secondary .alert-link {
-    color: #59470f; }
+    color: #816d2b; }
 
 .alert-white {
-  color: #858585;
+  color: #a7a7a7;
   background-color: white;
   border-color: white; }
   .alert-white hr {
     border-top-color: #f2f2f2; }
   .alert-white .alert-link {
-    color: #6c6c6c; }
+    color: #8e8e8e; }
 
 .alert-dark {
-  color: #21202d;
+  color: #43424f;
   background-color: #d9d8dd;
   border-color: #c9c9d0; }
   .alert-dark hr {
     border-top-color: #bbbbc4; }
   .alert-dark .alert-link {
-    color: #0b0b0f; }
+    color: #2b2b33; }
 
 @keyframes progress-bar-stripes {
   from {
@@ -3694,48 +3694,48 @@ input[type="button"].btn-block {
   border-bottom-width: 0; }
 
 .list-group-item-primary {
-  color: #780728;
+  color: #9b294b;
   background-color: #f8bbcd; }
   .list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
-    color: #780728;
+    color: #9b294b;
     background-color: #f6a4bc; }
   .list-group-item-primary.list-group-item-action.active {
     color: #fff;
-    background-color: #780728;
-    border-color: #780728; }
+    background-color: #9b294b;
+    border-color: #9b294b; }
 
 .list-group-item-secondary {
-  color: #856a16;
+  color: #a78d38;
   background-color: #fff1c3; }
   .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-    color: #856a16;
+    color: #a78d38;
     background-color: #ffebaa; }
   .list-group-item-secondary.list-group-item-action.active {
     color: #fff;
-    background-color: #856a16;
-    border-color: #856a16; }
+    background-color: #a78d38;
+    border-color: #a78d38; }
 
 .list-group-item-white {
-  color: #858585;
+  color: #a7a7a7;
   background-color: white; }
   .list-group-item-white.list-group-item-action:hover, .list-group-item-white.list-group-item-action:focus {
-    color: #858585;
+    color: #a7a7a7;
     background-color: #f2f2f2; }
   .list-group-item-white.list-group-item-action.active {
     color: #fff;
-    background-color: #858585;
-    border-color: #858585; }
+    background-color: #a7a7a7;
+    border-color: #a7a7a7; }
 
 .list-group-item-dark {
-  color: #21202d;
+  color: #43424f;
   background-color: #c9c9d0; }
   .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-    color: #21202d;
+    color: #43424f;
     background-color: #bbbbc4; }
   .list-group-item-dark.list-group-item-action.active {
     color: #fff;
-    background-color: #21202d;
-    border-color: #21202d; }
+    background-color: #43424f;
+    border-color: #43424f; }
 
 .close {
   float: right;
@@ -4381,7 +4381,7 @@ button.bg-white:focus {
   background-color: #e6e6e6 !important; }
 
 .bg-dark {
-  background-color: #3f3d56 !important; }
+  background-color: #3F3D56 !important; }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
@@ -4434,7 +4434,7 @@ button.bg-dark:focus {
   border-color: #FFFFFF !important; }
 
 .border-dark {
-  border-color: #3f3d56 !important; }
+  border-color: #3F3D56 !important; }
 
 .border-white {
   border-color: #fff !important; }
@@ -6658,19 +6658,19 @@ a.text-white:hover, a.text-white:focus {
   color: #d9d9d9 !important; }
 
 .text-dark {
-  color: #3f3d56 !important; }
+  color: #3F3D56 !important; }
 
 a.text-dark:hover, a.text-dark:focus {
   color: #1e1d29 !important; }
 
 .text-body {
-  color: #3f3d56 !important; }
+  color: #3F3D56 !important; }
 
 .text-muted {
   color: #6c757d !important; }
 
 .text-black-50 {
-  color: rgba(0, 0, 0, 0.5) !important; }
+  color: rgba(72, 72, 72, 0.5) !important; }
 
 .text-white-50 {
   color: rgba(255, 255, 255, 0.5) !important; }
@@ -6736,7 +6736,7 @@ a.text-dark:hover, a.text-dark:focus {
   .navbar {
     display: none; }
   .badge {
-    border: 1px solid #000000; }
+    border: 1px solid #484848; }
   .table {
     border-collapse: collapse !important; }
     .table td,
@@ -7774,17 +7774,17 @@ just replace your svg sprite and modify these classes.
   .btn.btn-primary {
     min-width: 100%; }
   .btn.btn-secondary {
-    color: #ffffff; }
+    color: #FFFFFF; }
   .btn.btn-light {
-    border: 1px solid #e70d4d;
-    background-color: #ffffff;
-    color: #e70d4d; }
+    border: 1px solid #E70D4D;
+    background-color: #FFFFFF;
+    color: #E70D4D; }
     .btn.btn-light.no-bg {
       background-color: transparent; }
   .btn.btn-white {
-    border: 1px solid #c4c4c4;
-    background-color: #ffffff;
-    color: #000000; }
+    border: 1px solid #C4C4C4;
+    background-color: #FFFFFF;
+    color: #484848; }
 
 .badge {
   min-width: 100%;
@@ -7794,55 +7794,114 @@ just replace your svg sprite and modify these classes.
   .badge.badge-primary {
     min-width: 100%; }
   .badge.badge-secondary {
-    color: #ffffff; }
+    color: #FFFFFF; }
   .badge.badge-light {
-    border: 1px solid #e70d4d;
-    background-color: #ffffff; }
+    border: 1px solid #E70D4D;
+    background-color: #FFFFFF; }
     .badge.badge-light.no-bg {
       background-color: transparent; }
   .badge.badge-white {
-    border: 1px solid #c4c4c4;
-    background-color: #ffffff; }
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
   .badge.badge-border-only {
     background-color: transparent;
-    border: 1px solid #3f3d56;
-    color: #3f3d56; }
+    border: 1px solid #3F3D56;
+    color: #3F3D56; }
   .badge.smaller {
-    padding: 5px 8px; }
+    padding: 5px 8px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px; }
 
 .btn *[class*="svg-"],
 .badge *[class*="svg-"] {
   vertical-align: middle;
-  margin-top: -3px; }
+  margin: -3px 5px 0 0; }
 
+.custom-switch {
+  padding: 0;
+  margin-bottom: 25px; }
+  .custom-switch .custom-control-label {
+    padding-right: 60px;
+    font-size: 23px;
+    font-weight: 300;
+    color: #484848; }
+    .custom-switch .custom-control-label:after, .custom-switch .custom-control-label:before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: auto;
+      display: block;
+      margin: auto; }
+    .custom-switch .custom-control-label:before {
+      width: 55px;
+      height: 31px; }
+    .custom-switch .custom-control-label:after {
+      width: 18px;
+      height: 18px;
+      right: 8px; }
+  .custom-switch .custom-control-input:checked ~ .custom-control-label:after {
+    transform: none;
+    right: 30px;
+    background-color: #FFFFFF; }
+
+.custom-control.custom-radio {
+  display: inline-block; }
+  .custom-control.custom-radio label {
+    color: #484848;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 38px; }
+
+.form-control {
+  text-align: center; }
+
+textarea.form-control {
+  text-align: left;
+  min-height: 129px;
+  border-radius: 8px;
+  border: 1px solid #3F3D56;
+  background-color: #F2F2F4;
+  color: #3F3D56;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px; }
+
+.smaller-gap div[class*="col-"]:nth-of-type(odd) {
+  padding-right: 5px; }
+
+.smaller-gap div[class*="col-"]:nth-of-type(even) {
+  padding-left: 5px; }
+
+/*
 .bg-pink {
-  background-color: #e70d4d; }
-
+  background-color: $primary;
+}
 .bg-green {
-  background-color: #2db148; }
-
+  background-color: $green;
+}
 .bg-blue {
-  background-color: #4285f4; }
-
+  background-color: $secondary;
+}
 .bg-black {
-  background-color: #000000; }
-
+  background-color: $textColor;
+}
+*/
 .btn-plain {
   background-color: transparent;
   border: none;
   vertical-align: middle; }
 
-.badge-white {
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
-
-.room {
+.room-table {
   width: 88px;
   min-height: 89px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  color: #ffffff;
+  color: #FFFFFF;
   padding: 14px 8px;
   text-align: center;
   margin: 0 15px 20px 0;
@@ -7851,10 +7910,20 @@ just replace your svg sprite and modify these classes.
   font-size: 18px;
   font-weight: 400;
   line-height: 22px; }
-  .room span {
+  .room-table span {
     display: inline-block; }
-    .room span[class*="svg-"] {
+    .room-table span[class*="svg-"] {
       margin-bottom: 5px; }
+  .room-table.free {
+    background-color: #2DB148; }
+  .room-table.kitchen {
+    background-color: #3F3D56; }
+  .room-table.ready {
+    background-color: #4285F4; }
+  .room-table.occupied {
+    background-color: #E70D4D; }
+  .room-table:nth-child(3n + 3) {
+    margin-right: 0; }
 
 .menu-item {
   display: inline-block; }
@@ -7889,7 +7958,7 @@ just replace your svg sprite and modify these classes.
         height: 28px; }
   .menu-item .name {
     display: block;
-    color: #3f3d56;
+    color: #3F3D56;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -7900,7 +7969,7 @@ just replace your svg sprite and modify these classes.
   width: 100%;
   border-radius: 8px;
   padding: 10px 20px;
-  color: #3f3d56;
+  color: #3F3D56;
   font-family: "Open Sans", sans-serif;
   font-size: 19px;
   font-weight: 400; }
@@ -7910,7 +7979,8 @@ just replace your svg sprite and modify these classes.
     margin-right: 5px; }
 
 .quantity {
-  margin: 15px 0 0; }
+  font-size: 0;
+  margin: 20px 0 0; }
   .quantity .btn-plain,
   .quantity .text {
     vertical-align: middle;
@@ -7926,16 +7996,23 @@ just replace your svg sprite and modify these classes.
 
 .cart-item,
 .ordered-item {
-  padding: 8px 15px;
+  padding: 13px 12px 10px;
   min-height: 88px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   margin-bottom: 30px; }
+  .cart-item .column-one,
+  .ordered-item .column-one {
+    padding-right: 0; }
+  .cart-item .column-two,
+  .ordered-item .column-two {
+    padding: 0 6px;
+    text-align: right; }
   .cart-item span,
   .ordered-item span {
     display: block;
-    color: #3f3d56;
+    color: #3F3D56;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -7943,17 +8020,21 @@ just replace your svg sprite and modify these classes.
     .cart-item span.desc,
     .ordered-item span.desc {
       font-size: 13px; }
-    .cart-item span.price i,
-    .ordered-item span.price i {
-      vertical-align: middle; }
+    .cart-item span.price,
+    .ordered-item span.price {
+      margin: 5px 0 0; }
+      .cart-item span.price i,
+      .ordered-item span.price i {
+        vertical-align: middle; }
   .cart-item.active,
   .ordered-item.active {
-    background-color: #e70d4d; }
+    background-color: #E70D4D; }
     .cart-item.active span,
     .ordered-item.active span {
-      color: #ffffff; }
+      color: #FFFFFF; }
       .cart-item.active span.price i,
       .ordered-item.active span.price i {
+        margin-right: 8px;
         background: url("svg/sprite.svg") 77.09605% 91.14233% no-repeat;
         width: 23px;
         height: 23px; }
@@ -7973,13 +8054,16 @@ just replace your svg sprite and modify these classes.
 .cart-item {
   margin-bottom: 30px;
   min-height: 75px; }
-  .cart-item span.name {
-    margin-bottom: 10px; }
   .cart-item span.price {
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
   .cart-item .quantity {
     margin: 0;
     display: inline-block; }
+  .cart-item .btn-plain,
+  .cart-item .price,
+  .cart-item .quantity {
+    vertical-align: middle; }
 
 .menu-item-detail,
 .order-detail {
@@ -7987,11 +8071,11 @@ just replace your svg sprite and modify these classes.
   min-height: 173px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   margin-bottom: 30px; }
   .menu-item-detail p,
   .order-detail p {
-    color: #3f3d56;
+    color: #3F3D56;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -7999,7 +8083,7 @@ just replace your svg sprite and modify these classes.
     margin-bottom: 5px; }
     .menu-item-detail p span,
     .order-detail p span {
-      color: #e70d4d; }
+      color: #E70D4D; }
     .menu-item-detail p:last-of-type,
     .order-detail p:last-of-type {
       margin-bottom: 0; }
@@ -8015,7 +8099,7 @@ just replace your svg sprite and modify these classes.
     position: absolute;
     display: block;
     top: 0;
-    right: 15px;
+    right: 5px;
     bottom: 0;
     left: auto;
     margin: auto;
@@ -8025,8 +8109,8 @@ just replace your svg sprite and modify these classes.
     .menu-item-detail .buttons-wrapper .badge-dark {
       position: absolute;
       top: auto;
-      right: 0;
-      bottom: 15px;
+      right: 15px;
+      bottom: 20px;
       left: auto;
       margin: auto;
       white-space: nowrap; }
@@ -8040,13 +8124,16 @@ just replace your svg sprite and modify these classes.
   .page-header .btn-plain {
     vertical-align: middle; }
   .page-header .btn-plain {
-    width: 60px; }
+    width: 60px;
+    display: inline-block; }
+    .page-header .btn-plain.btn-settings {
+      text-align: right; }
   .page-header h1 {
     margin: 0;
     text-align: center;
     display: inline-block;
     width: calc(100% - 120px);
-    color: #000000;
+    color: #484848;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     font-weight: 400; }
@@ -8057,29 +8144,37 @@ just replace your svg sprite and modify these classes.
 .input-group {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #ffffff; }
+  background-color: #FFFFFF; }
   .input-group .form-control {
     border-radius: 8px 0 0 8px; }
   .input-group .input-group-append .input-group-text {
     border-radius: 0 8px 8px 0;
-    background-color: #b9b9b7; }
+    background-color: #B9B9B7; }
   .input-group.bg-green .form-control {
     border-right: transparent; }
   .input-group.bg-green .input-group-append .input-group-text {
-    background-color: #2db148; }
+    background-color: #2DB148; }
   .input-group.bg-green .input-group-append.multi .input-group-text {
     background-color: transparent;
     border-left: transparent; }
   .input-group.bg-white .form-control {
     border-right: transparent; }
   .input-group.bg-white .input-group-append .input-group-text {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border-left: transparent; }
+  .input-group.bg-pink .form-control {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px 0 0 8px;
+    border-color: transparent;
+    text-align: left; }
+  .input-group.bg-pink .input-group-append .input-group-text {
+    background-color: #E70D4D;
+    color: #FFFFFF; }
 
 .table-status {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   min-height: 88px;
-  padding: 10px 15px;
+  padding: 15px 15px 5px;
   margin-bottom: 30px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -8088,7 +8183,6 @@ just replace your svg sprite and modify these classes.
     content: "";
     width: 9px;
     height: 100%;
-    background-color: #e70d4d;
     position: absolute;
     top: 0;
     right: auto;
@@ -8097,9 +8191,10 @@ just replace your svg sprite and modify these classes.
     margin: auto;
     border-radius: 8px 0 0 8px; }
   .table-status div[class*="col-"] {
-    padding-right: 0; }
+    padding-right: 0;
+    padding-left: 0; }
     .table-status div[class*="col-"]:first-of-type {
-      padding-left: 25px; }
+      padding-left: 19px; }
     .table-status div[class*="col-"]:last-of-type {
       padding-right: 10px; }
   .table-status span[class*="svg-"] {
@@ -8107,69 +8202,46 @@ just replace your svg sprite and modify these classes.
   .table-status .text {
     display: block;
     margin-bottom: 10px;
-    color: #3f3d56;
+    color: #3F3D56;
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 18px; }
   .table-status .time {
-    padding: 8px 6px;
+    padding: 8px 4px;
     float: right;
     display: block;
     text-align: center;
     max-width: 68px;
     min-height: 68px;
     border-radius: 8px;
-    border: 1px solid #3f3d56; }
+    border: 1px solid #3F3D56;
+    margin: -5px 0 0; }
     .table-status .time .text {
       margin-bottom: 0; }
   .table-status.free:before {
-    background-color: #2db148; }
+    background-color: #2DB148; }
   .table-status.kitchen:before {
-    background-color: #3f3d56; }
+    background-color: #3F3D56; }
   .table-status.ready:before {
-    background-color: #4285f4; }
+    background-color: #4285F4; }
+  .table-status.occupied:before {
+    background-color: #E70D4D; }
 
 @media screen and (min-width: 641px) {
   .mobile-box {
-    padding: 50px 0;
+    padding: 30px 0 100px;
     max-width: 375px;
     margin: 0 auto 0 60px;
-    background-color: #f2f2f4; } }
+    background-color: #F2F2F4; } }
 
 body {
-  background-color: #f2f2f4; }
+  background-color: #F2F2F4; }
   body .btn {
     min-width: 100%; }
-  body .container-fluid, body .container-sm, body .container-md, body .container-lg, body .container-xl {
-    padding-right: 36px;
-    padding-left: 36px; }
-
-.custom-switch {
-  padding: 0; }
-  .custom-switch .custom-control-label {
-    padding-right: 60px;
-    font-size: 23px;
-    font-weight: 400;
-    color: #000000; }
-    .custom-switch .custom-control-label:after, .custom-switch .custom-control-label:before {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: auto;
-      display: block;
-      margin: auto; }
-    .custom-switch .custom-control-label:before {
-      width: 55px;
-      height: 31px; }
-    .custom-switch .custom-control-label:after {
-      width: 18px;
-      height: 18px;
-      right: 8px; }
-  .custom-switch .custom-control-input:checked ~ .custom-control-label:after {
-    transform: none;
-    right: 30px;
-    background-color: #ffffff; }
+  body .inner-wrapper {
+    padding-left: 21px;
+    padding-right: 21px; }
 
 *[class*="svg-"] {
   display: inline-block; }
@@ -8182,7 +8254,7 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-bottom: 30px;
-  background-color: #ffffff; }
+  background-color: #FFFFFF; }
 
 .choose-box {
   min-width: 302px;
@@ -8191,7 +8263,7 @@ body {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-bottom: 30px;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   position: relative;
   align-items: center;
   display: flex;
@@ -8207,12 +8279,79 @@ body {
       display: block;
       margin: 0;
       text-align: center;
-      color: #000000;
+      color: #484848;
       font-family: "Open Sans", sans-serif;
       font-size: 30px;
       font-weight: 300;
       line-height: 35px; }
     .choose-box .item:hover, .choose-box .item:focus {
       text-decoration: none; }
+
+.login-screen {
+  height: 100vh;
+  width: 100%;
+  background-color: #FFFFFF; }
+  .login-screen a {
+    display: inline-block;
+    color: #FFCC2A;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 34px;
+    min-width: 1px; }
+  .login-screen .media-box {
+    min-height: 336px;
+    background: url("imgs/app-bg.png") no-repeat center center;
+    background-size: cover; }
+  .login-screen .content-box {
+    width: 100%;
+    max-width: calc(100% - 50px);
+    min-height: 184px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+    background-color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: -93px auto 30px; }
+    .login-screen .content-box .text {
+      text-align: center;
+      color: #484848;
+      font-family: "Open Sans", sans-serif;
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 35px; }
+      .login-screen .content-box .text span {
+        font-size: 37px;
+        font-weight: 300;
+        line-height: 42px;
+        display: block; }
+  .login-screen .login-form {
+    width: 100%;
+    max-width: calc(100% - 50px);
+    padding: 0 10px 40px;
+    margin: auto; }
+    .login-screen .login-form .custom-control.custom-radio + .forgot-link {
+      float: right; }
+    .login-screen .login-form .new-login {
+      padding: 25px 0 0;
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 400; }
+      .login-screen .login-form .new-login p {
+        margin-bottom: 0; }
+
+.form-settings {
+  text-align: center; }
+
+.tables-wrapper {
+  font-size: 0; }
+
+.menu-items-row > .col-6:nth-of-type(even) {
+  padding-left: 5px; }
+
+.menu-items-row > .col-6:nth-of-type(odd) {
+  padding-right: 5px; }
 
 /*# sourceMappingURL=all.css.map */

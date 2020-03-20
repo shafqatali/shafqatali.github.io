@@ -4,39 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, maximum-scale=1">
-    <title>Restaurant New order</title>
+    <title>Restaurant New orders</title>
     <link href="css/all.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="mobile-box">
-    <div class="container-fluid">
-<header class="page-header ">
-    <a href="index.html" class="btn-plain btn-back"><span class="svg-arrow-back"></span><span class="sr-only">Back Button</span></a>
+    <div class="inner-wrapper">
+        <div class="container-fluid">
+<header class="page-header">
+    <a href="index.html" class="btn-plain btn-back "><span class="svg-arrow-back"></span><span class="sr-only">Back Button</span></a>
     <h1>New orders</h1>
-    <a href="settings.html" class="btn-plain btn-settings"><span class="svg-settings"></span><span class="sr-only">Settings Button</span></a>
+    <a href="settings.html" class="btn-plain btn-settings "><span class="svg-settings"></span><span class="sr-only">Settings Button</span></a>
 </header>
+<div class="form-group">
+    <div class="input-group bg-pink">
+        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
+        <div class="input-group-append">
+            <button class="input-group-text" type="button">Ok</button>
+        </div>
+    </div>
+</div>
 <h2>New Table Orders:</h2>
 <div class="row">
-    <div class="col-12">
-<div class="room bg-green">
+    <div class="col-12 tables-wrapper">
+<div class="room-table free">
     <span class="svg-table-chair-white"></span>
     <span>Table 01</span>
 </div>
-<div class="room bg-green">
+<div class="room-table free">
     <span class="svg-table-chair-white"></span>
     <span>Table 02</span>
 </div>
-<div class="room bg-green">
+<div class="room-table free">
     <span class="svg-table-chair-white"></span>
     <span>Table 03</span>
 </div>
-<div class="room bg-green">
+<div class="room-table free">
     <span class="svg-table-chair-white"></span>
     <span>Table 07</span>
 </div>
-<div class="room bg-green">
+<div class="room-table free">
     <span class="svg-table-chair-white"></span>
     <span>Table 11</span>
 </div>
@@ -44,13 +56,14 @@
 </div>
 <h2>Orders being prepared</h2>
 <div class="row">
-    <div class="col-12">
-<div class="room bg-green">
+    <div class="col-12 tables-wrapper">
+<div class="room-table free">
     <span class="svg-table-chair-white"></span>
     <span>Table 04</span>
 </div>
     </div>
 </div>
+        </div>
     </div>
 </div>
 <script src="js/jquery.min.js"></script>
