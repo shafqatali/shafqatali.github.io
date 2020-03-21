@@ -2475,7 +2475,7 @@ input[type="button"].btn-block {
   .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-    border-color: #28a745; }
+    border-color: #B9B9B7; }
   .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     color: #fff;
     background-color: #28a745;
@@ -2483,7 +2483,7 @@ input[type="button"].btn-block {
   .custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
     color: #6c757d; }
     .custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
-      background-color: rgba(40, 167, 69, 0.5); }
+      background-color: rgba(185, 185, 183, 0.5); }
 
 .custom-control-label {
   position: relative;
@@ -2498,7 +2498,7 @@ input[type="button"].btn-block {
     height: 1rem;
     pointer-events: none;
     content: "";
-    background-color: #28a745;
+    background-color: #B9B9B7;
     border: #fff solid 1px; }
   .custom-control-label::after {
     position: absolute;
@@ -2524,10 +2524,10 @@ input[type="button"].btn-block {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e"); }
 
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(40, 167, 69, 0.5); }
+  background-color: rgba(185, 185, 183, 0.5); }
 
 .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
-  background-color: rgba(40, 167, 69, 0.5); }
+  background-color: rgba(185, 185, 183, 0.5); }
 
 .custom-radio .custom-control-label::before {
   border-radius: 50%; }
@@ -2536,7 +2536,7 @@ input[type="button"].btn-block {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); }
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(40, 167, 69, 0.5); }
+  background-color: rgba(185, 185, 183, 0.5); }
 
 .custom-switch {
   padding-left: 2.25rem; }
@@ -2557,10 +2557,10 @@ input[type="button"].btn-block {
       .custom-switch .custom-control-label::after {
         transition: none; } }
   .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: #28a745;
+    background-color: #B9B9B7;
     transform: translateX(0.75rem); }
   .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
-    background-color: rgba(40, 167, 69, 0.5); }
+    background-color: rgba(185, 185, 183, 0.5); }
 
 .custom-select {
   display: inline-block;
@@ -7775,6 +7775,9 @@ just replace your svg sprite and modify these classes.
   .btn.btn-secondary {
     color: #FFFFFF;
     text-transform: uppercase; }
+    .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active {
+      background-color: #484848;
+      border-color: #484848; }
   .btn.btn-light {
     border: 1px solid #E70D4D;
     background-color: #FFFFFF;
@@ -7785,6 +7788,10 @@ just replace your svg sprite and modify these classes.
     border: 1px solid #C4C4C4;
     background-color: #FFFFFF;
     color: #484848; }
+    .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
+      background-color: #484848;
+      border-color: #484848;
+      color: #FFFFFF; }
 
 .badge {
   min-width: 100%;
@@ -7803,6 +7810,10 @@ just replace your svg sprite and modify these classes.
     border: 1px solid #FFFFFF;
     background-color: #FFFFFF;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
+    .badge.badge-white:hover, .badge.badge-white:focus, .badge.badge-white:active {
+      background-color: #484848;
+      border-color: #484848;
+      color: #FFFFFF; }
   .badge.badge-border-only {
     background-color: transparent;
     border: 1px solid #3F3D56;
@@ -7839,10 +7850,10 @@ just replace your svg sprite and modify these classes.
     .custom-switch .custom-control-label:after {
       width: 18px;
       height: 18px;
-      right: 8px; }
+      right: 26px; }
   .custom-switch .custom-control-input:checked ~ .custom-control-label:after {
     transform: none;
-    right: 30px;
+    right: 8px;
     background-color: #FFFFFF; }
 
 .form-control {
@@ -7888,7 +7899,7 @@ textarea.form-control {
   .single-checkbox-style .custom-control-input {
     box-sizing: border-box; }
     .single-checkbox-style .custom-control-input:checked ~ .checkbox-label::after {
-      background-color: #2DB148; }
+      background-color: #E70D4D; }
   .single-checkbox-style .checkbox-label {
     color: #484848;
     font-family: "Open Sans", sans-serif;
@@ -8399,6 +8410,8 @@ body {
       line-height: 35px; }
     .choose-box .item:hover, .choose-box .item:focus {
       text-decoration: none; }
+  .choose-box:hover, .choose-box:focus, .choose-box:active {
+    background-color: #FFCC2A; }
 
 .login-screen {
   padding-top: 1px;
