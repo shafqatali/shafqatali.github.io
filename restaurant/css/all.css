@@ -7620,153 +7620,180 @@ we have to place the hex code of color after the last slash (/), It give a nice 
   .carousel-control .icon-next {
     margin-right: -10px; } }
 
-/*Use these class with @extend i.e
-
-.sample-box {
-  @extend .svg-social_facebook
-  &:after {
-  @extend .svg-social_facebook
-  }
-}
-
-Where ever you want to use it, because its give benefit to easily add new OR remove icons from sprite
-just replace your svg sprite and modify these classes.
-
-*/
-.svg-arrow-back {
-  background: url("svg/sprite.svg") 78.28056% 80.5314% no-repeat;
-  width: 26.45px;
-  height: 22.042px; }
-
-.svg-chair {
-  background: url("svg/sprite.svg") 89.15143% 25.53145% no-repeat;
-  width: 17.937px;
-  height: 26.833px; }
-
-.svg-chef {
-  background: url("svg/sprite.svg") 89.56571% 54.96669% no-repeat;
-  width: 23.481px;
-  height: 23.481px; }
-
-.svg-clock {
-  background: url("svg/sprite.svg") 99.77598% 10.18519% no-repeat;
-  width: 22px;
-  height: 22px; }
-
-.svg-clock-white {
-  background: url("svg/sprite.svg") 65.93886% 75.10278% no-repeat;
-  width: 22px;
-  height: 22px; }
-
-.svg-details {
-  background: url("svg/sprite.svg") 87.18377% 91.14233% no-repeat;
-  width: 23px;
-  height: 23px; }
-
-.svg-edit {
-  background: url("svg/sprite.svg") 80.26438% 26.17184% no-repeat;
-  width: 32px;
-  height: 32px; }
-
-.svg-info {
-  background: url("svg/sprite.svg") 65.98929% 44.50226% no-repeat;
-  width: 23px;
-  height: 23px; }
-
 .svg-kitchen {
-  background: url("svg/sprite.svg") 0 99.83784% no-repeat;
+  background: url("svg/icons.svg") 0 99.83784% no-repeat;
   width: 151px;
   height: 141.797px; }
 
-.svg-minus {
-  background: url("svg/sprite.svg") 97.64402% 44.38% no-repeat;
-  width: 17px;
-  height: 3px; }
-
-.svg-minus-circle {
-  background: url("svg/sprite.svg") 65.93886% 54.73241% no-repeat;
-  width: 22px;
-  height: 22px; }
-
-.svg-minus-circle-white {
-  background: url("svg/sprite.svg") 65.93886% 64.91759% no-repeat;
-  width: 22px;
-  height: 22px; }
-
-.svg-plus {
-  background: url("svg/sprite.svg") 97.64402% 39.4991% no-repeat;
-  width: 17px;
-  height: 17px; }
-
-.svg-plus-circle {
-  background: url("svg/sprite.svg") 99.77598% 20.37037% no-repeat;
-  width: 22px;
-  height: 22px; }
-
-.svg-plus-circle-white {
-  background: url("svg/sprite.svg") 99.77598% 0 no-repeat;
-  width: 22px;
-  height: 22px; }
-
-.svg-plus-circle-yellow {
-  background: url("svg/sprite.svg") 78.82466% 69.48286% no-repeat;
-  width: 28px;
-  height: 28px; }
-
-.svg-pound {
-  background: url("svg/sprite.svg") 89.37675% 67.86698% no-repeat;
-  width: 23px;
-  height: 23px; }
-
-.svg-pound-white {
-  background: url("svg/sprite.svg") 77.09605% 91.14233% no-repeat;
-  width: 23px;
-  height: 23px; }
-
-.svg-remove {
-  background: url("svg/sprite.svg") 80.26438% 41.70583% no-repeat;
-  width: 32px;
-  height: 32px; }
-
-.svg-settings {
-  background: url("svg/sprite.svg") 78.82466% 56.14952% no-repeat;
-  width: 28px;
-  height: 28px; }
-
-.svg-stop {
-  background: url("svg/sprite.svg") 65.93886% 95.47315% no-repeat;
-  width: 22px;
-  height: 22px; }
-
-.svg-table {
-  background: url("svg/sprite.svg") 89.92712% 80.52842% no-repeat;
-  width: 26.119px;
-  height: 22.034px; }
+.svg-kitchen-black {
+  background: url("svg/icons.svg") 75.12438% 99.83784% no-repeat;
+  width: 151px;
+  height: 141.797px; }
 
 .svg-table-chair {
-  background: url("svg/sprite.svg") 85.72954% 13.52837% no-repeat;
-  width: 45.961px;
-  height: 25.114px; }
-
-.svg-table-chair-white {
-  background: url("svg/sprite.svg") 88.64654% 0 no-repeat;
-  width: 52.708px;
-  height: 28.8px; }
-
-.svg-table-chair-yellow {
-  background: url("svg/sprite.svg") 0 0 no-repeat;
+  background: url("svg/icons.svg") 0 0 no-repeat;
   width: 175.779px;
   height: 96.047px; }
 
-.svg-tick-circle {
-  background: url("svg/sprite.svg") 99.46889% 30.45587% no-repeat;
-  width: 22px;
-  height: 21.293px; }
+.svg-table-chair-black {
+  background: url("svg/icons.svg") 99.74918% 0 no-repeat;
+  width: 175.779px;
+  height: 96.047px; }
 
-.svg-view {
-  background: url("svg/sprite.svg") 65.93886% 85.28796% no-repeat;
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?bijvrq");
+  src: url("../fonts/icomoon.eot?bijvrq#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?bijvrq") format("truetype"), url("../fonts/icomoon.woff?bijvrq") format("woff"), url("../fonts/icomoon.svg?bijvrq#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #484848; }
+
+.icon-arrow-back:before {
+  content: "\e90e";
+  font-size: 26px; }
+
+.icon-chair:before {
+  content: "\e90d";
+  font-size: 28px; }
+
+.icon-chef:before {
+  content: "\e90c";
+  font-size: 24px; }
+
+.icon-clock:before {
+  content: "\e90b";
+  font-size: 22px; }
+
+.icon-details:before {
+  content: "\e90a";
+  font-size: 23px;
+  color: #B9B9B7; }
+
+.icon-edit:before, .icon-edit-circle:before {
+  content: "\e909";
+  font-size: 19px; }
+
+.icon-info:before {
+  content: "\e908";
+  font-size: 23px; }
+
+.icon-minus:before, .icon-minus-circle:before, .quantity.white .btn-plain .icon.btn-minus:before,
+.ordered-item.active .btn-plain .icon.btn-minus:before {
+  content: "\e910";
+  font-size: 18px; }
+
+.icon-plus:before, .icon-plus-circle:before, .quantity.white .btn-plain .icon.btn-plus:before,
+.ordered-item.active .btn-plain .icon.btn-plus:before {
+  content: "\e90f";
+  font-size: 18px; }
+
+.icon-pound:before, .cart-item.active span.price i:before,
+.ordered-item.active span.price i:before {
+  content: "\e906";
+  font-size: 23px; }
+
+.icon-remove:before, .icon-remove-circle:before {
+  content: "\e905";
+  font-size: 20px; }
+
+.icon-settings:before {
+  content: "\e911";
+  font-size: 28px; }
+
+.icon-stop:before {
+  content: "\e904";
+  font-size: 22px; }
+
+.icon-table:before {
+  content: "\e903";
+  font-size: 27px; }
+
+.icon-table-chair:before {
+  content: "\e902";
+  font-size: 46px; }
+
+.icon-tick:before {
+  content: "\e901";
+  font-size: 22px;
+  color: #FFFFFF; }
+
+.icon-view:before {
+  content: "\e900";
+  font-size: 22px; }
+
+.icon-kitchen:before {
+  content: "\e907";
+  font-size: 30px; }
+
+.icon-plus-circle, .quantity.white .btn-plain .icon.btn-plus,
+.ordered-item.active .btn-plain .icon.btn-plus,
+.icon-minus-circle,
+.quantity.white .btn-plain .icon.btn-minus,
+.ordered-item.active .btn-plain .icon.btn-minus,
+.icon-edit-circle,
+.icon-remove-circle {
+  border-radius: 50%; }
+  .icon-plus-circle:before, .quantity.white .btn-plain .icon.btn-plus:before,
+  .ordered-item.active .btn-plain .icon.btn-plus:before,
+  .icon-minus-circle:before,
+  .quantity.white .btn-plain .icon.btn-minus:before,
+  .ordered-item.active .btn-plain .icon.btn-minus:before,
+  .icon-edit-circle:before,
+  .icon-remove-circle:before {
+    display: inline-block;
+    margin: 5px 0 0; }
+
+.icon-edit-circle {
+  width: 32px;
+  height: 32px;
+  background-color: #484848; }
+  .icon-edit-circle:before {
+    color: #FFFFFF; }
+
+.icon-remove-circle {
+  width: 32px;
+  height: 32px;
+  background-color: #484848; }
+  .icon-remove-circle:before {
+    color: #FFFFFF; }
+
+
+.icon-minus-circle,
+.quantity.white .btn-plain .icon.btn-minus,
+.ordered-item.active .btn-plain .icon.btn-minus {
   width: 22px;
-  height: 22px; }
+  height: 22px;
+  background-color: #484848; }
+  
+  .icon-minus-circle:before,
+  .quantity.white .btn-plain .icon.btn-minus:before,
+  .ordered-item.active .btn-plain .icon.btn-minus:before {
+    font-size: 11px;
+    color: #FFFFFF; }
+
+.icon-plus-circle, .quantity.white .btn-plain .icon.btn-plus,
+.ordered-item.active .btn-plain .icon.btn-plus {
+  width: 22px;
+  height: 22px;
+  background-color: #484848; }
+  .icon-plus-circle:before, .quantity.white .btn-plain .icon.btn-plus:before,
+  .ordered-item.active .btn-plain .icon.btn-plus:before {
+    font-size: 11px;
+    color: #FFFFFF; }
 
 .btn {
   min-width: 100%; }
@@ -7817,25 +7844,33 @@ just replace your svg sprite and modify these classes.
       background-color: #484848;
       border-color: #484848;
       color: #FFFFFF; }
+      .badge.badge-white:hover [class*="icon-"]:before, .badge.badge-white:focus [class*="icon-"]:before, .badge.badge-white:active [class*="icon-"]:before {
+        color: #FFFFFF; }
   .badge.badge-border-only {
     background-color: transparent;
     border: 1px solid #3F3D56;
-    color: #3F3D56; }
+    color: #3F3D56;
+    padding-top: 2px;
+    padding-bottom: 2px; }
   .badge.smaller {
     padding: 5px 8px;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px; }
+  .badge.badge-dark [class*="icon-"]:before {
+    color: #FFFFFF; }
 
-.btn *[class*="svg-"],
-.badge *[class*="svg-"] {
+.btn [class*="icon-"],
+.badge [class*="icon-"] {
+  display: inline-block;
   vertical-align: middle;
   margin: -3px 5px 0 0; }
 
 .custom-switch {
   padding: 0; }
   .custom-switch .custom-control-label {
+    user-select: none;
     padding-right: 60px;
     font-size: 23px;
     font-weight: 300;
@@ -7886,6 +7921,7 @@ textarea.form-control {
 .square-box,
 .room-table,
 .menu-item-detail,
+.menu-item,
 .order-detail,
 .page-header,
 .table-status,
@@ -7968,7 +8004,8 @@ textarea.form-control {
   line-height: 22px; }
   .room-table span {
     display: inline-block; }
-    .room-table span[class*="svg-"] {
+    .room-table span[class*="icon-"] {
+      color: #FFFFFF;
       margin-bottom: 5px; }
   .room-table.free {
     background-color: #2DB148; }
@@ -8000,18 +8037,22 @@ textarea.form-control {
       bottom: auto;
       left: auto;
       display: block; }
-      .menu-item .media-box .icon:before {
-        content: "";
+      .menu-item .media-box .icon [class*="icon-"] {
+        width: 28px;
+        height: 28px;
+        background-color: #FFCC2A;
+        display: block;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        display: block;
-        margin: auto;
-        background: url("svg/sprite.svg") 78.82466% 69.48286% no-repeat;
-        width: 28px;
-        height: 28px; }
+        margin: auto; }
+        .menu-item .media-box .icon [class*="icon-"]:before {
+          font-size: 14px;
+          margin: 7px 0 0 7px; }
+      .menu-item .media-box .icon:hover [class*="icon-"], .menu-item .media-box .icon:focus [class*="icon-"], .menu-item .media-box .icon:active [class*="icon-"] {
+        background-color: #484848; }
   .menu-item .name {
     display: block;
     color: #3F3D56;
@@ -8041,14 +8082,12 @@ textarea.form-control {
   .quantity .text {
     vertical-align: middle;
     display: inline-block; }
-  .quantity .btn-plain .icon.btn-minus {
-    background: url("svg/sprite.svg") 65.93886% 54.73241% no-repeat;
-    width: 22px;
-    height: 22px; }
-  .quantity .btn-plain .icon.btn-plus {
-    background: url("svg/sprite.svg") 99.77598% 20.37037% no-repeat;
-    width: 22px;
-    height: 22px; }
+  .quantity .btn-plain [class*="icon-"]:before {
+    margin: 0; }
+  .quantity .btn-plain:hover [class*="icon-"], .quantity .btn-plain:focus [class*="icon-"], .quantity .btn-plain:active [class*="icon-"] {
+    background-color: #E70D4D; }
+    .quantity .btn-plain:hover [class*="icon-"]:before, .quantity .btn-plain:focus [class*="icon-"]:before, .quantity .btn-plain:active [class*="icon-"]:before {
+      color: #FFFFFF; }
 
 .cart-item,
 .ordered-item {
@@ -8081,6 +8120,11 @@ textarea.form-control {
       .cart-item span.price i,
       .ordered-item span.price i {
         vertical-align: middle; }
+  .cart-item .btn-remove:hover [class*="icon-"]:before, .cart-item .btn-remove:focus [class*="icon-"]:before, .cart-item .btn-remove:active [class*="icon-"]:before,
+  .ordered-item .btn-remove:hover [class*="icon-"]:before,
+  .ordered-item .btn-remove:focus [class*="icon-"]:before,
+  .ordered-item .btn-remove:active [class*="icon-"]:before {
+    color: #E70D4D; }
   .cart-item.active,
   .ordered-item.active {
     background-color: #E70D4D; }
@@ -8090,21 +8134,23 @@ textarea.form-control {
       .cart-item.active span.price i,
       .ordered-item.active span.price i {
         margin-right: 8px;
-        background: url("svg/sprite.svg") 77.09605% 91.14233% no-repeat;
-        width: 23px;
-        height: 23px; }
-
-.quantity.white .btn-plain .icon.btn-minus,
-.ordered-item.active .btn-plain .icon.btn-minus {
-  background: url("svg/sprite.svg") 65.93886% 64.91759% no-repeat;
-  width: 22px;
-  height: 22px; }
-
-.quantity.white .btn-plain .icon.btn-plus,
-.ordered-item.active .btn-plain .icon.btn-plus {
-  background: url("svg/sprite.svg") 99.77598% 0 no-repeat;
-  width: 22px;
-  height: 22px; }
+        color: #FFFFFF; }
+    .cart-item.active .quantity .btn-plain [class*="icon-"],
+    .ordered-item.active .quantity .btn-plain [class*="icon-"] {
+      background-color: #FFFFFF; }
+      .cart-item.active .quantity .btn-plain [class*="icon-"]:before,
+      .ordered-item.active .quantity .btn-plain [class*="icon-"]:before {
+        color: #E70D4D; }
+    .cart-item.active .quantity .btn-plain:hover [class*="icon-"], .cart-item.active .quantity .btn-plain:focus [class*="icon-"], .cart-item.active .quantity .btn-plain:active [class*="icon-"],
+    .ordered-item.active .quantity .btn-plain:hover [class*="icon-"],
+    .ordered-item.active .quantity .btn-plain:focus [class*="icon-"],
+    .ordered-item.active .quantity .btn-plain:active [class*="icon-"] {
+      background-color: #484848; }
+      .cart-item.active .quantity .btn-plain:hover [class*="icon-"]:before, .cart-item.active .quantity .btn-plain:focus [class*="icon-"]:before, .cart-item.active .quantity .btn-plain:active [class*="icon-"]:before,
+      .ordered-item.active .quantity .btn-plain:hover [class*="icon-"]:before,
+      .ordered-item.active .quantity .btn-plain:focus [class*="icon-"]:before,
+      .ordered-item.active .quantity .btn-plain:active [class*="icon-"]:before {
+        color: #FFFFFF; }
 
 .cart-item {
   min-height: 75px; }
@@ -8167,6 +8213,12 @@ textarea.form-control {
       left: auto;
       margin: auto;
       white-space: nowrap; }
+    .menu-item-detail .buttons-wrapper .btn.btn-plain {
+      padding: 0 !important;
+      margin: 0 0 12px !important;
+      border-radius: 0 !important; }
+      .menu-item-detail .buttons-wrapper .btn.btn-plain:hover [class*="icon-"], .menu-item-detail .buttons-wrapper .btn.btn-plain:focus [class*="icon-"], .menu-item-detail .buttons-wrapper .btn.btn-plain:active [class*="icon-"] {
+        background-color: #E70D4D; }
 
 .page-header {
   font-size: 0;
@@ -8252,7 +8304,7 @@ textarea.form-control {
       padding-left: 19px; }
     .table-status div[class*="col-"]:last-of-type {
       padding-right: 10px; }
-  .table-status span[class*="svg-"] {
+  .table-status span[class*="icon-"] {
     vertical-align: middle; }
   .table-status .text {
     display: block;
@@ -8307,6 +8359,11 @@ textarea.form-control {
     .ordered-items-details .badge-white > span {
       padding: 0;
       margin: 0; }
+    .ordered-items-details .badge-white:hover, .ordered-items-details .badge-white:focus, .ordered-items-details .badge-white:active {
+      background-color: #FFFFFF;
+      border-color: #FFFFFF; }
+      .ordered-items-details .badge-white:hover .icon-details:before, .ordered-items-details .badge-white:focus .icon-details:before, .ordered-items-details .badge-white:active .icon-details:before {
+        color: #B9B9B7; }
   .ordered-items-details .row {
     margin-right: -5px;
     margin-left: -5px; }
@@ -8405,6 +8462,8 @@ body {
     .choose-box .item .icon {
       display: block;
       margin-bottom: 10px; }
+      .choose-box .item .icon.icon-hover {
+        display: none; }
     .choose-box .item .text {
       display: block;
       margin: 0;
@@ -8418,6 +8477,10 @@ body {
       text-decoration: none; }
   .choose-box:hover, .choose-box:focus, .choose-box:active {
     background-color: #FFCC2A; }
+    .choose-box:hover .icon, .choose-box:focus .icon, .choose-box:active .icon {
+      display: none; }
+      .choose-box:hover .icon.icon-hover, .choose-box:focus .icon.icon-hover, .choose-box:active .icon.icon-hover {
+        display: block; }
 
 .login-screen {
   padding-top: 1px;
@@ -8432,6 +8495,8 @@ body {
     font-weight: 400;
     line-height: 34px;
     min-width: 1px; }
+    .login-screen a:hover, .login-screen a:focus, .login-screen a:active {
+      color: #484848; }
   .login-screen .media-box {
     min-height: 336px;
     background: url("imgs/app-bg.png") no-repeat center center;
@@ -8557,5 +8622,27 @@ body {
   .screen-tables .vertical-center h2 {
     padding: 11px 0 10px;
     margin-bottom: 0; }
+
+.btn.btn-white .icon.icon-plus-circle:before, .btn.btn-white .quantity.white .btn-plain .icon.btn-plus:before, .quantity.white .btn-plain .btn.btn-white .icon.btn-plus:before,
+.btn.btn-white .ordered-item.active .btn-plain .icon.btn-plus:before, .ordered-item.active .btn-plain .btn.btn-white .icon.btn-plus:before {
+  display: block;
+  margin: 6px 0 0 !important; }
+
+.btn.btn-white:hover .icon.icon-plus-circle, .btn.btn-white:hover .quantity.white .btn-plain .icon.btn-plus, .quantity.white .btn-plain .btn.btn-white:hover .icon.btn-plus,
+.btn.btn-white:hover .ordered-item.active .btn-plain .icon.btn-plus, .ordered-item.active .btn-plain .btn.btn-white:hover .icon.btn-plus, .btn.btn-white:focus .icon.icon-plus-circle, .btn.btn-white:focus .quantity.white .btn-plain .icon.btn-plus, .quantity.white .btn-plain .btn.btn-white:focus .icon.btn-plus,
+.btn.btn-white:focus .ordered-item.active .btn-plain .icon.btn-plus, .ordered-item.active .btn-plain .btn.btn-white:focus .icon.btn-plus, .btn.btn-white:active .icon.icon-plus-circle, .btn.btn-white:active .quantity.white .btn-plain .icon.btn-plus, .quantity.white .btn-plain .btn.btn-white:active .icon.btn-plus,
+.btn.btn-white:active .ordered-item.active .btn-plain .icon.btn-plus, .ordered-item.active .btn-plain .btn.btn-white:active .icon.btn-plus {
+  background-color: #FFFFFF; }
+  .btn.btn-white:hover .icon.icon-plus-circle:before, .btn.btn-white:hover .quantity.white .btn-plain .icon.btn-plus:before, .quantity.white .btn-plain .btn.btn-white:hover .icon.btn-plus:before,
+  .btn.btn-white:hover .ordered-item.active .btn-plain .icon.btn-plus:before, .ordered-item.active .btn-plain .btn.btn-white:hover .icon.btn-plus:before, .btn.btn-white:focus .icon.icon-plus-circle:before, .btn.btn-white:focus .quantity.white .btn-plain .icon.btn-plus:before, .quantity.white .btn-plain .btn.btn-white:focus .icon.btn-plus:before,
+  .btn.btn-white:focus .ordered-item.active .btn-plain .icon.btn-plus:before, .ordered-item.active .btn-plain .btn.btn-white:focus .icon.btn-plus:before, .btn.btn-white:active .icon.icon-plus-circle:before, .btn.btn-white:active .quantity.white .btn-plain .icon.btn-plus:before, .quantity.white .btn-plain .btn.btn-white:active .icon.btn-plus:before,
+  .btn.btn-white:active .ordered-item.active .btn-plain .icon.btn-plus:before, .ordered-item.active .btn-plain .btn.btn-white:active .icon.btn-plus:before {
+    color: #484848; }
+
+.narrow-buttons {
+  margin-bottom: 15px; }
+  .narrow-buttons .btn,
+  .narrow-buttons .badge {
+    margin-bottom: 15px !important; }
 
 /*# sourceMappingURL=all.css.map */

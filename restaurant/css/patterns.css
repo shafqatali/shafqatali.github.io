@@ -587,3 +587,9 @@ section > .ds-h4 {
   max-width: 1146px;
   margin-left: auto;
   margin-right: auto; }
+
+.ds-sprites-list.iconmoon li {
+  padding-top: 30px !important; }
+  .ds-sprites-list.iconmoon li span[class*="icon-"] {
+    display: inline-block !important;
+    margin-bottom: 30px !important; }
