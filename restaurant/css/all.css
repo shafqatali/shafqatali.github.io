@@ -7769,8 +7769,7 @@ just replace your svg sprite and modify these classes.
   height: 22px; }
 
 .btn {
-  min-width: 100%;
-  margin-bottom: 10px; }
+  min-width: 100%; }
   .btn.btn-primary {
     min-width: 100%; }
   .btn.btn-secondary {
@@ -7790,7 +7789,6 @@ just replace your svg sprite and modify these classes.
 .badge {
   min-width: 100%;
   line-height: 1.1;
-  margin-bottom: 10px;
   border: none; }
   .badge.badge-primary {
     min-width: 100%; }
@@ -7822,8 +7820,7 @@ just replace your svg sprite and modify these classes.
   margin: -3px 5px 0 0; }
 
 .custom-switch {
-  padding: 0;
-  margin-bottom: 25px; }
+  padding: 0; }
   .custom-switch .custom-control-label {
     padding-right: 60px;
     font-size: 23px;
@@ -7878,6 +7875,22 @@ textarea.form-control {
 .smaller-gap div[class*="col-"]:nth-of-type(even) {
   padding-left: 5px; }
 
+.btn,
+.badge,
+.choose-box,
+.square-box,
+.room-table,
+.menu-item-detail,
+.order-detail,
+.page-header,
+.table-status,
+.ordered-items-details,
+.buttons-wrap,
+.cart-item,
+.ordered-item,
+.custom-switch {
+  margin-bottom: 30px; }
+
 /*
 .bg-pink {
   background-color: $primary;
@@ -7905,7 +7918,7 @@ textarea.form-control {
   color: #FFFFFF;
   padding: 14px 8px;
   text-align: center;
-  margin: 0 15px 20px 0;
+  margin-right: 15px;
   display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -8001,8 +8014,7 @@ textarea.form-control {
   min-height: 88px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #FFFFFF;
-  margin-bottom: 30px; }
+  background-color: #FFFFFF; }
   .cart-item .column-one,
   .ordered-item .column-one {
     padding-right: 0; }
@@ -8053,7 +8065,6 @@ textarea.form-control {
   height: 22px; }
 
 .cart-item {
-  margin-bottom: 30px;
   min-height: 75px; }
   .cart-item span.price {
     display: inline-block;
@@ -8072,8 +8083,7 @@ textarea.form-control {
   min-height: 173px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #FFFFFF;
-  margin-bottom: 30px; }
+  background-color: #FFFFFF; }
   .menu-item-detail p,
   .order-detail p {
     color: #3F3D56;
@@ -8119,8 +8129,7 @@ textarea.form-control {
 .page-header {
   font-size: 0;
   background-color: transparent;
-  padding: 10px 0;
-  margin-bottom: 30px; }
+  padding: 10px 0; }
   .page-header h1,
   .page-header .btn-plain {
     vertical-align: middle; }
@@ -8177,7 +8186,6 @@ textarea.form-control {
   background-color: #FFFFFF;
   min-height: 88px;
   padding: 15px 15px 5px;
-  margin-bottom: 30px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   position: relative; }
@@ -8234,7 +8242,6 @@ textarea.form-control {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: #FFFFFF;
-  margin-bottom: 30px;
   font-size: 0;
   padding: 0 10px 0 0;
   position: relative; }
@@ -8333,7 +8340,6 @@ body {
   min-height: 286px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  margin-bottom: 30px;
   background-color: #FFFFFF; }
 
 .choose-box {
@@ -8342,7 +8348,6 @@ body {
   min-height: 286px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  margin-bottom: 30px;
   background-color: #FFFFFF;
   position: relative;
   align-items: center;
@@ -8474,8 +8479,7 @@ body {
       width: calc(70% - 4px); }
 
 .buttons-wrap {
-  text-align: right;
-  margin-bottom: 30px; }
+  text-align: right; }
   .buttons-wrap .zoom-level {
     display: inline-block;
     color: #3F3D56;
