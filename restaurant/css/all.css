@@ -7845,15 +7845,6 @@ just replace your svg sprite and modify these classes.
     right: 30px;
     background-color: #FFFFFF; }
 
-.custom-control.custom-radio {
-  display: inline-block; }
-  .custom-control.custom-radio label {
-    color: #484848;
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 38px; }
-
 .form-control {
   text-align: center; }
 
@@ -7890,6 +7881,43 @@ textarea.form-control {
 .custom-switch,
 .new-login {
   margin-bottom: 30px; }
+
+.single-checkbox-style {
+  box-sizing: border-box;
+  display: inline-block; }
+  .single-checkbox-style .custom-control-input {
+    box-sizing: border-box; }
+    .single-checkbox-style .custom-control-input:checked ~ .checkbox-label::after {
+      background-color: #2DB148; }
+  .single-checkbox-style .checkbox-label {
+    color: #484848;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 38px;
+    padding-left: 30px;
+    position: relative;
+    user-select: none; }
+    .single-checkbox-style .checkbox-label:before, .single-checkbox-style .checkbox-label:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: 0;
+      display: block;
+      margin: auto;
+      border-radius: 50%; }
+    .single-checkbox-style .checkbox-label:before {
+      width: 26px;
+      height: 26px;
+      background-color: #FFFFFF;
+      border: 1px solid #C4C4C4; }
+    .single-checkbox-style .checkbox-label:after {
+      left: 4px;
+      width: 18px;
+      height: 18px;
+      background-color: transparent; }
 
 /*
 .bg-pink {
@@ -8417,7 +8445,9 @@ body {
     max-width: calc(100% - 50px);
     padding: 0 10px 40px;
     margin: auto; }
-    .login-screen .login-form .custom-control.custom-radio + .forgot-link {
+    .login-screen .login-form .single-checkbox-style .custom-control-input:checked ~ .checkbox-label:after {
+      background-color: #FFCC2A; }
+    .login-screen .login-form .single-checkbox-style + .forgot-link {
       float: right; }
   .login-screen .new-login {
     padding: 25px 0 0;
