@@ -7772,6 +7772,9 @@ just replace your svg sprite and modify these classes.
   min-width: 100%; }
   .btn.btn-primary {
     min-width: 100%; }
+    .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
+      background-color: #484848;
+      border-color: #484848; }
   .btn.btn-secondary {
     color: #FFFFFF;
     text-transform: uppercase; }
@@ -7798,7 +7801,7 @@ just replace your svg sprite and modify these classes.
   line-height: 1.1;
   border: none; }
   .badge.badge-primary {
-    min-width: 100%; }
+    box-sizing: border-box; }
   .badge.badge-secondary {
     color: #FFFFFF; }
   .badge.badge-light {
@@ -8220,6 +8223,9 @@ textarea.form-control {
   .input-group.bg-pink .input-group-append .input-group-text {
     background-color: #E70D4D;
     color: #FFFFFF; }
+    .input-group.bg-pink .input-group-append .input-group-text:hover, .input-group.bg-pink .input-group-append .input-group-text:focus, .input-group.bg-pink .input-group-append .input-group-text:active {
+      background-color: #484848;
+      border-color: #484848; }
 
 .table-status {
   background-color: #FFFFFF;
