@@ -26,25 +26,25 @@
 <span class="ds-h4">Input fields</span>
 <div class="login-form">
 <div class="form-group">
-    <label for="field713" class="sr-only">Email</label>
-    <input type="email" class="form-control" placeholder="Email" id="field713">
+    <label for="field475" class="sr-only">Email</label>
+    <input type="email" class="form-control" placeholder="Email" id="field475">
 </div>
 <div class="form-group">
-    <label for="field256" class="sr-only">Email</label>
-    <input type="password" class="form-control" placeholder="Password" id="field256">
+    <label for="field926" class="sr-only">Email</label>
+    <input type="password" class="form-control" placeholder="Password" id="field926">
 </div>
 </div>
 <span class="ds-h4">Checkbox fields</span>
 <div class="form-group">
     <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="field754" >
-        <label class="custom-control-label" for="field754">Online</label>
+        <input type="checkbox" class="custom-control-input" id="field66" >
+        <label class="custom-control-label" for="field66">Online</label>
     </div>
 </div>
 <div class="form-group">
     <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="field382" checked="checked">
-        <label class="custom-control-label" for="field382">Online</label>
+        <input type="checkbox" class="custom-control-input" id="field222" checked="checked">
+        <label class="custom-control-label" for="field222">Online</label>
     </div>
 </div>
 <span class="ds-h4">Input group</span>
@@ -370,5 +370,11 @@
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
 </body>
 </html>

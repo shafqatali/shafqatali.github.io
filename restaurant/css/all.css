@@ -7760,7 +7760,7 @@ just replace your svg sprite and modify these classes.
 
 .svg-tick-circle {
   background: url("svg/sprite.svg") 99.46889% 30.45587% no-repeat;
-  width: 21.293px;
+  width: 22px;
   height: 21.293px; }
 
 .svg-view {
@@ -8147,6 +8147,7 @@ textarea.form-control {
   border-radius: 8px;
   background-color: #FFFFFF; }
   .input-group .form-control {
+    text-align: left;
     border-radius: 8px 0 0 8px; }
   .input-group .input-group-append .input-group-text {
     border-radius: 0 8px 8px 0;
@@ -8228,6 +8229,84 @@ textarea.form-control {
     background-color: #4285F4; }
   .table-status.occupied:before {
     background-color: #E70D4D; }
+
+.ordered-items-details {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  margin-bottom: 30px;
+  font-size: 0;
+  padding: 0 10px 0 0;
+  position: relative; }
+  .ordered-items-details span {
+    color: #3F3D56;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 14px 0; }
+  .ordered-items-details .badge-white {
+    box-shadow: none;
+    margin: 0;
+    min-width: 1px;
+    padding: 11px 7px; }
+    .ordered-items-details .badge-white > span {
+      padding: 0;
+      margin: 0; }
+  .ordered-items-details .row {
+    margin-right: -5px;
+    margin-left: -5px; }
+    .ordered-items-details .row > div {
+      padding-right: 5px;
+      padding-left: 5px; }
+      .ordered-items-details .row > div:first-of-type {
+        padding-left: 18px; }
+  .ordered-items-details.heading span {
+    color: #E70D4D; }
+  .ordered-items-details.supply {
+    padding: 0; }
+    .ordered-items-details.supply .row > div:first-of-type {
+      flex: 0 0 50%;
+      max-width: 50%; }
+    .ordered-items-details.supply .badge-tick {
+      margin: 0;
+      padding: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 0 8px 8px 0;
+      background-color: #B9B9B7; }
+      .ordered-items-details.supply .badge-tick > span {
+        padding: 0;
+        margin: 0; }
+      .ordered-items-details.supply .badge-tick.supplied {
+        background-color: #2DB148; }
+  .ordered-items-details .tooltip.bs-tooltip-bottom, .ordered-items-details .tooltip.bs-tooltip-auto[x-placement^="bottom"] {
+    padding: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; }
+    .ordered-items-details .tooltip.bs-tooltip-bottom .arrow, .ordered-items-details .tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow {
+      opacity: 0; }
+    .ordered-items-details .tooltip.bs-tooltip-bottom .tooltip-inner, .ordered-items-details .tooltip.bs-tooltip-auto[x-placement^="bottom"] .tooltip-inner {
+      max-width: none;
+      background-color: #FFFFFF;
+      color: #3F3D56;
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      text-align: left;
+      border-radius: 8px;
+      padding: 15px 15px; }
+    .ordered-items-details .tooltip.bs-tooltip-bottom.show, .ordered-items-details .tooltip.show.bs-tooltip-auto[x-placement^="bottom"] {
+      opacity: 1;
+      top: 50px !important;
+      right: 0;
+      bottom: auto;
+      left: 0 !important;
+      margin: auto;
+      transform: none !important; }
 
 @media screen and (min-width: 641px) {
   .mobile-box {
@@ -8393,5 +8472,28 @@ body {
       border-radius: 0 8px 8px 0;
       border: 1px solid #B9B9B7;
       width: calc(70% - 4px); }
+
+.buttons-wrap {
+  text-align: right;
+  margin-bottom: 30px; }
+  .buttons-wrap .zoom-level {
+    display: inline-block;
+    color: #3F3D56;
+    font-family: "Open Sans", sans-serif;
+    font-size: 19px;
+    font-weight: 400; }
+  .buttons-wrap .btn-group {
+    display: inline-block; }
+    .buttons-wrap .btn-group .badge-white {
+      min-width: 48px;
+      width: 48px;
+      border-radius: 0;
+      margin-right: 3px;
+      margin-bottom: 0; }
+      .buttons-wrap .btn-group .badge-white:first-of-type {
+        border-radius: 8px 0 0 8px; }
+      .buttons-wrap .btn-group .badge-white:last-of-type {
+        border-radius: 0 8px 8px 0;
+        margin-right: 0; }
 
 /*# sourceMappingURL=all.css.map */

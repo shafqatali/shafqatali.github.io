@@ -36,31 +36,41 @@
         <button type="button" class="badge badge-dark"><span class="svg-clock-white"></span>Waiting since 0h 23m</button>
     </div>
 </div>
-<div class="form-group">
-    <div class="input-group bg-white">
-        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
-        <div class="input-group-append">
-            <button class="input-group-text" type="button"><span class="svg-details"></span></button>
+<div id="orderItem940" class="ordered-items-details heading">
+    <div class="row">
+        <div class="col-8">
+            <span>Item name</span>
+        </div>
+        <div class="col-2"><span>Qty</span></div>
+        <div class="col-2">
+            <span>Notes</span>
         </div>
     </div>
 </div>
-<div class="form-group">
-    <div class="input-group bg-white">
-        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
-        <div class="input-group-append">
-            <button class="input-group-text" type="button"><span class="svg-details"></span></button>
+<div id="orderItem698" class="ordered-items-details ">
+    <div class="row">
+        <div class="col-8">
+            <span>(1) Cheeseburger</span>
+        </div>
+        <div class="col-2"><span>01</span></div>
+        <div class="col-2">
+            <button type="button" class="badge badge-white" data-trigger="click" data-html="true" data-container="#orderItem698" data-toggle="tooltip" data-placement="bottom" data-title="Notes <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut">
+                <span class="svg-details"></span><span class="sr-only">Details button</span>
+            </button>
         </div>
     </div>
 </div>
-<div class="form-group">
-    <div class="input-group ">
-        <input type="text" class="form-control" placeholder="New order!" aria-label="input button">
-        <div class="input-group-append">
-            <button class="input-group-text" type="button"></button>
+<div id="orderItem774" class="ordered-items-details ">
+    <div class="row">
+        <div class="col-8">
+            <span>(1) Cheeseburger</span>
+        </div>
+        <div class="col-2"><span>01</span></div>
+        <div class="col-2">
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row smaller-gap">
     <div class="col-6">
         <button type="button" class="btn btn-light">Print</button>
     </div>
@@ -74,5 +84,11 @@
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
 </body>
 </html>
