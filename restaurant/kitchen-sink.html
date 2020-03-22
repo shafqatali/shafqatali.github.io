@@ -30,25 +30,25 @@
 <span class="ds-h4">Input fields</span>
 <div class="login-form">
 <div class="form-group">
-    <label for="field12" class="sr-only">Email</label>
-    <input type="email" class="form-control" placeholder="Email" id="field12">
+    <label for="field820" class="sr-only">Email</label>
+    <input type="email" class="form-control" placeholder="Email" id="field820">
 </div>
 <div class="form-group">
-    <label for="field965" class="sr-only">Email</label>
-    <input type="password" class="form-control" placeholder="Password" id="field965">
+    <label for="field24" class="sr-only">Password</label>
+    <input type="password" class="form-control" placeholder="Password" id="field24">
 </div>
 </div>
 <span class="ds-h4">Checkbox fields</span>
 <div class="form-group">
     <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="field196" >
-        <label class="custom-control-label" for="field196">Online</label>
+        <input type="checkbox" class="custom-control-input" id="field420" >
+        <label class="custom-control-label" for="field420">Online</label>
     </div>
 </div>
 <div class="form-group">
     <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="field533" checked="checked">
-        <label class="custom-control-label" for="field533">Online</label>
+        <input type="checkbox" class="custom-control-input" id="field999" checked="checked">
+        <label class="custom-control-label" for="field999">Online</label>
     </div>
 </div>
 <span class="ds-h4">Input group</span>
@@ -173,7 +173,7 @@
  <div class="col-6">
 <div class="menu-item">
     <div class="media-box">
-        <img src="images/menu-item.png" alt="menu item image">
+        <img src="images/menu-item.jpg" alt="menu item image">
         <a href="#/" class="icon"><span class="icon-plus-circle"></span><span class="sr-only">Add to order</span></a>
     </div>
     <span class="name">Main Meat Courses</span>
@@ -189,7 +189,8 @@
             <span class="price"><i class="icon-pound"></i>111,80</span>
         </div>
         <div class="col-4 column-two">
-<div class="quantity ">
+<div id="quantity180" class="quantity ">
+    <!-- each quantity div should have unique Id -->
     <button type="button" class="btn-plain minus"><span class="icon icon-minus-circle"></span><span class="sr-only">remove one</span></button>
     <span class="text">02</span>
     <button type="button" class="btn-plain plus"><span class="icon icon-plus-circle"></span><span class="sr-only">add one</span></button>
@@ -206,7 +207,8 @@
             <span class="price"><i class="icon-pound"></i>111,80</span>
         </div>
         <div class="col-4 column-two">
-<div class="quantity ">
+<div id="quantity587" class="quantity ">
+    <!-- each quantity div should have unique Id -->
     <button type="button" class="btn-plain minus"><span class="icon icon-minus-circle"></span><span class="sr-only">remove one</span></button>
     <span class="text">02</span>
     <button type="button" class="btn-plain plus"><span class="icon icon-plus-circle"></span><span class="sr-only">add one</span></button>
@@ -222,7 +224,8 @@
             <span class="price"><i class="icon-pound"></i>111,80</span>
         </div>
         <div class="col-5">
-<div class="quantity ">
+<div id="quantity689" class="quantity ">
+    <!-- each quantity div should have unique Id -->
     <button type="button" class="btn-plain minus"><span class="icon icon-minus-circle"></span><span class="sr-only">remove one</span></button>
     <span class="text">02</span>
     <button type="button" class="btn-plain plus"><span class="icon icon-plus-circle"></span><span class="sr-only">add one</span></button>
@@ -404,6 +407,7 @@
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 <script>
     setTimeout(function () {
         $('[data-toggle="tooltip"]').tooltip();
