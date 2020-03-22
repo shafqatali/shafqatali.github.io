@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <title>Restaurant Order Detail</title>
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Remove the '<div class="mobile-box">' from Ruby on rails build.
+ It's just for demonstration of HTML.
+ -->
+<div class="mobile-box">
+    <div class="inner-wrapper ">
+        <div class="container-fluid">
+<header class="page-header">
+    <a href="index.html" class="btn-plain btn-back "><span class="icon-arrow-back"></span><span class="sr-only">Back Button</span></a>
+    <h1>Order details</h1>
+    <a href="settings.html" class="btn-plain btn-settings "><span class="icon-settings"></span><span class="sr-only">Settings Button</span></a>
+</header>
+<button type="button" class="badge badge-border-only">
+    <span class="icon icon-table-chair"></span>
+    Table 11
+</button>
+<div class="row smaller-gap narrow-buttons">
+    <div class="col-6">
+        <button type="button" class="badge badge-dark">2857061</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="badge badge-dark"><span class="icon-pound"></span>15,90</button>
+    </div>
+    <div class="col-12">
+        <button type="button" class="badge badge-dark"><span class="icon-clock"></span>Waiting since 0h 23m</button>
+    </div>
+</div>
+<div id="orderItem730" class="ordered-items-details heading">
+    <div class="row">
+        <div class="col-8">
+            <span>Item name</span>
+        </div>
+        <div class="col-2"><span>Qty</span></div>
+        <div class="col-2">
+            <span>Notes</span>
+        </div>
+    </div>
+</div>
+<div id="orderItem206" class="ordered-items-details ">
+    <div class="row">
+        <div class="col-8">
+            <span>(1) Cheeseburger</span>
+        </div>
+        <div class="col-2"><span>01</span></div>
+        <div class="col-2">
+            <button type="button" class="badge badge-white" data-trigger="click" data-html="true" data-container="#orderItem206" data-toggle="tooltip" data-placement="bottom" data-title="Notes <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut">
+                <span class="icon-details"></span><span class="sr-only">Details button</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div id="orderItem791" class="ordered-items-details ">
+    <div class="row">
+        <div class="col-8">
+            <span>(1) Cheeseburger</span>
+        </div>
+        <div class="col-2"><span>01</span></div>
+        <div class="col-2">
+        </div>
+    </div>
+</div>
+<div class="row smaller-gap">
+    <div class="col-6">
+        <button type="button" class="btn btn-light">Print</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-primary">Accept order</button>
+    </div>
+</div>
+<button type="button" class="btn btn-white">Close</button>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
+</body>
+</html>

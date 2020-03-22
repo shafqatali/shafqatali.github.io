@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <title>Restaurant Login</title>
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Remove the '<div class="mobile-box">' from Ruby on rails build.
+ It's just for demonstration of HTML.
+ -->
+<div class="mobile-box">
+        <div class="login-screen">
+    <div class="media-box">
+    </div>
+    <div class="content-box">
+        <h1 class="text">Welcome to <span>Cafe heading</span></h1>
+    </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="exampleInputEmail1" class="sr-only">Email</label>
+            <input type="email" class="form-control" placeholder="Email" id="exampleInputEmail1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1" class="sr-only">Password</label>
+            <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
+            <div class="single-checkbox-style">
+                <input type="checkbox" id="customCheckbox" name="customCheckbox" class="custom-control-input">
+                <label class="checkbox-label" for="customCheckbox">Keep me logged in</label>
+            </div>
+            <a href="#/" class="forgot-link">Forgot?</a>
+        </div>
+        <button type="submit" class="btn btn-secondary">Login</button>
+        <div class="new-login">
+            <p>Don't have a account?</p>
+            <a href="#/">Register here</a>
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
+</body>
+</html>

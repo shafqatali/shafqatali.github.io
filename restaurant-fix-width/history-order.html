@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <title>Restaurant History Order</title>
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Remove the '<div class="mobile-box">' from Ruby on rails build.
+ It's just for demonstration of HTML.
+ -->
+<div class="mobile-box">
+    <div class="inner-wrapper ">
+        <div class="container-fluid">
+<header class="page-header">
+    <a href="index.html" class="btn-plain btn-back "><span class="icon-arrow-back"></span><span class="sr-only">Back Button</span></a>
+    <h1>Orders</h1>
+    <a href="settings.html" class="btn-plain btn-settings "><span class="icon-settings"></span><span class="sr-only">Settings Button</span></a>
+</header>
+<button type="button" class="badge badge-border-only">
+    <span class="icon icon-table-chair"></span>
+    Table 03
+</button>
+<div class="row smaller-gap">
+    <div class="col-6">
+        <button type="button" class="badge badge-white">Active</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="badge badge-dark">History</button>
+    </div>
+</div>
+<div class="order-detail">
+    <p><span>Date:</span> 12/03/2020 at 10:45</p>
+    <p><span>Number:</span> 2858516</p>
+    <p><span>Total Price:</span>15,30</p>
+    <p><span>Items:</span></p>
+    <p>(1) Barbecue Burger</p>
+    <p>(1) Cheeseburger</p>
+</div>
+<span class="btn btn-light no-bg">Total Amount: 15,90</span>
+<div class="narrow-buttons">
+    <button type="button" class="btn btn-white">Clear Table</button>
+<button type="button" class="btn btn-white">
+    <span class="icon icon-plus-circle"></span>
+    Add more
+</button>
+</div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
+</body>
+</html>

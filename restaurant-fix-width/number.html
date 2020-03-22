@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <title>Restaurant Login</title>
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Remove the '<div class="mobile-box">' from Ruby on rails build.
+ It's just for demonstration of HTML.
+ -->
+<div class="mobile-box">
+        <div class="login-screen">
+    <div class="logo-box">
+        <span class="sr-only">app logo</span>
+    </div>
+    <div class="inner-box">
+        <h1 class="text">Welcome to <span>Online Takeway</span></h1>
+        <div class="form-group otp-fields">
+            <label for="countryCode" class="sr-only">Country Code</label>
+            <input id="countryCode" type="text" class="form-control country-code" value="USA +1" placeholder="USA +1">
+            <label for="phoneNumber" class="sr-only">Phone number</label>
+            <input id="phoneNumber" type="text" class="form-control phone-number" placeholder="Enter phone number">
+        </div>
+        <button type="submit" class="btn btn-secondary">get otp</button>
+    </div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <title>Restaurant Table Status View B</title>
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Remove the '<div class="mobile-box">' from Ruby on rails build.
+ It's just for demonstration of HTML.
+ -->
+<div class="mobile-box">
+    <div class="inner-wrapper screen-tables">
+        <div class="container-fluid">
+<header class="page-header">
+    <a href="index.html" class="btn-plain btn-back "><span class="icon-arrow-back"></span><span class="sr-only">Back Button</span></a>
+    <h1>Table status</h1>
+    <a href="settings.html" class="btn-plain btn-settings "><span class="icon-settings"></span><span class="sr-only">Settings Button</span></a>
+</header>
+<button type="button" class="badge badge-white">
+    <span class="icon icon-view"></span>
+    Change view
+</button>
+<h2>Main Room</h2>
+<div class="row">
+    <div class="col-12">
+<div class="table-status occupied">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="icon-table"></span> Table 01</span>
+            <span class="text"><span class="icon-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="icon-info"></span> Occupied</span>
+            <span class="text"><span class="icon-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="icon-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="table-status free">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="icon-table"></span> Table 01</span>
+            <span class="text"><span class="icon-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="icon-info"></span> Occupied</span>
+            <span class="text"><span class="icon-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="icon-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="table-status kitchen">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="icon-table"></span> Table 01</span>
+            <span class="text"><span class="icon-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="icon-info"></span> Occupied</span>
+            <span class="text"><span class="icon-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="icon-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="table-status ready">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="icon-table"></span> Table 01</span>
+            <span class="text"><span class="icon-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="icon-info"></span> Occupied</span>
+            <span class="text"><span class="icon-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="icon-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+<h2>Side room</h2>
+<div class="row">
+    <div class="col-12">
+<div class="table-status free">
+    <div class="row">
+        <div class="col-5">
+            <span class="text"><span class="icon-table"></span> Table 01</span>
+            <span class="text"><span class="icon-chair"></span> Seats: 4</span>
+        </div>
+        <div class="col-4">
+            <span class="text"><span class="icon-info"></span> Occupied</span>
+            <span class="text"><span class="icon-pound"></span> 55,90</span>
+        </div>
+        <div class="col-3">
+            <span class="time">
+                <span class="icon-clock"></span>
+                <span class="text">1h 23m</span>
+            </span>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
+</body>
+</html>

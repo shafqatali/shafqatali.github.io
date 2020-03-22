@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <title>Restaurant Choose</title>
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Remove the '<div class="mobile-box">' from Ruby on rails build.
+ It's just for demonstration of HTML.
+ -->
+<div class="mobile-box">
+    <div class="inner-wrapper ">
+        <div class="container-fluid">
+<header class="page-header">
+    <a href="index.html" class="btn-plain btn-back invisible"><span class="icon-arrow-back"></span><span class="sr-only">Back Button</span></a>
+    <h1>Cafe heading</h1>
+    <a href="settings.html" class="btn-plain btn-settings "><span class="icon-settings"></span><span class="sr-only">Settings Button</span></a>
+</header>
+<div class="choose-box">
+    <a class="item" href="table-status.html">
+        <span class="icon svg-table-chair"></span>
+        <span class="icon icon-hover svg-table-chair-black"></span>
+        <span class="h2 text">Tables</span>
+    </a>
+</div>
+<div class="choose-box">
+    <a class="item" href="new-order.html">
+        <span class="icon svg-kitchen"></span>
+        <span class="icon icon-hover svg-kitchen-black"></span>
+        <span class="h2 text">Kitchen</span>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
+</body>
+</html>

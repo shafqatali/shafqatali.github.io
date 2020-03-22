@@ -8033,8 +8033,9 @@ textarea.form-control {
     background-color: #4285F4; }
   .room-table.occupied {
     background-color: #E70D4D; }
-  .room-table:nth-child(3n + 3) {
-    margin-right: 0; }
+  @media screen and (max-width: 440px) {
+    .room-table:nth-child(3n + 3) {
+      margin-right: 0; } }
 
 .menu-item {
   display: inline-block; }

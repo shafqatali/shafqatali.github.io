@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <title>Restaurant Check Orders</title>
+    <link href="css/all.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Remove the '<div class="mobile-box">' from Ruby on rails build.
+ It's just for demonstration of HTML.
+ -->
+<div class="mobile-box">
+    <div class="inner-wrapper ">
+        <div class="container-fluid">
+<header class="page-header">
+    <a href="index.html" class="btn-plain btn-back "><span class="icon-arrow-back"></span><span class="sr-only">Back Button</span></a>
+    <h1>Check Order</h1>
+    <a href="settings.html" class="btn-plain btn-settings "><span class="icon-settings"></span><span class="sr-only">Settings Button</span></a>
+</header>
+<button type="button" class="badge badge-border-only">
+    <span class="icon icon-table-chair"></span>
+    Table 03
+</button>
+<div class="cart-item">
+    <span class="name">Barbecu Burger</span>
+    <div class="row">
+        <div class="col-5">
+            <span class="price"><i class="icon-pound"></i>111,80</span>
+        </div>
+        <div class="col-5">
+<div class="quantity ">
+    <button type="button" class="btn-plain minus"><span class="icon icon-minus-circle"></span><span class="sr-only">remove one</span></button>
+    <span class="text">02</span>
+    <button type="button" class="btn-plain plus"><span class="icon icon-plus-circle"></span><span class="sr-only">add one</span></button>
+</div>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn-plain btn-remove"><span class="icon icon-stop"></span><span class="sr-only">add one</span></button>
+        </div>
+    </div>
+</div>
+<div class="cart-item">
+    <span class="name">Barbecu Burger</span>
+    <div class="row">
+        <div class="col-5">
+            <span class="price"><i class="icon-pound"></i>111,80</span>
+        </div>
+        <div class="col-5">
+<div class="quantity ">
+    <button type="button" class="btn-plain minus"><span class="icon icon-minus-circle"></span><span class="sr-only">remove one</span></button>
+    <span class="text">02</span>
+    <button type="button" class="btn-plain plus"><span class="icon icon-plus-circle"></span><span class="sr-only">add one</span></button>
+</div>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn-plain btn-remove"><span class="icon icon-stop"></span><span class="sr-only">add one</span></button>
+        </div>
+    </div>
+</div>
+<div class="cart-item">
+    <span class="name">Barbecu Burger</span>
+    <div class="row">
+        <div class="col-5">
+            <span class="price"><i class="icon-pound"></i>111,80</span>
+        </div>
+        <div class="col-5">
+<div class="quantity ">
+    <button type="button" class="btn-plain minus"><span class="icon icon-minus-circle"></span><span class="sr-only">remove one</span></button>
+    <span class="text">02</span>
+    <button type="button" class="btn-plain plus"><span class="icon icon-plus-circle"></span><span class="sr-only">add one</span></button>
+</div>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn-plain btn-remove"><span class="icon icon-stop"></span><span class="sr-only">add one</span></button>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="fieldTextArea" class="sr-only">notes</label>
+    <textarea class="form-control" id="fieldTextArea" placeholder="Type your notes..."></textarea>
+</div>
+<div class="form-group">
+    <div class="single-checkbox-style">
+        <input type="checkbox" id="customCheckbox" name="customCheckbox" class="custom-control-input">
+        <label class="checkbox-label" for="customCheckbox">Takeaway order</label>
+    </div>
+</div>
+<div class="row smaller-gap narrow-buttons">
+    <div class="col-6">
+        <button type="button" class="btn btn-white">Add more</button>
+    </div>
+    <div class="col-6">
+        <span class="btn btn-light">Total: 335,90</span>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-white">Cancel</button>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-primary">Order</button>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    setTimeout(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        console.log('tooltip bound now.');
+    }, 2000);
+</script>
+</body>
+</html>
