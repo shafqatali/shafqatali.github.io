@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Hotels Listing</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+        .filter-key {
+            display: block !important;
+        }
+
+        .badge.active {
+            background-color: #337ab7;
+        }
+
+        .filter-key .filter-count {
+            float: right;
+            color: #9d9d9d;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155611767-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-155611767-1');
+    </script>
+</head>
+<body>
+
+<main class="container">
+    <div class="hotel-listing">
+        <h2>App listing</h2>
+        <!--vue app start-->
+        <div id="appSample" class="vue-app-wrapper container loading-app">
+            <sample-app></sample-app>
+        </div>
+        <script type="text/x-template" id="sampleTemplate">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="meta-filters-wrappers">
+                        <a class="hidden-sm visible-xs" role="button" data-toggle="collapse" href="#collapseFilters"
+                           aria-expanded="false" aria-controls="collapseFilters">
+                            <h4>Show / Hide Filters</h4>
+                        </a>
+                        <div class="collapse in" id="collapseFilters">
+                            <div v-if="activeFilterList.length > 0">
+                                <div class="button-box">
+                                    <h4 class="txt">Select Filters</h4>
+                                    <button type="button" v-on:click="clearAll()"
+                                            class="btn-filter-reset btn btn-default">
+                                        Clear
+                                    </button>
+                                </div>
+                                <div class="filter-result" v-if="activeFilterList.length > 0">
+                                    <span v-html="tableData.length"></span> Hotel(s) found.
+                                </div>
+                                <div class="badge-group">
+                                <span v-for="item in activeFilterList" v-on:click="removeOne(item.id)" class="badge">
+                                    <span v-html="item.meta_title"></span>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </span>
+                                </div>
+                            </div>
+                            <div v-for="row in filterData" class="meta-filters-group">
+                                <div v-if="row.show" v-bind:class="toggleFilterGroup(row.meta_name)">
+                                    <a class="filter-label" role="button" data-toggle="collapse"
+                                       v-bind:href="getCollapseId(row.meta_name)" aria-expanded="false"
+                                       v-bind:aria-controls="row.meta_name">
+                                        <h4 v-html="row.DisplayName">H4</h4>
+                                    </a>
+                                    <div v-bind:id="row.meta_name" class="collapse">
+                                        <div v-bind:class="row.meta_name" class="filter-checkboxes">
+                                            <label v-if="row.meta_name === 'stars'" class="filter-key"
+                                                   v-for="f in row.meta_values">
+                                                <input v-on:click="searchHotels()" type="checkbox"
+                                                       v-bind:name="getUniqueId(f.id)"
+                                                       v-bind:id="getUniqueId(f.id)" v-bind:data-slug-name="f.meta_slug"
+                                                       v-bind:value="f.meta_slug">
+                                                <span class="filter-title"><span
+                                                        v-html="getStarClass(f.meta_slug)"></span></span>
+                                                <span class="filter-count" v-html="f.total">240</span>
+                                            </label>
+                                            <label v-for="f in row.meta_values" v-if="row.meta_name !== 'stars'"
+                                                   class="filter-key"
+                                                   v-bind:class="checkCount(f.total, f.enabled)">
+                                                <input v-on:click="searchHotels()" type="checkbox"
+                                                       v-bind:name="getUniqueId(f.id)"
+                                                       v-bind:id="getUniqueId(f.id)"
+                                                       v-bind:data-slug-name="f.meta_slug"
+                                                       v-bind:value="f.id">
+                                                <span class="filter-title" v-html="f.meta_title">Text</span>
+                                                <span class="filter-count" v-html="f.total">num</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div v-if="tableData.length > 0">
+                        <div v-for="row in pageData" class="row hotel-item">
+                            <div class="col-sm-5">
+                                <!-- to load actual image replace "v-bind:data-src" with "v-bind:src" and remove src attribute -->
+                                <img class="hotel-img img-responsive" src="place-holder.jpg" v-bind:data-src="row.image"
+                                     v-bind:alt="row.hotel_name">
+                            </div>
+                            <div class="col-sm-7" v-bind:data-id="row.hotel_id">
+                                <h2 class="hotel-name"><a v-bind:href="row.hotel_link" v-html="row.hotel_name">hotel
+                                    name</a></h2>
+                                <div class="hotel_star"><span v-html="getStarClass(row.hotel_star)"></span></div>
+                                <p class="hotel-address"><span class="glyphicon glyphicon-map-marker"></span>{{row.hotel_address}}
+                                </p>
+                                <div class="facilities-list" v-html="getHotelMeta(row.filter_ids)"></div>
+                                <div class="hotel-description">
+                                    <span v-html="row.description">DE</span>
+                                    ...
+                                    <span class="color-link">Read More </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="no-record-msg" v-if="tableData.length == 0">Sorry no hotel found with the current
+                        selection.</p>
+                    <nav class="row page_num" v-if="TotalPages > 1">
+                        <ul class="pagination pagination-small pagination-centered">
+                            <li class="page-item shift_page" v-bind:class="{disabled: CurrentPage == 1}">
+                                <a v-bind:href="CurrentPage - 1" class="page-link prev"
+                                   v-on:click.stop.prevent="getPageData(CurrentPage - 1,'')">Prev</a>
+                            </li>
+                            <li class="page-item" v-bind:class="{ active: CurrentPage == 1 }">
+                                <a class="page-link" href="1" v-on:click.stop.prevent="getPageData(1,'')">1</a>
+                            </li>
+                            <li class="page-item disabled" v-if="CurrentPage > 4">
+                                <a class="page-link" href="#">...</a>
+                            </li>
+                            <li v-for="n in TotalPages" class="page-item" v-if="pageLimit(n)"
+                                v-bind:class="{ active: n == CurrentPage }">
+                                <a class="page-link" v-bind:href="n" v-on:click.stop.prevent="getPageData(n,'')"
+                                   v-html="n">2</a>
+                            </li>
+                            <li class="page-item disabled" v-if="CurrentPage < TotalPages">
+                                <a class="page-link" href="#">...</a>
+                            </li>
+                            <li class="page-item" v-bind:class="{ active: TotalPages == CurrentPage }">
+                                <a class="page-link" href="TotalPages"
+                                   v-on:click.stop.prevent="getPageData(TotalPages,'')" v-html="TotalPages">last
+                                    page</a>
+                            </li>
+                            <li class="page-item shift_page" v-bind:class="{disabled: CurrentPage == TotalPages}">
+                                <a class="page-link next" href="#last"
+                                   v-on:click.stop.prevent="getPageData(CurrentPage + 1,'')">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </script>
+        <script>
+            var SampleComponent = {
+                name: "sampleApp",
+                template: "#sampleTemplate",
+                props: {},
+                data: function () {
+                    return {
+                        tableData: window.appHotels,
+                        filterData: [],
+                        filterNames: [],
+                        activeFilterIds: '',
+                        activeFilterList: [],
+                        PageSize: window.page_size,
+                        pageData: [],
+                        noDataFound: false,
+                        CurrentPage: 1,
+                        TotalPages: 0,
+                        defaultActive: -1,
+                        mobileClass: ""
+                    }
+                },
+                methods: {
+                    toggleFilterMobile: function () {
+                        if (this.mobileClass === "") {
+                            this.mobileClass = "active";
+                        } else {
+                            this.mobileClass = "";
+                        }
+                    },
+                    getHotelStars: function (number) {
+                        var count = 5;
+                        switch (number) {
+                            case "five":
+                                count = 5;
+                                break;
+                            case "four":
+                                count = 4;
+                                break;
+                            case "three":
+                                count = 3;
+                                break;
+                            case "two":
+                                count = 2;
+                                break;
+                            case "one":
+                                count = 1;
+                                break;
+                        }
+                        var markup = '';
+                        for (var i = 1; i <= count; i++) {
+                            markup += '<i class="icon-star-full"></i>';
+                        }
+                        return '<span class="stars-list">' + markup + '</span>';
+                    },
+                    toggleFilterGroup: function (metaType) {
+                        if (window.page_meta_name === 'all') {
+                            return '';
+                        } else if (window.page_meta_name === metaType) {
+                            return 'hidden d-none';
+                        } else {
+                            return '';
+                        }
+                    },
+                    getCollapseId: function (name) {
+                        return '#' + name;
+                    },
+                    checkCount: function (total, enabled, type) {
+                        if (type === 'propertyType') {
+                            if (enabled === '0' && total === '0') {
+                                return ' hidden d-none';
+                            }
+                            return '';
+                        } else {
+                            if (enabled === '1' && total !== '0') {
+                                return '';
+                            }
+                            if (enabled === '0' && total === '0') {
+                                return ' hidden d-none';
+                            }
+                            return ' disabled';
+                        }
+                    },
+                    pageLimit: function (page_num) {
+                        if (this.TotalPages < 5) {
+                            return;
+                        }
+                        var lastOneToShow = 0;
+                        if (this.CurrentPage < 5) {
+                            lastOneToShow = 5;
+                            if (page_num > 1 && page_num <= lastOneToShow) {
+                                return true
+                            } else {
+                                return false
+                            }
+                        } else {
+                            var currentOne = this.CurrentPage - 1;
+                            if (this.CurrentPage === this.TotalPages) {
+                                currentOne = this.CurrentPage - 4
+                            }
+                            lastOneToShow = currentOne + 4;
+                            if (page_num !== this.TotalPages && page_num >= currentOne && page_num <= lastOneToShow) {
+                                return true
+                            } else {
+                                return false
+                            }
+                        }
+                    },
+                    clearAll: function () {
+                        var allCheckBoxes = document.querySelectorAll('.filter-checkboxes input[type="checkbox"]:checked');
+                        for (var a = 0; a < allCheckBoxes.length; a++) {
+                            allCheckBoxes[a].checked = false;
+                        }
+                        this.activeFilterIds = '';
+                        this.activeFilterList = [];
+                        this.tableData = window.appHotels;
+                        this.getFiltersTotal(window.appHotels, true);
+                        this.getTotalPages();
+                        this.getPageData(1, 'mount');
+                    },
+                    removeOne: function (filter_id) {
+                        var id = this.getUniqueId(filter_id);
+                        if (document.getElementById(id) === null) {
+                            //this.clearAll();
+                        } else {
+                            document.getElementById(id).click();
+                        }
+                    },
+                    getUniqueId: function (id) {
+                        return 'mvc' + id;
+                    },
+                    getStarClass: function (star) {
+                        return '' + star + ' star';
+                    },
+                    getHotelMeta: function (ids) {
+                        var filtered = '';
+                        var markup = '';
+                        var names = ids.split(',');
+                        for (var f = 0; f < this.filterNames.length; f++) {
+                            var filter = this.filterNames[f];
+                            if (filter.meta_type !== 'stars' && names.indexOf(filter.id) >= 0) {
+                                var activeClass = '';
+                                //console.log('search for '+ filter.id +' from: '+ this.activeFilterIds);
+                                if (this.activeFilterIds.indexOf(filter.id) !== -1) {
+                                    activeClass = ' active';
+                                    filtered += '<span class="badge' + activeClass + '">' + filter.meta_title + '</span>';
+                                } else {
+                                    markup += '<span class="badge' + activeClass + '">' + filter.meta_title + '</span>';
+                                }
+                            }
+                        }
+                        return filtered + markup;
+                    },
+                    getTotalPages: function () {
+                        if (this.tableData.length > 0) {
+                            var n = this.tableData.length / this.PageSize;
+                            this.TotalPages = Math.ceil(n);
+                        } else {
+                            this.TotalPages = 0;
+                        }
+                    },
+                    getPageData: function (pageNum, eventType) {
+                        if (pageNum === 'prev') {
+                            this.CurrentPage -= 1;
+                        } else if (pageNum === 'next') {
+                            this.CurrentPage += 1;
+                        } else {
+                            this.CurrentPage = pageNum;
+                        }
+                        if (this.CurrentPage < 1) {
+                            this.CurrentPage = this.TotalPages;
+                        } else if (this.CurrentPage > this.TotalPages) {
+                            this.CurrentPage = 1
+                        }
+                        var startIndex = 0;
+                        var endIndex = 0;
+                        var items = this.tableData;
+                        var totalItems = items.length;
+                        if (items.length < this.PageSize) {
+                            startIndex = 1;
+                            endIndex = items.length;
+                        } else {
+                            if (this.CurrentPage === 1) {
+                                startIndex = 1;
+                                endIndex = this.PageSize;
+                            } else {
+                                endIndex = (this.CurrentPage * this.PageSize);
+                                startIndex = endIndex - this.PageSize;
+                                if (endIndex > totalItems) {
+                                    endIndex = items.length;
+                                }
+                            }
+                        }
+                        var pageData = [];
+                        if (startIndex === 1) {
+                            startIndex = 0;
+                        }
+                        for (var c = startIndex; c < endIndex; c++) {
+                            pageData.push(items[c]);
+                        }
+
+                        this.pageData = pageData;
+                        this.noDataFound = pageData.length === 0;
+
+                        if (eventType !== 'mount') {
+                            scrollToTop();
+                        }
+                        this.resetLozad();
+                    },
+                    resetLozad: function () {
+                        /*setTimeout(function () {
+                            var imgs = document.querySelectorAll('.vue-app-wrapper .off-screen');
+                            for (var c = 0; c < imgs.length; c++) {
+                                imgs[c].removeAttribute('data-loaded');
+                                imgs[c].setAttribute('src', 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+
+                                var observer = lozad(imgs[c]); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+                                observer.observe();
+                            }
+                        }, 500);*/
+                    },
+                    getFiltersTotal: function (hotels, excludeZero) {
+                        var counted = [];
+                        var filters = window.appFilters;
+                        for (var i = 0; i < filters.length; i++) {
+                            var group = filters[i];
+                            var items = filters[i].meta_values;
+
+                            var zero_items = [];
+                            var item_count = [];
+                            for (var t = 0; t < items.length; t++) {
+                                //hotel count for each filter
+                                /*var filterJson = JSON.stringify(items[t]);
+                                var filter = JSON.parse(filterJson);*/
+                                var filter = items[t];
+                                var total = this.getHotelCount(hotels, filter.id);
+                                if (total > 0) {
+                                    zero_items.push('a');
+                                    filter.total = total;
+                                }
+                                filter.enabled = (total > 0) ? '1' : '0';
+                                item_count.push(filter);
+                            }//end for item
+                            group['meta_values'] = item_count;
+                            if (group.show && zero_items.length === 0) {
+                                group.show = false;
+                            } else if (zero_items.length > 0) {
+                                group.show = true;
+                            }
+                            counted.push(group);
+                        }
+                        this.filterData = counted;
+                    },
+
+                    searchHotels: function () {
+                        var queryParam = '';
+                        var selectedFilterIds = [];
+                        var starIds = [];
+                        var propertyIds = [];
+                        var filters = this.filterData;
+                        var hotels = window.appHotels;
+                        for (var c = 0; c < filters.length; c++) {
+                            var filter = filters[c];
+                            var selectedSlugs = '';
+                            var mcbs = document.querySelectorAll('.filter-checkboxes.' + filter.meta_name + ' input[type="checkbox"]:checked');
+                            if (mcbs.length > 0) {
+                                var selectedItems = [];
+                                for (var i = 0; i < mcbs.length; i++) {
+                                    selectedSlugs += mcbs[i].getAttribute('data-slug-name') + ",";
+                                    if (filter.meta_name === 'stars') {
+                                        starIds.push(mcbs[i].value);
+                                    } else if (filter.meta_name === 'propertyType') {
+                                        propertyIds.push(mcbs[i].value);
+                                    } else {
+                                        selectedFilterIds.push(mcbs[i].value);
+                                    }
+                                }//end for checkbox checked
+                                selectedSlugs = selectedSlugs.substr(0, (selectedSlugs.length - 1));
+                                var qp = filter.query_parameter + '=' + selectedSlugs;
+                                if (queryParam.length > 0) {
+                                    queryParam += '&' + qp;
+                                } else {
+                                    queryParam = qp;
+                                }
+                            }
+                        }//end for filter
+                        var filteredHotels = [];
+                        //console.log('multiIds : ' + multiIds + '  >>> singleIds : ' + singleIds);
+                        for (var i = 0; i < hotels.length; i++) {
+                            var filterFound = true;
+                            var starFound = true;
+                            var propertyFound = true;
+                            var hotel = hotels[i];
+                            var hotel_filters = hotel.filter_ids;
+
+                            if (selectedFilterIds.length > 0) {
+                                var matchingFound = 0;
+                                for (var s = 0; s < selectedFilterIds.length; s++) {
+                                    var single = selectedFilterIds[s] + ',';
+                                    if (hotel_filters.indexOf(single) >= 0) {
+                                        matchingFound += 1;
+                                    }
+                                }
+                                filterFound = matchingFound === selectedFilterIds.length;
+                            }
+                            if (starIds.length > 0) {
+                                var starsFound = 0;
+                                for (var o = 0; o < starIds.length; o++) {
+                                    var star = starIds[o] + ',';
+                                    if (hotel_filters.indexOf(star) >= 0) {
+                                        starsFound += 1;
+                                    }
+                                }
+                                starFound = starsFound > 0;
+                            }
+                            if (propertyIds.length > 0) {
+                                var propertiesFound = 0;
+                                for (var o = 0; o < propertyIds.length; o++) {
+                                    var prop = propertyIds[o] + ',';
+                                    if (hotel_filters.indexOf(prop)) {
+                                        propertiesFound += 1;
+                                    }
+                                }
+                                propertyFound = propertiesFound > 0;
+                            }
+                            if (filterFound && starFound && propertyFound) {
+                                filteredHotels.push(hotel);
+                            }
+                        }// end for hotel
+                        var activeFilters = [];
+                        for (var c = 0; c < this.filterNames.length; c++) {
+                            var item = this.filterNames[c];
+                            if (selectedFilterIds.indexOf(item.id) >= 0) {
+                                activeFilters.push(item)
+                            }
+
+                            if (starIds.indexOf(item.id) >= 0) {
+                                activeFilters.push(item)
+                            }
+                            if (propertyIds.indexOf(item.id) >= 0) {
+                                activeFilters.push(item)
+                            }
+                        }
+                        this.activeFilterList = activeFilters;
+                        this.activeFilterIds = selectedFilterIds.toString() + ',' + starIds.toString() + ',' + propertyIds.toString();
+                        this.tableData = filteredHotels;
+                        this.getFiltersTotal(filteredHotels, false);
+                        this.getTotalPages();
+                        this.getPageData(1, 'mount');
+                    },
+                    getHotelCount: function (hotels, match) {
+                        var count = 0;
+                        for (var a = 0; a < hotels.length; a++) {
+                            var filter_ids = hotels[a]['filter_ids'];
+                            var like = match + ',';
+                            if (filter_ids !== null && filter_ids !== undefined && filter_ids.length > 0) {
+                                if (filter_ids.indexOf(like) >= 0) {
+                                    count += 1;
+                                }
+                            }//end null check
+                        }//end for
+                        //console.log('field: '+ field + ' >>has_many: '+ has_many+ ' >>like: '+like+ ' >>count: '+count);
+                        return count;
+                    },
+                    getMatchingHotels: function (hotels, field, has_many, match) {
+                        //console.log('field: '+ field + ' >>has_many: '+ has_many+ ' >>like: '+like);
+                        var matched = [];
+                        for (var a = 0; a < hotels.length; a++) {
+                            var stringValue = hotels[a][field];
+                            var is_matched = false;
+                            var like = (has_many) ? match + ',' : match;
+                            if (stringValue !== null && stringValue !== undefined && stringValue.length > 0) {
+                                if (has_many && stringValue.indexOf(like) !== -1) {
+                                    is_matched = true;
+                                } else if (stringValue === like) {
+                                    is_matched = true;
+                                }
+                            }//end null check
+                            if (is_matched) {
+                                matched.push(hotels[a]);
+                            }
+                        }//end for
+                        return matched;
+                    },
+                    mergeArrayItems: function (source, forMerge) {
+                        var sourceJson = JSON.stringify(source);
+                        var out = JSON.parse(sourceJson);
+                        for (var c = 0; c < forMerge.length; c++) {
+                            out.push(forMerge[c]);
+                        }
+                        return out;
+                    }
+                },
+                mounted: function () {
+                    this.getFiltersTotal(window.appHotels, true);
+                    this.getTotalPages();
+                    this.getPageData(1, 'mount');
+                    var filters = window.appFilters;
+                    var filterList = [];
+                    for (var b = 0; b < filters.length; b++) {
+                        filterList = this.mergeArrayItems(filterList, filters[b].meta_values);
+                    }
+                    this.filterNames = filterList;
+                    this.resetLozad();
+                    document.getElementById('appSample').classList.remove('loading-app');
+                },
+                created: function () {
+
+                }
+            };
+        </script>
+        <script>
+            function bindHotelsApp() {
+                console.log("binding app");
+                //console.log(window.appHotels[0]);
+                //console.log(window.appFilters[0]);
+                var filterAppEventsFilter = new Vue({
+                    el: "#appSample",
+                    name: "sampleVueApp",
+                    components: {
+                        sampleApp: SampleComponent
+                    }
+                });
+
+                console.log("binding app end here");
+            }
+
+            function scrollToTop() {
+                var t = $('.vue-app-wrapper').offset().top;
+                var affix = $('[data-spy="affix"]').attr('data-offset-top');
+                var x = t - affix;
+                $('html, body').stop().animate({scrollTop: x}, 1000);
+            }
+        </script>
+        <!--vue app end-->
+    </div>
+</main>
+<script type="text/javascript" src="js/json-data.js"></script>
+<script type="text/javascript" src="js/jquery.3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        bindHotelsApp();
+    });
+</script>
+</body>
+</html>
