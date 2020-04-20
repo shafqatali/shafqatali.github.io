@@ -1,0 +1,119 @@
+<html>
+<head>
+    <title>Styled Inputs</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styled-checkbox.css"/>
+    <link rel="stylesheet" href="styled-radio.css"/>
+    <link rel="stylesheet" href="styled-select.css"/>
+    <link rel="stylesheet" href="custom-select.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<script>
+    function foo ()
+    {
+        return 5;
+    }
+    var myVar = foo;
+</script>
+<h1>Style Checkboxes/Radio Buttons and select dropdown only with CSS</h1>
+<p>Fully supported on all browser upto IE 9</p>
+<p>Also accessible through key board</p>
+<p>Only a image required of your style as this, <img src="blue.png" alt="image"/></p>
+<p class="img">:after content example</p>
+<h2>Checkbox Example</h2>
+<hr/>
+<!-- styled-checkbox ONE -->
+<div class="styled-checkbox">
+    <input type="checkbox" checked="checked" value="None" id="squared" name="check"/>
+    <label for="squared">Checkbox Checked</label>
+</div>
+
+<hr/>
+<!-- styled-checkbox two -->
+<div class="styled-checkbox">
+    <input type="checkbox" value="None" id="squaredu" name="check"/>
+    <label for="squaredu">Checkbox Unchecked</label>
+</div>
+<hr/>
+<!-- styled-checkbox three-->
+<div class="styled-checkbox">
+    <input type="checkbox" checked="checked" disabled="disabled" value="None" id="squareddc" name="check"/>
+    <label for="squareddc">Disabled Checkbox Checked</label>
+</div>
+<hr/>
+<!-- styled-checkbox four -->
+<div class="styled-checkbox">
+    <input type="checkbox" disabled="disabled" value="None" id="squaredd" name="check"/>
+    <label for="squaredd">Disabled Checkbox Unchecked</label>
+</div>
+<hr/>
+<div class="check-group">
+    <div class="styled-checkbox">
+        <input type="checkbox" checked="checked" value="None" id="g1" name="check"/>
+        <label for="g1">Checkbox Checked</label>
+    </div>
+    <div class="styled-checkbox">
+        <input type="checkbox" value="None" id="g2" name="check"/>
+        <label for="g2">Checkbox Checked</label>
+    </div>
+    <div class="styled-checkbox">
+        <input type="checkbox" value="None" id="g3" name="check"/>
+        <label for="g3">Checkbox Checked</label>
+    </div>
+    <div class="styled-checkbox">
+        <input type="checkbox" value="None" id="g4" name="check"/>
+        <label for="g4">Checkbox Checked</label>
+    </div>
+</div>
+<hr/>
+<h2>Radio Buttons Example</h2>
+<hr/>
+<div class="styled-radio">
+    <input type="radio" value="a" checked="checked" id="radio1" name="fruit"/>
+    <label for="radio1">Apple</label>
+</div>
+<div class="styled-radio">
+    <input type="radio" value="a" id="radio2" name="fruit"/>
+    <label for="radio2">Banana</label>
+</div>
+<div class="styled-radio">
+    <input type="radio" value="a" id="radio3" name="fruit"/>
+    <label for="radio3">Mango</label>
+</div>
+<hr/>
+<div class="styled-radio">
+    <input type="radio" value="a" id="radio4" disabled="disabled" checked="checked" name="fruit1"/>
+    <label for="radio4">Disabled radio button checked state</label>
+</div>
+<div class="styled-radio">
+    <input type="radio" value="a" id="radio5" disabled="disabled" name="fruit1"/>
+    <label for="radio5">Disabled radio button state</label>
+</div>
+<hr/>
+<h2>Dropdown Styled Example Method 1</h2>
+<div class="custom-select">
+    <select id="slTopMenu2">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+    </select>
+</div>
+<h2>Dropdown Styled Example Method 2</h2>
+<div class="styled-select">
+    <select id="slTopMenu">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+    </select>
+</div>
+<hr/>
+</body>
+</html>

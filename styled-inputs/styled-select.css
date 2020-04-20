@@ -1,0 +1,45 @@
+/*
+How to use It:
+
+You need an custom image for select icon.
+And then you have to define positions in variable.
+The image icon added as background to wrapper div for select
+
+You can apply your custom style to wrapper div
+
+Note: Compulsory things to do in your stylesheet according to your design:
+1) You have to define height to wrapper div.
+2) And have to define padding to select within wrapper div.
+*/
+.styled-select {
+  overflow: hidden;
+  background: url("") no-repeat;
+  background-image: url("arrow-dropdown.png");
+  background-repeat: no-repeat;
+  background-position: 99% center;
+  position: relative;
+  cursor: pointer;
+  height: 19px; }
+  .styled-select select {
+    width: 100%;
+    height: inherit;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    outline: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*to hide in ie*/ }
+    .styled-select select::-ms-expand {
+      display: none; }
+  .styled-select.hover {
+    border: 1px solid #000 !important; }
+
+/*# sourceMappingURL=styled-select.css.map */

@@ -1,0 +1,54 @@
+/*
+How to use It:
+
+You need an custom image for select icon and have to wrap select tag in a div
+And then you have to define positions in variable $style-icon.
+You have to specify the icon dimensions i.e width and height, the gap between text and right border
+and the right position of your icon
+
+The image icon added as background to wrapper div for select using ::after pseudo element
+
+You can apply your custom style like font,border,etc to select tag
+but If you want to define background it should be added to wrapper div and
+select tag should have transparent background
+
+Note: Compulsory things to do in your stylesheet according to your design:
+1) You have to define icon dimensions and gap b/w icon and text and icon and right side.
+2) And you have to define a background image URL with position
+3) You have to add border color, padding, hover/focus states to select tag
+*/
+.custom-select {
+  display: inline-block;
+  position: relative; }
+  .custom-select:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 5px !important;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    background: url("sort_chevron.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 16px;
+    height: 10px;
+    z-index: 1; }
+  .custom-select select {
+    padding-right: 26px !important;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    outline: 0;
+    /*to hide in ie*/ }
+    .custom-select select::-ms-expand {
+      display: none; }
+
+/*# sourceMappingURL=custom-select.css.map */
