@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAkB;EAChB,gBAAgB,EAAE,6BAA0B;EAC5C,mCAAmB;IACjB,gBAAgB,EAAE,eAAe",
+"sources": ["wp-job.scss"],
+"names": [],
+"file": "wp-job.css"
+}
