@@ -1,3 +1,18 @@
+<?php
+$links = '';
+$path = getcwd();
+$folders = scandir($path);
+$ignoreList = ".well-known,robots.txt,index.php,web.config,.git,.idea,fonts,.gitignore";
+foreach ($folders as $folder) {
+    if ($folder != '..' && $folder != '.') {
+        $isFolder = is_dir($folder);
+        $ignoreMe = strpos($ignoreList, $folder);
+        if($ignoreMe === FALSE) {
+            $links .= '<li><a href="' . $folder . '">' . $folder . '</a></li>';
+        }
+    }
+}
+?>
 <html lang="en">
 
 <head>
@@ -73,22 +88,7 @@
 <div class="container">
     <h1>List of HTML Sites</h1>
     <ul class="templates">
-        <li><a href="ahs">ahs</a></li>
-        <li><a href="csv-parser">csv-parser</a></li>
-        <li><a href="divi">divi</a></li>
-        <li><a href="form-wizard">form-wizard</a></li>
-        <li><a href="index.html">index.html</a></li>
-        <li><a href="interactive-map">interactive-map</a></li>
-        <li><a href="map">map</a></li>
-        <li><a href="owl">owl</a></li>
-        <li><a href="pdf-parser">pdf-parser</a></li>
-        <li><a href="restaurant">restaurant</a></li>
-        <li><a href="restaurant-fix-width">restaurant-fix-width</a></li>
-        <li><a href="styled-inputs">styled-inputs</a></li>
-        <li><a href="text-over-image">text-over-image</a></li>
-        <li><a href="ticker">ticker</a></li>
-        <li><a href="video-banner">video-banner</a></li>
-        <li><a href="vue-app">vue-app</a></li>
+        <?php echo $links ?>
     </ul>
 </div>
 </body>
