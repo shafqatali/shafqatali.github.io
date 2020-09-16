@@ -1,0 +1,17 @@
+$bg-color: #f4f4f4;
+$text-color: #333333;
+$footer-bg-color: #f0f0f0;
+
+body {
+    background: $bg-color;
+    color: $text-color;
+}
+
+hr{margin: 50px 0px;}
+
+.container > .row{padding-top: 50px; padding-bottom: 50px;}
+.navbar .container > .row{padding-top: 0px;}
+
+.jumbotron{background-color: transparent;}
+
+.footer{background-color: $footer-bg-color;}

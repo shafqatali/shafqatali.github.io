@@ -1,0 +1,155 @@
+.navbar-brand {
+    white-space: initial;
+}
+
+/* Location Banner */
+
+.block {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    .inner-content {
+        padding: 120px 0;
+        @media screen and (max-width: 640px) {
+            padding: 20px 0;
+        }
+    }
+}
+.img-parallax {
+    width: 100vmax;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    @media screen and (max-width: 640px) {
+        height: 100%;
+    }
+}
+.location-banner {
+    color: $color_3;
+    position: relative;
+    @media screen and (max-width: 640px) {
+        padding: 40px 0;
+    }
+    .container {
+        .row {
+            @media screen and (max-width: 640px) {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    h3 {
+        color: $color_3;
+    }
+    p {
+        @media screen and (max-width: 640px) {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 2px;
+        }
+    }
+    a {
+        color: $color_3;
+        &:hover,
+        &:focus,
+        &:active{
+            color: $color_3;
+        }
+    }
+    a.btn.btn-link {
+        position: relative;
+        padding-left: 0;
+        padding-right: 25px;
+        @media screen and (max-width: 640px) {
+            margin-top: 35px;
+        }
+        &:before {
+            position: absolute;
+            content: url("imgs/link-arrow.svg");
+            width: 15px;
+            height: 20px;
+            right: 0;
+            left: auto;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    .number {
+        font-size: 3.125rem;
+        line-height: 41px;
+        font-family: $font_family_1;
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        @media screen and (max-width: 640px) {
+            font-size: 40px;
+            margin-top: 25px;
+            margin-bottom: 4px;
+        }
+    }
+    .title {
+        margin-bottom: 60px;
+        @media screen and (max-width: 640px) {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+    }
+    .inner-content {
+        padding: 120px 0;
+        @media screen and (max-width: 640px) {
+            padding: 20px 0;
+        }
+    }
+    &.location-banner-with-animation {
+        background-image: none;
+        background-color: $background_color_4;
+        min-height: 600px;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .inner-content {
+            @media screen and (min-width: 641px) {
+                min-width: 1140px;
+                max-width: 1140px;
+            }
+        }
+    }
+    &.parallax1 {
+        @media screen and (min-width: 641px) {
+            min-height: 600px;
+            display: flex;
+        }
+        .inner-content {
+            padding: 0;
+            @media screen and (min-width: 641px) {
+                min-width: 1140px;
+                max-width: 1140px;
+            }
+        }
+    }
+    &.parallax2 {
+        padding: 100px 0;
+        background-image: url("imgs/sample-updated.jpg");
+        height: 600px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: auto;
+        background-position: center;
+        align-items: center;
+        display: flex;
+        @media screen and (max-width: 640px) {
+            height: auto;
+            padding: 36px 0;
+            background-attachment: inherit;
+        }
+    }
+}

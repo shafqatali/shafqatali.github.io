@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>timeline_hotspot</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="timeline_hotspot" fill-rule="nonzero">
+            <circle id="Oval" fill="#FFFFFF" cx="10.08" cy="10.08" r="10.08"></circle>
+            <rect id="Rectangle-path" fill="#737373" x="9.64" y="3.92" width="1" height="3.08"></rect>
+            <rect id="Rectangle-path" fill="#737373" x="9.64" y="13.17" width="1" height="3.08"></rect>
+            <rect id="Rectangle-path" fill="#737373" x="9.64" y="9.2" width="1" height="1.76"></rect>
+            <rect id="Rectangle-path" fill="#737373" x="9.64" y="7.64" width="1" height="1"></rect>
+            <rect id="Rectangle-path" fill="#737373" x="9.64" y="11.61" width="1" height="1"></rect>
+            <rect id="Rectangle-path" fill="#737373" x="3.48" y="6.12" width="5.28" height="3.52"></rect>
+            <rect id="Rectangle-path" fill="#737373" x="11.41" y="10.52" width="5.28" height="3.52"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>image_hotspot</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="image_hotspot" fill-rule="nonzero">
+            <circle id="Oval" fill="#FFFFFF" cx="10.08" cy="10.08" r="10.08"></circle>
+            <path d="M10.72,7.19 C10.72,8.0736556 10.0036556,8.79 9.12,8.79 C8.2363444,8.79 7.52,8.0736556 7.52,7.19 C7.52,6.3063444 8.2363444,5.59 9.12,5.59 C9.54516306,5.5873175 9.95368976,5.75502691 10.2543314,6.05566857 C10.5549731,6.35631024 10.7226825,6.76483694 10.72,7.19 Z" id="Shape" fill="#737373"></path>
+            <path d="M10.08,19.21 C11.7984582,19.212757 13.4828832,18.7309976 14.94,17.82 L7.78,10.73 C7.22859835,10.20037 6.36708111,10.1702169 5.78,10.66 L1.86,14 C3.36510929,17.1773291 6.56421428,19.2049857 10.08,19.21 Z" id="Shape" fill="#737373"></path>
+            <path d="M19.2,10.66 L15.5,7.27 C15.1546711,6.95284858 14.6177484,6.97522036 14.3,7.32 L9.84,12.2 L13.18,15.53 L15.25,17.61 C17.5670757,16.0255913 19.0243708,13.4614898 19.2,10.66 Z" id="Shape" fill="#737373"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,43 @@
+.modal.right{
+    
+    .modal-dialog{
+        position: fixed;
+        margin: auto;
+        width: 50%;
+        max-width: 100%;
+        height: 100%;
+        transform: translate3d(0%, 0, 0);
+        
+        .modal-content{
+            height: 100%;
+            overflow-y: auto;
+            border-radius: 0;
+            border: none;
+            
+            .modal-header{
+                border-bottom-color: #EEEEEE;
+                background-color: #FAFAFA;
+                display: block;
+
+                .close {
+                    padding: 0px;
+                    margin: 5px 5px 5px 0px;
+                }
+            }   
+            
+            .modal-body{
+                padding: 15px 15px 80px;
+            }
+        }
+    }
+    
+    &.fade .modal-dialog {
+        right: -50%;
+        transition: opacity 0.5s linear, right 0.8s cubic-bezier(0.6, 0.2, 0.1, 1);
+    }
+    
+    &.fade.show .modal-dialog {
+        right: 0;
+    }
+}
+

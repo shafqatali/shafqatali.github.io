@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Front-end Sandbox</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript">
+            /*!
+             * enquire.js v2.1.2 - Awesome Media Queries in JavaScript
+             * Copyright (c) 2014 Nick Williams - http://wicky.nillia.ms/enquire.js
+             * License: MIT (http://www.opensource.org/licenses/mit-license.php)
+             */
+            !function(a,b,c){var d=window.matchMedia;"undefined"!=typeof module&&module.exports?module.exports=c(d):"function"==typeof define&&define.amd?define(function(){return b[a]=c(d)}):b[a]=c(d)}("enquire",this,function(a){"use strict";function b(a,b){var c,d=0,e=a.length;for(d;e>d&&(c=b(a[d],d),c!==!1);d++);}function c(a){return"[object Array]"===Object.prototype.toString.apply(a)}function d(a){return"function"==typeof a}function e(a){this.options=a,!a.deferSetup&&this.setup()}function f(b,c){this.query=b,this.isUnconditional=c,this.handlers=[],this.mql=a(b);var d=this;this.listener=function(a){d.mql=a,d.assess()},this.mql.addListener(this.listener)}function g(){if(!a)throw new Error("matchMedia not present, legacy browsers require a polyfill");this.queries={},this.browserIsIncapable=!a("only all").matches}return e.prototype={setup:function(){this.options.setup&&this.options.setup(),this.initialised=!0},on:function(){!this.initialised&&this.setup(),this.options.match&&this.options.match()},off:function(){this.options.unmatch&&this.options.unmatch()},destroy:function(){this.options.destroy?this.options.destroy():this.off()},equals:function(a){return this.options===a||this.options.match===a}},f.prototype={addHandler:function(a){var b=new e(a);this.handlers.push(b),this.matches()&&b.on()},removeHandler:function(a){var c=this.handlers;b(c,function(b,d){return b.equals(a)?(b.destroy(),!c.splice(d,1)):void 0})},matches:function(){return this.mql.matches||this.isUnconditional},clear:function(){b(this.handlers,function(a){a.destroy()}),this.mql.removeListener(this.listener),this.handlers.length=0},assess:function(){var a=this.matches()?"on":"off";b(this.handlers,function(b){b[a]()})}},g.prototype={register:function(a,e,g){var h=this.queries,i=g&&this.browserIsIncapable;return h[a]||(h[a]=new f(a,i)),d(e)&&(e={match:e}),c(e)||(e=[e]),b(e,function(b){d(b)&&(b={match:b}),h[a].addHandler(b)}),this},unregister:function(a,b){var c=this.queries[a];return c&&(b?c.removeHandler(b):(c.clear(),delete this.queries[a])),this}},new g});
+        </script>
+    </head>
+
+    <body>
+
+        <!-- SVG Sprite for button ripple effect -->
+        <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+                <!-- Because of Firefox. -->
+                <defs>
+                    <radialGradient id="gradient">
+                        <stop offset="0" stop-color="#0868BB" />
+                        <stop offset="0.25" stop-color="#0075D8" />
+                        <stop offset="0.35" stop-color="#0868BB" />
+                        <stop offset="0.50" stop-color="#0075D8" />
+                        <stop offset="0.60" stop-color="#0868BB" />
+                        <stop offset="0.85" stop-color="#0075D8" />
+                        <stop offset="1" stop-color="#0868BB" />
+                    </radialGradient>
+                </defs>
+                <symbol id="ripply-scott" viewBox="0 0 100 100">
+                    <circle id="ripple-shape" fill="url(#gradient)" cx="1" cy="1" r="1" />
+                </symbol>
+            </svg>
+        </div>
+        <!-- /end sprite -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="#">Front-end Sandbox. A collection of snippets, animations and various effects.</a>
+          </div>
+        </nav>
+
+        <div class="container">
+
+            <!-- Fade in effect -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Fade in effect</h2>
+                    <p>Simple fade in effect using <a href="https://github.com/jlmakes/scrollreveal">ScrollReveal</a> plugin. Check <strong>js/scripts.js</strong> for relevant code.</p>
+
+                </div>
+                <div class="col-md-12">
+
+                    <div class="jumbotron">
+
+                     <div class="row">
+                         <div class="col-md order-lg-1 order-sm-2 order-2">
+                            <h1 class="display-4">Hello, world!</h1>
+                            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                            <a type="button" href="javascript:void(0)" id="js-ripple-btn" class="button styl-material">
+                                Button
+                                <svg class="ripple-obj" id="js-ripple">
+                                    <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                                </svg>
+                            </a>
+                         </div>
+                         <div class="col-md order-lg-2 order-sm-1 order-1">
+                            <figure class="figure">
+                                  <img src="https://picsum.photos/400/250" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                            </figure>
+                         </div>
+                     </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- /Fade in effect -->
+
+            <hr>
+
+            <!-- Image hover effect -->
+            <div class="img-hover">
+               <div class="row">
+                    <div class="col-md-12">
+
+                        <h2>Image hover effect</h2>
+                        <p>Hover over image for opacity and image zoom-in effect. Desktop only, obviously.</p>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <figure class="figure">
+                         <a href="#">
+                             <div class="box-figure">
+                              <img src="https://picsum.photos/400/250" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                             </div>
+                         </a>
+                        </figure>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /Image hover effect -->
+
+            <hr>
+
+            <!-- Button ripple effect -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Button ripple effect</h2>
+                    <p>Hover over button to see ripple effect. Click on button to see translate effect. On tablet/mobile, click for ripple and translate effect.</p>
+
+                </div>
+                <div class="col-md-12">
+
+                    <a type="button" href="javascript:void(0)" id="js-ripple-btn" class="button styl-material">
+                        Hover/Click for Ripple
+                        <svg class="ripple-obj" id="js-ripple">
+                            <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- /Button ripple effect -->
+
+            <hr>
+
+            <!-- Button Gradiant Animations effect -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Button Hover effect Light</h2>
+                    <p>Hover over button to see Gradient hover effect.</p>
+
+                </div>
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-with-animation light">
+                        Sign me up now
+                    </a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Button Hover effect Dark</h2>
+                    <p>Hover over button to see Gradient hover effect.</p>
+
+                </div>
+                <div class="col-md-12">
+                    <a href="#" class="btn btn-with-animation dark">
+                        Sign me up now
+                    </a>
+                </div>
+            </div>
+            <!-- /Button Gradiant Animations effect -->
+
+            <hr>
+
+            <!-- Hotspot -->
+            <div class="row">
+                <div class="col-md-12">
+
+                     <h2>Hotspot</h2>
+                     <p>Pure CSS hotspot with infinite pulse effect.</p>
+
+                </div>
+                <div class="col-md-12">
+
+                      <div class="hotspot">
+                           <div class="row">
+                               <div class="col-md">
+                                   <button class="pulse"></button>
+                               </div>
+                           </div>
+                       </div>
+
+                </div>
+            </div>
+            <!-- /Hotspot -->
+
+            <hr>
+
+            <!-- Hotspot with info box -->
+            <div class="popup">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <h2>Hotspot with info box</h2>
+                        <p>Click on hotspot to toggle info box.</p>
+
+                    </div>
+                    <div class="col-md-12">
+
+                        <button class="pulse-y"></button>
+
+                        <div class="info-box">
+                            <div class="heading">We Build Roads</div>
+                            <div class="icons">
+                                <img src="assets/img/play_icon.svg">
+                                <img src="assets/img/timeline_icon.svg">
+                                <img src="assets/img/image_icon.svg">
+                            </div>
+                            <button type="button" class="read-more">Read More</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /Hotspot with info box -->
+
+            <hr>
+
+            <!-- Text sequenced animation -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Text sequenced animation</h2>
+                    <p>Fade in effect letter by letter. Refresh browser for effect.</p>
+
+                </div>
+
+                <div class="col-md-12">
+                    <h3>
+                        <span class="sq">l</span><span class="sq">a</span><span class="sq">n</span><span class="sq">d</span><span class="sq">o</span><span class="sq">&nbsp;</span><span class="sq">i</span><span class="sq">s</span><span class="sq">&nbsp;</span><span class="sq">a</span><span class="sq">w</span><span class="sq">e</span><span class="sq">s</span><span class="sq">o</span><span class="sq">m</span><span class="sq">e</span>
+                    </h3>
+                </div>
+            </div>
+            <!-- /Text sequenced animation -->
+
+            <hr>
+
+            <!-- Cards sequenced animation -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Cards sequenced animation</h2>
+                    <p>Sequenced fade in effect on card blocks. Refresh browser for effect.</p>
+
+                </div>
+
+
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1633f921343%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1633f921343%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.7265625%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1633f921345%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1633f921345%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.7265625%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1633f921347%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1633f921347%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.7265625%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1633f921348%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1633f921348%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.7265625%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1633f921349%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1633f921349%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.7265625%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1633f92134a%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1633f92134a%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.7265625%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+            <!-- /Cards sequenced animation -->
+
+            <hr>
+
+        </div>
+
+        <!-- Location Banner -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Banner with Animation Only</h2>
+                    <p>Banner with Scroll reveal Animation</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="location-banner location-banner-with-animation" style="">
+            <div class="inner-content">
+                <div class="container">
+                    <h3>Business Travel, on your Doorstep</h3>
+                    <p>Enjoy the convenience of being next door to Dublin Airport and all its premium services. See what our location has to offer below</p>
+                    <div class="row">
+                        <div class="col-6 col-sm airlines">
+                            <span class="number">40</span>
+                            <span class="title">Airlines</span>
+                        </div>
+                        <div class="col-6 col-sm flights">
+                            <span class="number">655</span>
+                            <span class="title">Average daily flights</span>
+                        </div>
+                        <div class="col-6 col-sm destinations">
+                            <span class="number">185+</span>
+                            <span class="title">Destinations</span>
+                        </div>
+                        <div class="col-6 col-sm weekly-flights">
+                            <span class="number">4,587</span>
+                            <span class="title">Flights Weekly</span>
+                        </div>
+                        <div class="col-6 col-sm rank">
+                            <span class="number">10th</span>
+                            <span class="title">Best airport in the world</span>
+                        </div>
+                        <div class="col-6 col-sm growth">
+                            <span class="number">10%</span>
+                            <span class="title">Passenger growth versus last year</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-link">Learn more about our location</a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+
+
+        <!-- Location Banner -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Banner with Animation and Parallax Variation 1</h2>
+                    <p>Location Banner with Scroll reveal Animationa and Parallax affect of Image</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="location-banner block parallax1 align-items-center justify-content-center">
+            <div class="inner-content">
+                <picture>
+                    <!--[if IE 9]>
+                    <video style="display: none;"><![endif]-->
+                    <source srcset="images/sample-updated-mobile.jpg" data-srcset="images/sample-updated-mobile.jpg" media="(max-width: 640px)">
+                    <source srcset="images/sample-updated.jpg" data-srcset="images/sample-updated.jpg" media="(min-width: 641px)">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="banner image" data-speed="0.75" class="img-parallax">
+                </picture>
+                <div class="container">
+                    <h3>Business Travel, on your Doorstep</h3>
+                    <p>Enjoy the convenience of being next door to Dublin Airport and all its premium services. See what our location has to offer below</p>
+                    <div class="row">
+                        <div class="col-6 col-sm airlines">
+                            <span class="number">40</span>
+                            <span class="title">Airlines</span>
+                        </div>
+                        <div class="col-6 col-sm flights">
+                            <span class="number">655</span>
+                            <span class="title">Average daily flights</span>
+                        </div>
+                        <div class="col-6 col-sm destinations">
+                            <span class="number">185+</span>
+                            <span class="title">Destinations</span>
+                        </div>
+                        <div class="col-6 col-sm weekly-flights">
+                            <span class="number">4,587</span>
+                            <span class="title">Flights Weekly</span>
+                        </div>
+                        <div class="col-6 col-sm rank">
+                            <span class="number">10th</span>
+                            <span class="title">Best airport in the world</span>
+                        </div>
+                        <div class="col-6 col-sm growth">
+                            <span class="number">10%</span>
+                            <span class="title">Passenger growth versus last year</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-link">Learn more about our location</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Location Banner -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Banner with Animation and Parallax Variation 2</h2>
+                    <p>Location Banner with Scroll reveal Animations and Parallax affect of Background Image</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="location-banner parallax2" style="">
+            <div class="container">
+                <h3>Business Travel, on your Doorstep</h3>
+                <p>Enjoy the convenience of being next door to Dublin Airport and all its premium services. See what our location has to offer below</p>
+                <div class="row">
+                    <div class="col-sm col-6 airlines">
+                        <span class="number">40</span>
+                        <span class="title">Airlines</span>
+                    </div>
+                    <div class="col-sm col-6 flights">
+                        <span class="number">655</span>
+                        <span class="title">Average daily flights</span>
+                    </div>
+                    <div class="col-sm col-6 destinations">
+                        <span class="number">185+</span>
+                        <span class="title">Destinations</span>
+                    </div>
+                    <div class="col-sm col-6 weekly-flights">
+                        <span class="number">4,587</span>
+                        <span class="title">Flights Weekly</span>
+                    </div>
+                    <div class="col-sm col-6 rank">
+                        <span class="number">10th</span>
+                        <span class="title">Best airport in the world</span>
+                    </div>
+                    <div class="col-sm col-6 growth">
+                        <span class="number">10%</span>
+                        <span class="title">Passenger growth versus last year</span>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-link">Learn more about our location</a>
+            </div>
+        </div>
+
+        <!-- Location Banner Ends Here -->
+
+        <!-- Pin dropping on map -->
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Pin dropping on map</h2>
+                    <p>Pin dropping on map on page scroll. Desktop and tablet only.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="map" style="background: url(assets/img/map.jpg) no-repeat center center transparent; background-size: cover;">
+                   <div class="col-md-6 offset-md-3">
+                    <div class="intro-box">
+                        <h2>Company Finder</h2>
+                        <span class="title">
+                            Browse our companies by division, country<br> and business type
+                        </span>
+                            <a type="button" href="javascript:void(0)" id="js-ripple-btn" class="button styl-material">
+                                Button
+                                <svg class="ripple-obj" id="js-ripple">
+                                    <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                                </svg>
+                            </a>
+                    </div>
+                   </div>
+                    <div class="pins pins_left">
+                        <ul>
+                            <li class="pin pin_one"><img src="assets/img/drop.png" alt="pin"></li>
+                            <li class="pin pin_two"><img src="assets/img/drop.png" alt="pin"></li>
+                            <li class="pin pin_three"><img src="assets/img/drop.png" alt="pin"></li>
+                        </ul>
+                    </div>
+                    <div class="pins pins_right">
+                        <ul>
+                            <li class="pin pin_four"><img src="assets/img/drop.png" alt="pin"></li>
+                            <li class="pin pin_five"><img src="assets/img/drop.png" alt="pin"></li>
+                        </ul>
+                    </div>
+                <!--<img class="img-fluid" src="assets/img/map.jpg" alt="map">-->
+                </div>
+            </div>
+
+        </div>
+        <!-- /Pin dropping on map -->
+
+        <div class="container">
+
+            <hr>
+
+            <!-- Lottie After Effect Test -->
+            <div class="city-json">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <h2>Lottie After Effect Test</h2>
+                        <p>Lottie After Effect plugin example. Desktop and tablet only.</p>
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <div id="lottie"> </div>
+                        <ul class="spots-list">
+                                <li id="point1" class="spot-item">
+                                    <button class="pulse-y"></button>
+                                    <div class="info-box">
+                                        <div class="heading">We Build Roads</div>
+                                        <div class="icons">
+                                            <img src="assets/img/play_icon.svg">
+                                            <img src="assets/img/timeline_icon.svg">
+                                            <img src="assets/img/image_icon.svg">
+                                        </div>
+                                        <button type="button" class="read-more">Read More</button>
+                                    </div>
+                                </li>
+                                <li id="point2" class="spot-item">
+                                    <button class="pulse-y"></button>
+                                    <div class="info-box">
+                                        <div class="heading">We Build Roads</div>
+                                        <div class="icons">
+                                            <img src="assets/img/play_icon.svg">
+                                            <img src="assets/img/timeline_icon.svg">
+                                            <img src="assets/img/image_icon.svg">
+                                        </div>
+                                        <button type="button" class="read-more">Read More</button>
+                                    </div>
+                                </li>
+                                <li id="point3" class="spot-item">
+                                    <button class="pulse-y"></button>
+                                    <div class="info-box">
+                                        <div class="heading">We Build Roads</div>
+                                        <div class="icons">
+                                            <img src="assets/img/play_icon.svg">
+                                            <img src="assets/img/timeline_icon.svg">
+                                            <img src="assets/img/image_icon.svg">
+                                        </div>
+                                        <button type="button" class="read-more">Read More</button>
+                                    </div>
+                                </li>
+                                <li id="point4" class="spot-item">
+                                    <button class="pulse-y"></button>
+                                    <div class="info-box">
+                                        <div class="heading">We Build Roads</div>
+                                        <div class="icons">
+                                            <img src="assets/img/play_icon.svg">
+                                            <img src="assets/img/timeline_icon.svg">
+                                            <img src="assets/img/image_icon.svg">
+                                        </div>
+                                        <button type="button" class="read-more">Read More</button>
+                                    </div>
+                                </li>
+                                <li id="point5" class="spot-item">
+                                    <button class="pulse-y"></button>
+                                    <div class="info-box">
+                                        <div class="heading">We Build Roads</div>
+                                        <div class="icons">
+                                            <img src="assets/img/play_icon.svg">
+                                            <img src="assets/img/timeline_icon.svg">
+                                            <img src="assets/img/image_icon.svg">
+                                        </div>
+                                        <button type="button" class="read-more">Read More</button>
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /Lottie After Effect Test -->
+
+            <hr>
+
+            <!-- Sliding content drawer -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Sliding content drawer</h2>
+                    <p>Simple Bootstrap modal sliding from right to left, original Codepen <a href="https://codepen.io/bootpen/pen/jbbaRa">here</a>.</p>
+
+                </div>
+
+                <div class="col-md-12">
+                    <a type="button" data-toggle="modal" data-target="#myModal2" href="javascript:void(0)" id="js-ripple-btn" class="button styl-material">
+                        Click to slide
+                        <svg class="ripple-obj" id="js-ripple">
+                            <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                        </svg>
+                    </a>
+                    <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel2">Hi, I'm a drawer!</h4>
+                                </div>
+
+                                <div class="modal-body">
+
+                                   <div class="row">
+                                       <div class="col-md-12">
+                                            <figure class="figure">
+                                                  <img src="https://picsum.photos/400/250" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+                                            </figure>
+                                       </div>
+                                       <div class="col-md-12">
+                                            <h1 class="display-4">Hello, world!</h1>
+                                            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                                            <a type="button" href="javascript:void(0)" id="js-ripple-btn" class="button styl-material">
+                                                Button
+                                                <svg class="ripple-obj" id="js-ripple">
+                                                    <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                                                </svg>
+                                            </a>
+                                       </div>
+                                   </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Sliding content drawer -->
+
+            <hr>
+            <!-- button border animation on hover -->
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h2>Secondary button's border animation on hover</h2>
+                    <p>
+                        <a href="#/" class="btn btn-secondary">
+                            <span class="text">
+                                get in touch
+                                <span class="line -bottom-hover"></span>
+                            </span>
+                            <span class="line -right"></span>
+                            <span class="line -top"></span>
+                            <span class="line -left"></span>
+                            <span class="line -bottom"></span>
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+            <!-- button border animation on hover end here-->
+            <hr>
+
+            <div class="row d-none">
+                <div class="col-md-12">
+
+                    <h2>Title</h2>
+                    <p>description</p>
+
+                </div>
+            </div>
+
+        </div>
+        
+
+        <script src="js/jquery.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/ripple-config.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/lottie.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

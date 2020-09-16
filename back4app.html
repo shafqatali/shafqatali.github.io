@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Back4App Inc" name="author">
+
+    <title>Sample App| JavaScript Quickstart | Back4App</title>
+
+    <!-- Here goes the Parse SDK for JavaScript -->
+    <script src="https://unpkg.com/parse/dist/parse.min.js"></script>
+
+</head>
+
+<body>
+<div>
+    <header>
+        <!-- Add your header image here -->
+    </header>
+
+    <h3>Hello World!</h3>
+    <!-- Add your content here -->
+
+    <script>
+        function addNews() {
+//PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript K
+            Parse.initialize("yMXLON6tPOqnUxw08nqleEuBJGrZQ0Hlakn4kW2X","TQiBaJ84sF2B7jf5D8Gc2c9pujBkU5t6f7h42vPF");
+            Parse.serverURL = 'https://parseapi.back4app.com/'
+
+            const MyFirstClass = Parse.Object.extend("Post");
+            const myFirstClass = new MyFirstClass();
+
+            myFirstClass.set("name", "I'm able to save objects!");
+            myFirstClass.save()
+                .then((object) => {
+                    // Success
+                    alert('New object created with objectId: ' + object.id);
+                    getAllRecords();
+                }, (error) => {
+                    // Save fails
+                    alert('Failed to create new object, with error code: ' + error.message);
+                });
+        }
+    </script>
+
+    <script>
+        function getAllRecords() {
+            const url = "https://alpha-test.back4app.io/classes/Post";
+
+            const options = {
+                headers: {
+                    "X-Parse-Application-Id" : "yMXLON6tPOqnUxw08nqleEuBJGrZQ0Hlakn4kW2X",
+                    "X-Parse-REST-API-Key": "xSTKnBTlB7gnsZoZwGCTvXu006xJ60DQPyqjiFTD"
+                }
+            };
+
+            fetch(url, options)
+                .then( res => res.json() )
+                .then( data => console.log(data) );
+        }
+        //getAllRecords();
+    </script>
+
+</div>
+
+<br><br><br>
+
+<footer>
+    <!-- Add your footer message/logo here -->
+</footer>
+
+<!-- Add your JS script here -->
+
+</body>
+
+</html>

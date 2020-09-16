@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>HTML5 Audio Player</title>
+    <meta name="author" content="Jake Rocheleau">
+    <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
+    <link rel="icon" href="http://designshack.net/favicon.ico">
+
+    <!-- For default styling, keep only "styles.css" and comment remaining css files -->
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+    <!--<link rel="stylesheet" href="../audio-demo/css/styles.css">-->
+</head>
+
+<body>
+<div id="w">
+    <div id="content">
+        <h1>Default HTML5 Audio Player</h1>
+        <div class="audio-player default">
+            <!--<h2>The Good Lawdz - Evidence Song</h2>-->
+            <audio id="default-audio-player" src="media/evidence-song.mp3" type="audio/mp3" controls="controls"></audio>
+        </div><!-- @end .audio-player -->
+        <br>
+        <br>
+        <br>
+        <h2>Customized HTML5 Audio Player</h2>
+        <div id="customized-audio" class="audio-player customized">
+            <!--<h2>The Good Lawdz - Evidence Song</h2>-->
+            <audio id="customized-audio-player" class="customized-audio" src="media/evidence-song.mp3" type="audio/mp3" controls="controls"></audio>
+        </div><!-- @end .audio-player -->
+        <br>
+        <br>
+        <p><strong>Note:</strong> For the Default version you need to include the <strong>_default.scss</strong> file. And for the Customized version, Use <strong>_customized.scss</strong></p>
+    </div><!-- @end #content -->
+</div><!-- @end #w -->
+
+<!-- For default styling, uncomment the following script and comment the main.js -->
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
