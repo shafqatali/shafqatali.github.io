@@ -1,0 +1,1579 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Base Template - Test Page</title>
+    <!--Un-gulped styles-->
+    <link href="css/all.css?rnd=395" rel="stylesheet"/>
+    <!--Un-gulped styles end-->
+    <script>
+        var $buoop = {
+            vs: {i: 10, f: -4, o: -4, s: 8, c: -4}, api: 4,
+            text: '<span>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</span>'
+        };
+        function $buo_f(){
+            var e = document.createElement("script");
+            e.src = "//browser-update.org/update.min.js";
+            document.body.appendChild(e);
+        };
+        try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+        catch(e){window.attachEvent("onload", $buo_f)}
+    </script>
+    <!--https://polyfill.io/v3/url-builder/-->
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from%2CArray.prototype.forEach%2Ces2015%2Ces6"></script>
+    <script>
+        /*!
+ * enquire.js v2.1.6 - Awesome Media Queries in JavaScript
+ * Copyright (c) 2017 Nick Williams - http://wicky.nillia.ms/enquire.js
+ * License: MIT */
+!function(a){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=a();else if("function"==typeof define&&define.amd)define([],a);else{var b;b="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,b.enquire=a()}}(function(){return function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c?c:a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}({1:[function(a,b,c){function d(a,b){this.query=a,this.isUnconditional=b,this.handlers=[],this.mql=window.matchMedia(a);var c=this;this.listener=function(a){c.mql=a.currentTarget||a,c.assess()},this.mql.addListener(this.listener)}var e=a(3),f=a(4).each;d.prototype={constuctor:d,addHandler:function(a){var b=new e(a);this.handlers.push(b),this.matches()&&b.on()},removeHandler:function(a){var b=this.handlers;f(b,function(c,d){if(c.equals(a))return c.destroy(),!b.splice(d,1)})},matches:function(){return this.mql.matches||this.isUnconditional},clear:function(){f(this.handlers,function(a){a.destroy()}),this.mql.removeListener(this.listener),this.handlers.length=0},assess:function(){var a=this.matches()?"on":"off";f(this.handlers,function(b){b[a]()})}},b.exports=d},{3:3,4:4}],2:[function(a,b,c){function d(){if(!window.matchMedia)throw new Error("matchMedia not present, legacy browsers require a polyfill");this.queries={},this.browserIsIncapable=!window.matchMedia("only all").matches}var e=a(1),f=a(4),g=f.each,h=f.isFunction,i=f.isArray;d.prototype={constructor:d,register:function(a,b,c){var d=this.queries,f=c&&this.browserIsIncapable;return d[a]||(d[a]=new e(a,f)),h(b)&&(b={match:b}),i(b)||(b=[b]),g(b,function(b){h(b)&&(b={match:b}),d[a].addHandler(b)}),this},unregister:function(a,b){var c=this.queries[a];return c&&(b?c.removeHandler(b):(c.clear(),delete this.queries[a])),this}},b.exports=d},{1:1,4:4}],3:[function(a,b,c){function d(a){this.options=a,!a.deferSetup&&this.setup()}d.prototype={constructor:d,setup:function(){this.options.setup&&this.options.setup(),this.initialised=!0},on:function(){!this.initialised&&this.setup(),this.options.match&&this.options.match()},off:function(){this.options.unmatch&&this.options.unmatch()},destroy:function(){this.options.destroy?this.options.destroy():this.off()},equals:function(a){return this.options===a||this.options.match===a}},b.exports=d},{}],4:[function(a,b,c){function d(a,b){var c=0,d=a.length;for(c;c<d&&b(a[c],c)!==!1;c++);}function e(a){return"[object Array]"===Object.prototype.toString.apply(a)}function f(a){return"function"==typeof a}b.exports={isFunction:f,isArray:e,each:d}},{}],5:[function(a,b,c){var d=a(2);b.exports=new d},{2:2}]},{},[5])(5)});
+    </script>
+    <script>
+        /*! lazysizes - v5.2.2 */
+!function(e){var t=function(u,D,f){"use strict";var k,H;if(function(){var e;var t={lazyClass:"lazyload",loadedClass:"lazyloaded",loadingClass:"lazyloading",preloadClass:"lazypreload",errorClass:"lazyerror",autosizesClass:"lazyautosizes",srcAttr:"data-src",srcsetAttr:"data-srcset",sizesAttr:"data-sizes",minSize:40,customMedia:{},init:true,expFactor:1.5,hFac:.8,loadMode:2,loadHidden:true,ricTimeout:0,throttleDelay:125};H=u.lazySizesConfig||u.lazysizesConfig||{};for(e in t){if(!(e in H)){H[e]=t[e]}}}(),!D||!D.getElementsByClassName){return{init:function(){},cfg:H,noSupport:true}}var O=D.documentElement,a=u.HTMLPictureElement,P="addEventListener",$="getAttribute",q=u[P].bind(u),I=u.setTimeout,U=u.requestAnimationFrame||I,l=u.requestIdleCallback,j=/^picture$/i,r=["load","error","lazyincluded","_lazyloaded"],i={},G=Array.prototype.forEach,J=function(e,t){if(!i[t]){i[t]=new RegExp("(\\s|^)"+t+"(\\s|$)")}return i[t].test(e[$]("class")||"")&&i[t]},K=function(e,t){if(!J(e,t)){e.setAttribute("class",(e[$]("class")||"").trim()+" "+t)}},Q=function(e,t){var i;if(i=J(e,t)){e.setAttribute("class",(e[$]("class")||"").replace(i," "))}},V=function(t,i,e){var a=e?P:"removeEventListener";if(e){V(t,i)}r.forEach(function(e){t[a](e,i)})},X=function(e,t,i,a,r){var n=D.createEvent("Event");if(!i){i={}}i.instance=k;n.initEvent(t,!a,!r);n.detail=i;e.dispatchEvent(n);return n},Y=function(e,t){var i;if(!a&&(i=u.picturefill||H.pf)){if(t&&t.src&&!e[$]("srcset")){e.setAttribute("srcset",t.src)}i({reevaluate:true,elements:[e]})}else if(t&&t.src){e.src=t.src}},Z=function(e,t){return(getComputedStyle(e,null)||{})[t]},s=function(e,t,i){i=i||e.offsetWidth;while(i<H.minSize&&t&&!e._lazysizesWidth){i=t.offsetWidth;t=t.parentNode}return i},ee=function(){var i,a;var t=[];var r=[];var n=t;var s=function(){var e=n;n=t.length?r:t;i=true;a=false;while(e.length){e.shift()()}i=false};var e=function(e,t){if(i&&!t){e.apply(this,arguments)}else{n.push(e);if(!a){a=true;(D.hidden?I:U)(s)}}};e._lsFlush=s;return e}(),te=function(i,e){return e?function(){ee(i)}:function(){var e=this;var t=arguments;ee(function(){i.apply(e,t)})}},ie=function(e){var i;var a=0;var r=H.throttleDelay;var n=H.ricTimeout;var t=function(){i=false;a=f.now();e()};var s=l&&n>49?function(){l(t,{timeout:n});if(n!==H.ricTimeout){n=H.ricTimeout}}:te(function(){I(t)},true);return function(e){var t;if(e=e===true){n=33}if(i){return}i=true;t=r-(f.now()-a);if(t<0){t=0}if(e||t<9){s()}else{I(s,t)}}},ae=function(e){var t,i;var a=99;var r=function(){t=null;e()};var n=function(){var e=f.now()-i;if(e<a){I(n,a-e)}else{(l||r)(r)}};return function(){i=f.now();if(!t){t=I(n,a)}}},e=function(){var v,m,c,h,e;var y,z,g,p,C,b,A;var n=/^img$/i;var d=/^iframe$/i;var E="onscroll"in u&&!/(gle|ing)bot/.test(navigator.userAgent);var _=0;var w=0;var N=0;var M=-1;var x=function(e){N--;if(!e||N<0||!e.target){N=0}};var W=function(e){if(A==null){A=Z(D.body,"visibility")=="hidden"}return A||!(Z(e.parentNode,"visibility")=="hidden"&&Z(e,"visibility")=="hidden")};var S=function(e,t){var i;var a=e;var r=W(e);g-=t;b+=t;p-=t;C+=t;while(r&&(a=a.offsetParent)&&a!=D.body&&a!=O){r=(Z(a,"opacity")||1)>0;if(r&&Z(a,"overflow")!="visible"){i=a.getBoundingClientRect();r=C>i.left&&p<i.right&&b>i.top-1&&g<i.bottom+1}}return r};var t=function(){var e,t,i,a,r,n,s,l,o,u,f,c;var d=k.elements;if((h=H.loadMode)&&N<8&&(e=d.length)){t=0;M++;for(;t<e;t++){if(!d[t]||d[t]._lazyRace){continue}if(!E||k.prematureUnveil&&k.prematureUnveil(d[t])){R(d[t]);continue}if(!(l=d[t][$]("data-expand"))||!(n=l*1)){n=w}if(!u){u=!H.expand||H.expand<1?O.clientHeight>500&&O.clientWidth>500?500:370:H.expand;k._defEx=u;f=u*H.expFactor;c=H.hFac;A=null;if(w<f&&N<1&&M>2&&h>2&&!D.hidden){w=f;M=0}else if(h>1&&M>1&&N<6){w=u}else{w=_}}if(o!==n){y=innerWidth+n*c;z=innerHeight+n;s=n*-1;o=n}i=d[t].getBoundingClientRect();if((b=i.bottom)>=s&&(g=i.top)<=z&&(C=i.right)>=s*c&&(p=i.left)<=y&&(b||C||p||g)&&(H.loadHidden||W(d[t]))&&(m&&N<3&&!l&&(h<3||M<4)||S(d[t],n))){R(d[t]);r=true;if(N>9){break}}else if(!r&&m&&!a&&N<4&&M<4&&h>2&&(v[0]||H.preloadAfterLoad)&&(v[0]||!l&&(b||C||p||g||d[t][$](H.sizesAttr)!="auto"))){a=v[0]||d[t]}}if(a&&!r){R(a)}}};var i=ie(t);var B=function(e){var t=e.target;if(t._lazyCache){delete t._lazyCache;return}x(e);K(t,H.loadedClass);Q(t,H.loadingClass);V(t,L);X(t,"lazyloaded")};var a=te(B);var L=function(e){a({target:e.target})};var T=function(t,i){try{t.contentWindow.location.replace(i)}catch(e){t.src=i}};var F=function(e){var t;var i=e[$](H.srcsetAttr);if(t=H.customMedia[e[$]("data-media")||e[$]("media")]){e.setAttribute("media",t)}if(i){e.setAttribute("srcset",i)}};var s=te(function(t,e,i,a,r){var n,s,l,o,u,f;if(!(u=X(t,"lazybeforeunveil",e)).defaultPrevented){if(a){if(i){K(t,H.autosizesClass)}else{t.setAttribute("sizes",a)}}s=t[$](H.srcsetAttr);n=t[$](H.srcAttr);if(r){l=t.parentNode;o=l&&j.test(l.nodeName||"")}f=e.firesLoad||"src"in t&&(s||n||o);u={target:t};K(t,H.loadingClass);if(f){clearTimeout(c);c=I(x,2500);V(t,L,true)}if(o){G.call(l.getElementsByTagName("source"),F)}if(s){t.setAttribute("srcset",s)}else if(n&&!o){if(d.test(t.nodeName)){T(t,n)}else{t.src=n}}if(r&&(s||o)){Y(t,{src:n})}}if(t._lazyRace){delete t._lazyRace}Q(t,H.lazyClass);ee(function(){var e=t.complete&&t.naturalWidth>1;if(!f||e){if(e){K(t,"ls-is-cached")}B(u);t._lazyCache=true;I(function(){if("_lazyCache"in t){delete t._lazyCache}},9)}if(t.loading=="lazy"){N--}},true)});var R=function(e){if(e._lazyRace){return}var t;var i=n.test(e.nodeName);var a=i&&(e[$](H.sizesAttr)||e[$]("sizes"));var r=a=="auto";if((r||!m)&&i&&(e[$]("src")||e.srcset)&&!e.complete&&!J(e,H.errorClass)&&J(e,H.lazyClass)){return}t=X(e,"lazyunveilread").detail;if(r){re.updateElem(e,true,e.offsetWidth)}e._lazyRace=true;N++;s(e,t,r,a,i)};var r=ae(function(){H.loadMode=3;i()});var l=function(){if(H.loadMode==3){H.loadMode=2}r()};var o=function(){if(m){return}if(f.now()-e<999){I(o,999);return}m=true;H.loadMode=3;i();q("scroll",l,true)};return{_:function(){e=f.now();k.elements=D.getElementsByClassName(H.lazyClass);v=D.getElementsByClassName(H.lazyClass+" "+H.preloadClass);q("scroll",i,true);q("resize",i,true);q("pageshow",function(e){if(e.persisted){var t=D.querySelectorAll("."+H.loadingClass);if(t.length&&t.forEach){U(function(){t.forEach(function(e){if(e.complete){R(e)}})})}}});if(u.MutationObserver){new MutationObserver(i).observe(O,{childList:true,subtree:true,attributes:true})}else{O[P]("DOMNodeInserted",i,true);O[P]("DOMAttrModified",i,true);setInterval(i,999)}q("hashchange",i,true);["focus","mouseover","click","load","transitionend","animationend"].forEach(function(e){D[P](e,i,true)});if(/d$|^c/.test(D.readyState)){o()}else{q("load",o);D[P]("DOMContentLoaded",i);I(o,2e4)}if(k.elements.length){t();ee._lsFlush()}else{i()}},checkElems:i,unveil:R,_aLSL:l}}(),re=function(){var i;var n=te(function(e,t,i,a){var r,n,s;e._lazysizesWidth=a;a+="px";e.setAttribute("sizes",a);if(j.test(t.nodeName||"")){r=t.getElementsByTagName("source");for(n=0,s=r.length;n<s;n++){r[n].setAttribute("sizes",a)}}if(!i.detail.dataAttr){Y(e,i.detail)}});var a=function(e,t,i){var a;var r=e.parentNode;if(r){i=s(e,r,i);a=X(e,"lazybeforesizes",{width:i,dataAttr:!!t});if(!a.defaultPrevented){i=a.detail.width;if(i&&i!==e._lazysizesWidth){n(e,r,a,i)}}}};var e=function(){var e;var t=i.length;if(t){e=0;for(;e<t;e++){a(i[e])}}};var t=ae(e);return{_:function(){i=D.getElementsByClassName(H.autosizesClass);q("resize",t)},checkElems:t,updateElem:a}}(),t=function(){if(!t.i&&D.getElementsByClassName){t.i=true;re._();e._()}};return I(function(){H.init&&t()}),k={cfg:H,autoSizer:re,loader:e,init:t,uP:Y,aC:K,rC:Q,hC:J,fire:X,gW:s,rAF:ee}}(e,e.document,Date);e.lazySizes=t,"object"==typeof module&&module.exports&&(module.exports=t)}("undefined"!=typeof window?window:{});
+    </script>
+</head>
+<body>
+<a href="#main-content" class="sr-only sr-only-focusable skip-content">Skip to Content</a>
+<noscript>
+    <div id="browser-warning" class="no-print user-warning">
+        <div class="container">
+            <p>
+                <i class="glyphicon glyphicon-info-sign"></i>It appears JavaScript is disabled. In order for this website to function correctly you need to enable JavaScript in your browser.
+            </p>
+        </div>
+    </div>
+</noscript>
+<div id="wrapper">
+    <!--It's just for the HTML site, we will remove it when shift to other CMS -->
+    <a id="ds-home-link" class="d-none" href="index.html"><span class="glyphicon glyphicon-home"></span><span class="sr-only">Homepage Link</span></a>
+    <main id="main-content">
+        <script type="text/javascript">
+    var filterListing =
+        {
+            "button": "Clear filters",
+            "buttonMobile": "Apply filters",
+            "checkBoxes": [
+                {
+                    "title": "Country",
+                    "fieldName": "country",
+                    "match": "equals",
+                    "list": [
+                        {"displayText": "Afghanistan", "value": "AF"}, {
+                            "displayText": "Albania",
+                            "value": "AL"
+                        }, {"displayText": "Algeria", "value": "DZ"}, {
+                            "displayText": "Andorra",
+                            "value": "AD"
+                        }, {"displayText": "Angola", "value": "AO"}, {
+                            "displayText": "Argentina",
+                            "value": "AR"
+                        }, {"displayText": "Armenia", "value": "AM"}, {
+                            "displayText": "Aruba",
+                            "value": "AW"
+                        }, {"displayText": "Australia", "value": "AU"}, {
+                            "displayText": "Austria",
+                            "value": "AT"
+                        }, {"displayText": "Azerbaijan", "value": "AZ"}, {
+                            "displayText": "Bahamas (the)",
+                            "value": "BS"
+                        }, {"displayText": "Bahrain", "value": "BH"}, {
+                            "displayText": "Bangladesh",
+                            "value": "BD"
+                        }, {"displayText": "Barbados", "value": "BB"}, {
+                            "displayText": "Belarus",
+                            "value": "BY"
+                        }, {"displayText": "Belgium", "value": "BE"}, {
+                            "displayText": "Belize",
+                            "value": "BZ"
+                        }, {"displayText": "Bermuda", "value": "BM"}, {
+                            "displayText": "Bhutan",
+                            "value": "BT"
+                        }, {"displayText": "Bolivia", "value": "BO"}, {
+                            "displayText": "Bosnia and Herzegovina",
+                            "value": "BA"
+                        }, {"displayText": "Botswana", "value": "BW"}, {
+                            "displayText": "Brazil",
+                            "value": "BR"
+                        }, {"displayText": "British Virgin Islands", "value": "VG"}, {
+                            "displayText": "Brunei ",
+                            "value": "BN"
+                        }, {"displayText": "Bulgaria", "value": "BG"}, {
+                            "displayText": "Burkina Faso",
+                            "value": "BF"
+                        }, {"displayText": "Cambodia", "value": "KH"}, {
+                            "displayText": "Cameroon",
+                            "value": "CM"
+                        }, {"displayText": "Canada", "value": "CA"}, {
+                            "displayText": "Cape Verde",
+                            "value": "CV"
+                        }, {"displayText": "Cayman Islands ", "value": "KY"}, {
+                            "displayText": "Chad",
+                            "value": "TD"
+                        }, {"displayText": "Chile", "value": "CL"}, {
+                            "displayText": "China",
+                            "value": "CN"
+                        }, {
+                            "displayText": "Colombia",
+                            "value": "CO"
+                        }, {
+                            "displayText": "Congo (the Democratic Republic of the)",
+                            "value": "CD"
+                        }, {"displayText": "Costa Rica", "value": "CR"}, {
+                            "displayText": "Croatia",
+                            "value": "HR"
+                        }, {"displayText": "Cuba", "value": "CU"}, {
+                            "displayText": "Cyprus",
+                            "value": "CY"
+                        }, {"displayText": "Czech Republic", "value": "CZ"}, {
+                            "displayText": "Denmark",
+                            "value": "DK"
+                        }, {"displayText": "Dominican Republic ", "value": "DO"}, {
+                            "displayText": "Ecuador",
+                            "value": "EC"
+                        }, {"displayText": "Egypt", "value": "EG"}, {
+                            "displayText": "El Salvador",
+                            "value": "SV"
+                        }, {"displayText": "Equatorial Guinea", "value": "GQ"}, {
+                            "displayText": "Estonia",
+                            "value": "EE"
+                        }, {"displayText": "Ethiopia", "value": "ET"}, {
+                            "displayText": "Fiji",
+                            "value": "FJ"
+                        }, {"displayText": "Finland", "value": "FI"}, {
+                            "displayText": "France",
+                            "value": "FR"
+                        }, {"displayText": "Gabon", "value": "GA"}, {
+                            "displayText": "Gambia ",
+                            "value": "GM"
+                        }, {"displayText": "Georgia", "value": "GE"}, {
+                            "displayText": "Germany",
+                            "value": "DE"
+                        }, {"displayText": "Ghana", "value": "GH"}, {
+                            "displayText": "Gibraltar",
+                            "value": "GI"
+                        }, {"displayText": "Greece", "value": "GR"}, {
+                            "displayText": "Guatemala",
+                            "value": "GT"
+                        }, {"displayText": "Guernsey", "value": "GG"}, {
+                            "displayText": "Guyana",
+                            "value": "GY"
+                        }, {"displayText": "Honduras", "value": "HN"}, {
+                            "displayText": "Hong Kong",
+                            "value": "HK"
+                        }, {"displayText": "Hungary", "value": "HU"}, {
+                            "displayText": "Iceland",
+                            "value": "IS"
+                        }, {"displayText": "India", "value": "IN"}, {
+                            "displayText": "Indonesia",
+                            "value": "ID"
+                        }, {"displayText": "Iran ", "value": "IR"}, {
+                            "displayText": "Iraq",
+                            "value": "IQ"
+                        }, {"displayText": "Ireland", "value": "IE"}, {
+                            "displayText": "Isle of Man",
+                            "value": "IM"
+                        }, {"displayText": "Israel", "value": "IL"}, {
+                            "displayText": "Italy",
+                            "value": "IT"
+                        }, {"displayText": "Ivory Coast", "value": "CI"}, {
+                            "displayText": "Jamaica",
+                            "value": "JM"
+                        }, {"displayText": "Japan", "value": "JP"}, {
+                            "displayText": "Jersey",
+                            "value": "JE"
+                        }, {"displayText": "Jordan", "value": "JO"}, {
+                            "displayText": "Kazakhstan",
+                            "value": "KZ"
+                        }, {"displayText": "Kenya", "value": "KE"}, {
+                            "displayText": "Korea (South)",
+                            "value": "KR"
+                        }, {"displayText": "Kuwait", "value": "KW"}, {
+                            "displayText": "Kyrgyzstan",
+                            "value": "KG"
+                        }, {"displayText": "Laos", "value": "LA"}, {
+                            "displayText": "Latvia",
+                            "value": "LV"
+                        }, {"displayText": "Lebanon", "value": "LB"}, {
+                            "displayText": "Liberia",
+                            "value": "LR"
+                        }, {"displayText": "Libya", "value": "LY"}, {
+                            "displayText": "Liechtenstein",
+                            "value": "LI"
+                        }, {"displayText": "Lithuania", "value": "LT"}, {
+                            "displayText": "Luxembourg",
+                            "value": "LU"
+                        }, {"displayText": "Macao", "value": "MO"}, {
+                            "displayText": "Macedonia (North)",
+                            "value": "MK"
+                        }, {"displayText": "Madagascar", "value": "MG"}, {
+                            "displayText": "Malawi",
+                            "value": "MW"
+                        }, {"displayText": "Malaysia", "value": "MY"}, {
+                            "displayText": "Maldives",
+                            "value": "MV"
+                        }, {"displayText": "Mali", "value": "ML"}, {
+                            "displayText": "Malta",
+                            "value": "MT"
+                        }, {"displayText": "Mauritania", "value": "MR"}, {
+                            "displayText": "Mauritius",
+                            "value": "MU"
+                        }, {"displayText": "Mexico", "value": "MX"}, {
+                            "displayText": "Moldova ",
+                            "value": "MD"
+                        }, {"displayText": "Monaco", "value": "MC"}, {
+                            "displayText": "Mongolia",
+                            "value": "MN"
+                        }, {"displayText": "Montenegro", "value": "ME"}, {
+                            "displayText": "Morocco",
+                            "value": "MA"
+                        }, {"displayText": "Mozambique", "value": "MZ"}, {
+                            "displayText": "Myanmar",
+                            "value": "MM"
+                        }, {"displayText": "Namibia", "value": "NA"}, {
+                            "displayText": "Nepal",
+                            "value": "NP"
+                        }, {"displayText": "Netherlands ", "value": "NL"}, {
+                            "displayText": "New Zealand",
+                            "value": "NZ"
+                        }, {"displayText": "Nicaragua", "value": "NI"}, {
+                            "displayText": "Nigeria",
+                            "value": "NG"
+                        }, {"displayText": "Norway", "value": "NO"}, {
+                            "displayText": "Oman",
+                            "value": "OM"
+                        }, {"displayText": "Pakistan", "value": "PK"}, {
+                            "displayText": "Panama",
+                            "value": "PA"
+                        }, {"displayText": "Papua New Guinea", "value": "PG"}, {
+                            "displayText": "Paraguay",
+                            "value": "PY"
+                        }, {"displayText": "Peru", "value": "PE"}, {
+                            "displayText": "Philippines ",
+                            "value": "PH"
+                        }, {"displayText": "Poland", "value": "PL"}, {
+                            "displayText": "Portugal",
+                            "value": "PT"
+                        }, {"displayText": "Puerto Rico", "value": "PR"}, {
+                            "displayText": "Qatar",
+                            "value": "QA"
+                        }, {"displayText": "Romania", "value": "RO"}, {
+                            "displayText": "Russia",
+                            "value": "RU"
+                        }, {"displayText": "Rwanda", "value": "RW"}, {
+                            "displayText": "Samoa",
+                            "value": "WS"
+                        }, {"displayText": "San Marino", "value": "SM"}, {
+                            "displayText": "Saudi Arabia",
+                            "value": "SA"
+                        }, {"displayText": "Senegal", "value": "SN"}, {
+                            "displayText": "Serbia",
+                            "value": "RS"
+                        }, {"displayText": "Sierra Leone", "value": "SL"}, {
+                            "displayText": "Singapore",
+                            "value": "SG"
+                        }, {"displayText": "Slovakia", "value": "SK"}, {
+                            "displayText": "Slovenia",
+                            "value": "SI"
+                        }, {"displayText": "Somalia", "value": "SO"}, {
+                            "displayText": "South Africa",
+                            "value": "ZA"
+                        }, {"displayText": "South Sudan", "value": "SS"}, {
+                            "displayText": "Spain",
+                            "value": "ES"
+                        }, {"displayText": "Sri Lanka", "value": "LK"}, {
+                            "displayText": "Sudan (the Republic of)",
+                            "value": "SD"
+                        }, {"displayText": "Suriname", "value": "SR"}, {
+                            "displayText": "Sweden",
+                            "value": "SE"
+                        }, {"displayText": "Switzerland", "value": "CH"}, {
+                            "displayText": "Syria",
+                            "value": "SY"
+                        }, {"displayText": "Taiwan ", "value": "TW"}, {
+                            "displayText": "Tajikistan",
+                            "value": "TJ"
+                        }, {"displayText": "Tanzania", "value": "TZ"}, {
+                            "displayText": "Thailand",
+                            "value": "TH"
+                        }, {"displayText": "Togo", "value": "TG"}, {
+                            "displayText": "Tonga",
+                            "value": "TO"
+                        }, {"displayText": "Trinidad and Tobago", "value": "TT"}, {
+                            "displayText": "Tunisia",
+                            "value": "TN"
+                        }, {"displayText": "Turkey", "value": "TR"}, {
+                            "displayText": "Turkmenistan",
+                            "value": "TM"
+                        }, {"displayText": "Uganda", "value": "UG"}, {
+                            "displayText": "Ukraine",
+                            "value": "UA"
+                        }, {
+                            "displayText": "United Arab Emirates (the)",
+                            "value": "AE"
+                        }, {
+                            "displayText": "United Kingdom (the)",
+                            "value": "GB"
+                        }, {"displayText": "United States of America (the)", "value": "US"}, {
+                            "displayText": "Uruguay",
+                            "value": "UY"
+                        }, {"displayText": "Uzbekistan", "value": "UZ"}, {
+                            "displayText": "Venezuela",
+                            "value": "VE"
+                        }, {"displayText": "Vietnam", "value": "VN"}, {
+                            "displayText": "Yemen",
+                            "value": "YE"
+                        }, {"displayText": "Zambia", "value": "ZM"}, {"displayText": "Zimbabwe", "value": "ZW"}]
+                },
+                {
+                    "title": "Year of Submission",
+                    "fieldName": "submissionDate",
+                    "match": "like",
+                    "list": [
+                        {"displayText": "2019", "value": "2019"},
+                        {"displayText": "2018", "value": "2018"},
+                        {"displayText": "2017", "value": "2017"},
+                        {"displayText": "2016", "value": "2016"},
+                        {"displayText": "2015", "value": "2015"}
+                        ]
+                },
+            ],
+            "dropDowns": [
+                {
+                    "title": "Type of Query",
+                    "fieldName": "queryType",
+                    "match": "equals",
+                    "list": ["Lease", "Transfer"]
+                },
+                {
+                    "title": "Status",
+                    "fieldName": "status",
+                    "match": "like",
+                    "list": ["Download", "In Progress"]
+                }
+            ],
+            "textBoxes": [
+                {
+                    "title": "Submitted By",
+                    "fieldName": "submittedBy",
+                    "match": "like",
+                    "placeholder": "Search for 'Submitted By'"
+                }
+            ]
+        };
+</script>
+<script type="text/javascript">
+    var tableJson = [
+        {
+            "queryType": "Lease",
+            "country": "Bahrain",
+            "identifier": "dfsdf",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Security Officer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=165"
+        }, {
+            "queryType": "Transfer",
+            "country": "Afghanistan",
+            "identifier": "3",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bermuda",
+            "identifier": "4",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "asfdafww",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "gkgh",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=160"
+        }, {
+            "queryType": "Lease",
+            "country": "Bangladesh",
+            "identifier": "asdfgggg",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=159"
+        }, {
+            "queryType": "Lease",
+            "country": "Ireland",
+            "identifier": "asfd",
+            "submissionDate": "30/5/2018",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bahrain",
+            "identifier": "dfsdf",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Security Officer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=165"
+        }, {
+            "queryType": "Transfer",
+            "country": "Afghanistan",
+            "identifier": "3",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bermuda",
+            "identifier": "4",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "asfdafww",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "gkgh",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=160"
+        }, {
+            "queryType": "Lease",
+            "country": "Bangladesh",
+            "identifier": "asdfgggg",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=159"
+        }, {
+            "queryType": "Lease",
+            "country": "Ireland",
+            "identifier": "asfd",
+            "submissionDate": "30/5/2018",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bahrain",
+            "identifier": "dfsdf",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Security Officer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=165"
+        }, {
+            "queryType": "Transfer",
+            "country": "Afghanistan",
+            "identifier": "3",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bermuda",
+            "identifier": "4",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "asfdafww",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "gkgh",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=160"
+        }, {
+            "queryType": "Lease",
+            "country": "Bangladesh",
+            "identifier": "asdfgggg",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=159"
+        }, {
+            "queryType": "Lease",
+            "country": "Ireland",
+            "identifier": "asfd",
+            "submissionDate": "30/5/2018",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bahrain",
+            "identifier": "dfsdf",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Security Officer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=165"
+        }, {
+            "queryType": "Transfer",
+            "country": "Afghanistan",
+            "identifier": "3",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bermuda",
+            "identifier": "4",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "asfdafww",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "gkgh",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=160"
+        }, {
+            "queryType": "Lease",
+            "country": "Bangladesh",
+            "identifier": "asdfgggg",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=159"
+        }, {
+            "queryType": "Lease",
+            "country": "Ireland",
+            "identifier": "asfd",
+            "submissionDate": "30/5/2018",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bahrain",
+            "identifier": "dfsdf",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Security Officer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=165"
+        }, {
+            "queryType": "Transfer",
+            "country": "Afghanistan",
+            "identifier": "3",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bermuda",
+            "identifier": "4",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "asfdafww",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "gkgh",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=160"
+        }, {
+            "queryType": "Lease",
+            "country": "Bangladesh",
+            "identifier": "asdfgggg",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Team Member",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=159"
+        }, {
+            "queryType": "Lease",
+            "country": "Ireland",
+            "identifier": "asfd",
+            "submissionDate": "30/5/2018",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bahrain",
+            "identifier": "dfsdf",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Security Officer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=165"
+        }, {
+            "queryType": "Transfer",
+            "country": "Afghanistan",
+            "identifier": "3",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bermuda",
+            "identifier": "4",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "asfdafww",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "gkgh",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=160"
+        }, {
+            "queryType": "Lease",
+            "country": "Bangladesh",
+            "identifier": "asdfgggg",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=159"
+        }, {
+            "queryType": "Lease",
+            "country": "Ireland",
+            "identifier": "asfd",
+            "submissionDate": "30/5/2018",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bahrain",
+            "identifier": "dfsdf",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Security Officer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=165"
+        }, {
+            "queryType": "Transfer",
+            "country": "Afghanistan",
+            "identifier": "3",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Bermuda",
+            "identifier": "4",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "asfdafww",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "Barbados",
+            "identifier": "gkgh",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=160"
+        }, {
+            "queryType": "Lease",
+            "country": "Bangladesh",
+            "identifier": "asdfgggg",
+            "submissionDate": "12/6/2019",
+            "submittedBy": "Frontend Developer",
+            "status": "Download",
+            "link": "ReportDownload.ashx?id=159"
+        }, {
+            "queryType": "Lease",
+            "country": "Ireland",
+            "identifier": "asfd",
+            "submissionDate": "30/5/2018",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Team Member",
+            "status": "In Progress",
+            "link": "#"
+        }, {
+            "queryType": "Lease",
+            "country": "United Kingdom (the)",
+            "identifier": "445646546546546",
+            "submissionDate": "12/6/2017",
+            "submittedBy": "Frontend Developer",
+            "status": "In Progress",
+            "link": "#"
+        }];
+</script>
+<!-- vue app start -->
+<div id="searchAbleDataTable" class="vue-app-wrapper filter-app loading-app">
+    <search-able-data-table ref="listener"></search-able-data-table>
+</div>
+<script type="text/x-template" id="searchAbleDataTableTemplate">
+    <div class="search-able-table">
+        <h1>Search Table Data</h1>
+        <div class="row d-flex d-sm-none">
+            <h4 class="col-8 mb-3 pr-0">Search Table Data </h4>
+            <a href="#" class="col-4 text-right pl-0 filter-count" v-on:click.stop.prevent="toggleFilters()">
+                <span class="tick-icon" v-bind:class="getClassName(useFilters, 1)" v-html="mobileFilterText">Update Filters</span>
+                <span class="filter-results" v-bind:class="getClassName(useFilters, 0)">Filter Results</span>
+            </a>
+            <span class="list-heading">View By Date</span>
+        </div>
+        <div aria-controls="tblQuriesList" class="row d-sm-flex filter-row" v-bind:class="{ active: mobileFilter }">
+            <div id="mobileFiltersWrapper" class="d-block d-sm-none col-12 mobile-filters">
+                <div class="row">
+                    <div class="col-9 pr-0">
+                        <a class="filter-back" v-on:click.stop.prevent="showFilterItems('')" href="#">&nbsp;<span class="sr-only">Back button</span></a>
+                        <h3 class="filter-lbl">Filters</h3>
+                    </div>
+                    <div class="col-3 text-right">
+                        <a href="#" class="filter-close" v-on:click.stop.prevent="toggleFilters()">Close</a>
+                    </div>
+                    <div class="col-12 filters-box">
+                        <div class="filter-box" v-for="dropdown,indexOuter in filterData.checkBoxes" v-bind:class="dropdown.fieldName">
+                            <a href="#" v-on:click.stop.prevent="showFilterItems(dropdown.fieldName)" class="box-title">
+                                <span class="title" v-html="dropdown.title"></span>
+                                <span class="selection">All</span>
+                                <span v-if="getFilterState(dropdown.fieldName)" class="clear-btn svg-Blue_Close" v-on:click.stop.prevent="clearFilters(dropdown.fieldName)"><i class="sr-only">clear filter button</i></span>
+                            </a>
+                            <div class="box-items">
+                                <div class="custom-checkbox" v-for="option,indexInner in dropdown.list">
+                                    <input v-bind:id="getUniqueId('chkM',indexOuter,indexInner)" type="checkbox"
+                                           v-bind:value="option.displayText" v-on:click="filterList()" v-bind:class="dropdown.fieldName">
+                                    <label v-bind:for="getUniqueId('chkM',indexOuter,indexInner)" v-html="option.displayText"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-box" v-for="dropdown,indexOuter in filterData.dropDowns"  v-bind:class="dropdown.fieldName">
+                            <a href="#" v-on:click.stop.prevent="showFilterItems(dropdown.fieldName)" class="box-title">
+                                <span class="title" v-html="dropdown.title"></span>
+                                <span class="selection">All</span>
+                                <span class="clear-btn svg-Blue_Close d-none" v-on:click.stop.prevent="clearFilters(dropdown.fieldName)"><i class="sr-only">clear filter button</i></span>
+                            </a>
+                            <div class="box-items">
+                                <div class="custom-checkbox" v-for="option,indexInner in dropdown.list">
+                                    <input v-bind:id="getUniqueId('chkMx',indexOuter,indexInner)" type="radio" v-bind:name="dropdown.fieldName"
+                                           v-bind:value="option" v-on:click="filterList()" v-bind:class="dropdown.fieldName">
+                                    <label v-bind:for="getUniqueId('chkMx',indexOuter,indexInner)" v-html="option"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-box" v-for="text,indexOuter in filterData.textBoxes" v-bind:class="text.fieldName">
+                            <div class="text-filter">
+                                <label class="sr-only" v-html="text.title" v-bind:for="getUniqueId('txtFilterM',indexOuter,indexOuter)"></label>
+                                <input type="search" v-bind:data-type="text.fieldName" class="form-control filter-text" v-bind:placeholder="text.placeholder"
+                                       v-bind:id="getUniqueId('txtFilterM',indexOuter,indexOuter)" v-on:keyup="filterList()"/>
+                                <a href="#" class="clear-filter" v-bind:class="{ active: getFilterState(text.fieldName) }"
+                                   v-on:click.stop.prevent="clearFilters(text.fieldName)"><span
+                                        class="sr-only">clear filter</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 button-box">
+                        <div class="group-1">
+                        <button type="button" class="btn btn-primary" v-on:click="applyMobileFilter()">Apply filters</button>
+                        <a href="#" v-on:click.stop.prevent="clearFilters('')">Clear filters</a>
+                        </div>
+                        <div class="group-2">
+                            <button type="button" class="btn btn-primary" v-on:click="applyFilter()">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-sm-block col filter-wrap" v-for="dropdown,indexOuter in filterData.checkBoxes">
+                <div class="filter-set multi-select" v-bind:class="{ active: indexOuter == expandedIndex }">
+                    <a href="#" class="filter-title"  v-bind:class="dropdown.fieldName" v-bind:id="getUniqueId('menuButton',indexOuter,indexOuter)"
+                       v-on:click.stop.prevent="expandFilterItems(indexOuter)"
+                       aria-haspopup="true" aria-expanded="false" v-html="dropdown.title"></a>
+                    <a href="#" class="clear-filter" v-bind:class="{ active: getFilterState(dropdown.fieldName) }"
+                       v-on:click.stop.prevent="clearFilters(dropdown.fieldName)"><span
+                            class="sr-only">clear filter</span></a>
+                    <div v-bind:id="getUniqueId('optionsList',indexOuter,indexOuter)" class="filter-options"
+                         v-bind:aria-labelledby="getUniqueId('menuButton',indexOuter,indexOuter)">
+                        <div class="options-list">
+                            <div class="styled-checkbox" v-for="option,indexInner in dropdown.list">
+                                <input v-bind:id="getUniqueId('chk',indexOuter,indexInner)" type="checkbox"
+                                       v-bind:value="option.displayText" v-on:click="filterList()" class="filter-checkbox" v-bind:class="dropdown.fieldName">
+                                <label v-bind:for="getUniqueId('chk',indexOuter,indexInner)" v-html="option.displayText"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-sm-block col filter-wrap" v-for="dropdown,indexOuter in filterData.dropDowns">
+                <div class="filter-set">
+                    <label class="sr-only" v-html="dropdown.title" v-bind:for="getUniqueId('ddlFilter',indexOuter,indexOuter)"></label>
+                    <select v-bind:data-type="dropdown.fieldName" class="form-control filter-single"
+                            v-bind:id="getUniqueId('ddlFilter',indexOuter,indexOuter)" v-on:change="filterList()">
+                        <option value="" v-html="dropdown.title">Select</option>
+                        <option v-for="opt in dropdown.list" v-html="opt" v-bind:value="opt"></option>
+                    </select>
+                    <a href="#" class="clear-filter" v-bind:class="{ active: getFilterState(dropdown.fieldName) }"
+                       v-on:click.stop.prevent="clearFilters(dropdown.fieldName)"><span
+                            class="sr-only">clear filter</span></a>
+                </div>
+            </div>
+            <div class="d-none d-sm-block col filter-wrap" v-for="text,indexOuter in filterData.textBoxes">
+                <div class="filter-set">
+                    <label class="sr-only" v-html="text.title" v-bind:for="getUniqueId('txtFilter',indexOuter,indexOuter)"></label>
+                    <input type="search" v-bind:data-type="text.fieldName" class="form-control filter-text" v-bind:placeholder="text.placeholder"
+                           v-bind:id="getUniqueId('txtFilter',indexOuter,indexOuter)" v-on:keyup="filterList()"/>
+                    <a href="#" class="clear-filter" v-bind:class="{ active: getFilterState(text.fieldName) }"
+                       v-on:click.stop.prevent="clearFilters(text.fieldName)"><span
+                            class="sr-only">clear filter</span></a>
+                </div>
+            </div>
+            <div class="d-none d-sm-block col filter-wrap button-wrap">
+                <button type="button" v-bind:disabled="useFilters == false" v-html="filterData.button"
+                        v-on:click.stop.prevent="clearFilters('')"
+                        class="btn btn-secondary btn-clear-filter btn-tall"></button>
+            </div>
+        </div>
+        <div class="filter-backdrop-overlay"></div>
+        <div id="tblQuriesList" role="region" aria-live="polite" class="filtered-items-list">
+            <p v-if="noDataFound">Sorry, no record found.</p>
+            <table v-else class="table table-bordered table-striped table-hover search-table">
+                <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Type of Query</th>
+                    <th>Query Submission Date</th>
+                    <th>Identifier</th>
+                    <th>Submitted By</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="row in pageData">
+                    <td>
+                        <span class="cell-label">Country</span>
+                        <span class="cell-value" v-html="row.country"></span>
+                    </td>
+                    <td>
+                        <span class="cell-label">Type</span>
+                        <span class="cell-value" v-html="row.queryType"></span>
+                    </td>
+                    <td>
+                        <span class="cell-label">Date</span>
+                        <span class="cell-value" v-html="row.submissionDate"></span>
+                    </td>
+                    <td>
+                        <span class="cell-label">Identifier</span>
+                        <span class="cell-value" v-html="row.identifier"></span>
+                    </td>
+                    <td>
+                        <span class="cell-label">Submitted By</span>
+                        <span class="cell-value" v-html="row.submittedBy"></span>
+                    </td>
+                    <td>
+                        <span class="cell-label">Status</span>
+                        <span class="cell-value">
+                            <span v-html="renderStatus(row.status, row.link)"></span>
+                            <span>&nbsp;|&nbsp;<a v-bind:href="row.identifier">Review</a></span>
+                        </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <pagination v-bind:data-list="allOrFiltered" v-bind:page-size="20" v-bind:paging-links="5" @update-page="updatePage" ref="paginate"></pagination>
+        </div>
+    </div>
+</script>
+<!-- vue app end here-->
+    </main>
+</div>
+<!-- JS References block-->
+<!--we can write function name(s) that would  be called after loading all js files-->
+<script>
+    const isGulped = false;
+    // Add a script element as a child of the body
+    function initJS() {
+        'use strict';
+        //load jQuery
+        //if browser is ie9 or older then returm document.addEventListener
+        if (document.all && !window.atob) {
+            return;
+        }
+        downloadJS("js/libman/jquery.min.js", function () {
+            let jqTimer = setInterval(function () {
+                if (window.jQuery) {
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=395", function () {
+                        downloadJS("js/libman/vue.min.js?rnd=395", function () {
+                            downloadJS("js/libman/picturefill.min.js?rnd=395", function () {
+                                downloadJS("js/en.min.js?rnd=395", function () {
+                                    downloadJS("js/datepicker.min.js?rnd=395", function () {
+                                        downloadJS("js/utilities.parsed.js?rnd=395", function () {
+                                            downloadJS("js/main.parsed.js?rnd=395", function () {
+                                                downloadJS("js/libman/vue.min.js", function () {
+                                                    downloadJS("js/searchable-data-table/easydropdown.js?rnd=395", function () {
+                                                        downloadJS("js/searchable-data-table/pagination-component.js?rnd=395", function () {
+                                                            downloadJS("js/searchable-data-table/plugin.js?rnd=395", function () {
+                                                                onPageReady();
+                                                            });
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                    clearInterval(jqTimer);
+                }
+            }, 50);
+        });
+    }
+</script>
+<!-- JS References deferred loading block-->
+<script>
+    function makeStickyFooter() {
+        if (document.getElementsByTagName('body')[0].offsetHeight < window.innerHeight) {
+            let calHeight = document.getElementById('wrapper').offsetHeight - document.getElementsByTagName('main')[0].offsetHeight;
+            document.getElementsByTagName('main')[0].setAttribute("style", 'min-height : calc(100vh - ' + calHeight + 'px)');
+        }
+    }
+    makeStickyFooter();
+</script>
+<script>
+    let es6Supported = true;
+    let mobileSize = 640;
+    let desktop = true;
+    let mobile = false;
+    //this variable will be add from code behind in CMS System
+    const isLiveSite = true;
+    function feature_check() {
+        let str = 'class ?_? extends Array {constructor(j = "a", ...c) {const q = (({u: e}) => {return { [`s${c}`]: Symbol(j) };})({});super(j, q, ...c);}}' +
+            'new Promise((f) => {const a = function* (){return "{20BB7}".match(/./u)[0].length === 2 || true;};for (let vre of a()) {' +
+            'const [uw, as, he, re] = [new Set(), new WeakSet(), new Map(), new WeakMap()];break;}f(new Proxy({}, {get: (han, h) => h in han ? han[h] ' +
+            ': "42".repeat(0o10)}));}).then(bi => new ?_?(bi.rd));';
+        try {
+            eval(str);
+            es6Supported = true;
+        } catch(e) {
+            es6Supported = false;
+            console.warn('Your browser does not support ES6!');
+        }
+    }
+    //feature_check();
+    function downloadJS(scriptSrc, callback) {
+        'use strict';
+        let element = document.createElement("script");
+        element.src = scriptSrc;
+        element.onload = function () {
+            callback();
+        };
+        document.body.appendChild(element);
+    }
+    // Check for browser support of event handling capability
+    if (window.addEventListener) {
+        window.addEventListener("load", initJS, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", initJS);
+    } else {
+        window.onload = initJS;
+    }
+    function onPageReady() {
+        enquire.register("screen and (min-width: " + (mobileSize + 1) + "px)", {
+            match: function () {
+                desktop = true;
+                mobile = false;
+                screenChange();
+            },
+            unmatch: function () {
+                desktop = false;
+            }
+        });
+        enquire.register("screen and (max-width: " + mobileSize + "px)", {
+            match: function () {
+                mobile = true;
+                desktop = false;
+                screenChange();
+            },
+            unmatch: function () {
+                mobile = false;
+                desktop = true;
+            }
+        });
+        //call page ready from all loaded files
+        if (typeof (page_ready_searchable_data_table) == "function") {page_ready_searchable_data_table();}
+        if (typeof (page_ready_default) == "function") {
+            page_ready_default();
+        }
+        if (typeof (loadAdditionalJs) == "function") {
+            loadAdditionalJs();
+        }
+    }
+    function screenChange() {
+        //call screen_change from all loaded files
+        if (typeof (screen_change_searchable_data_table) == "function") {screen_change_searchable_data_table();}
+        if (typeof (screen_change_default) == "function") {
+            screen_change_default();
+        }
+        makeStickyFooter();
+    }
+</script>
+</body>
+</html>
