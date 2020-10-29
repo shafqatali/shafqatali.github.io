@@ -8,7 +8,7 @@
     <title>Bino - Services</title>
     <link rel="stylesheet" href="https://use.typekit.net/htc1ift.css">
     <!--Un-gulped styles-->
-    <link href="css/all.css?rnd=65" rel="stylesheet"/>
+    <link href="css/all.css?rnd=242" rel="stylesheet"/>
     <!--Un-gulped styles end-->
     <script>
         var $buoop = {
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch90"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch451">
+    <input id="txtSearch307"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch212">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch451">Search</button>
+                <button type="button" class="button" id="btnSearch212">Search</button>
             </span>
     </div>
 </div>
@@ -213,7 +213,7 @@
 </div>
         </div>
         <div class="col-sm-6">
-<div id="carousel46" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
+<div id="carousel590" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="images/spotlight.jpg" alt="image 1">
@@ -250,16 +250,16 @@
     </div>
     <ol class="carousel-indicators">
         <li class="active ">
-            <button data-target="#carousel46" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
+            <button data-target="#carousel590" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel46" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
+            <button data-target="#carousel590" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel46" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
+            <button data-target="#carousel590" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel46" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
+            <button data-target="#carousel590" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
         </li>
     </ol>
 </div>
@@ -393,7 +393,7 @@
         downloadJS("js/libman/jquery.min.js", function () {
             let jqTimer = setInterval(function () {
                 if (window.jQuery) {
-                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=65", function () {downloadJS("js/libman/vue.min.js?rnd=65", function () {downloadJS("js/libman/picturefill.min.js?rnd=65", function () {downloadJS("js/en.min.js?rnd=65", function () {downloadJS("js/datepicker.min.js?rnd=65", function () {downloadJS("js/utilities.parsed.js?rnd=65", function () {downloadJS("js/cookie.parsed.js?rnd=65", function () {downloadJS("js/auto-complete.parsed.js?rnd=65", function () {downloadJS("js/main.parsed.js?rnd=65", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=65", function () {downloadJS("js/card-carousel/plugin.js?rnd=65", function () {downloadJS("js/simple-navigation/script.js?rnd=65", function () {onPageReady();});});});});});});});});});});});});
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=242", function () {downloadJS("js/libman/vue.min.js?rnd=242", function () {downloadJS("js/libman/picturefill.min.js?rnd=242", function () {downloadJS("js/en.min.js?rnd=242", function () {downloadJS("js/datepicker.min.js?rnd=242", function () {downloadJS("js/utilities.parsed.js?rnd=242", function () {downloadJS("js/cookie.parsed.js?rnd=242", function () {downloadJS("js/auto-complete.parsed.js?rnd=242", function () {downloadJS("js/main.parsed.js?rnd=242", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=242", function () {downloadJS("js/card-carousel/plugin.js?rnd=242", function () {downloadJS("js/simple-navigation/script.js?rnd=242", function () {onPageReady();});});});});});});});});});});});});
                     clearInterval(jqTimer);
                 }
             }, 50);
@@ -485,18 +485,15 @@
 <!-- offline service worker code -->
 <script>
     //scope path will be '/' OR '/base-template/'
-    var scopePath = '/portfolio/';
+    var scopePath = '/';
     var hostName = document.location.host;
     if (hostName == "shafqatali.github.io") {
-        //pathname will be i.e "/dev-base-template/index.html"
         var nodes = document.location.pathname.split('/');
         if (nodes.length > 2) {
             scopePath += nodes[1] + '/';
         }
     }else if (hostName.indexOf("localhost") == 0) {
         //it's localhost
-        //set scopepath here if it's not using gulp module i.e
-        //scopePath = "base-template/";
     }
     if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js', { scope: scopePath })

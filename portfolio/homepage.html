@@ -8,7 +8,7 @@
     <title>Bino - Home</title>
     <link rel="stylesheet" href="https://use.typekit.net/htc1ift.css">
     <!--Un-gulped styles-->
-    <link href="css/all.css?rnd=171" rel="stylesheet"/>
+    <link href="css/all.css?rnd=176" rel="stylesheet"/>
     <!--Un-gulped styles end-->
     <script>
         var $buoop = {
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch425"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch523">
+    <input id="txtSearch186"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch751">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch523">Search</button>
+                <button type="button" class="button" id="btnSearch751">Search</button>
             </span>
     </div>
 </div>
@@ -181,10 +181,10 @@
             <div class="row align-items-center">
                 <div class="col-sm-6">
 <div class="input-group search-box person-search autocomplete">
-    <input id="txtSearch59" data-list="titles" type="text" class="form-control" value="" placeholder="Type a Name or Service" aria-label="Type a Name or Service" aria-describedby="btnSearch534">
+    <input id="txtSearch228" data-list="titles" type="text" class="form-control" value="" placeholder="Type a Name or Service" aria-label="Type a Name or Service" aria-describedby="btnSearch561">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch534">Search</button>
+                <button type="button" class="button" id="btnSearch561">Search</button>
             </span>
     </div>
 </div>
@@ -350,7 +350,7 @@
 </div>
             </div>
             <div class="col-sm-6">
-<div id="carousel427" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
+<div id="carousel874" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="images/spotlight.jpg" alt="image 1">
@@ -387,16 +387,16 @@
     </div>
     <ol class="carousel-indicators">
         <li class="active ">
-            <button data-target="#carousel427" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
+            <button data-target="#carousel874" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel427" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
+            <button data-target="#carousel874" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel427" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
+            <button data-target="#carousel874" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel427" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
+            <button data-target="#carousel874" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
         </li>
     </ol>
 </div>
@@ -558,7 +558,7 @@
         downloadJS("js/libman/jquery.min.js", function () {
             let jqTimer = setInterval(function () {
                 if (window.jQuery) {
-                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=171", function () {downloadJS("js/libman/vue.min.js?rnd=171", function () {downloadJS("js/libman/picturefill.min.js?rnd=171", function () {downloadJS("js/en.min.js?rnd=171", function () {downloadJS("js/datepicker.min.js?rnd=171", function () {downloadJS("js/utilities.parsed.js?rnd=171", function () {downloadJS("js/cookie.parsed.js?rnd=171", function () {downloadJS("js/auto-complete.parsed.js?rnd=171", function () {downloadJS("js/main.parsed.js?rnd=171", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=171", function () {downloadJS("js/card-carousel/plugin.js?rnd=171", function () {downloadJS("js/simple-navigation/script.js?rnd=171", function () {onPageReady();});});});});});});});});});});});});
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=176", function () {downloadJS("js/libman/vue.min.js?rnd=176", function () {downloadJS("js/libman/picturefill.min.js?rnd=176", function () {downloadJS("js/en.min.js?rnd=176", function () {downloadJS("js/datepicker.min.js?rnd=176", function () {downloadJS("js/utilities.parsed.js?rnd=176", function () {downloadJS("js/cookie.parsed.js?rnd=176", function () {downloadJS("js/auto-complete.parsed.js?rnd=176", function () {downloadJS("js/main.parsed.js?rnd=176", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=176", function () {downloadJS("js/card-carousel/plugin.js?rnd=176", function () {downloadJS("js/simple-navigation/script.js?rnd=176", function () {onPageReady();});});});});});});});});});});});});
                     clearInterval(jqTimer);
                 }
             }, 50);
@@ -650,18 +650,15 @@
 <!-- offline service worker code -->
 <script>
     //scope path will be '/' OR '/base-template/'
-    var scopePath = '/portfolio/';
+    var scopePath = '/';
     var hostName = document.location.host;
     if (hostName == "shafqatali.github.io") {
-        //pathname will be i.e "/dev-base-template/index.html"
         var nodes = document.location.pathname.split('/');
         if (nodes.length > 2) {
             scopePath += nodes[1] + '/';
         }
     }else if (hostName.indexOf("localhost") == 0) {
         //it's localhost
-        //set scopepath here if it's not using gulp module i.e
-        //scopePath = "base-template/";
     }
     if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js', { scope: scopePath })

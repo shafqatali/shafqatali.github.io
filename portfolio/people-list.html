@@ -8,7 +8,7 @@
     <title>Bino - People</title>
     <link rel="stylesheet" href="https://use.typekit.net/htc1ift.css">
     <!--Un-gulped styles-->
-    <link href="css/all.css?rnd=839" rel="stylesheet"/>
+    <link href="css/all.css?rnd=480" rel="stylesheet"/>
     <!--Un-gulped styles end-->
     <script>
         var $buoop = {
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch477"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch389">
+    <input id="txtSearch818"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch970">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch389">Search</button>
+                <button type="button" class="button" id="btnSearch970">Search</button>
             </span>
     </div>
 </div>
@@ -140,10 +140,10 @@
     <div class="row mb-box">
         <div class="col-sm-6">
 <div class="input-group search-box person-search autocomplete">
-    <input id="txtSearch604" data-list="peopleTitles" type="text" class="form-control" value="" placeholder="Search by name" aria-label="Search by name" aria-describedby="btnSearch389">
+    <input id="txtSearch391" data-list="peopleTitles" type="text" class="form-control" value="" placeholder="Search by name" aria-label="Search by name" aria-describedby="btnSearch581">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch389">Search</button>
+                <button type="button" class="button" id="btnSearch581">Search</button>
             </span>
     </div>
 </div>
@@ -181,7 +181,7 @@
     </script>
     <script>
         function loadAdditionalJs() {
-            downloadJS("js/people-listing.js?rnd=376", function () {
+            downloadJS("js/people-listing.js?rnd=866", function () {
             });
         }
     </script>
@@ -313,7 +313,7 @@
         downloadJS("js/libman/jquery.min.js", function () {
             let jqTimer = setInterval(function () {
                 if (window.jQuery) {
-                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=839", function () {downloadJS("js/libman/vue.min.js?rnd=839", function () {downloadJS("js/libman/picturefill.min.js?rnd=839", function () {downloadJS("js/en.min.js?rnd=839", function () {downloadJS("js/datepicker.min.js?rnd=839", function () {downloadJS("js/utilities.parsed.js?rnd=839", function () {downloadJS("js/cookie.parsed.js?rnd=839", function () {downloadJS("js/auto-complete.parsed.js?rnd=839", function () {downloadJS("js/main.parsed.js?rnd=839", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=839", function () {downloadJS("js/card-carousel/plugin.js?rnd=839", function () {downloadJS("js/simple-navigation/script.js?rnd=839", function () {onPageReady();});});});});});});});});});});});});
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=480", function () {downloadJS("js/libman/vue.min.js?rnd=480", function () {downloadJS("js/libman/picturefill.min.js?rnd=480", function () {downloadJS("js/en.min.js?rnd=480", function () {downloadJS("js/datepicker.min.js?rnd=480", function () {downloadJS("js/utilities.parsed.js?rnd=480", function () {downloadJS("js/cookie.parsed.js?rnd=480", function () {downloadJS("js/auto-complete.parsed.js?rnd=480", function () {downloadJS("js/main.parsed.js?rnd=480", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=480", function () {downloadJS("js/card-carousel/plugin.js?rnd=480", function () {downloadJS("js/simple-navigation/script.js?rnd=480", function () {onPageReady();});});});});});});});});});});});});
                     clearInterval(jqTimer);
                 }
             }, 50);
@@ -405,18 +405,15 @@
 <!-- offline service worker code -->
 <script>
     //scope path will be '/' OR '/base-template/'
-    var scopePath = '/portfolio/';
+    var scopePath = '/';
     var hostName = document.location.host;
     if (hostName == "shafqatali.github.io") {
-        //pathname will be i.e "/dev-base-template/index.html"
         var nodes = document.location.pathname.split('/');
         if (nodes.length > 2) {
             scopePath += nodes[1] + '/';
         }
     }else if (hostName.indexOf("localhost") == 0) {
         //it's localhost
-        //set scopepath here if it's not using gulp module i.e
-        //scopePath = "base-template/";
     }
     if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js', { scope: scopePath })
