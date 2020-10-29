@@ -184,8 +184,8 @@ function getDescription(summary, index) {
 }
 
 function getImageMarkup(largeImage, smalImage, type) {
-    let mobileImage = "/ds/images/Image-desktop-read.jpg";
-    let desktopImage = "/ds/images/Image-desktop-read.jpg";
+    let mobileImage = "images/Image-desktop-read.jpg";
+    let desktopImage = "images/Image-desktop-read.jpg";
     if (document.location.host.indexOf("localhost") === 0) {
         mobileImage = "images/Image-desktop-read.jpg";
         desktopImage = "images/Image-desktop-read.jpg";
