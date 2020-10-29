@@ -18,7 +18,7 @@ let roles = [
 
 function call_api() {
     let guid = peopleParentID;
-    let api_url = "/js/people-records.json";
+    let api_url = "js/people-records.json";
 
     console.log(api_url);
     fetch(api_url)

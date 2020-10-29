@@ -36,7 +36,7 @@ function call_api(count, skip) {
         initialLoading = true;
     }
 
-    let api_url = "/js/insights-records.json?" + params;
+    let api_url = "js/insights-records.json?" + params;
     console.log(api_url);
     fetch(api_url)
         .then(response => response.json())
