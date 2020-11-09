@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino - Media Template</title>
-    <link rel="stylesheet" href="https://use.typekit.net/htc1ift.css">
+    <link rel="preload" href="https://use.typekit.net/htc1ift.css">
     <!--Un-gulped styles-->
-    <link href="css/all.css?rnd=146" rel="stylesheet"/>
+    <link href="css/all.css?rnd=356" rel="stylesheet"/>
     <!--Un-gulped styles end-->
     <script>
         var $buoop = {
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch742"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch893">
+    <input id="txtSearch148"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch521">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch893">Search</button>
+                <button type="button" class="button" id="btnSearch521">Search</button>
             </span>
     </div>
 </div>
@@ -160,8 +160,8 @@
 <a href="#/" class="list-item-wrapper">
     <div class="list-item-feature">
         <picture class="media-box watch">
-            <source data-srcset="images/image-desktop-watch.jpg" srcset="images/image-desktop-watch.jpg" media="(max-width: 640px)">
-            <source data-srcset="images/image-desktop-watch.jpg" srcset="images/image-desktop-watch.jpg" media="(min-width: 641px)">
+            <source data-srcset="images/Image-desktop-watch.jpg" srcset="images/Image-desktop-watch.jpg" media="(max-width: 640px)">
+            <source data-srcset="images/Image-desktop-watch.jpg" srcset="images/Image-desktop-watch.jpg" media="(min-width: 641px)">
             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                  alt="insight image"
                  class="lazyload">
@@ -327,9 +327,9 @@
             return;
         }
         downloadJS("js/libman/jquery.min.js", function () {
-            let jqTimer = setInterval(function () {
+            var jqTimer = setInterval(function () {
                 if (window.jQuery) {
-                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=146", function () {downloadJS("js/libman/vue.min.js?rnd=146", function () {downloadJS("js/libman/picturefill.min.js?rnd=146", function () {downloadJS("js/en.min.js?rnd=146", function () {downloadJS("js/datepicker.min.js?rnd=146", function () {downloadJS("js/utilities.parsed.js?rnd=146", function () {downloadJS("js/cookie.parsed.js?rnd=146", function () {downloadJS("js/auto-complete.parsed.js?rnd=146", function () {downloadJS("js/main.parsed.js?rnd=146", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=146", function () {downloadJS("js/card-carousel/plugin.js?rnd=146", function () {downloadJS("js/simple-navigation/script.js?rnd=146", function () {onPageReady();});});});});});});});});});});});});
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=356", function () {downloadJS("js/libman/picturefill.min.js?rnd=356", function () {downloadJS("js/utilities.parsed.js?rnd=356", function () {downloadJS("js/cookie.parsed.js?rnd=356", function () {downloadJS("js/auto-complete.parsed.js?rnd=356", function () {downloadJS("js/main.parsed.js?rnd=356", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=356", function () {downloadJS("js/card-carousel/plugin.js?rnd=356", function () {downloadJS("js/simple-navigation/script.js?rnd=356", function () {onPageReady();});});});});});});});});});
                     clearInterval(jqTimer);
                 }
             }, 50);
@@ -338,14 +338,14 @@
 </script>
 <!-- JS References deferred loading block-->
 <script>
-    let es6Supported = true;
-    let mobileSize = 640;
-    let desktop = true;
-    let mobile = false;
+    var es6Supported = true;
+    var mobileSize = 640;
+    var desktop = true;
+    var mobile = false;
     //this variable will be add from code behind in CMS System
     const isLiveSite = true;
     function feature_check() {
-        let str = 'class ?_? extends Array {constructor(j = "a", ...c) {const q = (({u: e}) => {return { [`s${c}`]: Symbol(j) };})({});super(j, q, ...c);}}' +
+        var str = 'class ?_? extends Array {constructor(j = "a", ...c) {const q = (({u: e}) => {return { [`s${c}`]: Symbol(j) };})({});super(j, q, ...c);}}' +
             'new Promise((f) => {const a = function* (){return "{20BB7}".match(/./u)[0].length === 2 || true;};for (let vre of a()) {' +
             'const [uw, as, he, re] = [new Set(), new WeakSet(), new Map(), new WeakMap()];break;}f(new Proxy({}, {get: (han, h) => h in han ? han[h] ' +
             ': "42".repeat(0o10)}));}).then(bi => new ?_?(bi.rd));';
@@ -360,7 +360,7 @@
     //feature_check();
     function downloadJS(scriptSrc, callback) {
         'use strict';
-        let element = document.createElement("script");
+        var element = document.createElement("script");
         element.src = scriptSrc;
         element.onload = function () {
             callback();

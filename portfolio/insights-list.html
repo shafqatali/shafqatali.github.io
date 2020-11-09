@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino - Insights</title>
-    <link rel="stylesheet" href="https://use.typekit.net/htc1ift.css">
+    <link rel="preload" href="https://use.typekit.net/htc1ift.css">
     <!--Un-gulped styles-->
-    <link href="css/all.css?rnd=618" rel="stylesheet"/>
+    <link href="css/all.css?rnd=663" rel="stylesheet"/>
     <!--Un-gulped styles end-->
     <script>
         var $buoop = {
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch377"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch297">
+    <input id="txtSearch510"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch531">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch297">Search</button>
+                <button type="button" class="button" id="btnSearch531">Search</button>
             </span>
     </div>
 </div>
@@ -164,10 +164,10 @@
         </div>
         <div class="col-sm-4">
 <div class="input-group search-box news-search ">
-    <input id="txtSearch867"  type="text" class="form-control" value="" placeholder="Search insights" aria-label="Search insights" aria-describedby="btnSearch432">
+    <input id="txtSearch363"  type="text" class="form-control" value="" placeholder="Search insights" aria-label="Search insights" aria-describedby="btnSearch61">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch432">Search</button>
+                <button type="button" class="button" id="btnSearch61">Search</button>
             </span>
     </div>
 </div>
@@ -189,7 +189,7 @@
         var insightPageUrl = "/insights/detail";
         var preFilterServiceID = "00000000-0000-0000-0000-000000000000";
     </script>
-    <script src="js/insight-listing.js?rnd=463"></script>
+    <script src="js/insight-listing.parsed.js?rnd=655"></script>
 </div>
 </main>
     </div>
@@ -316,9 +316,9 @@
             return;
         }
         downloadJS("js/libman/jquery.min.js", function () {
-            let jqTimer = setInterval(function () {
+            var jqTimer = setInterval(function () {
                 if (window.jQuery) {
-                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=618", function () {downloadJS("js/libman/vue.min.js?rnd=618", function () {downloadJS("js/libman/picturefill.min.js?rnd=618", function () {downloadJS("js/en.min.js?rnd=618", function () {downloadJS("js/datepicker.min.js?rnd=618", function () {downloadJS("js/utilities.parsed.js?rnd=618", function () {downloadJS("js/cookie.parsed.js?rnd=618", function () {downloadJS("js/auto-complete.parsed.js?rnd=618", function () {downloadJS("js/main.parsed.js?rnd=618", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=618", function () {downloadJS("js/card-carousel/plugin.js?rnd=618", function () {downloadJS("js/simple-navigation/script.js?rnd=618", function () {onPageReady();});});});});});});});});});});});});
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=663", function () {downloadJS("js/libman/picturefill.min.js?rnd=663", function () {downloadJS("js/utilities.parsed.js?rnd=663", function () {downloadJS("js/cookie.parsed.js?rnd=663", function () {downloadJS("js/auto-complete.parsed.js?rnd=663", function () {downloadJS("js/main.parsed.js?rnd=663", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=663", function () {downloadJS("js/card-carousel/plugin.js?rnd=663", function () {downloadJS("js/simple-navigation/script.js?rnd=663", function () {onPageReady();});});});});});});});});});
                     clearInterval(jqTimer);
                 }
             }, 50);
@@ -327,14 +327,14 @@
 </script>
 <!-- JS References deferred loading block-->
 <script>
-    let es6Supported = true;
-    let mobileSize = 640;
-    let desktop = true;
-    let mobile = false;
+    var es6Supported = true;
+    var mobileSize = 640;
+    var desktop = true;
+    var mobile = false;
     //this variable will be add from code behind in CMS System
     const isLiveSite = true;
     function feature_check() {
-        let str = 'class ?_? extends Array {constructor(j = "a", ...c) {const q = (({u: e}) => {return { [`s${c}`]: Symbol(j) };})({});super(j, q, ...c);}}' +
+        var str = 'class ?_? extends Array {constructor(j = "a", ...c) {const q = (({u: e}) => {return { [`s${c}`]: Symbol(j) };})({});super(j, q, ...c);}}' +
             'new Promise((f) => {const a = function* (){return "{20BB7}".match(/./u)[0].length === 2 || true;};for (let vre of a()) {' +
             'const [uw, as, he, re] = [new Set(), new WeakSet(), new Map(), new WeakMap()];break;}f(new Proxy({}, {get: (han, h) => h in han ? han[h] ' +
             ': "42".repeat(0o10)}));}).then(bi => new ?_?(bi.rd));';
@@ -349,7 +349,7 @@
     //feature_check();
     function downloadJS(scriptSrc, callback) {
         'use strict';
-        let element = document.createElement("script");
+        var element = document.createElement("script");
         element.src = scriptSrc;
         element.onload = function () {
             callback();

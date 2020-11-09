@@ -31,25 +31,6 @@ function page_ready_default() {
     // External links function
     updateExternalLinks();
 
-    $('.date.form-control').datepicker({
-        markup: 'bootstrap4',
-        inputFormat: 'dd/MM/yy',
-        outputFormat: 'dd/MM/y',
-        titleFormat: 'EEEE d MMMM y',
-        gainFocusOnConstruction: false
-    });
-
-    $('.date.form-control').keydown(function (e) {
-        const validKeys = /[0-9.-\/]/;
-        if ((e.key.match(validKeys))) {
-            return true;
-        } else if (e.keyCode == 8 || e.keyCode == 9) {
-            return true;
-        } else {
-            return false;
-        }
-    });
-
     bindEventsForCarousel();
     bindPlayPauseEventsForCarousel();
 
