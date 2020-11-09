@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino - Services</title>
     <link rel="preload" href="https://use.typekit.net/htc1ift.css">
-    <!--Un-gulped styles-->
-    <link href="css/all.css?rnd=19" rel="stylesheet"/>
-    <!--Un-gulped styles end-->
+    <!--gulped styles-->
+    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=628">
+    <!--gulped styles end-->
     <script>
         var $buoop = {
             vs: {i: 10, f: -4, o: -4, s: 8, c: -4}, api: 4,
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch567"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch915">
+    <input id="txtSearch614"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch872">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch915">Search</button>
+                <button type="button" class="button" id="btnSearch872">Search</button>
             </span>
     </div>
 </div>
@@ -213,7 +213,7 @@
 </div>
         </div>
         <div class="col-sm-6">
-<div id="carousel878" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
+<div id="carousel810" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img data-src="images/spotlight.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload" alt="image 1">
@@ -250,16 +250,16 @@
     </div>
     <ol class="carousel-indicators">
         <li class="active ">
-            <button data-target="#carousel878" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
+            <button data-target="#carousel810" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel878" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
+            <button data-target="#carousel810" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel878" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
+            <button data-target="#carousel810" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel878" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
+            <button data-target="#carousel810" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
         </li>
     </ol>
 </div>
@@ -381,7 +381,7 @@
 <!-- JS References block-->
 <!--we can write function name(s) that would  be called after loading all js files-->
 <script>
-    const isGulped = false;
+    const isGulped = true;
     // Add a script element as a child of the body
     function initJS() {
         'use strict';
@@ -390,13 +390,8 @@
         if (document.all && !window.atob) {
             return;
         }
-        downloadJS("js/libman/jquery.min.js", function () {
-            var jqTimer = setInterval(function () {
-                if (window.jQuery) {
-                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=19", function () {downloadJS("js/libman/picturefill.min.js?rnd=19", function () {downloadJS("js/utilities.parsed.js?rnd=19", function () {downloadJS("js/cookie.parsed.js?rnd=19", function () {downloadJS("js/auto-complete.parsed.js?rnd=19", function () {downloadJS("js/main.parsed.js?rnd=19", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=19", function () {downloadJS("js/card-carousel/plugin.js?rnd=19", function () {downloadJS("js/simple-navigation/script.js?rnd=19", function () {onPageReady();});});});});});});});});});
-                    clearInterval(jqTimer);
-                }
-            }, 50);
+        downloadJS("js/gulp_script.min.uglify.js?rnd=628", function () {
+            onPageReady();
         });
     }
 </script>

@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino - News</title>
     <link rel="preload" href="https://use.typekit.net/htc1ift.css">
-    <!--Un-gulped styles-->
-    <link href="css/all.css?rnd=473" rel="stylesheet"/>
-    <!--Un-gulped styles end-->
+    <!--gulped styles-->
+    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=429">
+    <!--gulped styles end-->
     <script>
         var $buoop = {
             vs: {i: 10, f: -4, o: -4, s: 8, c: -4}, api: 4,
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch365"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch299">
+    <input id="txtSearch829"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch139">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch299">Search</button>
+                <button type="button" class="button" id="btnSearch139">Search</button>
             </span>
     </div>
 </div>
@@ -368,7 +368,7 @@ Addthis plugin goes here
 <!-- JS References block-->
 <!--we can write function name(s) that would  be called after loading all js files-->
 <script>
-    const isGulped = false;
+    const isGulped = true;
     // Add a script element as a child of the body
     function initJS() {
         'use strict';
@@ -377,13 +377,8 @@ Addthis plugin goes here
         if (document.all && !window.atob) {
             return;
         }
-        downloadJS("js/libman/jquery.min.js", function () {
-            var jqTimer = setInterval(function () {
-                if (window.jQuery) {
-                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=473", function () {downloadJS("js/libman/picturefill.min.js?rnd=473", function () {downloadJS("js/utilities.parsed.js?rnd=473", function () {downloadJS("js/cookie.parsed.js?rnd=473", function () {downloadJS("js/auto-complete.parsed.js?rnd=473", function () {downloadJS("js/main.parsed.js?rnd=473", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=473", function () {downloadJS("js/card-carousel/plugin.js?rnd=473", function () {downloadJS("js/simple-navigation/script.js?rnd=473", function () {onPageReady();});});});});});});});});});
-                    clearInterval(jqTimer);
-                }
-            }, 50);
+        downloadJS("js/gulp_script.min.uglify.js?rnd=429", function () {
+            onPageReady();
         });
     }
 </script>

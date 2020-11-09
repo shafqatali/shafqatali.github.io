@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino - People</title>
     <link rel="preload" href="https://use.typekit.net/htc1ift.css">
-    <!--Un-gulped styles-->
-    <link href="css/all.css?rnd=478" rel="stylesheet"/>
-    <!--Un-gulped styles end-->
+    <!--gulped styles-->
+    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=430">
+    <!--gulped styles end-->
     <script>
         var $buoop = {
             vs: {i: 10, f: -4, o: -4, s: 8, c: -4}, api: 4,
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch802"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch534">
+    <input id="txtSearch770"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch160">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch534">Search</button>
+                <button type="button" class="button" id="btnSearch160">Search</button>
             </span>
     </div>
 </div>
@@ -140,10 +140,10 @@
     <div class="row mb-box">
         <div class="col-sm-6">
 <div class="input-group search-box person-search autocomplete">
-    <input id="txtSearch799" data-list="peopleTitles" type="text" class="form-control" value="" placeholder="Search by name" aria-label="Search by name" aria-describedby="btnSearch649">
+    <input id="txtSearch84" data-list="peopleTitles" type="text" class="form-control" value="" placeholder="Search by name" aria-label="Search by name" aria-describedby="btnSearch935">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch649">Search</button>
+                <button type="button" class="button" id="btnSearch935">Search</button>
             </span>
     </div>
 </div>
@@ -181,7 +181,7 @@
     </script>
     <script>
         function loadAdditionalJs() {
-            downloadJS("js/people-listing.parsed.js?rnd=164", function () {
+            downloadJS("js/people-listing.parsed.js?rnd=727", function () {
             });
         }
     </script>
@@ -301,7 +301,7 @@
 <!-- JS References block-->
 <!--we can write function name(s) that would  be called after loading all js files-->
 <script>
-    const isGulped = false;
+    const isGulped = true;
     // Add a script element as a child of the body
     function initJS() {
         'use strict';
@@ -310,13 +310,8 @@
         if (document.all && !window.atob) {
             return;
         }
-        downloadJS("js/libman/jquery.min.js", function () {
-            var jqTimer = setInterval(function () {
-                if (window.jQuery) {
-                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=478", function () {downloadJS("js/libman/picturefill.min.js?rnd=478", function () {downloadJS("js/utilities.parsed.js?rnd=478", function () {downloadJS("js/cookie.parsed.js?rnd=478", function () {downloadJS("js/auto-complete.parsed.js?rnd=478", function () {downloadJS("js/main.parsed.js?rnd=478", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=478", function () {downloadJS("js/card-carousel/plugin.js?rnd=478", function () {downloadJS("js/simple-navigation/script.js?rnd=478", function () {onPageReady();});});});});});});});});});
-                    clearInterval(jqTimer);
-                }
-            }, 50);
+        downloadJS("js/gulp_script.min.uglify.js?rnd=430", function () {
+            onPageReady();
         });
     }
 </script>
