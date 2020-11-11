@@ -258,12 +258,12 @@ function initializeAPIDemo(api){
         e.preventDefault();
         api.reload(
             // XML path to the same or different 360 viewer config xml.
-            "360_assets/Blue low/Blue low.xml",   
+            aciveXMLPath,
             // Optional RootPath if CDN or Master Config support is used (PRO). Usually null.
             null,  
             // Optional callback which is called when reload is complete.
             function(){ 
-                alert("Reload finished!");
+                //alert("Reload finished!");
             }, 
             // Optional zero-based index of the image to load / show first upon reload (-1 or empty to use config settings).
             api.images.getCurrentImageIndex(),
@@ -282,6 +282,7 @@ function initializeAPIDemo(api){
     });
 }
 
+var aciveXMLPath = '360_assets/Blue low/Blue low.xml';
 
 function bindRotator(xmlPath){
     jQuery('#wr360PlayerId').rotator({
@@ -305,13 +306,15 @@ jQuery(document).ready(function(){
 
     jQuery('#loadGrey').click(function (e) {
         e.preventDefault();
-        $("#delete").click();
-        bindRotator('360_assets/grey-low/grey-low.xml');
+        aciveXMLPath = "360_assets/grey-low/grey-low.xml";
+        $("#reload").click();
+        //bindRotator('360_assets/grey-low/grey-low.xml');
     });
     jQuery('#loadBlue').click(function (e) {
         e.preventDefault();
-        $("#delete").click();
-        bindRotator('360_assets/Blue low/Blue low.xml');
+        aciveXMLPath = "360_assets/Blue low/Blue low.xml";
+        $("#reload").click();
+        //bindRotator('360_assets/Blue low/Blue low.xml');
     });
 });
 
