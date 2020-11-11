@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <settings>
+    <preloader image="images/Sofa 01 360 Color 01_010002.jpg" />
+    <userInterface showZoomButtons="true" showToolTips="true" showHotspotsButton="false" showFullScreenButton="false" showTogglePlayButton="true" showArrows="false" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="true" showFullScreenToolbar="false" fullScreenBackColor="#FFFFFF" toolbarPosition="1" customCursorClass="default_cursor" viewerHint="" toolbarAutohide="false" showToolbarOnLoadStart="false" />
+    <control dragSpeed="0.01" doubleClickZooms="true" disableMouseControl="false" showHighresOnFullScreen="true" mouseHoverDrag="false" hideHotspotsOnLoad="false" hideHotspotsOnZoom="false" rowSensitivity="15" dragSensitivity="10" inBrowserFullScreen="false" doubleClickFullscreen="false" zoomSteps="1" zoomSpeed="300" singleClickZooms="false" pauseOnPreload="false" resumePreloadOnHover="false" mouseWheelDrag="false" mouseWheelDragZoomOnly="false" allowRotateInputInZoom="false" allowPanX="true" allowPanY="true" />
+    <rotation firstImage="0" rotate="false" rotatePeriod="9" bounce="false" rotateDirection="-1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="true" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" />
+  </settings>
+  <hotspots />
+  <images rows="1" highresWidth="4500" highresHeight="4500">
+    <image src="images/Sofa 01 360 Color 01_010002.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010002.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010004.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010004.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010006.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010006.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010008.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010008.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010010.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010010.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010012.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010012.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010014.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010014.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010016.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010016.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010018.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010018.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010020.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010020.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010022.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010022.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010024.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010024.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010026.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010026.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010028.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010028.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010030.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010030.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010032.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010032.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010034.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010034.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010036.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010036.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010038.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010038.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010040.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010040.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010042.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010042.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010044.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010044.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010046.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010046.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010048.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010048.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010050.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010050.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010052.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010052.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010054.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010054.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010056.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010056.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010058.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010058.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010060.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010060.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010062.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010062.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010064.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010064.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010066.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010066.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010068.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010068.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010070.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010070.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010072.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010072.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010074.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010074.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010076.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010076.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010078.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010078.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010080.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010080.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010082.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010082.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010084.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010084.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010086.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010086.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010088.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010088.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010090.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010090.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010092.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010092.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010094.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010094.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010096.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010096.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010098.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010098.jpg" />
+    </image>
+    <image src="images/Sofa 01 360 Color 01_010100.jpg">
+      <highres src="images/highres/Sofa 01 360 Color 01_010100.jpg" />
+    </image>
+  </images>
+</config>
