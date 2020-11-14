@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino - Services</title>
-    <link rel="preload" href="https://use.typekit.net/htc1ift.css">
+    <link rel="stylesheet" href="https://use.typekit.net/htc1ift.css">
     <!--gulped styles-->
-    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=628">
+    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=671">
     <!--gulped styles end-->
     <script>
         var $buoop = {
@@ -38,7 +38,7 @@
     </script>
 </head>
 <body>
-<a href="#wrapper" class="sr-only sr-only-focusable skip-content">Skip to Content</a>
+<a href="#main-content" class="sr-only sr-only-focusable skip-content">Skip to Content</a>
 <noscript>
     <div id="browser-warning" class="no-print user-warning">
         <div class="container">
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch614"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch872">
+    <input id="txtSearch920"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch340">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch872">Search</button>
+                <button type="button" class="button" id="btnSearch340">Search</button>
             </span>
     </div>
 </div>
@@ -190,7 +190,7 @@
     </div>
     <div class="row">
         <div class="col-sm-6">
-<div class="multi-item-spotlights bg-dark">
+<div class="multi-item-spotlights bg-dark widget-navy1">
     <div class="heading-box">
         <h2>Latest NEWS</h2>
         <a href="#/" class="btn btn-primary">view all</a>
@@ -213,7 +213,7 @@
 </div>
         </div>
         <div class="col-sm-6">
-<div id="carousel810" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
+<div id="carousel460" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img data-src="images/spotlight.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload" alt="image 1">
@@ -250,16 +250,16 @@
     </div>
     <ol class="carousel-indicators">
         <li class="active ">
-            <button data-target="#carousel810" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
+            <button data-target="#carousel460" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel810" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
+            <button data-target="#carousel460" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel810" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
+            <button data-target="#carousel460" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel810" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
+            <button data-target="#carousel460" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
         </li>
     </ol>
 </div>
@@ -355,7 +355,7 @@
                     <li><a href="#/">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-9">
                 <ul class="footer-links separator">
                     <li><a href="#/">Link A</a></li>
                     <li><a href="#/">Link B</a></li>
@@ -366,7 +366,7 @@
                     <li><a href="#/">Link G</a></li>
                 </ul>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <ul class="social-links">
                     <li><a href="https://www.instagram.com/"><span class="sr-only">instagram</span></a></li>
                     <li><a href="https://twitter.com"><span class="sr-only">twitter</span></a></li>
@@ -390,7 +390,7 @@
         if (document.all && !window.atob) {
             return;
         }
-        downloadJS("js/gulp_script.min.uglify.js?rnd=628", function () {
+        downloadJS("js/gulp_script.min.uglify.js?rnd=671", function () {
             onPageReady();
         });
     }
@@ -471,12 +471,8 @@
         if (typeof (screen_change_default) == "function") {
             screen_change_default();
         }
-        if (typeof (screen_change_cookie) == "function") {
-            screen_change_cookie();
-        }
     }
 </script>
-<!-- cookie markup-->
 <!-- offline service worker code -->
 <script>
     //scope path will be '/' OR '/base-template/'
@@ -501,7 +497,6 @@
                 console.error(error);
             });
         navigator.serviceWorker.ready.then(function(registration) {
-            console.log('Service Worker Ready. Scope is ' + registration.scope);
         });
     }
 </script>

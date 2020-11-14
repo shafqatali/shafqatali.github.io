@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino - Insight</title>
-    <link rel="preload" href="https://use.typekit.net/htc1ift.css">
+    <link rel="stylesheet" href="https://use.typekit.net/htc1ift.css">
     <!--gulped styles-->
-    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=423">
+    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=102">
     <!--gulped styles end-->
     <script>
         var $buoop = {
@@ -38,7 +38,7 @@
     </script>
 </head>
 <body>
-<a href="#wrapper" class="sr-only sr-only-focusable skip-content">Skip to Content</a>
+<a href="#main-content" class="sr-only sr-only-focusable skip-content">Skip to Content</a>
 <noscript>
     <div id="browser-warning" class="no-print user-warning">
         <div class="container">
@@ -76,10 +76,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch643"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch621">
+    <input id="txtSearch519"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch836">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch621">Search</button>
+                <button type="button" class="button" id="btnSearch836">Search</button>
             </span>
     </div>
 </div>
@@ -219,15 +219,15 @@ Addthis plugin goes here
                 </h4>
             </div>
             <div class="related-items">
-<div class="highlighted-text ">
+<div class="highlighted-text black">
     <span class="date">06/04/2020</span>
     <a href="#/" class="text">COVID-19 Updates</a>
 </div>
-<div class="highlighted-text ">
+<div class="highlighted-text black">
     <span class="date">06/04/2020</span>
     <a href="#/" class="text">Nunc ultricies scelerisque nisl, eget blandit</a>
 </div>
-<div class="highlighted-text ">
+<div class="highlighted-text black">
     <span class="date">06/04/2020</span>
     <a href="#/" class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</a>
 </div>
@@ -247,28 +247,28 @@ Addthis plugin goes here
 <a href="#/" class="spotlight-card dark">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
                 </div>
                 <div class="col-sm-3">
 <a href="#/" class="spotlight-card dark">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
                 </div>
                 <div class="col-sm-3">
 <a href="#/" class="spotlight-card dark">
     <span class="date">09/04/2020</span>
     <h4 class="text">Fusce nec tellus convallis, aliquam ex nec, malesuada nua. </h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
                 </div>
                 <div class="col-sm-3">
 <a href="#/" class="spotlight-card dark">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
                 </div>
             </div>
@@ -363,7 +363,7 @@ Addthis plugin goes here
                     <li><a href="#/">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-9">
                 <ul class="footer-links separator">
                     <li><a href="#/">Link A</a></li>
                     <li><a href="#/">Link B</a></li>
@@ -374,7 +374,7 @@ Addthis plugin goes here
                     <li><a href="#/">Link G</a></li>
                 </ul>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <ul class="social-links">
                     <li><a href="https://www.instagram.com/"><span class="sr-only">instagram</span></a></li>
                     <li><a href="https://twitter.com"><span class="sr-only">twitter</span></a></li>
@@ -398,7 +398,7 @@ Addthis plugin goes here
         if (document.all && !window.atob) {
             return;
         }
-        downloadJS("js/gulp_script.min.uglify.js?rnd=423", function () {
+        downloadJS("js/gulp_script.min.uglify.js?rnd=102", function () {
             onPageReady();
         });
     }
@@ -479,12 +479,8 @@ Addthis plugin goes here
         if (typeof (screen_change_default) == "function") {
             screen_change_default();
         }
-        if (typeof (screen_change_cookie) == "function") {
-            screen_change_cookie();
-        }
     }
 </script>
-<!-- cookie markup-->
 <!-- offline service worker code -->
 <script>
     //scope path will be '/' OR '/base-template/'
@@ -509,7 +505,6 @@ Addthis plugin goes here
                 console.error(error);
             });
         navigator.serviceWorker.ready.then(function(registration) {
-            console.log('Service Worker Ready. Scope is ' + registration.scope);
         });
     }
 </script>

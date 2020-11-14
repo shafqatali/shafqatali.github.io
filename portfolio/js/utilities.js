@@ -538,14 +538,12 @@ function getCurrentIndex(listSelector, currentItem, key, recursive) {
     //console.log('recursive: '+ recursive);
     if (recursive && ($(currentItem).parent().is(':first-child') || $(currentItem).parent().is(':last-child'))) {
         if ($(currentItem).parent().is(':first-child') && (key === "left" || key === "up")) {
-            console.log('moving to last item');
             //selector ul>li>a so the it will find in ul
             $(currentItem).parent().parent().find('li:last-of-type > a:last-of-type').focus();
             return;
         }
 
         if ($(currentItem).parent().is(':last-child') && (key === "right" || key === "down")) {
-            console.log('moving to first item');
             //selector ul>li>a so the it will find in ul
             $(currentItem).parent().parent().find('li:first-of-type > a:first-of-type').focus();
             return;
@@ -612,7 +610,6 @@ $("ul[role='menu'] li a").keydown(function (e) {
 function handle_keys_sample() {
     $("#selector").keydown(function (e) {
         e = e || window.event;
-        console.log(e.keyCode);
         switch (e.keyCode) {
             case 9://tab key
                 break;

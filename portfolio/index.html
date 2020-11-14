@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino - Pattern Library</title>
-    <link rel="preload" href="https://use.typekit.net/htc1ift.css">
+    <link rel="stylesheet" href="https://use.typekit.net/htc1ift.css">
     <!--It's temporary CSS only for presentation of HTML page. It should be excluded from actual project Kentico/CMS -->
     <!--If you want to remove any page then add this "presentation: 'yes'" to your page  between liquid tags -->
-    <link href="css/patterns.css?rnd=716" rel="stylesheet"/>
+    <link href="css/patterns.css?rnd=863" rel="stylesheet"/>
     <!--gulped styles-->
-    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=716">
+    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=863">
     <!--gulped styles end-->
     <script>
         var $buoop = {
@@ -41,7 +41,7 @@
     </script>
 </head>
 <body>
-<a href="#wrapper" class="sr-only sr-only-focusable skip-content">Skip to Content</a>
+<a href="#main-content" class="sr-only sr-only-focusable skip-content">Skip to Content</a>
 <noscript>
     <div id="browser-warning" class="no-print user-warning">
         <div class="container">
@@ -258,6 +258,7 @@
                         <li class="parent"><a href="global-template.html">Global template</a></li>
                         <li class="parent"><a href="standard-template.html">Standard template</a></li>
                         <li class="parent"><a href="media-template.html">Media template</a></li>
+                        <li class="parent"><a href="server-error.html">Server Error</a></li>
                     </ul>
                     <ul style="margin-top: 30px;" class="nav nav-stacked">
                         <li class="parent"><a style="color: #000;"><b>Pages</b></a></li>
@@ -1241,20 +1242,6 @@
     <label>Label <span class="optional">(Optional)</span></label>
 </div>
                     </li>
-                    <li id="p-calendar-control-01-atoms" class="ds-group">
-                        <h4 class="ds-sub-title ds-code-title">
-                            Calendar Control
-                            <span class="ds-view-code">View code <i class="glyphicon glyphicon-circle-arrow-right"></i></span>
-                        </h4>
-                        <div class="ds-the-code">
-                            <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container no-gutters ds-elements"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"date form-control"</span> <span class="na">id=</span><span class="s">"datePicker"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"dd/MM/yyyy"</span> <span class="na">title=</span><span class="s">"format: dd/MM/y"</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-                        </div>
-                        <div class="container no-gutters ds-elements">
-    <input class="date form-control" id="datePicker" type="text" placeholder="dd/MM/yyyy" title="format: dd/MM/y"/>
-</div>
-                    </li>
                     <li id="p-styled-select-01-atoms" class="ds-group">
                         <h4 class="ds-sub-title ds-code-title">
                             Styled Select
@@ -1942,7 +1929,7 @@
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -1954,7 +1941,7 @@
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
         </div>
     </div>
@@ -1972,7 +1959,7 @@
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card dark"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -1984,7 +1971,7 @@
 <a href="#/" class="spotlight-card dark">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
         </div>
     </div>
@@ -3252,10 +3239,10 @@
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group search-box person-search autocomplete"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch180"</span> <span class="na">data-list=</span><span class="s">"titles"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Type a Name or Service"</span> <span class="na">aria-label=</span><span class="s">"Type a Name or Service"</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch514"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch254"</span> <span class="na">data-list=</span><span class="s">"titles"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Type a Name or Service"</span> <span class="na">aria-label=</span><span class="s">"Type a Name or Service"</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch706"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch514"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch706"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -3314,10 +3301,10 @@
         <div class="row">
             <div class="col-sm-6">
 <div class="input-group search-box person-search autocomplete">
-    <input id="txtSearch180" data-list="titles" type="text" class="form-control" value="" placeholder="Type a Name or Service" aria-label="Type a Name or Service" aria-describedby="btnSearch514">
+    <input id="txtSearch254" data-list="titles" type="text" class="form-control" value="" placeholder="Type a Name or Service" aria-label="Type a Name or Service" aria-describedby="btnSearch706">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch514">Search</button>
+                <button type="button" class="button" id="btnSearch706">Search</button>
             </span>
     </div>
 </div>
@@ -3381,10 +3368,10 @@
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group search-box  "</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch626"</span>  <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Begin your search..."</span> <span class="na">aria-label=</span><span class="s">"Begin your search..."</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch255"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch92"</span>  <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Begin your search..."</span> <span class="na">aria-label=</span><span class="s">"Begin your search..."</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch351"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch255"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch351"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -3398,10 +3385,10 @@
         <div class="row">
             <div class="col-sm-4">
 <div class="input-group search-box  ">
-    <input id="txtSearch626"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch255">
+    <input id="txtSearch92"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch351">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch255">Search</button>
+                <button type="button" class="button" id="btnSearch351">Search</button>
             </span>
     </div>
 </div>
@@ -3421,10 +3408,10 @@
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group search-box news-search "</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch45"</span>  <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Search news"</span> <span class="na">aria-label=</span><span class="s">"Search news"</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch410"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch434"</span>  <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Search news"</span> <span class="na">aria-label=</span><span class="s">"Search news"</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch801"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch410"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch801"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -3438,10 +3425,10 @@
         <div class="row">
             <div class="col-sm-4">
 <div class="input-group search-box news-search ">
-    <input id="txtSearch45"  type="text" class="form-control" value="" placeholder="Search news" aria-label="Search news" aria-describedby="btnSearch410">
+    <input id="txtSearch434"  type="text" class="form-control" value="" placeholder="Search news" aria-label="Search news" aria-describedby="btnSearch801">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch410">Search</button>
+                <button type="button" class="button" id="btnSearch801">Search</button>
             </span>
     </div>
 </div>
@@ -3461,10 +3448,10 @@
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group search-box person-search "</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch69"</span>  <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Search by name"</span> <span class="na">aria-label=</span><span class="s">"Search by name"</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch91"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch103"</span>  <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Search by name"</span> <span class="na">aria-label=</span><span class="s">"Search by name"</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch882"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch91"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch882"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -3478,10 +3465,10 @@
         <div class="row">
             <div class="col-sm-6">
 <div class="input-group search-box person-search ">
-    <input id="txtSearch69"  type="text" class="form-control" value="" placeholder="Search by name" aria-label="Search by name" aria-describedby="btnSearch91">
+    <input id="txtSearch103"  type="text" class="form-control" value="" placeholder="Search by name" aria-label="Search by name" aria-describedby="btnSearch882">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch91">Search</button>
+                <button type="button" class="button" id="btnSearch882">Search</button>
             </span>
     </div>
 </div>
@@ -3759,10 +3746,10 @@
                         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search-menu mobile-search-box"</span><span class="nt">&gt;</span>
                             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"search-wrapper collapsed"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group search-box  "</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch724"</span>  <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Begin your search..."</span> <span class="na">aria-label=</span><span class="s">"Begin your search..."</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch296"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"txtSearch809"</span>  <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">placeholder=</span><span class="s">"Begin your search..."</span> <span class="na">aria-label=</span><span class="s">"Begin your search..."</span> <span class="na">aria-describedby=</span><span class="s">"btnSearch449"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-group-text"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch296"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
+                <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"btnSearch449"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -3833,10 +3820,10 @@
                         <div class="search-menu mobile-search-box">
                             <div class="search-wrapper collapsed" aria-hidden="true">
 <div class="input-group search-box  ">
-    <input id="txtSearch724"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch296">
+    <input id="txtSearch809"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch449">
     <div class="input-group-append">
             <span class="input-group-text">
-                <button type="button" class="button" id="btnSearch296">Search</button>
+                <button type="button" class="button" id="btnSearch449">Search</button>
             </span>
     </div>
 </div>
@@ -3975,7 +3962,7 @@
                     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span><span class="nt">&gt;</span>Contact Us<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links separator"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span><span class="nt">&gt;</span>Link A<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
                     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span><span class="nt">&gt;</span>Link B<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -3986,7 +3973,7 @@
                     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span><span class="nt">&gt;</span>Link G<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
                 <span class="nt">&lt;/ul&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"social-links"</span><span class="nt">&gt;</span>
                     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.instagram.com/"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>instagram<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
                     <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>twitter<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
@@ -4087,7 +4074,7 @@
                     <li><a href="#/">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-9">
                 <ul class="footer-links separator">
                     <li><a href="#/">Link A</a></li>
                     <li><a href="#/">Link B</a></li>
@@ -4098,7 +4085,7 @@
                     <li><a href="#/">Link G</a></li>
                 </ul>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <ul class="social-links">
                     <li><a href="https://www.instagram.com/"><span class="sr-only">instagram</span></a></li>
                     <li><a href="https://twitter.com"><span class="sr-only">twitter</span></a></li>
@@ -4129,7 +4116,7 @@
                             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container no-gutters ds-elements"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"multi-item-spotlights bg-dark"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"multi-item-spotlights bg-dark widget-navy1"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"heading-box"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h2&gt;</span>Latest NEWS<span class="nt">&lt;/h2&gt;</span>
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>view all<span class="nt">&lt;/a&gt;</span>
@@ -4157,7 +4144,7 @@
                         <div class="container no-gutters ds-elements">
     <div class="row">
         <div class="col-sm-6">
-<div class="multi-item-spotlights bg-dark">
+<div class="multi-item-spotlights bg-dark widget-navy1">
     <div class="heading-box">
         <h2>Latest NEWS</h2>
         <a href="#/" class="btn btn-primary">view all</a>
@@ -4191,7 +4178,7 @@
                             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container no-gutters ds-elements"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"carousel19"</span> <span class="na">class=</span><span class="s">"multi-item-spotlights-horizontal carousel slide"</span> <span class="na">data-ride=</span><span class="s">"carousel"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"carousel68"</span> <span class="na">class=</span><span class="s">"multi-item-spotlights-horizontal carousel slide"</span> <span class="na">data-ride=</span><span class="s">"carousel"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-inner"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carousel-item active"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;img</span> <span class="na">data-src=</span><span class="s">"images/spotlight.jpg"</span> <span class="na">src=</span><span class="s">"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"</span> <span class="na">class=</span><span class="s">"lazyload"</span> <span class="na">alt=</span><span class="s">"image 1"</span><span class="nt">&gt;</span>
@@ -4228,16 +4215,16 @@
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"carousel-indicators"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active "</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">data-target=</span><span class="s">"#carousel19"</span> <span class="na">data-slide-to=</span><span class="s">"0"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">data-target=</span><span class="s">"#carousel68"</span> <span class="na">data-slide-to=</span><span class="s">"0"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">data-target=</span><span class="s">"#carousel19"</span> <span class="na">data-slide-to=</span><span class="s">"1"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">data-target=</span><span class="s">"#carousel68"</span> <span class="na">data-slide-to=</span><span class="s">"1"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">data-target=</span><span class="s">"#carousel19"</span> <span class="na">data-slide-to=</span><span class="s">"2"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Slide 3<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">data-target=</span><span class="s">"#carousel68"</span> <span class="na">data-slide-to=</span><span class="s">"2"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Slide 3<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">data-target=</span><span class="s">"#carousel19"</span> <span class="na">data-slide-to=</span><span class="s">"3"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Slide 4<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">data-target=</span><span class="s">"#carousel68"</span> <span class="na">data-slide-to=</span><span class="s">"3"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Slide 4<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
     <span class="nt">&lt;/ol&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -4248,7 +4235,7 @@
                         <div class="container no-gutters ds-elements">
     <div class="row">
         <div class="col-sm-6">
-<div id="carousel19" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
+<div id="carousel68" class="multi-item-spotlights-horizontal carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img data-src="images/spotlight.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload" alt="image 1">
@@ -4285,16 +4272,16 @@
     </div>
     <ol class="carousel-indicators">
         <li class="active ">
-            <button data-target="#carousel19" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
+            <button data-target="#carousel68" data-slide-to="0" tabindex="0"><span class="sr-only">Slide 1</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel19" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
+            <button data-target="#carousel68" data-slide-to="1" tabindex="0"><span class="sr-only">Slide 2</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel19" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
+            <button data-target="#carousel68" data-slide-to="2" tabindex="0"><span class="sr-only">Slide 3</span></button>
         </li>
         <li class="">
-            <button data-target="#carousel19" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
+            <button data-target="#carousel68" data-slide-to="3" tabindex="0"><span class="sr-only">Slide 4</span></button>
         </li>
     </ol>
 </div>
@@ -4311,15 +4298,15 @@
                             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container no-gutters ds-elements"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-3 related-items"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlighted-text "</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlighted-text black"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>COVID-19 Updates<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlighted-text "</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlighted-text black"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Nunc ultricies scelerisque nisl, eget blandit<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlighted-text "</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"highlighted-text black"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -4330,15 +4317,15 @@
                         <div class="container no-gutters ds-elements">
     <div class="row">
         <div class="col-sm-3 related-items">
-<div class="highlighted-text ">
+<div class="highlighted-text black">
     <span class="date">06/04/2020</span>
     <a href="#/" class="text">COVID-19 Updates</a>
 </div>
-<div class="highlighted-text ">
+<div class="highlighted-text black">
     <span class="date">06/04/2020</span>
     <a href="#/" class="text">Nunc ultricies scelerisque nisl, eget blandit</a>
 </div>
-<div class="highlighted-text ">
+<div class="highlighted-text black">
     <span class="date">06/04/2020</span>
     <a href="#/" class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</a>
 </div>
@@ -5142,14 +5129,14 @@
                             <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container no-gutters ds-elements"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion"</span> <span class="na">id=</span><span class="s">"accordion286"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"accordion"</span> <span class="na">id=</span><span class="s">"accordion702"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span> <span class="na">id=</span><span class="s">"heading286_item_1"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"card-link "</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse286_item_1"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse286_item_1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span> <span class="na">id=</span><span class="s">"heading702_item_1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"card-link "</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse702_item_1"</span> <span class="na">aria-expanded=</span><span class="s">"true"</span> <span class="na">aria-controls=</span><span class="s">"collapse702_item_1"</span><span class="nt">&gt;</span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit?
             <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse286_item_1"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">aria-labelledby=</span><span class="s">"heading286_item_1"</span> <span class="na">data-parent=</span><span class="s">"#accordion286"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse702_item_1"</span> <span class="na">class=</span><span class="s">"collapse show"</span> <span class="na">aria-labelledby=</span><span class="s">"heading702_item_1"</span> <span class="na">data-parent=</span><span class="s">"#accordion702"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;h2&gt;</span>Lorem ipsum H2<span class="nt">&lt;/h2&gt;</span>
                 <span class="nt">&lt;p&gt;</span>Malesuada nua fusce nec tellus convallis, malesuada aliquam ex nec.<span class="nt">&lt;/p&gt;</span>
@@ -5169,12 +5156,12 @@
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span> <span class="na">id=</span><span class="s">"heading286_item_2"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"card-link collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse286_item_2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse286_item_2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span> <span class="na">id=</span><span class="s">"heading702_item_2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"card-link collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse702_item_2"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse702_item_2"</span><span class="nt">&gt;</span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit?
             <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse286_item_2"</span> <span class="na">class=</span><span class="s">"collapse "</span> <span class="na">aria-labelledby=</span><span class="s">"heading286_item_2"</span> <span class="na">data-parent=</span><span class="s">"#accordion286"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse702_item_2"</span> <span class="na">class=</span><span class="s">"collapse "</span> <span class="na">aria-labelledby=</span><span class="s">"heading702_item_2"</span> <span class="na">data-parent=</span><span class="s">"#accordion702"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;h2&gt;</span>Lorem ipsum H2<span class="nt">&lt;/h2&gt;</span>
                 <span class="nt">&lt;p&gt;</span>Duis viverra vitae dolor eu interdum. Etiam nec finibus quam, luctus gravida est. Pellentesque non odio at turpis porta blandit nec interdum massa. Mauris sed lacus volutpat, venenatis magna sit amet, vehicula orci. Aliquam eget nibh aliquet velit accumsan tristique in a ante. Aliquam mauris enim, varius ac dapibus rhoncus, bibendum id metus. In leo erat, maximus eget condimentum quis, consequat at ante. Vivamus id velit augue. Mauris vel sem euismod, finibus quam eu, pulvinar sapien. Praesent sem nulla, eleifend in felis sit amet, consequat suscipit purus.<span class="nt">&lt;/p&gt;</span>
@@ -5182,12 +5169,12 @@
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span> <span class="na">id=</span><span class="s">"heading286_item_3"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"card-link collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse286_item_3"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse286_item_3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-header"</span> <span class="na">id=</span><span class="s">"heading702_item_3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"card-link collapsed"</span> <span class="na">data-toggle=</span><span class="s">"collapse"</span> <span class="na">data-target=</span><span class="s">"#collapse702_item_3"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span> <span class="na">aria-controls=</span><span class="s">"collapse702_item_3"</span><span class="nt">&gt;</span>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit?
             <span class="nt">&lt;/a&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse286_item_3"</span> <span class="na">class=</span><span class="s">"collapse "</span> <span class="na">aria-labelledby=</span><span class="s">"heading286_item_3"</span> <span class="na">data-parent=</span><span class="s">"#accordion286"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"collapse702_item_3"</span> <span class="na">class=</span><span class="s">"collapse "</span> <span class="na">aria-labelledby=</span><span class="s">"heading702_item_3"</span> <span class="na">data-parent=</span><span class="s">"#accordion702"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card-body"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;h2&gt;</span>Lorem ipsum H2<span class="nt">&lt;/h2&gt;</span>
                 <span class="nt">&lt;p&gt;</span>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.<span class="nt">&lt;/p&gt;</span>
@@ -5202,14 +5189,14 @@
                         <div class="container no-gutters ds-elements">
     <div class="row">
         <div class="col-sm-8">
-<div class="accordion" id="accordion286">
+<div class="accordion" id="accordion702">
     <div class="card">
-        <div class="card-header" id="heading286_item_1">
-            <a href="#" class="card-link " data-toggle="collapse" data-target="#collapse286_item_1" aria-expanded="true" aria-controls="collapse286_item_1">
+        <div class="card-header" id="heading702_item_1">
+            <a href="#" class="card-link " data-toggle="collapse" data-target="#collapse702_item_1" aria-expanded="true" aria-controls="collapse702_item_1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit?
             </a>
         </div>
-        <div id="collapse286_item_1" class="collapse show" aria-labelledby="heading286_item_1" data-parent="#accordion286">
+        <div id="collapse702_item_1" class="collapse show" aria-labelledby="heading702_item_1" data-parent="#accordion702">
             <div class="card-body">
                 <h2>Lorem ipsum H2</h2>
                 <p>Malesuada nua fusce nec tellus convallis, malesuada aliquam ex nec.</p>
@@ -5229,12 +5216,12 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-header" id="heading286_item_2">
-            <a href="#" class="card-link collapsed" data-toggle="collapse" data-target="#collapse286_item_2" aria-expanded="false" aria-controls="collapse286_item_2">
+        <div class="card-header" id="heading702_item_2">
+            <a href="#" class="card-link collapsed" data-toggle="collapse" data-target="#collapse702_item_2" aria-expanded="false" aria-controls="collapse702_item_2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit?
             </a>
         </div>
-        <div id="collapse286_item_2" class="collapse " aria-labelledby="heading286_item_2" data-parent="#accordion286">
+        <div id="collapse702_item_2" class="collapse " aria-labelledby="heading702_item_2" data-parent="#accordion702">
             <div class="card-body">
                 <h2>Lorem ipsum H2</h2>
                 <p>Duis viverra vitae dolor eu interdum. Etiam nec finibus quam, luctus gravida est. Pellentesque non odio at turpis porta blandit nec interdum massa. Mauris sed lacus volutpat, venenatis magna sit amet, vehicula orci. Aliquam eget nibh aliquet velit accumsan tristique in a ante. Aliquam mauris enim, varius ac dapibus rhoncus, bibendum id metus. In leo erat, maximus eget condimentum quis, consequat at ante. Vivamus id velit augue. Mauris vel sem euismod, finibus quam eu, pulvinar sapien. Praesent sem nulla, eleifend in felis sit amet, consequat suscipit purus.</p>
@@ -5242,12 +5229,12 @@
         </div>
     </div>
     <div class="card">
-        <div class="card-header" id="heading286_item_3">
-            <a href="#" class="card-link collapsed" data-toggle="collapse" data-target="#collapse286_item_3" aria-expanded="false" aria-controls="collapse286_item_3">
+        <div class="card-header" id="heading702_item_3">
+            <a href="#" class="card-link collapsed" data-toggle="collapse" data-target="#collapse702_item_3" aria-expanded="false" aria-controls="collapse702_item_3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit?
             </a>
         </div>
-        <div id="collapse286_item_3" class="collapse " aria-labelledby="heading286_item_3" data-parent="#accordion286">
+        <div id="collapse702_item_3" class="collapse " aria-labelledby="heading702_item_3" data-parent="#accordion702">
             <div class="card-body">
                 <h2>Lorem ipsum H2</h2>
                 <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
@@ -5374,63 +5361,63 @@
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Nunc ultricies scelerisque nis<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Nunc ultricies scelerisque nis B<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda C<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Nunc ultricies scelerisque nis D<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda E<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Nunc ultricies scelerisque nis F<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda G<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"item"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card "</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Nunc ultricies scelerisque nis H<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -5459,63 +5446,63 @@
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Nunc ultricies scelerisque nis</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
     <div class="item">
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
     <div class="item">
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Nunc ultricies scelerisque nis B</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
     <div class="item">
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda C</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
     <div class="item">
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Nunc ultricies scelerisque nis D</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
     <div class="item">
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda E</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
     <div class="item">
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Nunc ultricies scelerisque nis F</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
     <div class="item">
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda G</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
     <div class="item">
 <a href="#/" class="spotlight-card ">
     <span class="date">06/04/2020</span>
     <h4 class="text">Nunc ultricies scelerisque nis H</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
     </div>
 </div>
@@ -5545,28 +5532,28 @@
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card dark"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
                 <span class="nt">&lt;/div&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card dark"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
                 <span class="nt">&lt;/div&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card dark"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>09/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Fusce nec tellus convallis, aliquam ex nec, malesuada nua. <span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
                 <span class="nt">&lt;/div&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#/"</span> <span class="na">class=</span><span class="s">"spotlight-card dark"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"date"</span><span class="nt">&gt;</span>06/04/2020<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda<span class="nt">&lt;/h4&gt;</span>
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"chevron svg-chisel"</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
                 <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
@@ -5587,28 +5574,28 @@
 <a href="#/" class="spotlight-card dark">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
                 </div>
                 <div class="col-sm-3">
 <a href="#/" class="spotlight-card dark">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
                 </div>
                 <div class="col-sm-3">
 <a href="#/" class="spotlight-card dark">
     <span class="date">09/04/2020</span>
     <h4 class="text">Fusce nec tellus convallis, aliquam ex nec, malesuada nua. </h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
                 </div>
                 <div class="col-sm-3">
 <a href="#/" class="spotlight-card dark">
     <span class="date">06/04/2020</span>
     <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
-    <span class="icon svg-chisel"></span>
+    <span class="chevron svg-chisel"></span>
 </a>
                 </div>
             </div>
@@ -5803,42 +5790,42 @@
 <span class="nt">&lt;fieldset</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>
     <span class="nt">&lt;legend&gt;</span>Form Product<span class="nt">&lt;/legend&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_827_full_name"</span><span class="nt">&gt;</span>Full Name<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"field_827_full_name"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_827_full_name"</span> <span class="na">required</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_827_full_name"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_64_full_name"</span><span class="nt">&gt;</span>Full Name<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"field_64_full_name"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_64_full_name"</span> <span class="na">required</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_64_full_name"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_827_company"</span><span class="nt">&gt;</span>Company<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"field_827_company"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_827_company"</span> <span class="na">required</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_827_company"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_64_company"</span><span class="nt">&gt;</span>Company<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"field_64_company"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_64_company"</span> <span class="na">required</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_64_company"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_827_country"</span><span class="nt">&gt;</span>Country<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_64_country"</span><span class="nt">&gt;</span>Country<span class="nt">&lt;/label&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"styled-select-dropdown"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"field_827_country"</span> <span class="na">aria-describedby=</span><span class="s">"validate_827_country"</span> <span class="na">required</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"field_64_country"</span> <span class="na">aria-describedby=</span><span class="s">"validate_64_country"</span> <span class="na">required</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>Select<span class="nt">&lt;/option&gt;</span>
                 <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"1"</span><span class="nt">&gt;</span>Option One<span class="nt">&lt;/option&gt;</span>
                 <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"2"</span><span class="nt">&gt;</span>Option Two<span class="nt">&lt;/option&gt;</span>
                 <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"3"</span><span class="nt">&gt;</span>Option Three<span class="nt">&lt;/option&gt;</span>
                 <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"4"</span><span class="nt">&gt;</span>Option Four<span class="nt">&lt;/option&gt;</span>
             <span class="nt">&lt;/select&gt;</span>
-            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_827_country"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_64_country"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_827_phone"</span><span class="nt">&gt;</span>Phone<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"field_827_phone"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_827_phone"</span> <span class="na">required</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_827_phone"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_64_phone"</span><span class="nt">&gt;</span>Phone<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"field_64_phone"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_64_phone"</span> <span class="na">required</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_64_phone"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_827_email"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"field_827_email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_827_email"</span> <span class="na">required</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_827_email"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_64_email"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"field_64_email"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_64_email"</span> <span class="na">required</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_64_email"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_827_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e"</span><span class="nt">&gt;</span>Label <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"optional"</span><span class="nt">&gt;</span>(Optional)<span class="nt">&lt;/span&gt;&lt;/label&gt;</span>
-        <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"field_827_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">rows=</span><span class="s">"4"</span> <span class="na">cols=</span><span class="s">"48"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_827_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e"</span> <span class="na">required</span><span class="nt">&gt;&lt;/textarea&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_827_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"field_64_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e"</span><span class="nt">&gt;</span>Label <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"optional"</span><span class="nt">&gt;</span>(Optional)<span class="nt">&lt;/span&gt;&lt;/label&gt;</span>
+        <span class="nt">&lt;textarea</span> <span class="na">id=</span><span class="s">"field_64_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">rows=</span><span class="s">"4"</span> <span class="na">cols=</span><span class="s">"48"</span> <span class="na">placeholder=</span><span class="s">"Type here"</span> <span class="na">aria-describedby=</span><span class="s">"validate_64_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e"</span> <span class="na">required</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"invalid-feedback"</span> <span class="na">id=</span><span class="s">"validate_64_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e"</span><span class="nt">&gt;</span>This is a validation message<span class="nt">&lt;/span&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>submit<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/fieldset&gt;</span>
@@ -5880,42 +5867,42 @@
 <fieldset class="">
     <legend>Form Product</legend>
     <div class="form-group">
-        <label for="field_827_full_name">Full Name</label>
-        <input id="field_827_full_name" class="form-control" type="text" placeholder="Type here" aria-describedby="validate_827_full_name" required>
-        <span class="invalid-feedback" id="validate_827_full_name">This is a validation message</span>
+        <label for="field_64_full_name">Full Name</label>
+        <input id="field_64_full_name" class="form-control" type="text" placeholder="Type here" aria-describedby="validate_64_full_name" required>
+        <span class="invalid-feedback" id="validate_64_full_name">This is a validation message</span>
     </div>
     <div class="form-group">
-        <label for="field_827_company">Company</label>
-        <input id="field_827_company" class="form-control" type="text" placeholder="Type here" aria-describedby="validate_827_company" required>
-        <span class="invalid-feedback" id="validate_827_company">This is a validation message</span>
+        <label for="field_64_company">Company</label>
+        <input id="field_64_company" class="form-control" type="text" placeholder="Type here" aria-describedby="validate_64_company" required>
+        <span class="invalid-feedback" id="validate_64_company">This is a validation message</span>
     </div>
     <div class="form-group">
-        <label for="field_827_country">Country</label>
+        <label for="field_64_country">Country</label>
         <div class="styled-select-dropdown">
-            <select id="field_827_country" aria-describedby="validate_827_country" required>
+            <select id="field_64_country" aria-describedby="validate_64_country" required>
                 <option value="">Select</option>
                 <option value="1">Option One</option>
                 <option value="2">Option Two</option>
                 <option value="3">Option Three</option>
                 <option value="4">Option Four</option>
             </select>
-            <span class="invalid-feedback" id="validate_827_country">This is a validation message</span>
+            <span class="invalid-feedback" id="validate_64_country">This is a validation message</span>
         </div>
     </div>
     <div class="form-group">
-        <label for="field_827_phone">Phone</label>
-        <input id="field_827_phone" class="form-control" type="tel" placeholder="Type here" aria-describedby="validate_827_phone" required>
-        <span class="invalid-feedback" id="validate_827_phone">This is a validation message</span>
+        <label for="field_64_phone">Phone</label>
+        <input id="field_64_phone" class="form-control" type="tel" placeholder="Type here" aria-describedby="validate_64_phone" required>
+        <span class="invalid-feedback" id="validate_64_phone">This is a validation message</span>
     </div>
     <div class="form-group">
-        <label for="field_827_email">Email</label>
-        <input id="field_827_email" class="form-control" type="email" placeholder="Type here" aria-describedby="validate_827_email" required>
-        <span class="invalid-feedback" id="validate_827_email">This is a validation message</span>
+        <label for="field_64_email">Email</label>
+        <input id="field_64_email" class="form-control" type="email" placeholder="Type here" aria-describedby="validate_64_email" required>
+        <span class="invalid-feedback" id="validate_64_email">This is a validation message</span>
     </div>
     <div class="form-group">
-        <label for="field_827_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e">Label <span class="optional">(Optional)</span></label>
-        <textarea id="field_827_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e" class="form-control" rows="4" cols="48" placeholder="Type here" aria-describedby="validate_827_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e" required></textarea>
-        <span class="invalid-feedback" id="validate_827_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e">This is a validation message</span>
+        <label for="field_64_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e">Label <span class="optional">(Optional)</span></label>
+        <textarea id="field_64_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e" class="form-control" rows="4" cols="48" placeholder="Type here" aria-describedby="validate_64_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e" required></textarea>
+        <span class="invalid-feedback" id="validate_64_label_%3cspan_class%3d%22optional%22%3e%28optional%29%3c%2fspan%3e">This is a validation message</span>
     </div>
     <button type="submit" class="btn btn-primary">submit</button>
 </fieldset>
@@ -6176,7 +6163,19 @@
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 media-box"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"animation-box"</span><span class="nt">&gt;</span>
-                    <span class="c">&lt;!-- build:scripto --&gt;</span>
+<span class="nt">&lt;style&gt;</span>
+    <span class="nf">#lottie</span><span class="p">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="m">#E60000</span><span class="p">;</span>
+        <span class="nl">width</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+        <span class="nl">height</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+        <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+        <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+        <span class="nl">transform</span><span class="p">:</span> <span class="n">translate3d</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">);</span>
+        <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="nl">opacity</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="c">&lt;!-- build:scripto --&gt;</span>
 <span class="nt">&lt;script&gt;</span>
     <span class="p">(</span><span class="k">typeof</span> <span class="nb">navigator</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">undefined</span><span class="dl">"</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">factory</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">define</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">function</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">define</span><span class="p">.</span><span class="nx">amd</span><span class="p">)</span> <span class="p">{</span>
@@ -6230,7 +6229,19 @@
             </div>
             <div class="col-sm-8 media-box">
                 <div class="animation-box">
-                    <!-- build:scripto -->
+<style>
+    #lottie{
+        background-color: #E60000;
+        width:100%;
+        height:100%;
+        display:block;
+        overflow: hidden;
+        transform: translate3d(0,0,0);
+        text-align: center;
+        opacity: 1;
+    }
+</style>
+<!-- build:scripto -->
 <script>
     (typeof navigator !== "undefined") && (function(root, factory) {
         if (typeof define === "function" && define.amd) {
@@ -6744,7 +6755,7 @@
         if (document.all && !window.atob) {
             return;
         }
-        downloadJS("js/gulp_script.min.uglify.js?rnd=716", function () {
+        downloadJS("js/gulp_script.min.uglify.js?rnd=863", function () {
             onPageReady();
         });
     }
@@ -6825,12 +6836,8 @@
         if (typeof (screen_change_default) == "function") {
             screen_change_default();
         }
-        if (typeof (screen_change_cookie) == "function") {
-            screen_change_cookie();
-        }
     }
 </script>
-<!-- cookie markup-->
 <!-- offline service worker code -->
 <script>
     //scope path will be '/' OR '/base-template/'
@@ -6855,7 +6862,6 @@
                 console.error(error);
             });
         navigator.serviceWorker.ready.then(function(registration) {
-            console.log('Service Worker Ready. Scope is ' + registration.scope);
         });
     }
 </script>

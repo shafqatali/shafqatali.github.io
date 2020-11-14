@@ -28,7 +28,7 @@ function call_api(count, skip) {
 
     let api_url = "js/news-records.json?" + params;
 
-    console.log(api_url);
+    
     fetch(api_url)
         .then(response => response.json())
         .then(data => bind_api_data(data))

@@ -24,7 +24,13 @@ function page_ready_default() {
             let targetId = this.getAttribute("href").replace("#", "");
             scrollToElement(targetId);
             return false;
-        }
+        };
+        skipContentLink.onkeydown = function(e){
+            if (e.keyCode === 32) {
+                e.preventDefault();
+                skipContentLink.click();
+            }
+        };
     }
     populateAccordions();
     updateStandardContent('.standard-content', '16by9', 'table-striped');
@@ -98,7 +104,7 @@ function updateStandardContent(hook, videoclass, tableclass) {
 
         const nestedItems = document.querySelectorAll(`${hook} ol:not(.pagination), ${hook} ul:not(.pagination)`).length;
         for (var z = 0; z < nestedItems; z++) {
-            let listItems = Array.from(document.querySelectorAll(`${hook} ol:not(.pagination):not(.wrapped) > li, ${hook} ul:not(.pagination):not(.wrapped) > li`));
+            let listItems = Array.from(document.querySelectorAll(`${hook} ol:not(.pagination):not(.wrapped) > li, ${hook} ul:not(.service-team):not(.pagination):not(.wrapped) > li`));
             if (listItems) {
                 listItems.forEach(function (li) {
                     li.innerHTML = `<span>${li.innerHTML}</span>`;
@@ -169,7 +175,6 @@ function populateAccordionsAlternative() {
         accords.forEach(function (t, index) {
             let startTag = '<a class="card-link" href="#" data-toggle="collapse" data-target="#collapse' + index + '" aria-expanded="false" aria-controls="collapse' + index + '">';
             let bodyTag = '<div id="collapse' + index + '" class="collapse" aria-labelledby="heading' + index + '" data-parent="#accordion' + index + '">';
-            console.log(t.innerHTML);
             let innerHtml = t.innerHTML.replace("<!--card-link-start-->", startTag);
             innerHtml = innerHtml.replace("<!--card-link-end-->", "</a>");
             innerHtml = innerHtml.replace("<!--card-body-start-->", bodyTag);

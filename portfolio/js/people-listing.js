@@ -11,8 +11,8 @@ let roles = [
     {"Id": "4", "Title": "Partner", "Visible": "true"},
     {"Id": "8", "Title": "Tax Principal", "Visible": "true"},
     {"Id": "16", "Title": "Of Counsel", "Visible": "true"},
-    {"Id": "32", "Title": "Associate", "Visible": "true"},
-    {"Id": "64", "Title": "PSL", "Visible": "true"},
+    {"Id": "32", "Title": "Associate", "Visible": "false"},
+    {"Id": "64", "Title": "PSL", "Visible": "false"},
     {"Id": "128", "Title": "Other Professionals", "Visible": "true"}
 ];
 
@@ -20,7 +20,7 @@ function call_api() {
     let guid = peopleParentID;
     let api_url = "js/people-records.json";
 
-    console.log(api_url);
+
     fetch(api_url)
         .then(response => response.json())
         .then(data => bind_api_data(data))
@@ -56,7 +56,7 @@ function bindList(items, count) {
     peopleTitles = items.map( o=> o.Title);
     let listMarkup = items.map(o => `<div class="col-sm-4 ${getClassForFirst(o.PersonRole)}">
         <div class="people-list-card">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="${o.Title}">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload" alt="${o.Title}">
             <div class="info-box">
                 <div class="highlighted-box">
                     <a href="${o.ViewUrl}" class="title">${o.Title}</a>
