@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino DS - Menu Page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-    <!--gulped styles-->
-    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=403">
-    <!--gulped styles end-->
+    <!--Un-gulped styles-->
+    <link href="css/all.css?rnd=889" rel="stylesheet"/>
+    <!--Un-gulped styles end-->
     <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicons/apple-touch-icon-152x152.png">
     <script>
@@ -493,7 +493,7 @@
 <!-- JS References block-->
 <!--we can write function name(s) that would  be called after loading all js files-->
 <script>
-    const isGulped = true;
+    const isGulped = false;
     // Add a script element as a child of the body
     function initJS() {
         'use strict';
@@ -502,8 +502,13 @@
         if (document.all && !window.atob) {
             return;
         }
-        downloadJS("js/gulp_script.min.uglify.js?rnd=403", function () {
-            onPageReady();
+        downloadJS("js/libman/jquery.min.js", function () {
+            let jqTimer = setInterval(function () {
+                if (window.jQuery) {
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=889", function () {downloadJS("js/libman/picturefill.min.js?rnd=889", function () {downloadJS("js/utilities.parsed.js?rnd=889", function () {downloadJS("js/cookie.parsed.js?rnd=889", function () {downloadJS("js/main.parsed.js?rnd=889", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=889", function () {downloadJS("js/card-carousel/plugin.parsed.js?rnd=889", function () {downloadJS("js/embedded-spotlight/plugin.parsed.js?rnd=889", function () {downloadJS("js/megamenu-multi-level/plugin.parsed.js?rnd=889", function () {onPageReady();});});});});});});});});});
+                    clearInterval(jqTimer);
+                }
+            }, 50);
         });
     }
 </script>

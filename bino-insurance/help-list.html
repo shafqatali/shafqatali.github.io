@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1">
     <title>Bino DS - Help List</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-    <!--gulped styles-->
-    <link rel="stylesheet" href="css/gulp_default.min.css?rnd=87">
-    <!--gulped styles end-->
+    <!--Un-gulped styles-->
+    <link href="css/all.css?rnd=338" rel="stylesheet"/>
+    <!--Un-gulped styles end-->
     <link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicons/apple-touch-icon-152x152.png">
     <script>
@@ -406,9 +406,9 @@
         <p class="lead">Lorem eiusmod id labore et in cillum proident officia laboris nulla qui ad eu pariatur ut veniam commodo voluptate veniam sed et cupidatat consectetur.</p>
 <div class="input-group search-box">
     <input type="text" class="form-control" placeholder="How can we help?" aria-label="How can we help?"
-           aria-describedby="search-label-855">
+           aria-describedby="search-label-234">
     <div class="input-group-append">
-        <button class="btn-search" type="submit" id="search-label-855"><span class="sr-only">Search Button</span></button>
+        <button class="btn-search" type="submit" id="search-label-234"><span class="sr-only">Search Button</span></button>
     </div>
 </div>
     </div>
@@ -435,10 +435,10 @@
     <h4 class="title">Travel Insurance so You Can Get on with Your Holiday</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non mi non lorem efficitur lacinia. Praesent et arcu sagittis velit blandit posuere. Quisque porta. diam quis dignssim iaculis. Quisque nisl ex, aliquam non rutrum maximus, condimentum in leo. Proin pulvinar ipsum rutrum maximus, condimentum in leo. Proin pulvinar ipsum</p>
 </div>
-        <nav role="navigation" aria-label="Pagination Navigation">
+        <nav aria-label="Pagination Navigation">
     <ol class="pagination">
         <li class="page-item disabled"><a class="page-link" href="#" aria-label="Goto Previous Page"  aria-disabled="true">Previous</a></li>
-        <li class="page-item active"><a class="page-link" href=""  aria-label="Current Page, Page 1" aria-current="true" aria-label="Goto Page 1">1</a></li>
+        <li class="page-item active"><a class="page-link" href=""  aria-label="Current Page, Page 1" aria-current="true">1</a></li>
         <li class="page-item"><a class="page-link" href="" aria-label="Goto Page 2">2</a></li>
         <li class="page-item"><a class="page-link" href="" aria-label="Goto Page 3">3</a></li>
         <li class="page-item"><a class="page-link" href="" aria-label="Goto Page 4">4</a></li>
@@ -522,7 +522,7 @@
 <!-- JS References block-->
 <!--we can write function name(s) that would  be called after loading all js files-->
 <script>
-    const isGulped = true;
+    const isGulped = false;
     // Add a script element as a child of the body
     function initJS() {
         'use strict';
@@ -531,8 +531,13 @@
         if (document.all && !window.atob) {
             return;
         }
-        downloadJS("js/gulp_script.min.uglify.js?rnd=87", function () {
-            onPageReady();
+        downloadJS("js/libman/jquery.min.js", function () {
+            let jqTimer = setInterval(function () {
+                if (window.jQuery) {
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=338", function () {downloadJS("js/libman/picturefill.min.js?rnd=338", function () {downloadJS("js/utilities.parsed.js?rnd=338", function () {downloadJS("js/cookie.parsed.js?rnd=338", function () {downloadJS("js/main.parsed.js?rnd=338", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=338", function () {downloadJS("js/card-carousel/plugin.parsed.js?rnd=338", function () {downloadJS("js/embedded-spotlight/plugin.parsed.js?rnd=338", function () {downloadJS("js/megamenu-multi-level/plugin.parsed.js?rnd=338", function () {onPageReady();});});});});});});});});});
+                    clearInterval(jqTimer);
+                }
+            }, 50);
         });
     }
 </script>
