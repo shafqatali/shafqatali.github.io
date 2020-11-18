@@ -1,5 +1,12 @@
-/* globals desktop mobile getCurrentIndex is_ie_mobile */
+/* globals desktop mobile getCurrentIndex is_ie_mobile  */
 /* exported page_ready_megamenu_multi_level screen_change_megamenu_multi_level */
+
+function closeMenu() {
+    $('.nav.navbar-nav > li.dropdown a.dropdown-toggle').attr("aria-expanded", "false").removeClass('show');
+    $('.nav.navbar-nav > li.dropdown .dropdown-menu').attr("aria-hidden", "true").removeClass('show');
+    $('.nav.navbar-nav > li.dropdown').removeClass('expanded');
+}
+
 function page_ready_megamenu_multi_level() {
     if ($('.gns_multi_level').length) {
         bindGnsEvents
@@ -7,61 +14,68 @@ function page_ready_megamenu_multi_level() {
     //get list of toplevel GNS items
 
     //GNS first level hover
-    $(".gns_multi_level .nav.navbar-nav > li.dropdown").hover(function () {
-            if (desktop) {
-                $(this).children('.dropdown-toggle').attr("aria-expanded", "true").addClass('show');
-                $(this).children('.dropdown-menu').addClass('show');
-                $(this).children('.dropdown-menu').attr("aria-hidden", "false");
-            }
-        },
-        function () {
-            if (desktop) {
-                $(this).children('.dropdown-toggle').attr("aria-expanded", "false").removeClass('show');
-                $(this).children('.dropdown-menu').removeClass('show');
-                $(this).children('.dropdown-menu').attr("aria-hidden", "true");
-            }
+    $(".gns_multi_level .nav.navbar-nav > li.dropdown > a.dropdown-toggle").hover(function () {
+        if (desktop) {
+            closeMenu();
+            $(this).attr("aria-expanded", "true");
+            $(this).parent().addClass('expanded');
+            $('.nav.navbar-nav > li.dropdown.expanded .dropdown-menu').attr("aria-hidden", "false").addClass('show');
         }
-    );
+    }, function (e) {
+        e.preventDefault();
+    });
+
+    $(".megamenu-multi-level").hover(function (e) {
+        e.preventDefault();
+    }, function (e) {
+        if (desktop) {
+            e.preventDefault();
+            closeMenu();
+        }
+    });
+
     //GNS first level
     $(".gns_multi_level .dropdown-toggle")
         .keydown(function (e) {
-        e = e || window.event;
-        switch (e.keyCode) {
-            case 9://tab key
-                break;
-            case 38://Arrow Up
-            case 27:// ESC key
-                $('.gns_multi_level [data-toggle="dropdown"]').removeClass('show').attr('aria-expanded', 'false');
-                $('.gns_multi_level .dropdown-menu').removeClass('show').attr("aria-hidden", "true");
-                break;
-            case 37://Arrow Left
-                //getCurrentIndex(".gns_multi_level .dropdown-toggle", e.target, "left");
-                break;
-            case 39://Arrow Right
-                //getCurrentIndex(".gns_multi_level .dropdown-toggle", e.target, "right");
-                break;
-            case 13://ENTER key
-                break;
-            case 40://Arrow Down
-            case 32://SPACE key
-                $('.gns_multi_level [data-toggle="dropdown"]').removeClass('show').attr('aria-expanded', 'false');
-                $('.gns_multi_level .dropdown-menu').removeClass('show').attr("aria-hidden", "true");
-                $(this).parent().find('.dropdown-menu').addClass('show').attr("aria-hidden", "false");
-                $(this).addClass('show').attr('aria-expanded', 'true');
-                $(".gns_multi_level .dropdown-menu ul.ul-cols > li:first-of-type > a").focus();
-                break;
-            default:
-                break;
-        }
-    })
-        .click(function(e) {
-            if(mobile){
+            e = e || window.event;
+            switch (e.keyCode) {
+                case 9://tab key
+                    break;
+                case 38://Arrow Up
+                case 27:// ESC key
+                    e.preventDefault();
+                    $('.gns_multi_level [data-toggle="dropdown"]').removeClass('show').attr('aria-expanded', 'false');
+                    $('.gns_multi_level .dropdown-menu').removeClass('show').attr("aria-hidden", "true");
+                    break;
+                case 37://Arrow Left
+                    getCurrentIndex(".gns_multi_level .dropdown-toggle", e.target, "left");
+                    break;
+                case 39://Arrow Right
+                    getCurrentIndex(".gns_multi_level .dropdown-toggle", e.target, "right");
+                    break;
+                case 13://ENTER key
+                    break;
+                case 40://Arrow Down
+                case 32://SPACE key
+                    e.preventDefault();
+                    $('.gns_multi_level [data-toggle="dropdown"]').removeClass('show').attr('aria-expanded', 'false');
+                    $('.gns_multi_level .dropdown-menu').removeClass('show').attr("aria-hidden", "true");
+                    $(this).parent().find('.dropdown-menu').addClass('show').attr("aria-hidden", "false");
+                    $(this).addClass('show').attr('aria-expanded', 'true');
+                    $(".gns_multi_level .dropdown-menu ul.ul-cols > li:first-of-type > a").focus();
+                    break;
+                default:
+                    break;
+            }
+        })
+        .click(function (e) {
+            if (mobile) {
                 e.preventDefault();
-                if($(this).hasClass("show")) {
+                if ($(this).hasClass("show")) {
                     $(this).attr("aria-expanded", "false").removeClass('show');
                     $(this).parent().children('.dropdown-menu').removeClass('show');
                     $(this).parent().children('.dropdown-menu').attr("aria-hidden", "true");
-                }else {
+                } else {
                     $(this).attr("aria-expanded", "true").addClass('show');
                     $(this).parent().children('.dropdown-menu').addClass('show');
                     $(this).parent().children('.dropdown-menu').attr("aria-hidden", "false");
@@ -76,7 +90,7 @@ function page_ready_megamenu_multi_level() {
                 break;
             case 27:// ESC key
                 $(this).parents('li.dropdown').find('.dropdown-toggle').focus();
-                $(this).parents('li.dropdown').removeClass('show').find('.dropdown-menu').removeClass('show')
+                $(this).parents('li.dropdown').removeClass('show').find('.dropdown-menu').removeClass('show');
                 break;
             case 37://Arrow Left
                 break;
@@ -103,7 +117,7 @@ function page_ready_megamenu_multi_level() {
                 break;
             case 27:// ESC key
                 $(this).parents('li.dropdown').find('.dropdown-toggle').focus();
-                $(this).parents('li.dropdown').removeClass('show').find('.dropdown-menu').removeClass('show')
+                $(this).parents('li.dropdown').removeClass('show').find('.dropdown-menu').removeClass('show');
                 break;
             case 37://Arrow Left
                 break;

@@ -2,9 +2,7 @@
 function page_ready_card_carousel() {
     if($('.cards-carousel').hasClass("desktop-carousel")){
         carousel_only_on_desktop();
-        //console.log('alternate');
     }else {
-        //console.log('default');
         $('.owl-carousel').owlCarousel({
             //stagePadding: 50,
             loop: true,

@@ -31,26 +31,7 @@ function page_ready_default() {
     updateStandardContent('section', '16by9', 'table-striped');
     // External links function
     updateExternalLinks(['.standard-content',".ds-elements"]);
-    /*
-        $('.date.form-control').datepicker({
-            markup: 'bootstrap4',
-            inputFormat: 'dd/MM/yy',
-            outputFormat: 'dd/MM/y',
-            titleFormat: 'EEEE d MMMM y',
-            gainFocusOnConstruction: false
-        });
 
-        $('.date.form-control').keydown(function (e) {
-            const validKeys = /[0-9.-/]/;
-            if ((e.key.match(validKeys))) {
-                return true;
-            } else if (e.keyCode == 8 || e.keyCode == 9) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-    */
     const notificationDate = checkCookie("notification");
     if (notificationDate && notificationDate === modificationDate) {
         $('.notification-banner').alert('close');
@@ -85,6 +66,7 @@ function updateStandardContent(hook, videoclass, tableclass) {
                         t.classList.add('no-thead');
                         hasDirtyTables = true;
                     }
+                    t.removeAttribute("style");
                 }
             });
             if (hasDirtyTables) {

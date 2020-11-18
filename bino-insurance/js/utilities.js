@@ -265,10 +265,8 @@ function checkRequiredParent(target, filterExpression) {
     }
     //search for clicked item has required item as parent
     if (target.parents(filterExpression).length || itemHasClass || itemHasId) {
-        //console.log('filterExpression found or item has it as a class');
         return true;
     } else {
-        //console.log('filterExpression not found. other item');
         return false;
     }
 }
@@ -380,7 +378,6 @@ function bindSwipeEventsForCarousel() {
                 if (angle > 30 && angle < 90)
                     return;
                 //$('.testimonial-carousel h2').append(mc.touchAction.actions);
-                //console.log(angle);
                 let obj = (ev.target ? ev.target : ev.srcEvent);
                 //if target is carousel then proceed further
                 let carouselId = $(obj).parents('.carousel').attr('id');
@@ -523,7 +520,7 @@ function grayScaleImage(src) {
         ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
         return canvas.toDataURL();
     } catch (err) {
-        console.log('Error!... ' + err.message);
+        console.error('Error!... ' + err.message);
         return src;
     }
 }
@@ -535,17 +532,14 @@ function getCurrentIndex(listSelector, currentItem, key, recursive) {
     let items = $(listSelector);
     let index = 0;
     let GNSItemIndex;
-    //console.log('recursive: '+ recursive);
     if (recursive && ($(currentItem).parent().is(':first-child') || $(currentItem).parent().is(':last-child'))) {
         if ($(currentItem).parent().is(':first-child') && (key === "left" || key === "up")) {
-            //console.log('moving to last item');
             //selector ul>li>a so the it will find in ul
             $(currentItem).parent().parent().find('li:last-of-type > a:last-of-type').focus();
             return;
         }
 
         if ($(currentItem).parent().is(':last-child') && (key === "right" || key === "down")) {
-            //console.log('moving to first item');
             //selector ul>li>a so the it will find in ul
             $(currentItem).parent().parent().find('li:first-of-type > a:first-of-type').focus();
             return;
@@ -612,7 +606,6 @@ $("ul[role='menu'] li a").keydown(function (e) {
 function handle_keys_sample() {
     $("#selector").keydown(function (e) {
         e = e || window.event;
-        //console.log(e.keyCode);
         switch (e.keyCode) {
             case 9://tab key
                 break;
