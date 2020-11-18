@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow</title>
+    <defs>
+        <linearGradient x1="6.18908581%" y1="5.20745586e-07%" x2="91.3880787%" y2="96.560168%" id="linearGradient-1">
+            <stop stop-color="#5F8298" offset="0%"></stop>
+            <stop stop-color="#314B5F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="38.1164039%" y1="5.20745586e-07%" x2="61.2264083%" y2="96.560168%" id="linearGradient-2">
+            <stop stop-color="#5F8298" offset="0%"></stop>
+            <stop stop-color="#314B5F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="2.46561561%" y1="49.8046875%" x2="94.9056332%" y2="50.1818757%" id="linearGradient-3">
+            <stop stop-color="#5F8298" offset="0%"></stop>
+            <stop stop-color="#314B5F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Armyn-·-Landing-page" transform="translate(-334.000000, -913.000000)" stroke-width="2">
+            <g id="Light-Side" transform="translate(185.000000, 422.000000)">
+                <g id="Arrow" transform="translate(175.000000, 517.000000) rotate(-90.000000) translate(-175.000000, -517.000000) translate(150.000000, 492.000000)">
+                    <path d="M47.7028186,15.3492647 C43.1156572,4.56127517 31.5685673,-1.50705774 20.0818875,0.833658958 C8.59520765,3.17437566 0.343432381,13.2772543 0.343432381,25 C0.343432381,36.7227457 8.59520765,46.8256243 20.0818875,49.166341 C31.5685673,51.5070577 43.1156572,45.4387248 47.7028186,34.6507353" id="Path" stroke="url(#linearGradient-1)"></path>
+                    <polyline id="Path" stroke="url(#linearGradient-2)" points="23.9276961 16.4215686 15.3492647 25 23.9276961 33.5784314"></polyline>
+                    <line x1="15.3492647" y1="25" x2="49.6629902" y2="25" id="Path" stroke="url(#linearGradient-3)"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
