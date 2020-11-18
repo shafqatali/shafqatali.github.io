@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Bino - Contact</title>
+    <!--Un-gulped styles-->
+    <link href="css/all.css?rnd=836" rel="stylesheet"/>
+    <!--Un-gulped styles end-->
+    <script>
+        var $buoop = {
+            vs: {i: 10, f: -4, o: -4, s: 8, c: -4}, api: 4,
+            text: '<span>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</span>'
+        };
+        function $buo_f(){
+            var e = document.createElement("script");
+            e.src = "//browser-update.org/update.min.js";
+            document.body.appendChild(e);
+        };
+        try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+        catch(e){window.attachEvent("onload", $buo_f)}
+    </script>
+    <!--https://polyfill.io/v3/url-builder/-->
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from%2CArray.prototype.forEach%2Ces2015%2Ces6%2Cfetch%2CElement.prototype.remove"></script>
+    <script>
+        /*!
+ * enquire.js v2.1.6 - Awesome Media Queries in JavaScript
+ * Copyright (c) 2017 Nick Williams - http://wicky.nillia.ms/enquire.js
+ * License: MIT */
+!function(a){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=a();else if("function"==typeof define&&define.amd)define([],a);else{var b;b="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,b.enquire=a()}}(function(){return function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c?c:a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}({1:[function(a,b,c){function d(a,b){this.query=a,this.isUnconditional=b,this.handlers=[],this.mql=window.matchMedia(a);var c=this;this.listener=function(a){c.mql=a.currentTarget||a,c.assess()},this.mql.addListener(this.listener)}var e=a(3),f=a(4).each;d.prototype={constuctor:d,addHandler:function(a){var b=new e(a);this.handlers.push(b),this.matches()&&b.on()},removeHandler:function(a){var b=this.handlers;f(b,function(c,d){if(c.equals(a))return c.destroy(),!b.splice(d,1)})},matches:function(){return this.mql.matches||this.isUnconditional},clear:function(){f(this.handlers,function(a){a.destroy()}),this.mql.removeListener(this.listener),this.handlers.length=0},assess:function(){var a=this.matches()?"on":"off";f(this.handlers,function(b){b[a]()})}},b.exports=d},{3:3,4:4}],2:[function(a,b,c){function d(){if(!window.matchMedia)throw new Error("matchMedia not present, legacy browsers require a polyfill");this.queries={},this.browserIsIncapable=!window.matchMedia("only all").matches}var e=a(1),f=a(4),g=f.each,h=f.isFunction,i=f.isArray;d.prototype={constructor:d,register:function(a,b,c){var d=this.queries,f=c&&this.browserIsIncapable;return d[a]||(d[a]=new e(a,f)),h(b)&&(b={match:b}),i(b)||(b=[b]),g(b,function(b){h(b)&&(b={match:b}),d[a].addHandler(b)}),this},unregister:function(a,b){var c=this.queries[a];return c&&(b?c.removeHandler(b):(c.clear(),delete this.queries[a])),this}},b.exports=d},{1:1,4:4}],3:[function(a,b,c){function d(a){this.options=a,!a.deferSetup&&this.setup()}d.prototype={constructor:d,setup:function(){this.options.setup&&this.options.setup(),this.initialised=!0},on:function(){!this.initialised&&this.setup(),this.options.match&&this.options.match()},off:function(){this.options.unmatch&&this.options.unmatch()},destroy:function(){this.options.destroy?this.options.destroy():this.off()},equals:function(a){return this.options===a||this.options.match===a}},b.exports=d},{}],4:[function(a,b,c){function d(a,b){var c=0,d=a.length;for(c;c<d&&b(a[c],c)!==!1;c++);}function e(a){return"[object Array]"===Object.prototype.toString.apply(a)}function f(a){return"function"==typeof a}b.exports={isFunction:f,isArray:e,each:d}},{}],5:[function(a,b,c){var d=a(2);b.exports=new d},{2:2}]},{},[5])(5)});
+    </script>
+    <script>
+        /*! lazysizes - v5.2.1-rc1 */
+!function(e){var t=function(u,D,f){"use strict";var k,H;if(function(){var e;var t={lazyClass:"lazyload",loadedClass:"lazyloaded",loadingClass:"lazyloading",preloadClass:"lazypreload",errorClass:"lazyerror",autosizesClass:"lazyautosizes",srcAttr:"data-src",srcsetAttr:"data-srcset",sizesAttr:"data-sizes",minSize:40,customMedia:{},init:true,expFactor:1.5,hFac:.8,loadMode:2,loadHidden:true,ricTimeout:0,throttleDelay:125};H=u.lazySizesConfig||u.lazysizesConfig||{};for(e in t){if(!(e in H)){H[e]=t[e]}}}(),!D||!D.getElementsByClassName){return{init:function(){},cfg:H,noSupport:true}}var O=D.documentElement,a=u.HTMLPictureElement,P="addEventListener",$="getAttribute",q=u[P].bind(u),I=u.setTimeout,U=u.requestAnimationFrame||I,l=u.requestIdleCallback,j=/^picture$/i,r=["load","error","lazyincluded","_lazyloaded"],i={},G=Array.prototype.forEach,J=function(e,t){if(!i[t]){i[t]=new RegExp("(\\s|^)"+t+"(\\s|$)")}return i[t].test(e[$]("class")||"")&&i[t]},K=function(e,t){if(!J(e,t)){e.setAttribute("class",(e[$]("class")||"").trim()+" "+t)}},Q=function(e,t){var i;if(i=J(e,t)){e.setAttribute("class",(e[$]("class")||"").replace(i," "))}},V=function(t,i,e){var a=e?P:"removeEventListener";if(e){V(t,i)}r.forEach(function(e){t[a](e,i)})},X=function(e,t,i,a,r){var n=D.createEvent("Event");if(!i){i={}}i.instance=k;n.initEvent(t,!a,!r);n.detail=i;e.dispatchEvent(n);return n},Y=function(e,t){var i;if(!a&&(i=u.picturefill||H.pf)){if(t&&t.src&&!e[$]("srcset")){e.setAttribute("srcset",t.src)}i({reevaluate:true,elements:[e]})}else if(t&&t.src){e.src=t.src}},Z=function(e,t){return(getComputedStyle(e,null)||{})[t]},s=function(e,t,i){i=i||e.offsetWidth;while(i<H.minSize&&t&&!e._lazysizesWidth){i=t.offsetWidth;t=t.parentNode}return i},ee=function(){var i,a;var t=[];var r=[];var n=t;var s=function(){var e=n;n=t.length?r:t;i=true;a=false;while(e.length){e.shift()()}i=false};var e=function(e,t){if(i&&!t){e.apply(this,arguments)}else{n.push(e);if(!a){a=true;(D.hidden?I:U)(s)}}};e._lsFlush=s;return e}(),te=function(i,e){return e?function(){ee(i)}:function(){var e=this;var t=arguments;ee(function(){i.apply(e,t)})}},ie=function(e){var i;var a=0;var r=H.throttleDelay;var n=H.ricTimeout;var t=function(){i=false;a=f.now();e()};var s=l&&n>49?function(){l(t,{timeout:n});if(n!==H.ricTimeout){n=H.ricTimeout}}:te(function(){I(t)},true);return function(e){var t;if(e=e===true){n=33}if(i){return}i=true;t=r-(f.now()-a);if(t<0){t=0}if(e||t<9){s()}else{I(s,t)}}},ae=function(e){var t,i;var a=99;var r=function(){t=null;e()};var n=function(){var e=f.now()-i;if(e<a){I(n,a-e)}else{(l||r)(r)}};return function(){i=f.now();if(!t){t=I(n,a)}}},e=function(){var v,m,c,h,e;var y,z,g,p,C,b,A;var n=/^img$/i;var d=/^iframe$/i;var E="onscroll"in u&&!/(gle|ing)bot/.test(navigator.userAgent);var _=0;var w=0;var N=0;var M=-1;var x=function(e){N--;if(!e||N<0||!e.target){N=0}};var W=function(e){if(A==null){A=Z(D.body,"visibility")=="hidden"}return A||!(Z(e.parentNode,"visibility")=="hidden"&&Z(e,"visibility")=="hidden")};var S=function(e,t){var i;var a=e;var r=W(e);g-=t;b+=t;p-=t;C+=t;while(r&&(a=a.offsetParent)&&a!=D.body&&a!=O){r=(Z(a,"opacity")||1)>0;if(r&&Z(a,"overflow")!="visible"){i=a.getBoundingClientRect();r=C>i.left&&p<i.right&&b>i.top-1&&g<i.bottom+1}}return r};var t=function(){var e,t,i,a,r,n,s,l,o,u,f,c;var d=k.elements;if((h=H.loadMode)&&N<8&&(e=d.length)){t=0;M++;for(;t<e;t++){if(!d[t]||d[t]._lazyRace){continue}if(!E||k.prematureUnveil&&k.prematureUnveil(d[t])){R(d[t]);continue}if(!(l=d[t][$]("data-expand"))||!(n=l*1)){n=w}if(!u){u=!H.expand||H.expand<1?O.clientHeight>500&&O.clientWidth>500?500:370:H.expand;k._defEx=u;f=u*H.expFactor;c=H.hFac;A=null;if(w<f&&N<1&&M>2&&h>2&&!D.hidden){w=f;M=0}else if(h>1&&M>1&&N<6){w=u}else{w=_}}if(o!==n){y=innerWidth+n*c;z=innerHeight+n;s=n*-1;o=n}i=d[t].getBoundingClientRect();if((b=i.bottom)>=s&&(g=i.top)<=z&&(C=i.right)>=s*c&&(p=i.left)<=y&&(b||C||p||g)&&(H.loadHidden||W(d[t]))&&(m&&N<3&&!l&&(h<3||M<4)||S(d[t],n))){R(d[t]);r=true;if(N>9){break}}else if(!r&&m&&!a&&N<4&&M<4&&h>2&&(v[0]||H.preloadAfterLoad)&&(v[0]||!l&&(b||C||p||g||d[t][$](H.sizesAttr)!="auto"))){a=v[0]||d[t]}}if(a&&!r){R(a)}}};var i=ie(t);var B=function(e){var t=e.target;if(t._lazyCache){delete t._lazyCache;return}x(e);K(t,H.loadedClass);Q(t,H.loadingClass);V(t,L);X(t,"lazyloaded")};var a=te(B);var L=function(e){a({target:e.target})};var T=function(t,i){try{t.contentWindow.location.replace(i)}catch(e){t.src=i}};var F=function(e){var t;var i=e[$](H.srcsetAttr);if(t=H.customMedia[e[$]("data-media")||e[$]("media")]){e.setAttribute("media",t)}if(i){e.setAttribute("srcset",i)}};var s=te(function(t,e,i,a,r){var n,s,l,o,u,f;if(!(u=X(t,"lazybeforeunveil",e)).defaultPrevented){if(a){if(i){K(t,H.autosizesClass)}else{t.setAttribute("sizes",a)}}s=t[$](H.srcsetAttr);n=t[$](H.srcAttr);if(r){l=t.parentNode;o=l&&j.test(l.nodeName||"")}f=e.firesLoad||"src"in t&&(s||n||o);u={target:t};K(t,H.loadingClass);if(f){clearTimeout(c);c=I(x,2500);V(t,L,true)}if(o){G.call(l.getElementsByTagName("source"),F)}if(s){t.setAttribute("srcset",s)}else if(n&&!o){if(d.test(t.nodeName)){T(t,n)}else{t.src=n}}if(r&&(s||o)){Y(t,{src:n})}}if(t._lazyRace){delete t._lazyRace}Q(t,H.lazyClass);ee(function(){var e=t.complete&&t.naturalWidth>1;if(!f||e){if(e){K(t,"ls-is-cached")}B(u);t._lazyCache=true;I(function(){if("_lazyCache"in t){delete t._lazyCache}},9)}if(t.loading=="lazy"){N--}},true)});var R=function(e){if(e._lazyRace){return}var t;var i=n.test(e.nodeName);var a=i&&(e[$](H.sizesAttr)||e[$]("sizes"));var r=a=="auto";if((r||!m)&&i&&(e[$]("src")||e.srcset)&&!e.complete&&!J(e,H.errorClass)&&J(e,H.lazyClass)){return}t=X(e,"lazyunveilread").detail;if(r){re.updateElem(e,true,e.offsetWidth)}e._lazyRace=true;N++;s(e,t,r,a,i)};var r=ae(function(){H.loadMode=3;i()});var l=function(){if(H.loadMode==3){H.loadMode=2}r()};var o=function(){if(m){return}if(f.now()-e<999){I(o,999);return}m=true;H.loadMode=3;i();q("scroll",l,true)};return{_:function(){e=f.now();k.elements=D.getElementsByClassName(H.lazyClass);v=D.getElementsByClassName(H.lazyClass+" "+H.preloadClass);q("scroll",i,true);q("resize",i,true);q("pageshow",function(e){if(e.persisted){var t=D.querySelectorAll("."+H.loadingClass);if(t.length&&t.forEach){U(function(){t.forEach(function(e){if(e.complete){R(e)}})})}}});if(u.MutationObserver){new MutationObserver(i).observe(O,{childList:true,subtree:true,attributes:true})}else{O[P]("DOMNodeInserted",i,true);O[P]("DOMAttrModified",i,true);setInterval(i,999)}q("hashchange",i,true);["focus","mouseover","click","load","transitionend","animationend"].forEach(function(e){D[P](e,i,true)});if(/d$|^c/.test(D.readyState)){o()}else{q("load",o);D[P]("DOMContentLoaded",i);I(o,2e4)}if(k.elements.length){t();ee._lsFlush()}else{i()}},checkElems:i,unveil:R,_aLSL:l}}(),re=function(){var i;var n=te(function(e,t,i,a){var r,n,s;e._lazysizesWidth=a;a+="px";e.setAttribute("sizes",a);if(j.test(t.nodeName||"")){r=t.getElementsByTagName("source");for(n=0,s=r.length;n<s;n++){r[n].setAttribute("sizes",a)}}if(!i.detail.dataAttr){Y(e,i.detail)}});var a=function(e,t,i){var a;var r=e.parentNode;if(r){i=s(e,r,i);a=X(e,"lazybeforesizes",{width:i,dataAttr:!!t});if(!a.defaultPrevented){i=a.detail.width;if(i&&i!==e._lazysizesWidth){n(e,r,a,i)}}}};var e=function(){var e;var t=i.length;if(t){e=0;for(;e<t;e++){a(i[e])}}};var t=ae(e);return{_:function(){i=D.getElementsByClassName(H.autosizesClass);q("resize",t)},checkElems:t,updateElem:a}}(),t=function(){if(!t.i&&D.getElementsByClassName){t.i=true;re._();e._()}};return I(function(){H.init&&t()}),k={cfg:H,autoSizer:re,loader:e,init:t,uP:Y,aC:K,rC:Q,hC:J,fire:X,gW:s,rAF:ee}}(e,e.document,Date);e.lazySizes=t,"object"==typeof module&&module.exports&&(module.exports=t)}("undefined"!=typeof window?window:{});
+    </script>
+</head>
+<body>
+<a href="#main-content" class="sr-only sr-only-focusable skip-content">Skip to Content</a>
+<noscript>
+    <div id="browser-warning" class="no-print user-warning">
+        <div class="container">
+            <p>
+                <i class="glyphicon glyphicon-info-sign"></i>It appears JavaScript is disabled. In order for this website to function correctly you need to enable JavaScript in your browser.
+            </p>
+        </div>
+    </div>
+</noscript>
+<div id="wrapper" class="page no-shadow">
+    <!--It's just for the HTML site, we will remove it when shift to other CMS -->
+    <a id="ds-home-link" class="d-none" href="index.html"><span class="glyphicon glyphicon-home"></span><span class="sr-only">Homepage Link</span></a>
+    <header class="simple-gns">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-9 logo-column">
+                    <a href="homepage.html">
+                        <span class="sr-only">logo</span>
+                    </a>
+            </div>
+            <div class="col-3 d-block d-sm-none">
+                <button id="toggleMenuSimple" type="button" class="border-0 bg-transparent navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#gns"
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+            </div>
+            <nav class="col-sm-9 col-12 menu-column" aria-label="Main Menu">
+                <div id="gns" class="collapse navbar-collapse d-sm-block">
+                    <div class="tns-wrapper">
+                        <ul class="tns-nav">
+                            <li><a href="news-list.html">News</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                        <div class="search-menu mobile-search-box">
+                            <div class="search-wrapper collapsed" aria-hidden="true">
+<div class="input-group search-box  ">
+    <input id="txtSearch466"  type="text" class="form-control" value="" placeholder="Begin your search..." aria-label="Begin your search..." aria-describedby="btnSearch533">
+    <div class="input-group-append">
+            <span class="input-group-text">
+                <button type="button" class="button" id="btnSearch533">Search</button>
+            </span>
+    </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav navbar-nav flex-sm-row" role="menubar" aria-label="Main Menu">
+                        <li id="item01"  class='active'>
+                            <a href="service-details.html" role="menuitem">About us</a>
+                        </li>
+                        <li id="item02" >
+                            <a href="service-list.html" role="menuitem">Services</a>
+                        </li>
+                        <li id="item03" >
+                            <a href="people-list.html" role="menuitem">People</a>
+                        </li>
+                        <li id="item04" >
+                            <a href="insights-list.html" role="menuitem">Insights</a>
+                        </li>
+                        <li id="item05" >
+                            <a href="news-details.html" role="menuitem">Careers</a>
+                        </li>
+                    </ul>
+                    <div class="d-block d-sm-none">
+                        <ul class="tns-nav">
+                            <li><a href="#/">News</a></li>
+                            <li><a href="#/">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="social-icons d-block d-sm-none" aria-hidden="true">
+                        <ul class="social-links" role="menu" aria-label="Social Media Links">
+                            <li><a href="https://www.instagram.com/" role="menuitem"><span class="sr-only">instagram</span></a></li>
+                            <li><a href="https://twitter.com" role="menuitem"><span class="sr-only">twitter</span></a></li>
+                            <li><a href="http://www.linkedin.com" role="menuitem"><span class="sr-only">linkedin</span></a></li>
+                            <li><a href="https://www.youtube.com/" role="menuitem"><span class="sr-only">youtube</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <div id="sf-wrapper">
+        <div class="bg-primary">
+    <div class="container">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb light">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">About Us</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Diversity &amp; Inclusion</li>
+    </ol>
+</nav>
+    </div>
+</div>
+<div class="bg-primary person-bio-banner contact-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 details-wrapper">
+                <div class="person-details">
+                    <span class="name">London</span>
+                    <ul class="links-list">
+                        <li>
+                            <span><span class="svg-location"></span>1 Lore File, London ED5V 7KN, UK</span>
+                        </li>
+                        <li>
+                            <span class="phone"><span class="svg-phone"></span>+123 1 2 320 1234</span>
+                        </li>
+                        <li>
+                            <a href="mailto:employee@bino.com"><span class="svg-mail"></span>employee@bino.com</a>
+                        </li>
+                    </ul>
+                    <ul class="links-list inline-list">
+                        <li>
+                            <span><span class="svg-map-view"></span>View on map</span>
+                        </li>
+                        <li>
+                            <span><span class="svg-direction"></span>Get directions</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-8 media-wrapper">
+                <div class="person-photo">
+                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/contact-banner.png" alt="contact banner">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<main id="main-content">
+    <div class="container">
+        <div class="row">
+            <article class="sf_colsIn col-sm-9 standard-content">
+                <h2>Our London Office</h2>
+                <p>
+                    Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices. Vivamus molestie metus ut est vehicula luctus. Nunc accumsan dolor et diam luctus aliquam. Aliquam in enim lacus. Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices. Vivamus molestie metus ut est vehicula luctus. Nunc accumsan dolor et diam luctus aliquam. Aliquam in enim lacus. Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices.
+                </p>
+                <p>Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices. Vivamus molestie metus ut est vehicula luctus. Nunc accumsan dolor et diam luctus aliquam. Aliquam in enim lacus. Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices. Vivamus molestie metus ut est vehicula luctus. Nunc accumsan dolor et diam luctus aliquam. Aliquam in enim lacus. Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices. Vivamus molestie metus ut est vehicula luctus. Nunc accumsan dolor et diam luctus aliquam.</p>
+                <p>Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices. Vivamus molestie metus ut est vehicula luctus. Nunc accumsan dolor et diam luctus aliquam. Aliquam in enim lacus. Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices. Vivamus molestie </p>
+                <p>Mauris cursus vulputate nisi id consectetur. Ut cursus tortor id sem condimentum ultrices. Vivamus molestie metus ut est vehicula luctus. Nunc accumsan dolor et diam luctus aliquam. Aliquam in enim lacus. Mauris cursus vulputate</p>
+                <h2>Our Team</h2>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="contact-spotlight">
+    <img data-src="images/sharon-daly.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Jack Thomas" class="lazyload">
+    <div class="highlighted-text">
+        <a href="#/" class="text">Jack Thomas</a>
+        <span class="date">Partner</span>
+    </div>
+</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-spotlight">
+    <img data-src="images/sharon-daly.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Jack Thomas" class="lazyload">
+    <div class="highlighted-text">
+        <a href="#/" class="text">Jack Thomas</a>
+        <span class="date">Partner</span>
+    </div>
+</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-spotlight">
+    <img data-src="images/sharon-daly.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Jack Thomas" class="lazyload">
+    <div class="highlighted-text">
+        <a href="#/" class="text">Jack Thomas</a>
+        <span class="date">Partner</span>
+    </div>
+</div>
+                    </div>
+                </div>
+            </article>
+            <div class="col-sm-3">
+<div class="sidebar-nav rns">
+    <h4 class="sidebar-title">
+        Our Locations
+    </h4>
+    <ul>
+        <li><a href="#/">Lorem</a>
+        </li>
+        <li><a href="#/">ipsum</a>
+        </li>
+        <li><a href="#/">Dolor</a>
+        </li>
+        <li><a href="#/">Palolto</a>
+        </li>
+        <li><a href="#/">Francisco</a>
+        </li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</main>
+<section class="multi-card-spotlight">
+    <div class="cards-box">
+        <div class="container">
+            <div class="cta-box">
+                <h2 class="landing">Latest Insights</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+<a href="#/" class="spotlight-card dark">
+    <span class="date">06/04/2020</span>
+    <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
+    <span class="chevron svg-chisel"></span>
+</a>
+                </div>
+                <div class="col-sm-3">
+<a href="#/" class="spotlight-card dark">
+    <span class="date">06/04/2020</span>
+    <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
+    <span class="chevron svg-chisel"></span>
+</a>
+                </div>
+                <div class="col-sm-3">
+<a href="#/" class="spotlight-card dark">
+    <span class="date">09/04/2020</span>
+    <h4 class="text">Fusce nec tellus convallis, aliquam ex nec, malesuada nua. </h4>
+    <span class="chevron svg-chisel"></span>
+</a>
+                </div>
+                <div class="col-sm-3">
+<a href="#/" class="spotlight-card dark">
+    <span class="date">06/04/2020</span>
+    <h4 class="text">Maecenas vestibulum ipsum sit amet gravida ornare, magna ante ultrices lectus, tincidunt soda</h4>
+    <span class="chevron svg-chisel"></span>
+</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+<footer>
+    <div class="container">
+        <a class="collapsible-link" data-toggle="collapse" href="#internationalOffices" role="button" aria-expanded="false" aria-controls="internationalOffices">
+            Our International Offices
+        </a>
+        <div class="collapse" id="internationalOffices">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="office-card">
+                        <span><a href="#/" class="name">Office A</a></span>
+                        <span class="phone-wrapper">
+                            <span class="phone">+123 1 232 1234</span>
+                        </span>
+                        <span>
+                            <a href="mailto:office@bino.com">office@bino.com</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="office-card">
+                        <span><a href="#/" class="name">Office B</a></span>
+                        <span class="phone-wrapper">
+                            <span class="phone">+123 1 2 320 1234</span>
+                        </span>
+                        <span>
+                            <a href="mailto:office@bino.com">office@bino.com</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="office-card">
+                        <span><a href="#/" class="name">Office C</a></span>
+                        <span class="phone-wrapper">
+                            <span class="phone">+123 1 2 320 1234</span>
+                        </span>
+                        <span>
+                            <a href="mailto:office@bino.com">office@bino.com</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="office-card">
+                        <span><a href="#/" class="name">Office D</a></span>
+                        <span class="phone-wrapper">
+                            <span class="phone">+123 1 2 320 1234</span>
+                        </span>
+                        <span>
+                            <a href="mailto:office@bino.com">office@bino.com</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="office-card">
+                        <span><a href="#/" class="name">Office E</a></span>
+                        <span class="phone-wrapper">
+                            <span class="phone">+123 1 2 320 1234</span>
+                        </span>
+                        <span>
+                            <a href="mailto:office@bino.com">office@bino.com</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="office-card">
+                        <span><a href="#/" class="name">Office F</a></span>
+                        <span class="phone-wrapper">
+                            <span class="phone">+1 415 423 0540</span>
+                        </span>
+                        <span>
+                            <a href="mailto:office@bino.com">office@bino.com</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="footer-links">
+                    <li><a href="#/">About us</a></li>
+                    <li><a href="#/">Services</a></li>
+                    <li><a href="#/">People</a></li>
+                    <li><a href="#/">Insights</a></li>
+                    <li><a href="#/">News</a></li>
+                    <li><a href="#/">Careers</a></li>
+                    <li><a href="#/">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9">
+                <ul class="footer-links separator">
+                    <li><a href="#/">Link A</a></li>
+                    <li><a href="#/">Link B</a></li>
+                    <li><a href="#/">Link C</a></li>
+                    <li><a href="#/">Link D</a></li>
+                    <li><a href="#/">Link E</a></li>
+                    <li><a href="#/">Link F</a></li>
+                    <li><a href="#/">Link G</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/"><span class="sr-only">instagram</span></a></li>
+                    <li><a href="https://twitter.com"><span class="sr-only">twitter</span></a></li>
+                    <li><a href="http://www.linkedin.com"><span class="sr-only">linkedin</span></a></li>
+                    <li><a href="https://www.youtube.com/"><span class="sr-only">youtube</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<!-- JS References block-->
+<!--we can write function name(s) that would  be called after loading all js files-->
+<script>
+    const isGulped = false;
+    // Add a script element as a child of the body
+    function initJS() {
+        'use strict';
+        //load jQuery
+        //if browser is ie9 or older then returm document.addEventListener
+        if (document.all && !window.atob) {
+            return;
+        }
+        downloadJS("js/libman/jquery.min.js", function () {
+            var jqTimer = setInterval(function () {
+                if (window.jQuery) {
+                    downloadJS("js/libman/js/bootstrap.bundle.min.js?rnd=836", function () {downloadJS("js/libman/picturefill.min.js?rnd=836", function () {downloadJS("js/utilities.parsed.js?rnd=836", function () {downloadJS("js/auto-complete.parsed.js?rnd=836", function () {downloadJS("js/main.parsed.js?rnd=836", function () {downloadJS("js/card-carousel/owl.carousel.min.js?rnd=836", function () {downloadJS("js/card-carousel/plugin.js?rnd=836", function () {downloadJS("js/simple-navigation/script.js?rnd=836", function () {onPageReady();});});});});});});});});
+                    clearInterval(jqTimer);
+                }
+            }, 50);
+        });
+    }
+</script>
+<!-- JS References deferred loading block-->
+<script>
+    var es6Supported = true;
+    var mobileSize = 640;
+    var desktop = true;
+    var mobile = false;
+    //this variable will be add from code behind in CMS System
+    const isLiveSite = true;
+    function feature_check() {
+        var str = 'class ?_? extends Array {constructor(j = "a", ...c) {const q = (({u: e}) => {return { [`s${c}`]: Symbol(j) };})({});super(j, q, ...c);}}' +
+            'new Promise((f) => {const a = function* (){return "{20BB7}".match(/./u)[0].length === 2 || true;};for (let vre of a()) {' +
+            'const [uw, as, he, re] = [new Set(), new WeakSet(), new Map(), new WeakMap()];break;}f(new Proxy({}, {get: (han, h) => h in han ? han[h] ' +
+            ': "42".repeat(0o10)}));}).then(bi => new ?_?(bi.rd));';
+        try {
+            eval(str);
+            es6Supported = true;
+        } catch(e) {
+            es6Supported = false;
+            console.warn('Your browser does not support ES6!');
+        }
+    }
+    //feature_check();
+    function downloadJS(scriptSrc, callback) {
+        'use strict';
+        var element = document.createElement("script");
+        element.src = scriptSrc;
+        element.onload = function () {
+            callback();
+        };
+        document.body.appendChild(element);
+    }
+    // Check for browser support of event handling capability
+    if (window.addEventListener) {
+        window.addEventListener("load", initJS, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", initJS);
+    } else {
+        window.onload = initJS;
+    }
+    function onPageReady() {
+        enquire.register("screen and (min-width: " + (mobileSize + 1) + "px)", {
+            match: function () {
+                desktop = true;
+                mobile = false;
+                screenChange();
+            },
+            unmatch: function () {
+                desktop = false;
+            }
+        });
+        enquire.register("screen and (max-width: " + mobileSize + "px)", {
+            match: function () {
+                mobile = true;
+                desktop = false;
+                screenChange();
+            },
+            unmatch: function () {
+                mobile = false;
+                desktop = true;
+            }
+        });
+        //call page ready from all loaded files
+        if (typeof (page_ready_card_carousel) == "function") {page_ready_card_carousel();}if (typeof (page_ready_image_spotlight) == "function") {page_ready_image_spotlight();}if (typeof (page_ready_simple_navigation) == "function") {page_ready_simple_navigation();}
+        if (typeof (page_ready_default) == "function") {
+            page_ready_default();
+        }
+        if (typeof (loadAdditionalJs) == "function") {
+            loadAdditionalJs();
+        }
+    }
+    function screenChange() {
+        //call screen_change from all loaded files
+        if (typeof (screen_change_card_carousel) == "function") {screen_change_card_carousel();}if (typeof (screen_change_image_spotlight) == "function") {screen_change_image_spotlight();}if (typeof (screen_change_simple_navigation) == "function") {screen_change_simple_navigation();}
+        if (typeof (screen_change_default) == "function") {
+            screen_change_default();
+        }
+    }
+</script>
+<!-- offline service worker code -->
+<script>
+    //scope path will be '/' OR '/base-template/'
+    var scopePath = '/';
+    var hostName = document.location.host;
+    if (hostName == "shafqatali.github.io") {
+        var nodes = document.location.pathname.split('/');
+        if (nodes.length > 2) {
+            scopePath += nodes[1] + '/';
+        }
+    }else if (hostName.indexOf("localhost") == 0) {
+        //it's localhost
+    }
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js', { scope: scopePath })
+            .then(function(registration) {
+                console.info('Service Worker registration succeeded. Scope is ' + registration.scope);
+            })
+            .catch(function(error) {
+                // registration failed
+                console.error('Service Worker registration failed with following error' );
+                console.error(error);
+            });
+        navigator.serviceWorker.ready.then(function(registration) {
+        });
+    }
+</script>
+<!-- offline service worker code end here-->
+</body>
+</html>
+
