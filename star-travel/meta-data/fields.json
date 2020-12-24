@@ -1,0 +1,148 @@
+{
+  "status": 200,
+  "data": {
+    "TripTypes": [
+      {
+        "title": "One Way",
+        "value": "0"
+      },
+      {
+        "title": "Round Trip",
+        "value": "1"
+      }
+    ],
+    "directFlights": {
+      "title": "Direct flights only",
+      "value": false
+    },
+    "fromCity": {
+      "title": "From City",
+      "placeholder": "LHR"
+    },
+    "toCity": {
+      "title": "To City",
+      "placeholder": "LHE"
+    },
+    "departure": {
+      "title": "Departure",
+      "placeholder": "Date"
+    },
+    "retrun": {
+      "title": "Return",
+      "placeholder": "Date"
+    },
+    "cabinTypes": {
+      "title": "Travel Class",
+      "values": [
+        {
+          "title": "Economy",
+          "value": "5"
+        },
+        {
+          "title": "Premium Economy",
+          "value": "4"
+        },
+        {
+          "title": "Business",
+          "value": "3"
+        },
+        {
+          "title": "Premium Business",
+          "value": "2"
+        },
+        {
+          "title": "First",
+          "value": "1"
+        },
+        {
+          "title": "Premium First",
+          "value": "0"
+        }
+      ]
+    },
+    "adults": {
+      "title": "Adults",
+      "values": [
+        {
+          "title": "1",
+          "value": "1"
+        },
+        {
+          "title": "2",
+          "value": "2"
+        },
+        {
+          "title": "3",
+          "value": "3"
+        },
+        {
+          "title": "4",
+          "value": "4"
+        },
+        {
+          "title": "5",
+          "value": "5"
+        }
+      ]
+    },
+    "childs": {
+      "title": "Childs",
+      "values": [
+        {
+          "title": "0",
+          "value": "0"
+        },
+        {
+          "title": "1",
+          "value": "1"
+        },
+        {
+          "title": "2",
+          "value": "2"
+        },
+        {
+          "title": "3",
+          "value": "3"
+        },
+        {
+          "title": "4",
+          "value": "4"
+        },
+        {
+          "title": "5",
+          "value": "5"
+        }
+      ]
+    },
+    "infants": {
+      "title": "Infants",
+      "values": [
+        {
+          "title": "0",
+          "value": "0"
+        },
+        {
+          "title": "1",
+          "value": "1"
+        },
+        {
+          "title": "2",
+          "value": "2"
+        },
+        {
+          "title": "3",
+          "value": "3"
+        },
+        {
+          "title": "4",
+          "value": "4"
+        },
+        {
+          "title": "5",
+          "value": "5"
+        }
+      ]
+    },
+    "submitLabel": "Find"
+  }
+}
