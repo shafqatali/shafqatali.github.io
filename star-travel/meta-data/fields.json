@@ -9,6 +9,10 @@
       {
         "title": "Round Trip",
         "value": "1"
+      },
+      {
+        "title": "Multicity",
+        "value": "2"
       }
     ],
     "directFlights": {
@@ -62,86 +66,15 @@
     },
     "adults": {
       "title": "Adults",
-      "values": [
-        {
-          "title": "1",
-          "value": "1"
-        },
-        {
-          "title": "2",
-          "value": "2"
-        },
-        {
-          "title": "3",
-          "value": "3"
-        },
-        {
-          "title": "4",
-          "value": "4"
-        },
-        {
-          "title": "5",
-          "value": "5"
-        }
-      ]
+      "values": [1,2,3,4,5,6,7,8,9]
     },
     "childs": {
       "title": "Childs",
-      "values": [
-        {
-          "title": "0",
-          "value": "0"
-        },
-        {
-          "title": "1",
-          "value": "1"
-        },
-        {
-          "title": "2",
-          "value": "2"
-        },
-        {
-          "title": "3",
-          "value": "3"
-        },
-        {
-          "title": "4",
-          "value": "4"
-        },
-        {
-          "title": "5",
-          "value": "5"
-        }
-      ]
+      "values": [0]
     },
     "infants": {
       "title": "Infants",
-      "values": [
-        {
-          "title": "0",
-          "value": "0"
-        },
-        {
-          "title": "1",
-          "value": "1"
-        },
-        {
-          "title": "2",
-          "value": "2"
-        },
-        {
-          "title": "3",
-          "value": "3"
-        },
-        {
-          "title": "4",
-          "value": "4"
-        },
-        {
-          "title": "5",
-          "value": "5"
-        }
-      ]
+      "values": [0,1,2,3,4,5]
     },
     "submitLabel": "Find"
   }

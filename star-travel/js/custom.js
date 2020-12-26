@@ -1,12 +1,12 @@
 function BindCustomLibraryEvents() {
-    //console.log("binding jquery events");
-    if (typeof (BootStrapEvents) == "function") {
-        // eslint-disable-next-line no-undef
-        BootStrapEvents();
-    }
-
     //console.log("binding custom library events");
     BindRevolutionSlider();
+}
+
+function scrollToListing() {
+    setTimeout(function () {
+        $('html, body').stop().animate({scrollTop: $('.flights-listing-wrapper').offset().top}, 500);
+    }, 500);
 }
 
 function BindRevolutionSlider() {
