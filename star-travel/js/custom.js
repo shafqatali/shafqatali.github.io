@@ -1,12 +1,14 @@
 function BindCustomLibraryEvents() {
-    //console.log("binding custom library events");
-    BindRevolutionSlider();
+    setTimeout(function () {
+        //console.log("binding custom library events");
+        BindRevolutionSlider();
+    },1000);
 }
 
-function scrollToListing() {
+function scrollToListing(elementSelector) {
     setTimeout(function () {
-        $('html, body').stop().animate({scrollTop: $('.flights-listing-wrapper').offset().top}, 500);
-    }, 500);
+        $('html, body').stop().animate({scrollTop: $(elementSelector).offset().top}, 500);
+    }, 250);
 }
 
 function BindRevolutionSlider() {
