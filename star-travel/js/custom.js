@@ -1,6 +1,5 @@
 function BindCustomLibraryEvents() {
     setTimeout(function () {
-        //console.log("binding custom library events");
         BindRevolutionSlider();
     },1000);
 }
