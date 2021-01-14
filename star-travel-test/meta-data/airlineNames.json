@@ -1,0 +1,424 @@
+{
+  "data": [
+    {
+      "Name": "ADRIA AIRWAYS",
+      "Code": "JP"
+    },
+    {
+      "Name": "AEGEAN AIRLINES",
+      "Code": "A3"
+    },
+    {
+      "Name": "AER LINGUS",
+      "Code": "EI"
+    },
+    {
+      "Name": "AEROFLOT RUSSIAN AIRLINES",
+      "Code": "SU"
+    },
+    {
+      "Name": "AEROLINEAS ARGENTINAS",
+      "Code": "AR"
+    },
+    {
+      "Name": "AEROMEXICO",
+      "Code": "AM"
+    },
+    {
+      "Name": "AIR AUSTRAL",
+      "Code": "UU"
+    },
+    {
+      "Name": "AIR CANADA",
+      "Code": "AC"
+    },
+    {
+      "Name": "AIR CHINA",
+      "Code": "CA"
+    },
+    {
+      "Name": "AIR CÓTE D'IVOIRE",
+      "Code": "HF"
+    },
+    {
+      "Name": "AIR FRANCE",
+      "Code": "AF"
+    },
+    {
+      "Name": "AIR INDIA",
+      "Code": "AI"
+    },
+    {
+      "Name": "AIR ITALY-MERIDIANA",
+      "Code": "I9"
+    },
+    {
+      "Name": "AIR LITUANICA",
+      "Code": "LT"
+    },
+    {
+      "Name": "AIR MADAGASCAR",
+      "Code": "MD"
+    },
+    {
+      "Name": "AIR MALTA",
+      "Code": "KM"
+    },
+    {
+      "Name": "AIR MAURITIUS",
+      "Code": "MK"
+    },
+    {
+      "Name": "AIR MOLDOVA",
+      "Code": "9U"
+    },
+    {
+      "Name": "AIR NAMIBIA",
+      "Code": "SW"
+    },
+    {
+      "Name": "AIR NEW ZEALAND",
+      "Code": "NZ"
+    },
+    {
+      "Name": "AIR TAHITI",
+      "Code": "VT"
+    },
+    {
+      "Name": "AIR TAHITI NUI",
+      "Code": "TN"
+    },
+    {
+      "Name": "airBALTIC",
+      "Code": "BT"
+    },
+    {
+      "Name": "AIRBERLIN",
+      "Code": "AB"
+    },
+    {
+      "Name": "ALITALIA",
+      "Code": "AZ"
+    },
+    {
+      "Name": "ALL NIPPON AIRWAYS",
+      "Code": "NH"
+    },
+    {
+      "Name": "AMERICAN AIRLINES",
+      "Code": "AA"
+    },
+    {
+      "Name": "ANADOLU JET",
+      "Code": "TK"
+    },
+    {
+      "Name": "ASIANA AIRLINES",
+      "Code": "OZ"
+    },
+    {
+      "Name": "ATLASGLOBAL",
+      "Code": "KK"
+    },
+    {
+      "Name": "AUSTRIAN AIRLINES",
+      "Code": "OS"
+    },
+    {
+      "Name": "AVIANCA",
+      "Code": "AVA"
+    },
+    {
+      "Name": "BANGKOK AIRWAYS",
+      "Code": "PG"
+    },
+    {
+      "Name": "BRITISH AIRWAYS",
+      "Code": "BA"
+    },
+    {
+      "Name": "BRUSSELS AIRLINES",
+      "Code": "SN"
+    },
+    {
+      "Name": "CARIBBEAN AIRLINES",
+      "Code": "BW"
+    },
+    {
+      "Name": "CATHAY PACIFIC",
+      "Code": "CX"
+    },
+    {
+      "Name": "CHINA EASTERN",
+      "Code": "MU"
+    },
+    {
+      "Name": "CONDOR",
+      "Code": "DE"
+    },
+    {
+      "Name": "CORENDON AIRLINES",
+      "Code": "CAI"
+    },
+    {
+      "Name": "CROATIA AIRLINES",
+      "Code": "OU"
+    },
+    {
+      "Name": "CZECH AIRLINES",
+      "Code": "OK"
+    },
+    {
+      "Name": "DELTA AIRLINES",
+      "Code": "DL"
+    },
+    {
+      "Name": "EASYJET",
+      "Code": "U2"
+    },
+    {
+      "Name": "EGYPTAIR",
+      "Code": "MS"
+    },
+    {
+      "Name": "EL AL",
+      "Code": "LY"
+    },
+    {
+      "Name": "EMIRATES",
+      "Code": "EK"
+    },
+    {
+      "Name": "ETHIOPIAN AIRLINES",
+      "Code": "ET"
+    },
+    {
+      "Name": "ETIHAD AIRWAYS",
+      "Code": "EY"
+    },
+    {
+      "Name": "EUROWINGS",
+      "Code": "EW"
+    },
+    {
+      "Name": "FREEBIRD",
+      "Code": "FH"
+    },
+    {
+      "Name": "GARUDA INDONESIA",
+      "Code": "GA"
+    },
+    {
+      "Name": "GERMANIA",
+      "Code": "ST"
+    },
+    {
+      "Name": "GERMANWINGS",
+      "Code": "4U"
+    },
+    {
+      "Name": "GULF AIR",
+      "Code": "GF"
+    },
+    {
+      "Name": "HONG KONG AIRLINES",
+      "Code": "HX"
+    },
+    {
+      "Name": "IBERIA",
+      "Code": "IB"
+    },
+    {
+      "Name": "ICELANDAIR",
+      "Code": "FI"
+    },
+    {
+      "Name": "INDONESIAN AIR ASIA",
+      "Code": "QZ"
+    },
+    {
+      "Name": "IRAN AIR",
+      "Code": "IR"
+    },
+    {
+      "Name": "JAL JAPAN AIRLINES",
+      "Code": "JL"
+    },
+    {
+      "Name": "KENIA AIRWAYS",
+      "Code": "KQ"
+    },
+    {
+      "Name": "KLM ROYAL DUTCH AIRLINES",
+      "Code": "KL"
+    },
+    {
+      "Name": "KOREAN AIR",
+      "Code": "KE"
+    },
+    {
+      "Name": "KUWAIT AIRWAYS",
+      "Code": "KU"
+    },
+    {
+      "Name": "LOT POLISH AIRLINES",
+      "Code": "LO"
+    },
+    {
+      "Name": "LUFTHANSA",
+      "Code": "LH"
+    },
+    {
+      "Name": "MALAYSIA AIRLINES",
+      "Code": "MH"
+    },
+    {
+      "Name": "MIDDLE EAST AIRLINES - AIR LIBAN",
+      "Code": "ME"
+    },
+    {
+      "Name": "NORWEGIAN",
+      "Code": "DY"
+    },
+    {
+      "Name": "OLYMPIC AIR",
+      "Code": "OA"
+    },
+    {
+      "Name": "OMAN AIR",
+      "Code": "WY"
+    },
+    {
+      "Name": "ONURAIR",
+      "Code": "8Q"
+    },
+    {
+      "Name": "PACIFIC WINGS",
+      "Code": "LW"
+    },
+    {
+      "Name": "PAKISTAN INTERNATIONAL AIRLINES",
+      "Code": "PK"
+    },
+    {
+      "Name": "PEGASUS AIRLINES",
+      "Code": "PC"
+    },
+    {
+      "Name": "PHILIPPINE AIRLINES",
+      "Code": "PR"
+    },
+    {
+      "Name": "POLYNESIAN AIRLINES",
+      "Code": "PH"
+    },
+    {
+      "Name": "QANTAS",
+      "Code": "QF"
+    },
+    {
+      "Name": "QATAR AIRWAYS",
+      "Code": "QR"
+    },
+    {
+      "Name": "ROSSIYA AIRLINES",
+      "Code": "FV"
+    },
+    {
+      "Name": "ROYAL BRUNEI",
+      "Code": "BI"
+    },
+    {
+      "Name": "ROYAL JORDANIEN",
+      "Code": "RJ"
+    },
+    {
+      "Name": "RYANAIR",
+      "Code": "FR"
+    },
+    {
+      "Name": "SAS SCANDINAVIAN AIRLINES",
+      "Code": "SK"
+    },
+    {
+      "Name": "SAUDI ARABIAN AIRLINES",
+      "Code": "SV"
+    },
+    {
+      "Name": "SINGAPORE AIRLINES",
+      "Code": "SQ"
+    },
+    {
+      "Name": "SOUTH AFRICAN AIRWAYS",
+      "Code": "SA"
+    },
+    {
+      "Name": "SOUTHWEST AIRLINES",
+      "Code": "WN"
+    },
+    {
+      "Name": "SRILANKAN AIRLINES",
+      "Code": "UL"
+    },
+    {
+      "Name": "SUN EXPRESS",
+      "Code": "XQ"
+    },
+    {
+      "Name": "SWISS INTERNATIONAL AIRLINES",
+      "Code": "LX"
+    },
+    {
+      "Name": "TAILWIND",
+      "Code": "TWI"
+    },
+    {
+      "Name": "TAP PORTUGAL",
+      "Code": "TP"
+    },
+    {
+      "Name": "THAI AIRASIA",
+      "Code": "FD"
+    },
+    {
+      "Name": "THAI AIRWAYS",
+      "Code": "TG"
+    },
+    {
+      "Name": "TUIFLY",
+      "Code": "X3"
+    },
+    {
+      "Name": "TUNISAIR",
+      "Code": "TU"
+    },
+    {
+      "Name": "TURKISH AIRLINES",
+      "Code": "TK"
+    },
+    {
+      "Name": "UKRAINE INTARENATIONAL AIRLINES",
+      "Code": "PS"
+    },
+    {
+      "Name": "UNITED",
+      "Code": "UA"
+    },
+    {
+      "Name": "VIETNAM AIRLINES",
+      "Code": "VN"
+    },
+    {
+      "Name": "VIRGIN ATLANTIC",
+      "Code": "VS"
+    },
+    {
+      "Name": "VLM AIRLINES",
+      "Code": "VG"
+    },
+    {
+      "Name": "WIZZAIR",
+      "Code": "W6"
+    }
+  ]
+}
