@@ -1,7 +1,10 @@
 function BindCustomLibraryEvents() {
     setTimeout(function () {
         BindRevolutionSlider();
-    },1000);
+        if ($('.localhost').length === 0) {
+            $('.dev-box').remove();
+        }
+    }, 1000);
 }
 
 function scrollToListing(elementSelector) {
