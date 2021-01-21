@@ -1,9 +1,6 @@
 function BindCustomLibraryEvents() {
     setTimeout(function () {
         BindRevolutionSlider();
-        if ($('.localhost').length === 0) {
-            $('.dev-box').remove();
-        }
     }, 1000);
 }
 
@@ -72,4 +69,10 @@ function BindRevolutionSlider() {
             startWithSlide: 0
         });
     }
+}
+
+function expandAllFlightInfo() {
+    $('a[href*="flightInformation-"]').each(function () {
+        $(this).click();
+    });
 }
