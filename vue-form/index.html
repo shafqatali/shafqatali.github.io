@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/vfg.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+<h1 class="text-center">Demo of vue-form-generator</h1>
+<p class="text-center">To view all fields use this link <a href="fields.html">All fields</a></p>
+<div class="container" id="app">
+    <div class="panel panel-default">
+        <div class="panel-heading">Form</div>
+        <div class="panel-body">
+            <vue-form-generator :schema="schema" :model="model" :options="formOptions"></vue-form-generator>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Model</div>
+        <div class="panel-body">
+            <pre v-if="model" v-html="prettyJSON(model)"></pre>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Schema</div>
+        <div class="panel-body">
+            <pre v-if="model" v-html="prettyJSON(schema)"></pre>
+        </div>
+    </div>
+</div>
+<script src="js/vue.min.js"></script>
+<script src="js/vfg.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

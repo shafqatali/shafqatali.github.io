@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Fields </title>
+    <link rel="stylesheet" href="css/vfg.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+<h1 class="text-center">Demo of vue-form-generator</h1>
+<p class="text-center">To view all fields use this link <a href="fields.html">All fields</a> Details here https://vue-generators.gitbook.io/vue-generators/</p>
+<div class="container" id="app">
+    <div class="panel panel-default">
+        <div class="panel-heading">Form</div>
+        <div class="panel-body">
+            <div class="col-sm-5">
+            <vue-form-generator :schema="schema" :model="model" :options="formOptions"></vue-form-generator>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Model</div>
+        <div class="panel-body">
+            <pre v-if="model" v-html="prettyJSON(model)"></pre>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Schema</div>
+        <div class="panel-body">
+            <pre v-if="model" v-html="prettyJSON(schema)"></pre>
+        </div>
+    </div>
+</div>
+<script src="js/fields.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/vfg.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+
+        components: {
+            "vue-form-generator": VueFormGenerator.component
+        },
+
+        data() {
+            return {
+                model: window.FormKeys,
+                schema: window.FormSchema,
+
+                formOptions: {
+                    validateAfterLoad: false,
+                    validateAfterChanged: false
+                }
+            };
+        },
+
+        methods: {
+            prettyJSON: function (json) {
+                if (json) {
+                    json = JSON.stringify(json, undefined, 4);
+                    json = json.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>');
+                    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                        var cls = 'number';
+                        if (/^"/.test(match)) {
+                            if (/:$/.test(match)) {
+                                cls = 'key';
+                            } else {
+                                cls = 'string';
+                            }
+                        } else if (/true|false/.test(match)) {
+                            cls = 'boolean';
+                        } else if (/null/.test(match)) {
+                            cls = 'null';
+                        }
+                        return '<span class="' + cls + '">' + match + '</span>';
+                    });
+                }
+            }
+        },
+        mounted() {
+            console.log(this.model);
+            console.log(this.schema);
+        },
+    });
+
+</script>
+</body>
+</html>
