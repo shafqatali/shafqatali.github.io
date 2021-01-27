@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 5</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width,maximum-scale=1">
+</head>
+<body>
+<div class="container">
+    <h2>Popover with text</h2>
+    <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title"
+            data-bs-content="And here's some amazing content. It's very engaging. Right? <h2>H2 Tag</h2>">Click to toggle popover
+    </button>
+    <h2>Popover with HTML</h2>
+    <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title"
+            data-bs-trigger="hover"
+            data-bs-content="<div><h2>H2 Tag</h2><h3>H3 Tag</h3></div>">Click to toggle popover
+    </button>
+    <h2>Popover with anchor</h2>
+    <a href="#" data-bs-toggle="popover" title="New Features" data-bs-placement="left"
+       data-bs-content="<b>Multi-Select List</b> - You can now send one message to multiple lists by selecting the checkboxes.<br /><b>Modify List</b> - Click on the list name or email to modify these attributes.">
+        <img src="../images/WhatsNew.png" class="inline-icon-with-text" alt="What's New" />What's New!
+    </a>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    try {
+        bindBootstrapEvents(null, null);
+        window.addEventListener("resize", handleScreenChange);
+    } catch (e) {
+        console.log("error in start");
+        console.log(e);
+    }
+
+    function handleScreenChange() {
+        setTimeout(function () {
+            bindBootstrapEvents(null, null);
+        }, 1000);
+    }
+
+    function bindBootstrapEvents(sender, args) {
+        try {
+            var popoverOptions = {
+                container: 'body',
+                html: true,
+                trigger: 'focus'
+            };
+            if (window.screen.width <= 640 ) {
+                popoverOptions.placement = 'bottom';
+            }
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, popoverOptions);
+            });
+            var anchorsList = Array.from(document.querySelectorAll('a[href="#"]'));
+            for (var a = 0; a < anchorsList.length; a++) {
+                anchorsList[a].addEventListener("click", function (e) { e.preventDefault(); });
+            }
+        } catch (e) {
+            console.log("error in bindBootstrapEvents");
+            console.log(e);
+        }
+    }
+</script>
+</body>
+</html>
