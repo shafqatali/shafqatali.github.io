@@ -4,15 +4,15 @@
     "TripTypes": [
       {
         "title": "One Way",
-        "value": "0"
-      },
-      {
-        "title": "Round Trip",
         "value": "1"
       },
       {
-        "title": "Multicity",
+        "title": "Round Trip",
         "value": "2"
+      },
+      {
+        "title": "Multicity",
+        "value": "3"
       }
     ],
     "directFlights": {
@@ -40,11 +40,11 @@
       "values": [
         {
           "title": "Economy",
-          "value": "5"
+          "value": "1"
         },
         {
           "title": "Premium Economy",
-          "value": "4"
+          "value": "2"
         },
         {
           "title": "Business",
@@ -52,15 +52,15 @@
         },
         {
           "title": "Premium Business",
-          "value": "2"
+          "value": "4"
         },
         {
           "title": "First",
-          "value": "1"
+          "value": "5"
         },
         {
           "title": "Premium First",
-          "value": "0"
+          "value": "6"
         }
       ]
     },
