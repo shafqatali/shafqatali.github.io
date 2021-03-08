@@ -1,0 +1,98 @@
+$screen-xs: 640px;
+$screen-sm: 641px;
+.govuk-row {
+  .govuk-header__logo {
+    width: auto !important;
+  }
+}
+
+.govuk-sub-pages-menu {
+  padding: 0;
+  margin: 1rem 0;
+  display: block;
+  list-style: none;
+  @media screen and (min-width: $screen-sm) {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: -45px;
+    left: 0;
+    margin: auto;
+  }
+  @media screen and (max-width: $screen-xs) {
+    padding: 10px 0;
+    margin: 10px -15px;
+    background-color: #fff !important;
+  }
+  li {
+    display: inline-block;
+    margin-right: 11px;
+    @media screen and (max-width: $screen-xs) {
+      display: block;
+      padding: 5px 15px;
+      border-bottom: 1px solid #dedfe0;
+    }
+    a {
+      position: relative;
+      text-decoration: none;
+      white-space: nowrap;
+      font-family: "GDS Transport", arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.25;
+      display: inline-block;
+      color: #1E1A34 !important;
+      @media screen and (max-width: $screen-xs) {
+        font-size: 0.875rem;
+        line-height: 1.1428571429;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
+      &.active {
+        color: #1D70B8 !important;
+        &:hover,
+        &:focus,
+        &:active {
+          text-decoration: none;
+        }
+        &:after {
+          content: "";
+          display: block;
+          border-bottom: 4px solid #1D70B8;
+          position: absolute;
+          top: auto;
+          right: 0;
+          bottom: -1rem;
+          left: 0;
+          margin: auto;
+          @media screen and (max-width: $screen-xs) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $screen-xs) {
+  .govuk-header__menu-button {
+    display: block !important;
+  }
+  .govuk-header__navigation {
+    display: none;
+    &.govuk-header__navigation--open {
+      display: block;
+    }
+  }
+
+}
+
+.page-sub-menu-wrapper {
+  border-bottom: 2px solid #dedfe0;
+  min-height: 50px;
+  @media screen and (max-width: $screen-xs) {
+    display: none;
+  }
+}
