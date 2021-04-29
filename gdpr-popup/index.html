@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Standard Content</title>
+    <!--Un-gulped styles-->
+    <link href="css/default.css" rel="stylesheet"/>
+    <!--Un-gulped styles end-->
+</head>
+<body>
+<div id="wrapper">
+    <main id="main-content" role="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <article id="article" class="standard-content">
+                        <h1>H1 Heading Example</h1>
+                        <h2>H2 Heading Example</h2>
+                        <h3>H3 Heading Example</h3>
+                        <h4>H4 Heading Example</h4>
+                        <h5>H5 Heading Example</h5>
+                        <h6>H6 Heading Example</h6>
+                        <hr/>
+                        <h3 class="example">p tag example</h3>
+                        <p>Cras elit risus, tristique id <span class="phone">1850 372 757</span> nunc quis, ornare
+                            efficitur
+                            nisl. In hac habitasse platea dictumst.
+                            Aliquam
+                            velit elit, finibus in diam ac, porta faucibus ligula <span class="phone"
+                                                                                        aria-label="0900111222">0900 111 222</span>.
+                            Sed vehicula pulvinar sem eget ultricies.
+                            Duis eu
+                            mauris arcu.
+                            Morbi quis sodales ante. <a href="#/">Link within text</a> Nunc auctor fermentum eros, ut
+                            tincidunt
+                            urna
+                            pretium et. Praesent
+                            efficitur
+                            mauris consequat lacinia laoreet. Mauris accumsan tincidunt neque, ac placerat magna
+                            sagittis sit
+                            amet.
+                            In hac habitasse platea dictumst.</p>
+                        <h3 class="example">ordered list example</h3>
+                        <ol>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                        </ol>
+                        <hr/>
+
+                        <div class="cookie-data">
+                            <div class="checkbox" data-check="disabled">
+                                <label><input type="checkbox" value="Compulsory" class="cookie-checkbox"
+                                              name="Compulsory" checked disabled>Compulsory</label>
+                            </div>
+                            <div class="checkbox" data-check="">
+                                <label><input type="checkbox" value="Analytics" class="cookie-checkbox"
+                                              name="Analytics"  >Analytics</label>
+                            </div>
+                            <div class="checkbox" data-check="">
+                                <label><input type="checkbox" value="Performance" class="cookie-checkbox"
+                                              name="Performance"  >Performance</label>
+                            </div>
+                            <div class="button-wrapper">
+                                <input type="button" id="updateCookieBtn" class="btn btn-primary" value="Update"/>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-3">
+                    <div class="sidebar">
+                        <h3>Sidebar Nav</h3>
+                        <br/>
+                        <ul>
+                            <li><a href="index.html">Home</a><br/><br/></li>
+                            <li><a href="all-plugins.html">Plugins</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="cookie" class=" cookie-bottom" data-placement="bottom">
+        <script>
+            //window['ga-disable-UA-126462227-3'] = true;
+            var GooglePropertyID = 'UA-126462227-3';
+            var GoogleCodeType = 'classic';//'GTM','analytics'
+            var siteRootPath = 'js/';
+        </script>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-9">
+                    <p>
+                        <strong>Cookies:</strong> By Using this website, you agree to the use of cookies in accordance
+                        with the Cookie Policy. For more information on cookies see our <a href="#/">Cookie Policy</a>.
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-6">
+                            <div class="checkbox" data-check="disabled">
+                                <label><input type="checkbox" value="Compulsory" class="cookie-checkbox"
+                                              name="Compulsory" checked disabled>Compulsory</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-xs-6">
+                            <div class="checkbox" data-check="">
+                                <label><input type="checkbox" value="Analytics" class="cookie-checkbox"
+                                              name="Analytics">Analytics</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-xs-6">
+                            <div class="checkbox" data-check="">
+                                <label><input type="checkbox" value="Performance" class="cookie-checkbox"
+                                              name="Performance">Performance</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-3 text-right">
+                    <input type="button" id="cookieBtn" class="btn btn-default" value="Ok"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center"><span><span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;&nbsp;2021</span>
+    </footer>
+</div>
+<!-- JS References block-->
+<!--we can write function name(s) that would  be called after loading all js files-->
+<script type="text/javascript">
+    var isGulped = false;
+
+    // Add a script element as a child of the body
+    function initJS() {
+        'use strict';
+        //load jQuery
+        //if browser is ie9 or older then returm document.addEventListener
+        if (document.all && !window.atob) {
+            return;
+        }
+        downloadJS("js/jquery.min.js", function () {
+            var jqTimer = setInterval(function () {
+                if (window.jQuery) {
+                    downloadJS("js/cookie.js", function () {
+                        downloadJS("js/main.js", function () {
+                            onPageReady();
+                        });
+                    });
+                    clearInterval(jqTimer);
+                }
+            }, 50);
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    var siteRootPath = "";
+    var mobileSize = 640;
+    var desktop = true;
+    var mobile = false;
+    //this variable will be add from code behind in CMS System
+    var isLiveSite = true;
+
+    function downloadJS(scriptSrc, callback) {
+        'use strict';
+        var element = document.createElement("script");
+        element.src = scriptSrc;
+        element.onload = function () {
+            callback();
+        };
+        document.body.appendChild(element);
+    }
+
+    // Check for browser support of event handling capability
+    if (window.addEventListener) {
+        window.addEventListener("load", initJS, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", initJS);
+    } else {
+        window.onload = initJS;
+    }
+
+    function onPageReady() {
+        if (typeof (page_ready_default) == "function") {
+            page_ready_default();
+        }
+        if (typeof (loadAdditionalJs) == "function") {
+            loadAdditionalJs();
+        }
+    }
+</script>
+</body>
+</html>
