@@ -6,7 +6,7 @@
   margin: 1rem 0;
   display: block;
   list-style: none; }
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 40.0625em) {
     .govuk-sub-pages-menu {
       position: absolute;
       top: auto;
@@ -14,7 +14,7 @@
       bottom: -45px;
       left: 0;
       margin: auto; } }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40.0525em) {
     .govuk-sub-pages-menu {
       padding: 10px 0;
       margin: 10px -15px;
@@ -22,7 +22,7 @@
   .govuk-sub-pages-menu li {
     display: inline-block;
     margin-right: 11px; }
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 40.0525em) {
       .govuk-sub-pages-menu li {
         display: block;
         padding: 5px 15px;
@@ -37,7 +37,7 @@
       line-height: 1.25;
       display: inline-block;
       color: #1E1A34 !important; }
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 40.0525em) {
         .govuk-sub-pages-menu li a {
           font-size: 0.875rem;
           line-height: 1.1428571429; } }
@@ -57,11 +57,11 @@
           bottom: -1rem;
           left: 0;
           margin: auto; }
-          @media screen and (max-width: 640px) {
+          @media screen and (max-width: 40.0525em) {
             .govuk-sub-pages-menu li a.active:after {
               display: none; } }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 40.0525em) {
   .govuk-header__menu-button {
     display: block !important; }
 
@@ -72,7 +72,7 @@
 .page-sub-menu-wrapper {
   border-bottom: 2px solid #dedfe0;
   min-height: 50px; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 40.0525em) {
     .page-sub-menu-wrapper {
       display: none; } }
 

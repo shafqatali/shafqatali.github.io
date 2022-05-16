@@ -1,0 +1,55 @@
+$screen-xs: 40.0525em;
+$screen-sm: 40.0625em;
+.abc {
+  background-color: red;
+}
+
+.media-box {
+  position: relative;
+  @media screen and (max-width: $screen-xs) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  @media screen and (min-width: $screen-sm) {
+    display: block;
+    padding-left: 160px;
+    margin-bottom: 4rem;
+  }
+  .media-image {
+    width: 130px;
+    height: 130px;
+    @media screen and (max-width: $screen-xs) {
+      display: flex;
+      flex-basis: 130px;
+    }
+    @media screen and (min-width: $screen-sm) {
+      position: absolute;
+      top: 0;
+      right: auto;
+      bottom: auto;
+      left: 0;
+      display: block;
+      margin: auto;
+    }
+  }
+  .media-title {
+    @media screen and (max-width: $screen-xs) {
+      display: flex;
+      flex-basis: calc(100% - 145px);
+      align-items: center;
+      padding-left: 15px;
+    }
+    @media screen and (min-width: $screen-sm) {
+      display: block;
+      width: 100%;
+    }
+  }
+  .media-content {
+    display: block;
+    @media screen and (max-width: $screen-xs) {
+      flex-basis: 100%;
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.abc {
+  background-color: red; }
+
+.media-box {
+  position: relative; }
+  @media screen and (max-width: 40.0525em) {
+    .media-box {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem; } }
+  @media screen and (min-width: 40.0625em) {
+    .media-box {
+      display: block;
+      padding-left: 160px;
+      margin-bottom: 4rem; } }
+  .media-box .media-image {
+    width: 130px;
+    height: 130px; }
+    @media screen and (max-width: 40.0525em) {
+      .media-box .media-image {
+        display: flex;
+        flex-basis: 130px; } }
+    @media screen and (min-width: 40.0625em) {
+      .media-box .media-image {
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        display: block;
+        margin: auto; } }
+  @media screen and (max-width: 40.0525em) {
+    .media-box .media-title {
+      display: flex;
+      flex-basis: calc(100% - 145px);
+      align-items: center;
+      padding-left: 15px; } }
+  @media screen and (min-width: 40.0625em) {
+    .media-box .media-title {
+      display: block;
+      width: 100%; } }
+  .media-box .media-content {
+    display: block; }
+    @media screen and (max-width: 40.0525em) {
+      .media-box .media-content {
+        flex-basis: 100%;
+        margin-top: 15px; } }
+
+/*# sourceMappingURL=help-to-grow.css.map */
