@@ -1,8 +1,5 @@
 $screen-xs: 40.0525em;
 $screen-sm: 40.0625em;
-.abc {
-  background-color: red;
-}
 
 .media-box {
   position: relative;
@@ -53,3 +50,59 @@ $screen-sm: 40.0625em;
     }
   }
 }
+
+/* accordion styles start */
+.govuk-accordion.custom {
+  border: none !important;
+  .govuk-accordion__controls {
+    display: none !important;
+  }
+  .govuk-accordion__section {
+    margin-bottom: 10px !important;
+    .govuk-accordion__section-header {
+      .govuk-accordion__section-heading {
+        .govuk-accordion__section-button {
+          padding: 10px 20px !important;
+          background-color: #1e1a32 !important;
+          color: #ffb001 !important;
+          padding-right: 60px !important;
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 20px;
+            bottom: 0;
+            left: auto;
+            display: block;
+            margin: auto;
+            width: 32px;
+            height: 40px;
+            background: url("accordion-arrow.svg") no-repeat center center;
+          }
+          > span {
+            display: inline-block !important;
+            &.govuk-accordion__section-toggle {
+              display: none !important;
+            }
+          }
+          &[aria-expanded="false"] {
+            &:after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+    .govuk-accordion__section-content {
+      padding-top: 20px !important;
+      padding-bottom: 0 !important;
+      ul {
+        margin: 0 !important;
+        background-color: #efefef !important;
+        padding: 15px 15px 15px 30px !important;
+      }
+    }
+  }
+}
+/* accordion styles end */

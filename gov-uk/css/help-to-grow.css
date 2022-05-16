@@ -1,6 +1,3 @@
-.abc {
-  background-color: red; }
-
 .media-box {
   position: relative; }
   @media screen and (max-width: 40.0525em) {
@@ -45,5 +42,46 @@
       .media-box .media-content {
         flex-basis: 100%;
         margin-top: 15px; } }
+
+/* accordion styles start */
+.govuk-accordion.custom {
+  border: none !important; }
+  .govuk-accordion.custom .govuk-accordion__controls {
+    display: none !important; }
+  .govuk-accordion.custom .govuk-accordion__section {
+    margin-bottom: 10px !important; }
+    .govuk-accordion.custom .govuk-accordion__section .govuk-accordion__section-header .govuk-accordion__section-heading .govuk-accordion__section-button {
+      padding: 10px 20px !important;
+      background-color: #1e1a32 !important;
+      color: #ffb001 !important;
+      padding-right: 60px !important;
+      position: relative; }
+      .govuk-accordion.custom .govuk-accordion__section .govuk-accordion__section-header .govuk-accordion__section-heading .govuk-accordion__section-button:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 20px;
+        bottom: 0;
+        left: auto;
+        display: block;
+        margin: auto;
+        width: 32px;
+        height: 40px;
+        background: url("accordion-arrow.svg") no-repeat center center; }
+      .govuk-accordion.custom .govuk-accordion__section .govuk-accordion__section-header .govuk-accordion__section-heading .govuk-accordion__section-button > span {
+        display: inline-block !important; }
+        .govuk-accordion.custom .govuk-accordion__section .govuk-accordion__section-header .govuk-accordion__section-heading .govuk-accordion__section-button > span.govuk-accordion__section-toggle {
+          display: none !important; }
+      .govuk-accordion.custom .govuk-accordion__section .govuk-accordion__section-header .govuk-accordion__section-heading .govuk-accordion__section-button[aria-expanded="false"]:after {
+        transform: rotate(180deg); }
+    .govuk-accordion.custom .govuk-accordion__section .govuk-accordion__section-content {
+      padding-top: 20px !important;
+      padding-bottom: 0 !important; }
+      .govuk-accordion.custom .govuk-accordion__section .govuk-accordion__section-content ul {
+        margin: 0 !important;
+        background-color: #efefef !important;
+        padding: 15px 15px 15px 30px !important; }
+
+/* accordion styles end */
 
 /*# sourceMappingURL=help-to-grow.css.map */
